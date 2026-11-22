@@ -110,7 +110,35 @@
       planBasic: "Basic plan (demo). Premium cards still open as a preview.",
       planPremium: "Premium plan (demo). Enjoy Talk to Chotu and more!",
       planFamily: "Family Premium (demo). Premium features for 2 children.",
-      heardUnknown: "I did not catch that. Please try again, or tap a button."
+      heardUnknown: "I did not catch that. Please try again, or tap a button.",
+      reels: "Chotu Reels",
+      reelsSub: "Swipe to learn — songs, stories and quick games",
+      reelsTitle: "Chotu Reels",
+      newEpisode: "New episode today",
+      newTag: "New",
+      rewards: "Stickers & outfits",
+      rewardsIntro: "Spend stars on outfits, and collect stickers as you learn.",
+      outfits: "Chotu's outfits",
+      stickers: "Sticker book",
+      timeLimit: "Screen time",
+      limitIntro: "Choose how long Chotu can play today. A parent must answer a quick question to change this.",
+      parentGate: "For parents",
+      tiredTitle: "Chotu is tired",
+      tiredLine: "That was a great learning day. See you tomorrow!",
+      tiredHint: "A parent can change the time limit.",
+      tiredSpeech: "Chotu is tired. That was a great learning day. See you tomorrow!",
+      seeYou: "See you tomorrow",
+      parentChange: "I'm a parent — change time",
+      limitOff: "No limit",
+      limit1: "1 minute (demo test)",
+      limit10: "10 minutes",
+      limit20: "20 minutes",
+      limit30: "30 minutes",
+      unlock: "Unlock",
+      wear: "Wear",
+      wearing: "Wearing",
+      needStars: "Need more stars",
+      stickerLocked: "Keep learning to get this"
     },
     hi: {
       appName: "छोटू टीचर",
@@ -220,7 +248,35 @@
       planBasic: "बेसिक योजना (डेमो)। प्रीमियम कार्ड पूर्वावलोकन के रूप में खुले हैं।",
       planPremium: "प्रीमियम योजना (डेमो)। छोटू से बातें और और भी मज़ा लें!",
       planFamily: "फ़ैमिली प्रीमियम (डेमो)। 2 बच्चों के लिए प्रीमियम सुविधाएँ।",
-      heardUnknown: "समझ नहीं आया। फिर कोशिश करो, या बटन दबाओ।"
+      heardUnknown: "समझ नहीं आया। फिर कोशिश करो, या बटन दबाओ।",
+      reels: "छोटू रील्स",
+      reelsSub: "स्वाइप करो — गीत, कहानियाँ और तेज़ खेल",
+      reelsTitle: "छोटू रील्स",
+      newEpisode: "आज का नया एपिसोड",
+      newTag: "नया",
+      rewards: "स्टिकर और पोशाक",
+      rewardsIntro: "सितारों से पोशाक लो, और सीखते हुए स्टिकर इकट्ठा करो।",
+      outfits: "छोटू की पोशाकें",
+      stickers: "स्टिकर बुक",
+      timeLimit: "स्क्रीन समय",
+      limitIntro: "आज छोटू कितनी देर खेल सकता है, चुनें। बदलने के लिए माता-पिता को एक प्रश्न हल करना होगा।",
+      parentGate: "माता-पिता के लिए",
+      tiredTitle: "छोटू थक गया है",
+      tiredLine: "आज बहुत अच्छा सीखा। कल मिलते हैं!",
+      tiredHint: "माता-पिता समय सीमा बदल सकते हैं।",
+      tiredSpeech: "छोटू थक गया है। आज बहुत अच्छा सीखा। कल मिलते हैं!",
+      seeYou: "कल मिलते हैं",
+      parentChange: "मैं माता-पिता हूँ — समय बदलें",
+      limitOff: "कोई सीमा नहीं",
+      limit1: "1 मिनट (डेमो टेस्ट)",
+      limit10: "10 मिनट",
+      limit20: "20 मिनट",
+      limit30: "30 मिनट",
+      unlock: "खोलो",
+      wear: "पहनो",
+      wearing: "पहनी हुई",
+      needStars: "और सितारे चाहिए",
+      stickerLocked: "इसे पाने के लिए सीखते रहो"
     }
   };
 
@@ -412,7 +468,7 @@
     lang: "en", stars: 0, plan: "none", age: "nursery", screen: "splash",
     quizAnswered: false, slateIndex: 0, rupeeCoins: [1, 2, 2], rupeeChoices: [3, 5, 7],
     rupeeAnswered: false, listening: false, engIndex: 0, mathIndex: 0, logicIndex: 0,
-    currentAnswer: null, currentSpeak: ""
+    currentAnswer: null, currentSpeak: "", engQueue: [], mathQueue: [], logicQueue: []
   };
 
   let recognition = null;
@@ -460,13 +516,15 @@
     if (state.screen === "english") renderEnglish(false);
     if (state.screen === "maths") renderMaths(false);
     if (state.screen === "logic") renderLogic(false);
+    if (window.ChotuFun && window.ChotuFun.onI18n) window.ChotuFun.onI18n();
   }
 
   function screenTitleKey(id) {
     const titles = {
       splash: "appName", parent: "parentTitle", home: "homeTitle",
       english: "englishTitle", maths: "mathsTitle", logic: "logicTitle",
-      slate: "slateTitle", talk: "talkTitle", report: "reportTitle", rupees: "rupeeTitle"
+      slate: "slateTitle", talk: "talkTitle", report: "reportTitle", rupees: "rupeeTitle",
+      reels: "reelsTitle", rewards: "rewards", limit: "timeLimit", gate: "parentGate", tired: "tiredTitle"
     };
     return titles[id] || "appName";
   }
@@ -485,6 +543,9 @@
     if (id === "report") renderReport();
     if (id === "home") renderHome();
     if (state.listening) stopListening();
+    const phone = $("#phone");
+    if (phone) phone.classList.toggle("reels-on", id === "reels");
+    if (window.ChotuFun && window.ChotuFun.onScreen) window.ChotuFun.onScreen(id);
   }
 
   function pickVoice(langCode) {
@@ -522,6 +583,7 @@
     burst.setAttribute("aria-hidden", "true");
     document.body.appendChild(burst);
     setTimeout(() => burst.remove(), 800);
+    if (window.ChotuFun && window.ChotuFun.onStars) window.ChotuFun.onStars(n);
   }
 
   function toast(msg) {
@@ -562,6 +624,7 @@
       family: txt("Family Premium selected (demo).", "फ़ैमिली प्रीमियम चुना गया (डेमो)।")
     };
     toast(words[plan] || "");
+    if (window.ChotuFun && window.ChotuFun.onPlayStart) window.ChotuFun.onPlayStart();
   }
 
   function setAge(age) {
@@ -629,6 +692,7 @@
   function optionButtons(options, onPick) {
     const wrap = document.createElement("div");
     wrap.className = "choice-row";
+    options = shuffle(options || []);
     options.forEach((opt) => {
       const b = document.createElement("button");
       b.type = "button";
@@ -674,6 +738,20 @@
     }
   }
 
+  function updateProgress(kind) {
+    const map = { english: ["engQueue", "engIndex"], maths: ["mathQueue", "mathIndex"], logic: ["logicQueue", "logicIndex"] };
+    const pair = map[kind];
+    if (!pair) return;
+    const q = state[pair[0]] || [];
+    const i = state[pair[1]] || 0;
+    const total = Math.max(q.length, 1);
+    const cur = (i % total) + 1;
+    const bar = $("#" + kind + "-progress");
+    const lab = $("#" + kind + "-progress-label");
+    if (bar) bar.style.width = Math.round((cur / total) * 100) + "%";
+    if (lab) lab.textContent = cur + " / " + total;
+  }
+
   function englishBank() {
     if (state.age === "lkg") {
       return [
@@ -682,7 +760,13 @@
         { tiles: ["p", "o", "t"], word: "pot", options: [{ value: "pot", label: "pot", emoji: "🪴" }, { value: "pat", label: "pat", emoji: "👋" }, { value: "pit", label: "pit", emoji: "🕳️" }] },
         { tiles: ["m", "a", "n"], word: "man", options: [{ value: "man", label: "man", emoji: "👨" }, { value: "mat", label: "mat", emoji: "🟩" }, { value: "pan", label: "pan", emoji: "🍳" }] },
         { tiles: ["l", "i", "d"], word: "lid", options: [{ value: "lid", label: "lid", emoji: "🥫" }, { value: "lad", label: "lad", emoji: "👦" }, { value: "led", label: "led", emoji: "💡" }] },
-        { tiles: ["p", "a", "n"], word: "pan", options: [{ value: "pan", label: "pan", emoji: "🍳" }, { value: "pin", label: "pin", emoji: "📌" }, { value: "pen", label: "pen", emoji: "🖊️" }] }
+        { tiles: ["p", "a", "n"], word: "pan", options: [{ value: "pan", label: "pan", emoji: "🍳" }, { value: "pin", label: "pin", emoji: "📌" }, { value: "pen", label: "pen", emoji: "🖊️" }] },
+        { tiles: ["s", "a", "t"], word: "sat", options: [{ value: "sat", label: "sat", emoji: "😌" }, { value: "sit", label: "sit", emoji: "🪑" }, { value: "pat", label: "pat", emoji: "👋" }] },
+        { tiles: ["c", "a", "p"], word: "cap", options: [{ value: "cap", label: "cap", emoji: "🧢" }, { value: "cat", label: "cat", emoji: "🐱" }, { value: "cup", label: "cup", emoji: "☕" }] },
+        { tiles: ["d", "o", "g"], word: "dog", options: [{ value: "dog", label: "dog", emoji: "🐶" }, { value: "dig", label: "dig", emoji: "🕳️" }, { value: "dot", label: "dot", emoji: "🔴" }] },
+        { tiles: ["k", "i", "d"], word: "kid", options: [{ value: "kid", label: "kid", emoji: "👧" }, { value: "kit", label: "kit", emoji: "🧰" }, { value: "lid", label: "lid", emoji: "🥫" }] },
+        { tiles: ["m", "u", "g"], word: "mug", options: [{ value: "mug", label: "mug", emoji: "🍺" }, { value: "mat", label: "mat", emoji: "🟩" }, { value: "man", label: "man", emoji: "👨" }] },
+        { tiles: ["c", "o", "t"], word: "cot", options: [{ value: "cot", label: "cot", emoji: "🛏️" }, { value: "cat", label: "cat", emoji: "🐱" }, { value: "pot", label: "pot", emoji: "🪴" }] }
       ];
     }
     if (state.age === "ukg") {
@@ -690,14 +774,29 @@
         { sentence: "The ship is on the sand.", qEn: "Tap the word with the sh sound.", qHi: "sh ध्वनि वाला शब्द दबाओ।", options: ["ship", "is", "the"], answer: "ship", speakEn: "The ship is on the sand. Which word has the sh sound?", speakHi: "शिप इज़ ऑन द सैंड। sh ध्वनि वाला शब्द कौन सा है?" },
         { sentence: "I can see the shop.", qEn: "What can you see?", qHi: "तुम क्या देख सकते हो?", options: ["the shop", "the frog", "the cap"], answer: "the shop", speakEn: "I can see the shop. What can you see?", speakHi: "मैं दुकान देख सकता हूँ। तुम क्या देखते हो?" },
         { sentence: "The child sits on the chair.", qEn: "Tap the word with the ch sound.", qHi: "ch ध्वनि वाला शब्द दबाओ।", options: ["chair", "sits", "The"], answer: "chair", speakEn: "The child sits on the chair. Which word has the ch sound?", speakHi: "चाइल्ड चेयर पर बैठा है। ch वाला शब्द कौन सा है?" },
-        { sentence: "I like this thin chapati.", qEn: "Tap the word with the th sound.", qHi: "th ध्वनि वाला शब्द दबाओ।", options: ["thin", "like", "this"], answer: "thin", speakEn: "I like this thin chapati. Which word has the th sound at the start?", speakHi: "मुझे यह पतली रोटी पसंद है। th से शुरू शब्द कौन सा है?" }
+        { sentence: "I like this thin chapati.", qEn: "Tap the word with the th sound.", qHi: "th ध्वनि वाला शब्द दबाओ।", options: ["thin", "like", "this"], answer: "thin", speakEn: "I like this thin chapati. Which word has the th sound at the start?", speakHi: "मुझे यह पतली रोटी पसंद है। th से शुरू शब्द कौन सा है?" },
+        { sentence: "A fish swims in the pond.", qEn: "Tap the word with the sh sound.", qHi: "sh ध्वनि वाला शब्द दबाओ।", options: ["fish", "pond", "in"], answer: "fish", speakEn: "A fish swims in the pond. Which word has the sh sound?", speakHi: "तालाब में मछली तैरती है। sh वाला शब्द कौन सा है?" },
+        { sentence: "The bell rang at night.", qEn: "Tap the word with the igh sound.", qHi: "igh ध्वनि वाला शब्द दबाओ।", options: ["night", "bell", "The"], answer: "night", speakEn: "The bell rang at night. Which word has the igh sound?", speakHi: "रात में घंटी बजी। igh वाला शब्द कौन सा है?" },
+        { sentence: "I can see a green tree.", qEn: "What can you see?", qHi: "तुम क्या देख सकते हो?", options: ["a green tree", "a red shop", "the cap"], answer: "a green tree", speakEn: "I can see a green tree. What can you see?", speakHi: "मैं हरा पेड़ देख सकता हूँ। तुम क्या देखते हो?" },
+        { sentence: "The goat is on the road.", qEn: "Tap the word with the oa sound.", qHi: "oa ध्वनि वाला शब्द दबाओ।", options: ["goat", "The", "is"], answer: "goat", speakEn: "The goat is on the road. Which word has the oa sound?", speakHi: "बकरी सड़क पर है। oa वाला शब्द कौन सा है?" },
+        { sentence: "She has a ring and a song.", qEn: "Tap the word with the ng sound.", qHi: "ng ध्वनि वाला शब्द दबाओ।", options: ["ring", "has", "a"], answer: "ring", speakEn: "She has a ring and a song. Which word has the ng sound?", speakHi: "उसके पास अंगूठी और गीत है। ng वाला शब्द कौन सा है?" },
+        { sentence: "We play in the rain.", qEn: "Where do we play?", qHi: "हम कहाँ खेलते हैं?", options: ["in the rain", "in the shop", "on the chair"], answer: "in the rain", speakEn: "We play in the rain. Where do we play?", speakHi: "हम बारिश में खेलते हैं। हम कहाँ खेलते हैं?" },
+        { sentence: "The train is going to the market.", qEn: "Where is the train going?", qHi: "ट्रेन कहाँ जा रही है?", options: ["to the market", "to the pond", "to the bed"], answer: "to the market", speakEn: "The train is going to the market. Where is the train going?", speakHi: "ट्रेन बाज़ार जा रही है। वह कहाँ जा रही है?" }
       ];
     }
     if (state.age === "class1") {
       return [
         { sentence: "The monkeys took the caps.", qEn: "Who took the caps?", qHi: "टोपी कौन ले गया?", options: ["the monkeys", "the frogs", "the birds"], answer: "the monkeys", speakEn: "The monkeys took the caps. Who took the caps?", speakHi: "बंदर टोपियाँ ले गए। टोपी कौन ले गया?" },
         { sentence: "The frog is in the pond.", qEn: "Where is the frog?", qHi: "मेंढक कहाँ है?", options: ["in the pond", "on the cap", "in the shop"], answer: "in the pond", speakEn: "The frog is in the pond. Where is the frog?", speakHi: "मेंढक तालाब में है। मेंढक कहाँ है?" },
-        { sentence: "Anandi saw a rainbow in the sky.", qEn: "What did Anandi see?", qHi: "आनंदी ने क्या देखा?", options: ["a rainbow", "a monkey", "a ship"], answer: "a rainbow", speakEn: "Anandi saw a rainbow in the sky. What did Anandi see?", speakHi: "आनंदी ने आसमान में इंद्रधनुष देखा। उसने क्या देखा?" }
+        { sentence: "Anandi saw a rainbow in the sky.", qEn: "What did Anandi see?", qHi: "आनंदी ने क्या देखा?", options: ["a rainbow", "a monkey", "a ship"], answer: "a rainbow", speakEn: "Anandi saw a rainbow in the sky. What did Anandi see?", speakHi: "आनंदी ने आसमान में इंद्रधनुष देखा। उसने क्या देखा?" },
+        { sentence: "We say Namaste to Nani.", qEn: "What do we say to Nani?", qHi: "नानी को हम क्या कहते हैं?", options: ["Namaste", "Goodbye", "Shop"], answer: "Namaste", speakEn: "We say Namaste to Nani. What do we say?", speakHi: "हम नानी को नमस्ते कहते हैं। हम क्या कहते हैं?" },
+        { sentence: "The farmer is at the farm.", qEn: "Where is the farmer?", qHi: "किसान कहाँ है?", options: ["at the farm", "in the shop", "on the cap"], answer: "at the farm", speakEn: "The farmer is at the farm. Where is the farmer?", speakHi: "किसान खेत पर है। किसान कहाँ है?" },
+        { sentence: "I like roti and dal today.", qEn: "What do I like today?", qHi: "आज मुझे क्या पसंद है?", options: ["roti and dal", "a ship", "the caps"], answer: "roti and dal", speakEn: "I like roti and dal today. What do I like?", speakHi: "आज मुझे रोटी और दाल पसंद है। क्या पसंद है?" },
+        { sentence: "The sun is hot in summer.", qEn: "How is the sun in summer?", qHi: "गर्मी में सूरज कैसा है?", options: ["hot", "cold", "wet"], answer: "hot", speakEn: "The sun is hot in summer. How is the sun?", speakHi: "गर्मी में सूरज गर्म है। सूरज कैसा है?" },
+        { sentence: "The hen is in the shed.", qEn: "Where is the hen?", qHi: "मुर्गी कहाँ है?", options: ["in the shed", "in the pond", "on the flag"], answer: "in the shed", speakEn: "The hen is in the shed. Where is the hen?", speakHi: "मुर्गी शेड में है। मुर्गी कहाँ है?" },
+        { sentence: "Two little hands can clap.", qEn: "What can two little hands do?", qHi: "दो छोटे हाथ क्या कर सकते हैं?", options: ["clap", "swim", "fly"], answer: "clap", speakEn: "Two little hands can clap. What can they do?", speakHi: "दो छोटे हाथ ताली बजा सकते हैं। वे क्या कर सकते हैं?" },
+        { sentence: "The flag has three colours.", qEn: "How many colours does the flag have?", qHi: "झंडे में कितने रंग हैं?", options: ["three", "two", "five"], answer: "three", speakEn: "The flag has three colours. How many colours?", speakHi: "झंडे में तीन रंग हैं। कितने रंग हैं?" },
+        { sentence: "The cows eat grass on the farm.", qEn: "What do the cows eat?", qHi: "गायें क्या खाती हैं?", options: ["grass", "caps", "books"], answer: "grass", speakEn: "The cows eat grass on the farm. What do the cows eat?", speakHi: "गायें खेत पर घास खाती हैं। वे क्या खाती हैं?" }
       ];
     }
     return [
@@ -706,11 +805,18 @@
       { word: "tap", hi: "नल", emoji: "🚰", sound: "t", options: ["t", "p", "n"], speakEn: "Tap. What is the first sound?", speakHi: "टैप, नल। पहली ध्वनि क्या है?" },
       { word: "pot", hi: "गमला", emoji: "🪴", sound: "p", options: ["p", "s", "m"], speakEn: "Pot. What is the first sound?", speakHi: "पॉट, गमला। पहली ध्वनि क्या है?" },
       { word: "pin", hi: "पिन", emoji: "📌", sound: "p", options: ["p", "i", "n"], speakEn: "Pin. What is the first sound?", speakHi: "पिन। पहली ध्वनि क्या है?" },
-      { word: "man", hi: "आदमी", emoji: "👨", sound: "m", options: ["m", "s", "a"], speakEn: "Man. What is the first sound?", speakHi: "मैन, आदमी। पहली ध्वनि क्या है?" }
+      { word: "man", hi: "आदमी", emoji: "👨", sound: "m", options: ["m", "s", "a"], speakEn: "Man. What is the first sound?", speakHi: "मैन, आदमी। पहली ध्वनि क्या है?" },
+      { word: "sit", hi: "बैठो", emoji: "🪑", sound: "s", options: ["s", "i", "t"], speakEn: "Sit. What is the first sound?", speakHi: "सिट, बैठो। पहली ध्वनि क्या है?" },
+      { word: "tin", hi: "टिन", emoji: "🥫", sound: "t", options: ["t", "p", "n"], speakEn: "Tin. What is the first sound?", speakHi: "टिन। पहली ध्वनि क्या है?" },
+      { word: "map", hi: "नक्शा", emoji: "🗺️", sound: "m", options: ["m", "a", "p"], speakEn: "Map. What is the first sound?", speakHi: "मैप, नक्शा। पहली ध्वनि क्या है?" },
+      { word: "dip", hi: "डुबकी", emoji: "🏊", sound: "d", options: ["d", "i", "p"], speakEn: "Dip. What is the first sound?", speakHi: "डिप, डुबकी। पहली ध्वनि क्या है?" },
+      { word: "sad", hi: "उदास", emoji: "😢", sound: "s", options: ["s", "a", "d"], speakEn: "Sad. What is the first sound?", speakHi: "सैड, उदास। पहली ध्वनि क्या है?" },
+      { word: "mat", hi: "चटाई", emoji: "🟩", sound: "m", options: ["m", "s", "t"], speakEn: "Mat. What is the first sound?", speakHi: "मैट, चटाई। पहली ध्वनि क्या है?" }
     ];
   }
 
   function startEnglish() {
+    state.engQueue = shuffle(englishBank().slice());
     state.engIndex = 0;
     state.quizAnswered = false;
     renderEnglish(true);
@@ -719,8 +825,9 @@
   }
 
   function renderEnglish(resetFeedback) {
-    const bank = englishBank();
+    const bank = (state.engQueue && state.engQueue.length) ? state.engQueue : englishBank();
     const item = bank[state.engIndex % bank.length];
+    updateProgress("english");
     const intro = $("#english-intro");
     const stage = $("#english-stage");
     if (!stage) return;
@@ -776,6 +883,7 @@
   }
 
   function startMaths() {
+    state.mathQueue = shuffle([0,1,2,3,4,5,6,7,8,9,10,11]);
     state.mathIndex = 0;
     state.quizAnswered = false;
     renderMaths(true);
@@ -792,6 +900,8 @@
       if (fb) { fb.textContent = ""; fb.className = "feedback"; }
     }
     stage.innerHTML = "";
+    updateProgress("maths");
+    const mi = (state.mathQueue && state.mathQueue.length) ? state.mathQueue[state.mathIndex % state.mathQueue.length] : state.mathIndex;
     const onPick = (val, btn, wrap) => {
       const ok = String(val) === String(state.currentAnswer);
       markAnswer(wrap, btn, ok);
@@ -799,8 +909,8 @@
     };
 
     if (state.age === "nursery") {
-      const counts = [2, 3, 4, 5, 3, 4];
-      const n = counts[state.mathIndex % counts.length];
+      const counts = [2, 3, 4, 5, 2, 3, 4, 5, 3, 4, 5, 2];
+      const n = counts[mi % counts.length];
       state.currentAnswer = n;
       state.currentSpeak = txt("Look first. How many mangoes?", "पहले देखो। कितने आम हैं?");
       if (intro) intro.textContent = txt("Look first, then tell. How many mangoes?", "पहले देखो, फिर बताओ। कितने आम हैं?");
@@ -811,8 +921,8 @@
       const opts = shuffle([n, n === 5 ? 4 : n + 1, n === 2 ? 3 : n - 1].filter((v, i, a) => a.indexOf(v) === i && v >= 1));
       stage.appendChild(optionButtons(opts, onPick));
     } else if (state.age === "lkg") {
-      const filleds = [6, 7, 4, 9, 5, 8];
-      const filled = filleds[state.mathIndex % filleds.length];
+      const filleds = [6, 7, 4, 9, 5, 8, 3, 2, 7, 6, 9, 5];
+      const filled = filleds[mi % filleds.length];
       const need = 10 - filled;
       state.currentAnswer = need;
       state.currentSpeak = txt("There are " + filled + " on the ten-frame. How many more to make 10?", "दस-फ्रेम पर " + filled + " हैं। 10 बनाने के लिए कितने और चाहिए?");
@@ -832,9 +942,17 @@
       const shops = [
         { items: [{ e: "✏️", nEn: "pencil", nHi: "पेंसिल", p: 8 }, { e: "📒", nEn: "eraser", nHi: "रबर", p: 5 }], have: null, answer: 13, options: [12, 13, 15], qEn: "How much in all?", qHi: "कुल कितने रुपये?", speakEn: "A pencil is 8 rupees. An eraser is 5 rupees. How much in all?", speakHi: "पेंसिल 8 रुपये, रबर 5 रुपये। कुल कितने?" },
         { items: [{ e: "📓", nEn: "notebook", nHi: "कॉपी", p: 12 }], have: 20, answer: 8, options: [6, 8, 10], qEn: "You have ₹20. How much comes back?", qHi: "तुम्हारे पास ₹20 हैं। कितने वापस आएँगे?", speakEn: "A notebook is 12 rupees. You have 20 rupees. How much comes back?", speakHi: "कॉपी 12 रुपये की है। तुम्हारे पास 20 हैं। कितने वापस?" },
-        { items: [{ e: "🍬", nEn: "toffee", nHi: "टॉफ़ी", p: 7 }], have: 10, answer: 3, options: [2, 3, 4], qEn: "You have ₹10. How much comes back?", qHi: "तुम्हारे पास ₹10 हैं। कितने वापस आएँगे?", speakEn: "A toffee is 7 rupees. You have 10 rupees. How much comes back?", speakHi: "टॉफ़ी 7 रुपये की है। तुम्हारे पास 10 हैं। कितने वापस?" }
+        { items: [{ e: "🍬", nEn: "toffee", nHi: "टॉफ़ी", p: 7 }], have: 10, answer: 3, options: [2, 3, 4], qEn: "You have ₹10. How much comes back?", qHi: "तुम्हारे पास ₹10 हैं। कितने वापस आएँगे?", speakEn: "A toffee is 7 rupees. You have 10 rupees. How much comes back?", speakHi: "टॉफ़ी 7 रुपये की है। तुम्हारे पास 10 हैं। कितने वापस?" },
+        { items: [{ e: "🍌", nEn: "banana", nHi: "केला", p: 6 }, { e: "🍎", nEn: "apple", nHi: "सेब", p: 9 }], have: null, answer: 15, options: [14, 15, 16], qEn: "How much in all?", qHi: "कुल कितने रुपये?", speakEn: "A banana is 6 rupees. An apple is 9 rupees. How much in all?", speakHi: "केला 6, सेब 9। कुल कितने?" },
+        { items: [{ e: "🥛", nEn: "milk", nHi: "दूध", p: 15 }], have: 20, answer: 5, options: [5, 4, 6], qEn: "You have ₹20. How much comes back?", qHi: "तुम्हारे पास ₹20 हैं। कितने वापस आएँगे?", speakEn: "Milk is 15 rupees. You have 20. How much comes back?", speakHi: "दूध 15 रुपये का है। 20 हैं। कितने वापस?" },
+        { items: [{ e: "🥜", nEn: "peanuts", nHi: "मूंगफली", p: 8 }], have: 10, answer: 2, options: [2, 3, 1], qEn: "You have ₹10. How much comes back?", qHi: "तुम्हारे पास ₹10 हैं। कितने वापस आएँगे?", speakEn: "Peanuts are 8 rupees. You have 10. How much comes back?", speakHi: "मूंगफली 8 रुपये की है। 10 हैं। कितने वापस?" },
+        { items: [{ e: "🥨", nEn: "biscuit", nHi: "बिस्कुट", p: 4 }, { e: "🍬", nEn: "toffee", nHi: "टॉफ़ी", p: 3 }], have: null, answer: 7, options: [6, 7, 8], qEn: "How much in all?", qHi: "कुल कितने रुपये?", speakEn: "A biscuit is 4 rupees. A toffee is 3. How much in all?", speakHi: "बिस्कुट 4, टॉफ़ी 3। कुल कितने?" },
+        { items: [{ e: "🚌", nEn: "bus ticket", nHi: "बस टिकट", p: 9 }], have: 20, answer: 11, options: [10, 11, 12], qEn: "You have ₹20. How much comes back?", qHi: "तुम्हारे पास ₹20 हैं। कितने वापस आएँगे?", speakEn: "A bus ticket is 9 rupees. You have 20. How much comes back?", speakHi: "टिकट 9 रुपये का है। 20 हैं। कितने वापस?" },
+        { items: [{ e: "🖍️", nEn: "crayon", nHi: "क्रेयॉन", p: 5 }, { e: "✏️", nEn: "pencil", nHi: "पेंसिल", p: 5 }], have: null, answer: 10, options: [9, 10, 11], qEn: "How much in all?", qHi: "कुल कितने रुपये?", speakEn: "A crayon is 5 rupees. A pencil is 5. How much in all?", speakHi: "क्रेयॉन 5, पेंसिल 5। कुल कितने?" },
+        { items: [{ e: "📗", nEn: "book", nHi: "किताब", p: 18 }], have: 20, answer: 2, options: [2, 3, 1], qEn: "You have ₹20. How much comes back?", qHi: "तुम्हारे पास ₹20 हैं। कितने वापस आएँगे?", speakEn: "A book is 18 rupees. You have 20. How much comes back?", speakHi: "किताब 18 रुपये की है। 20 हैं। कितने वापस?" },
+        { items: [{ e: "🛝", nEn: "toy", nHi: "खिलौना", p: 11 }], have: 20, answer: 9, options: [8, 9, 10], qEn: "You have ₹20. How much comes back?", qHi: "तुम्हारे पास ₹20 हैं। कितने वापस आएँगे?", speakEn: "A toy is 11 rupees. You have 20. How much comes back?", speakHi: "खिलौना 11 रुपये का है। 20 हैं। कितने वापस?" }
       ];
-      const item = shops[state.mathIndex % shops.length];
+      const item = shops[mi % shops.length];
       state.currentAnswer = item.answer;
       state.currentSpeak = txt(item.speakEn, item.speakHi);
       if (intro) intro.textContent = txt(item.qEn, item.qHi);
@@ -859,9 +977,17 @@
         { type: "groups", groups: 3, each: 2, answer: 6, options: [5, 6, 8], qEn: "3 plates with 2 laddoos. 2 + 2 + 2 = ?", qHi: "3 थालियों में 2-2 लड्डू। 2 + 2 + 2 = ?", speakEn: "Three plates with two laddoos each. Two plus two plus two. That is 3 times 2. How many in all?", speakHi: "तीन थालियों में दो-दो लड्डू। 2 जमा 2 जमा 2। यह 3 गुना 2 है। कुल कितने?" },
         { type: "groups", groups: 4, each: 2, answer: 8, options: [6, 8, 10], qEn: "4 plates with 2 laddoos. 2 + 2 + 2 + 2 = ?", qHi: "4 थालियों में 2-2 लड्डू। 2 + 2 + 2 + 2 = ?", speakEn: "Four plates with two laddoos each. That is 4 times 2. How many in all?", speakHi: "चार थालियों में दो-दो लड्डू। यह 4 गुना 2 है। कुल कितने?" },
         { type: "place", tens: 4, ones: 7, answer: 47, options: [47, 74, 40], qEn: "4 tens and 7 ones. What number is this?", qHi: "4 दहाई और 7 इकाई। यह कौन सी संख्या है?", speakEn: "Four tens and seven ones. What number is this?", speakHi: "चार दहाई और सात इकाई। यह कौन सी संख्या है?" },
-        { type: "place", tens: 2, ones: 5, answer: 25, options: [25, 52, 20], qEn: "2 tens and 5 ones. What number is this?", qHi: "2 दहाई और 5 इकाई। यह कौन सी संख्या है?", speakEn: "Two tens and five ones. What number is this?", speakHi: "दो दहाई और पाँच इकाई। यह कौन सी संख्या है?" }
+        { type: "place", tens: 2, ones: 5, answer: 25, options: [25, 52, 20], qEn: "2 tens and 5 ones. What number is this?", qHi: "2 दहाई और 5 इकाई। यह कौन सी संख्या है?", speakEn: "Two tens and five ones. What number is this?", speakHi: "दो दहाई और पाँच इकाई। यह कौन सी संख्या है?" },
+        { type: "groups", groups: 2, each: 3, answer: 6, options: [5, 6, 9], qEn: "2 plates with 3 laddoos. 3 + 3 = ?", qHi: "2 थालियों में 3-3 लड्डू। 3 + 3 = ?", speakEn: "Two plates with three laddoos. That is 2 times 3. How many?", speakHi: "दो थालियों में तीन-तीन लड्डू। यह 2 गुना 3 है। कितने?" },
+        { type: "groups", groups: 5, each: 2, answer: 10, options: [8, 10, 12], qEn: "5 plates with 2 laddoos. How many in all?", qHi: "5 थालियों में 2-2 लड्डू। कुल कितने?", speakEn: "Five plates with two laddoos. That is 5 times 2. How many?", speakHi: "पाँच थालियों में दो-दो लड्डू। यह 5 गुना 2 है।" },
+        { type: "place", tens: 3, ones: 6, answer: 36, options: [36, 63, 30], qEn: "3 tens and 6 ones. What number is this?", qHi: "3 दहाई और 6 इकाई। यह कौन सी संख्या है?", speakEn: "Three tens and six ones. What number?", speakHi: "तीन दहाई और छह इकाई। कौन सी संख्या?" },
+        { type: "place", tens: 5, ones: 0, answer: 50, options: [50, 15, 5], qEn: "5 tens and 0 ones. What number is this?", qHi: "5 दहाई और 0 इकाई। यह कौन सी संख्या है?", speakEn: "Five tens and zero ones. What number?", speakHi: "पाँच दहाई और शून्य इकाई। कौन सी संख्या?" },
+        { type: "place", tens: 6, ones: 8, answer: 68, options: [68, 86, 60], qEn: "6 tens and 8 ones. What number is this?", qHi: "6 दहाई और 8 इकाई। यह कौन सी संख्या है?", speakEn: "Six tens and eight ones. What number?", speakHi: "छह दहाई और आठ इकाई। कौन सी संख्या?" },
+        { type: "groups", groups: 3, each: 3, answer: 9, options: [6, 9, 12], qEn: "3 plates with 3 laddoos. 3 + 3 + 3 = ?", qHi: "3 थालियों में 3-3 लड्डू। 3 + 3 + 3 = ?", speakEn: "Three plates with three laddoos. That is 3 times 3. How many?", speakHi: "तीन थालियों में तीन-तीन लड्डू। यह 3 गुना 3 है।" },
+        { type: "place", tens: 9, ones: 9, answer: 99, options: [99, 90, 9], qEn: "9 tens and 9 ones. What number is this?", qHi: "9 दहाई और 9 इकाई। यह कौन सी संख्या है?", speakEn: "Nine tens and nine ones. What number?", speakHi: "नौ दहाई और नौ इकाई। कौन सी संख्या?" },
+        { type: "groups", groups: 4, each: 3, answer: 12, options: [9, 12, 16], qEn: "4 plates with 3 laddoos. How many in all?", qHi: "4 थालियों में 3-3 लड्डू। कुल कितने?", speakEn: "Four plates with three laddoos. That is 4 times 3. How many?", speakHi: "चार थालियों में तीन-तीन लड्डू। यह 4 गुना 3 है।" }
       ];
-      const item = sets[state.mathIndex % sets.length];
+      const item = sets[mi % sets.length];
       state.currentAnswer = item.answer;
       state.currentSpeak = txt(item.speakEn, item.speakHi);
       if (intro) intro.textContent = txt(item.qEn, item.qHi);
@@ -900,6 +1026,7 @@
   }
 
   function startLogic() {
+    state.logicQueue = shuffle([0,1,2,3,4,5,6,7,8,9,10,11]);
     state.logicIndex = 0;
     state.quizAnswered = false;
     renderLogic(true);
@@ -916,6 +1043,8 @@
       if (fb) { fb.textContent = ""; fb.className = "feedback"; }
     }
     stage.innerHTML = "";
+    updateProgress("logic");
+    const li = (state.logicQueue && state.logicQueue.length) ? state.logicQueue[state.logicIndex % state.logicQueue.length] : state.logicIndex;
     const onPick = (val, btn, wrap) => {
       const ok = String(val) === String(state.currentAnswer);
       markAnswer(wrap, btn, ok);
@@ -924,23 +1053,59 @@
     const banks = {
       nursery: [
         { show: ["☕", "☕", "🍌", "☕"], qEn: "Which one does not belong? Why?", qHi: "कौन सा मेल नहीं खाता? क्यों?", options: [{ value: "banana", label: "banana", emoji: "🍌" }, { value: "cup", label: "cup", emoji: "☕" }], answer: "banana", speakEn: "Cups, cups, banana, cups. Which one does not belong?", speakHi: "कप, कप, केला, कप। कौन सा मेल नहीं खाता?" },
-        { show: ["🐱", "🎩", "🥭", "🦇"], qEn: "Which word does not rhyme: cat, hat, mango, bat?", qHi: "कौन सा शब्द तुक नहीं मिलाता: cat, hat, mango, bat?", options: [{ value: "mango", label: "mango", emoji: "🥭" }, { value: "cat", label: "cat", emoji: "🐱" }, { value: "hat", label: "hat", emoji: "🎩" }], answer: "mango", speakEn: "Cat, hat, mango, bat. Which word does not rhyme?", speakHi: "कैट, हैट, मैंगो, बैट। कौन सा तुक नहीं मिलाता?" }
+        { show: ["🐱", "🎩", "🥭", "🦇"], qEn: "Which word does not rhyme: cat, hat, mango, bat?", qHi: "कौन सा शब्द तुक नहीं मिलाता: cat, hat, mango, bat?", options: [{ value: "mango", label: "mango", emoji: "🥭" }, { value: "cat", label: "cat", emoji: "🐱" }, { value: "hat", label: "hat", emoji: "🎩" }], answer: "mango", speakEn: "Cat, hat, mango, bat. Which word does not rhyme?", speakHi: "कैट, हैट, मैंगो, बैट। कौन सा तुक नहीं मिलाता?" },
+        { show: ["🐶", "🐶", "🐱", "🐶"], qEn: "Which one does not belong?", qHi: "कौन सा मेल नहीं खाता?", options: [{ value: "cat", label: "cat", emoji: "🐱" }, { value: "dog", label: "dog", emoji: "🐶" }], answer: "cat", speakEn: "Dogs and one cat. Which one does not belong?", speakHi: "कुत्ते और एक बिल्ली। कौन सा अलग है?" },
+        { pattern: ["⭐", "🌙", "⭐", "🌙", "?"], qEn: "What comes next?", qHi: "आगे क्या आएगा?", options: [{ value: "star", label: "star", emoji: "⭐" }, { value: "moon", label: "moon", emoji: "🌙" }, { value: "sun", label: "sun", emoji: "☀️" }], answer: "star", speakEn: "Star, moon, star, moon. What comes next?", speakHi: "तारा, चाँद, तारा, चाँद। आगे क्या?" },
+        { show: ["🍎", "🍌", "🚗", "🍇"], qEn: "Which one is not a fruit?", qHi: "कौन सा फल नहीं है?", options: [{ value: "car", label: "car", emoji: "🚗" }, { value: "apple", label: "apple", emoji: "🍎" }, { value: "banana", label: "banana", emoji: "🍌" }], answer: "car", speakEn: "Apple, banana, car, grapes. Which is not a fruit?", speakHi: "सेब, केला, गाड़ी, अंगूर। कौन सा फल नहीं है?" },
+        { show: ["👟", "👡", "🧢", "🥾"], qEn: "Which one is not a shoe?", qHi: "कौन सा जूता नहीं है?", options: [{ value: "cap", label: "cap", emoji: "🧢" }, { value: "shoe", label: "shoe", emoji: "👟" }], answer: "cap", speakEn: "Shoes and a cap. Which one is not a shoe?", speakHi: "जूते और एक टोपी। कौन सा जूता नहीं है?" },
+        { pattern: ["🔴", "🔴", "🔵", "🔴", "🔴", "?"], qEn: "What comes next?", qHi: "आगे क्या आएगा?", options: [{ value: "blue", label: "blue", emoji: "🔵" }, { value: "red", label: "red", emoji: "🔴" }], answer: "blue", speakEn: "Red, red, blue. What comes next?", speakHi: "लाल, लाल, नीला। आगे क्या?" },
+        { show: ["☀️", "🌙", "⭐", "✏️"], qEn: "Which one does not belong in the sky?", qHi: "कौन सा आसमान में नहीं है?", options: [{ value: "pencil", label: "pencil", emoji: "✏️" }, { value: "sun", label: "sun", emoji: "☀️" }], answer: "pencil", speakEn: "Sun, moon, star, pencil. Which does not belong in the sky?", speakHi: "सूरज, चाँद, तारा, पेंसिल। कौन सा आसमान में नहीं है?" },
+        { show: ["🐠", "🐟", "🐈", "🐡"], qEn: "Which one is not a fish?", qHi: "कौन सी मछली नहीं है?", options: [{ value: "cat", label: "cat", emoji: "🐈" }, { value: "fish", label: "fish", emoji: "🐠" }], answer: "cat", speakEn: "Fish and a cat. Which one is not a fish?", speakHi: "मछलियाँ और एक बिल्ली। कौन सी मछली नहीं है?" },
+        { pattern: ["👏", "👏", "🥁", "👏", "👏", "?"], qEn: "What comes next?", qHi: "आगे क्या आएगा?", options: [{ value: "drum", label: "drum", emoji: "🥁" }, { value: "clap", label: "clap", emoji: "👏" }], answer: "drum", speakEn: "Clap, clap, drum. What comes next?", speakHi: "ताली, ताली, ढोल। आगे क्या?" },
+        { show: ["🪑", "🛏️", "🥭", "🛋️"], qEn: "Which one is not furniture?", qHi: "कौन सा फर्नीचर नहीं है?", options: [{ value: "mango", label: "mango", emoji: "🥭" }, { value: "chair", label: "chair", emoji: "🪑" }], answer: "mango", speakEn: "Chair, bed, mango, sofa. Which is not furniture?", speakHi: "कुर्सी, बिस्तर, आम, सोफा। कौन सा फर्नीचर नहीं है?" }
       ],
       lkg: [
         { pattern: ["🔴", "🔵", "🔴", "🔵", "?"], qEn: "What comes next? Say the rule.", qHi: "आगे क्या आएगा? नियम बताओ।", options: [{ value: "red", label: "red", emoji: "🔴" }, { value: "blue", label: "blue", emoji: "🔵" }, { value: "green", label: "green", emoji: "🟢" }], answer: "red", speakEn: "Red, blue, red, blue. What comes next?", speakHi: "लाल, नीला, लाल, नीला। आगे क्या आएगा?" },
-        { pattern: ["▲", "▲", "●", "▲", "▲", "?"], qEn: "What comes next in this pattern?", qHi: "इस पैटर्न में आगे क्या आएगा?", options: [{ value: "circle", label: "circle", emoji: "●" }, { value: "triangle", label: "triangle", emoji: "▲" }], answer: "circle", speakEn: "Triangle, triangle, circle. What comes next?", speakHi: "त्रिभुज, त्रिभुज, वृत्त। आगे क्या?" }
+        { pattern: ["▲", "▲", "●", "▲", "▲", "?"], qEn: "What comes next in this pattern?", qHi: "इस पैटर्न में आगे क्या आएगा?", options: [{ value: "circle", label: "circle", emoji: "●" }, { value: "triangle", label: "triangle", emoji: "▲" }], answer: "circle", speakEn: "Triangle, triangle, circle. What comes next?", speakHi: "त्रिभुज, त्रिभुज, वृत्त। आगे क्या?" },
+        { pattern: ["1", "2", "3", "1", "2", "?"], qEn: "What comes next? Say the rule.", qHi: "आगे क्या आएगा? नियम बताओ।", options: ["3", "1", "4"], answer: "3", speakEn: "One, two, three, one, two. What comes next?", speakHi: "एक, दो, तीन, एक, दो। आगे क्या?" },
+        { show: ["🔺", "🔻", "🟩", "🔸"], qEn: "Which one is not a triangle?", qHi: "कौन सा त्रिभुज नहीं है?", options: [{ value: "square", label: "square", emoji: "🟩" }, { value: "triangle", label: "triangle", emoji: "🔺" }], answer: "square", speakEn: "Which shape is not a triangle?", speakHi: "कौन सी आकृति त्रिभुज नहीं है?" },
+        { pattern: ["☀️", "☀️", "🌧️", "☀️", "☀️", "?"], qEn: "What comes next?", qHi: "आगे क्या आएगा?", options: [{ value: "rain", label: "rain", emoji: "🌧️" }, { value: "sun", label: "sun", emoji: "☀️" }], answer: "rain", speakEn: "Sun, sun, rain. What comes next?", speakHi: "धूप, धूप, बारिश। आगे क्या?" },
+        { pattern: ["A", "B", "A", "B", "?"], qEn: "What comes next? State the rule.", qHi: "आगे क्या आएगा? नियम बताओ।", options: ["A", "B", "C"], answer: "A", speakEn: "A, B, A, B. What comes next?", speakHi: "A, B, A, B। आगे क्या?" },
+        { show: ["🟠", "🟠", "🟢", "🟠"], qEn: "Which one does not belong?", qHi: "कौन सा मेल नहीं खाता?", options: [{ value: "green", label: "green", emoji: "🟢" }, { value: "orange", label: "orange", emoji: "🟠" }], answer: "green", speakEn: "Orange circles and one green. Which does not belong?", speakHi: "नारंगी और एक हरा। कौन सा अलग है?" },
+        { pattern: ["👟", "🧦", "👟", "🧦", "?"], qEn: "What comes next?", qHi: "आगे क्या आएगा?", options: [{ value: "shoe", label: "shoe", emoji: "👟" }, { value: "sock", label: "sock", emoji: "🧦" }], answer: "shoe", speakEn: "Shoe, sock, shoe, sock. What comes next?", speakHi: "जूता, मोज़ा, जूता, मोज़ा। आगे क्या?" },
+        { show: ["1️⃣", "3️⃣", "🅰️", "5️⃣"], qEn: "Which one is not a number?", qHi: "कौन सी संख्या नहीं है?", options: [{ value: "letter", label: "letter", emoji: "🅰️" }, { value: "three", label: "three", emoji: "3️⃣" }], answer: "letter", speakEn: "Which one is not a number?", speakHi: "कौन सी संख्या नहीं है?" },
+        { pattern: ["2", "4", "2", "4", "?"], qEn: "What comes next?", qHi: "आगे क्या आएगा?", options: ["2", "4", "6"], answer: "2", speakEn: "Two, four, two, four. What comes next?", speakHi: "2, 4, 2, 4। आगे क्या?" },
+        { show: ["📏", "📐", "🍌", "✏️"], qEn: "Which one is not a school tool?", qHi: "कौन सा स्कूल का सामान नहीं है?", options: [{ value: "banana", label: "banana", emoji: "🍌" }, { value: "ruler", label: "ruler", emoji: "📏" }], answer: "banana", speakEn: "Which one is not a school tool?", speakHi: "कौन सा स्कूल का सामान नहीं है?" }
       ],
       ukg: [
         { show: ["⬜", "⬜", "🔺", "⬜"], qEn: "Which shape does not belong?", qHi: "कौन सी आकृति मेल नहीं खाती?", options: [{ value: "triangle", label: "triangle", emoji: "🔺" }, { value: "square", label: "square", emoji: "⬜" }], answer: "triangle", speakEn: "Squares and one triangle. Which shape does not belong?", speakHi: "वर्ग और एक त्रिभुज। कौन सी आकृति अलग है?" },
-        { pattern: ["1", "2", "1", "2", "?"], qEn: "What comes next? State the rule.", qHi: "आगे क्या आएगा? नियम बताओ।", options: ["1", "2", "3"], answer: "1", speakEn: "One, two, one, two. What comes next?", speakHi: "एक, दो, एक, दो। आगे क्या?" }
+        { pattern: ["1", "2", "1", "2", "?"], qEn: "What comes next? State the rule.", qHi: "आगे क्या आएगा? नियम बताओ।", options: ["1", "2", "3"], answer: "1", speakEn: "One, two, one, two. What comes next?", speakHi: "एक, दो, एक, दो। आगे क्या?" },
+        { pattern: ["10", "9", "8", "?"], qEn: "What comes next? Count back.", qHi: "आगे क्या आएगा? पीछे गिनो।", options: ["7", "9", "11"], answer: "7", speakEn: "Ten, nine, eight. What comes next?", speakHi: "10, 9, 8। आगे क्या?" },
+        { show: ["🔵", "🔵", "🔺", "🔵"], qEn: "Which shape does not belong?", qHi: "कौन सी आकृति मेल नहीं खाती?", options: [{ value: "triangle", label: "triangle", emoji: "🔺" }, { value: "circle", label: "circle", emoji: "🔵" }], answer: "triangle", speakEn: "Circles and a triangle. Which does not belong?", speakHi: "वृत्त और एक त्रिभुज। कौन सी अलग है?" },
+        { pattern: ["Mon", "Tue", "Wed", "?"], qEn: "What day comes next?", qHi: "अगला दिन कौन सा है?", options: ["Thu", "Sun", "Fri"], answer: "Thu", speakEn: "Monday, Tuesday, Wednesday. What comes next?", speakHi: "सोम, मंगल, बुध। आगे क्या?" },
+        { show: ["🟧", "🟥", "🟦", "🎵"], qEn: "Which one is not a colour block?", qHi: "कौन सा रंग ब्लॉक नहीं है?", options: [{ value: "music", label: "music", emoji: "🎵" }, { value: "blue", label: "blue", emoji: "🟦" }], answer: "music", speakEn: "Which one is not a colour block?", speakHi: "कौन सा रंग ब्लॉक नहीं है?" },
+        { pattern: ["2", "4", "6", "8", "?"], qEn: "What comes next? Say the rule.", qHi: "आगे क्या आएगा? नियम बताओ।", options: ["9", "10", "12"], answer: "10", speakEn: "Two, four, six, eight. The rule is add 2. What comes next?", speakHi: "2, 4, 6, 8। नियम है 2 जोड़ना। आगे क्या?" },
+        { show: ["🧊", "❄️", "🔥", "🌨️"], qEn: "Which one is not cold?", qHi: "कौन सा ठंडा नहीं है?", options: [{ value: "fire", label: "fire", emoji: "🔥" }, { value: "ice", label: "ice", emoji: "🧊" }], answer: "fire", speakEn: "Ice, snow, fire, snowflake. Which is not cold?", speakHi: "बर्फ, आग। कौन सा ठंडा नहीं है?" },
+        { pattern: ["A", "A", "B", "A", "A", "?"], qEn: "What comes next?", qHi: "आगे क्या आएगा?", options: ["B", "A", "C"], answer: "B", speakEn: "A, A, B. What comes next?", speakHi: "A, A, B। आगे क्या?" },
+        { show: ["🕒", "🕔", "🍎", "🕘"], qEn: "Which one is not a clock?", qHi: "कौन सी घड़ी नहीं है?", options: [{ value: "apple", label: "apple", emoji: "🍎" }, { value: "clock", label: "clock", emoji: "🕒" }], answer: "apple", speakEn: "Which one is not a clock?", speakHi: "कौन सी घड़ी नहीं है?" },
+        { pattern: ["5", "10", "15", "?"], qEn: "What comes next? Count in fives.", qHi: "आगे क्या आएगा? पाँच-पाँच गिनो।", options: ["20", "16", "25"], answer: "20", speakEn: "Five, ten, fifteen. What comes next?", speakHi: "5, 10, 15। आगे क्या?" }
       ],
       class1: [
         { pattern: ["2", "4", "6", "?"], qEn: "What comes next? Say the rule.", qHi: "आगे क्या आएगा? नियम बताओ।", options: ["7", "8", "10"], answer: "8", speakEn: "Two, four, six. What comes next? The rule is add 2.", speakHi: "2, 4, 6। आगे क्या? नियम है 2 जोड़ना।" },
-        { show: ["47", "50", "74"], qEn: "Which is closer to 50: 47 or 74? Why?", qHi: "50 के पास कौन है: 47 या 74? क्यों?", options: ["47", "74", "40"], answer: "47", speakEn: "Which is closer to 50, 47 or 74?", speakHi: "50 के पास कौन है, 47 या 74?" }
+        { show: ["47", "50", "74"], qEn: "Which is closer to 50: 47 or 74? Why?", qHi: "50 के पास कौन है: 47 या 74? क्यों?", options: ["47", "74", "40"], answer: "47", speakEn: "Which is closer to 50, 47 or 74?", speakHi: "50 के पास कौन है, 47 या 74?" },
+        { pattern: ["5", "10", "15", "20", "?"], qEn: "What comes next?", qHi: "आगे क्या आएगा?", options: ["25", "21", "30"], answer: "25", speakEn: "Five, ten, fifteen, twenty. What comes next?", speakHi: "5, 10, 15, 20। आगे क्या?" },
+        { show: ["12", "21", "20"], qEn: "Which is closer to 20: 12 or 21?", qHi: "20 के पास कौन है: 12 या 21?", options: ["21", "12", "2"], answer: "21", speakEn: "Which is closer to 20, 12 or 21?", speakHi: "20 के पास कौन है, 12 या 21?" },
+        { pattern: ["10", "20", "30", "?"], qEn: "What comes next? Count in tens.", qHi: "आगे क्या आएगा? दस-दस गिनो।", options: ["40", "31", "50"], answer: "40", speakEn: "Ten, twenty, thirty. What comes next?", speakHi: "10, 20, 30। आगे क्या?" },
+        { show: ["99", "90", "9"], qEn: "Which is closer to 100: 99 or 90?", qHi: "100 के पास कौन है: 99 या 90?", options: ["99", "90", "9"], answer: "99", speakEn: "Which is closer to 100, 99 or 90?", speakHi: "100 के पास कौन है, 99 या 90?" },
+        { pattern: ["1", "3", "5", "7", "?"], qEn: "What comes next? Odd numbers.", qHi: "आगे क्या आएगा? विषम संख्याएँ।", options: ["9", "8", "11"], answer: "9", speakEn: "One, three, five, seven. What comes next?", speakHi: "1, 3, 5, 7। आगे क्या?" },
+        { show: ["36", "63", "30"], qEn: "Which is closer to 40: 36 or 63?", qHi: "40 के पास कौन है: 36 या 63?", options: ["36", "63", "3"], answer: "36", speakEn: "Which is closer to 40, 36 or 63?", speakHi: "40 के पास कौन है, 36 या 63?" },
+        { pattern: ["100", "90", "80", "?"], qEn: "What comes next? Count back in tens.", qHi: "आगे क्या आएगा? दस पीछे गिनो।", options: ["70", "79", "60"], answer: "70", speakEn: "One hundred, ninety, eighty. What comes next?", speakHi: "100, 90, 80। आगे क्या?" },
+        { show: ["25", "52", "20"], qEn: "Which is closer to 30: 25 or 52?", qHi: "30 के पास कौन है: 25 या 52?", options: ["25", "52", "2"], answer: "25", speakEn: "Which is closer to 30, 25 or 52?", speakHi: "30 के पास कौन है, 25 या 52?" },
+        { pattern: ["3", "6", "9", "12", "?"], qEn: "What comes next? Count in threes.", qHi: "आगे क्या आएगा? तीन-तीन गिनो।", options: ["15", "13", "18"], answer: "15", speakEn: "Three, six, nine, twelve. What comes next?", speakHi: "3, 6, 9, 12। आगे क्या?" }
       ]
     };
     const bank = banks[state.age] || banks.nursery;
-    const item = bank[state.logicIndex % bank.length];
+    const item = bank[li % bank.length];
     state.currentAnswer = item.answer;
     state.currentSpeak = txt(item.speakEn, item.speakHi);
     if (intro) intro.textContent = txt(item.qEn, item.qHi);
@@ -1252,7 +1417,7 @@
 
   function bind() {
     $("#back-btn").addEventListener("click", () => {
-      const map = { parent: "splash", home: "parent", english: "home", maths: "home", logic: "home", slate: "home", talk: "home", report: "home", rupees: "home" };
+      const map = { parent: "splash", home: "parent", english: "home", maths: "home", logic: "home", slate: "home", talk: "home", report: "home", rupees: "home", reels: "home", rewards: "home", limit: "home", gate: "home", tired: "home" };
       showScreen(map[state.screen] || "home");
     });
     $("#lang-btn").addEventListener("click", () => { state.lang = state.lang === "en" ? "hi" : "en"; applyI18n(); });
@@ -1270,6 +1435,9 @@
     $("#card-talk").addEventListener("click", () => showScreen("talk"));
     $("#card-rupees").addEventListener("click", () => { newRupeeRound(); showScreen("rupees"); });
     $("#card-report").addEventListener("click", () => showScreen("report"));
+    if ($("#card-reels")) $("#card-reels").addEventListener("click", () => { if (window.ChotuFun) window.ChotuFun.openReels(); else showScreen("reels"); });
+    if ($("#card-rewards")) $("#card-rewards").addEventListener("click", () => { if (window.ChotuFun) window.ChotuFun.openRewards(); else showScreen("rewards"); });
+    if ($("#card-limit")) $("#card-limit").addEventListener("click", () => { if (window.ChotuFun) window.ChotuFun.openLimitGate(); else showScreen("gate"); });
     $("#btn-english-hear").addEventListener("click", () => speakRaw(state.currentSpeak));
     $("#btn-english-next").addEventListener("click", nextEnglish);
     $("#btn-english-home").addEventListener("click", () => showScreen("home"));
@@ -1302,7 +1470,26 @@
     bind();
     applyI18n();
     showScreen("splash");
+    if (window.ChotuFun && window.ChotuFun.boot) window.ChotuFun.boot();
   }
+
+  window.Chotu = {
+    state: state,
+    t: t,
+    txt: txt,
+    speakRaw: speakRaw,
+    addStars: addStars,
+    showScreen: showScreen,
+    $: $,
+    $$: $$,
+    shuffle: shuffle,
+    toast: toast,
+    praise: praise,
+    retry: retry,
+    applyI18n: applyI18n,
+    optionButtons: optionButtons,
+    markAnswer: markAnswer
+  };
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();

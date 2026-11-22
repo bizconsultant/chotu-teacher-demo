@@ -70,6 +70,10 @@
         </section>
 
         <section class="screen" id="screen-home">
+          <div class="home-meta">
+            <span class="streak-pill" id="streak-pill">🔥 1</span>
+            <span class="episode-badge hidden" id="episode-badge" data-i18n="newEpisode">New episode today</span>
+          </div>
           <img class="chotu small" src="assets/chotu.png" alt="Chotu" />
           <p class="hint" id="plan-banner"></p>
           <p class="sub" data-i18n="pickAge">Pick a level</p>
@@ -80,6 +84,12 @@
             <button type="button" class="age-chip" data-age="class1"><span data-i18n="class1">Class 1</span><small data-i18n="class1Age">Age 6</small></button>
           </div>
           <p class="level-blurb" id="level-blurb"></p>
+          <button type="button" class="lesson-card reels-hero" id="card-reels">
+            <span class="tag tag-new hidden" id="reels-new-tag" data-i18n="newTag">New</span>
+            <span class="emoji">🎬</span>
+            <span data-i18n="reels">Chotu Reels</span>
+            <small class="card-sub" data-i18n="reelsSub">Swipe to learn — songs, stories and quick games</small>
+          </button>
           <div class="card-grid">
             <button type="button" class="lesson-card" id="card-english"><span class="emoji">🔤</span><span data-i18n="english">English</span><small class="card-sub" id="english-card-sub"></small></button>
             <button type="button" class="lesson-card" id="card-maths"><span class="emoji">🔢</span><span data-i18n="maths">Maths</span><small class="card-sub" id="maths-card-sub"></small></button>
@@ -87,6 +97,8 @@
             <button type="button" class="lesson-card" id="card-slate"><span class="emoji">✏️</span><span data-i18n="slate">Slate</span></button>
             <button type="button" class="lesson-card" id="card-talk"><span class="tag" data-i18n="premiumTag">Premium</span><span class="emoji">🎙️</span><span data-i18n="talk">Talk to Chotu</span></button>
             <button type="button" class="lesson-card" id="card-rupees"><span class="tag" data-i18n="premiumTag">Premium</span><span class="emoji">🪙</span><span data-i18n="rupees">Rupee coins</span></button>
+            <button type="button" class="lesson-card" id="card-rewards"><span class="emoji">🎀</span><span data-i18n="rewards">Stickers &amp; outfits</span></button>
+            <button type="button" class="lesson-card" id="card-limit"><span class="emoji">⏰</span><span data-i18n="timeLimit">Screen time</span></button>
             <button type="button" class="lesson-card wide" id="card-report"><span class="tag" data-i18n="premiumTag">Premium</span><span class="emoji">📝</span><span data-i18n="report">Parent report</span></button>
           </div>
           <h2 class="section-label" data-i18n="courseUnits">This year's units</h2>
@@ -94,6 +106,7 @@
         </section>
 
         <section class="screen" id="screen-english">
+          <div class="progress-wrap"><div class="progress-track"><div class="progress-bar" id="english-progress"></div></div><span class="progress-label" id="english-progress-label">1 / 10</span></div>
           <p class="sub" id="english-intro"></p>
           <div id="english-stage"></div>
           <div class="feedback" id="english-feedback"></div>
@@ -103,6 +116,7 @@
         </section>
 
         <section class="screen" id="screen-maths">
+          <div class="progress-wrap"><div class="progress-track"><div class="progress-bar" id="maths-progress"></div></div><span class="progress-label" id="maths-progress-label">1 / 10</span></div>
           <p class="sub" id="maths-intro"></p>
           <div id="maths-stage"></div>
           <div class="feedback" id="maths-feedback"></div>
@@ -112,6 +126,7 @@
         </section>
 
         <section class="screen" id="screen-logic">
+          <div class="progress-wrap"><div class="progress-track"><div class="progress-bar" id="logic-progress"></div></div><span class="progress-label" id="logic-progress-label">1 / 10</span></div>
           <p class="sub" id="logic-intro"></p>
           <div id="logic-stage"></div>
           <div class="feedback" id="logic-feedback"></div>
@@ -167,10 +182,53 @@
           <div class="feedback" id="rupee-feedback"></div>
           <button type="button" class="btn btn-sky" id="btn-rupee-next" data-i18n="rupeeNext">Next coins</button>
         </section>
+        <section class="screen reels-screen" id="screen-reels">
+          <div class="reels-viewport" id="reels-viewport"></div>
+          <div class="reels-side">
+            <button type="button" class="reel-nav" id="reel-prev" aria-label="Previous reel">↑</button>
+            <button type="button" class="reel-like" id="reel-like" aria-label="Star this reel">⭐</button>
+            <span class="reel-like-count" id="reel-like-count">0</span>
+            <button type="button" class="reel-nav" id="reel-next" aria-label="Next reel">↓</button>
+          </div>
+          <p class="reel-index" id="reel-index">1 / 8</p>
+        </section>
+
+        <section class="screen" id="screen-rewards">
+          <img class="chotu small" src="assets/chotu.png" alt="Chotu" id="rewards-chotu" />
+          <p class="sub" data-i18n="rewardsIntro">Spend stars on outfits, and collect stickers as you learn.</p>
+          <p class="hint" id="rewards-stars"></p>
+          <h2 class="section-label" data-i18n="outfits">Chotu's outfits</h2>
+          <div class="outfit-grid" id="outfit-grid"></div>
+          <h2 class="section-label" data-i18n="stickers">Sticker book</h2>
+          <div class="sticker-grid" id="sticker-grid"></div>
+        </section>
+
+        <section class="screen" id="screen-limit">
+          <p class="sub" data-i18n="limitIntro">Choose how long Chotu can play today. A parent must answer a quick question to change this.</p>
+          <div class="limit-options" id="limit-options"></div>
+          <p class="hint" id="limit-current"></p>
+        </section>
+
+        <section class="screen" id="screen-gate">
+          <p class="badge" data-i18n="parentGate">For parents</p>
+          <p class="sub" id="gate-question">What is 8 + 7?</p>
+          <div class="choice-row" id="gate-options"></div>
+          <div class="feedback" id="gate-feedback"></div>
+        </section>
+
+        <section class="screen" id="screen-tired">
+          <img class="chotu small" src="assets/chotu.png" alt="Chotu" />
+          <h1 class="h1" data-i18n="tiredTitle">Chotu is tired</h1>
+          <p class="sub" data-i18n="tiredLine">That was a great learning day. See you tomorrow!</p>
+          <p class="hint" data-i18n="tiredHint">A parent can change the time limit.</p>
+          <button type="button" class="btn btn-sun" id="btn-tired-home" data-i18n="seeYou">See you tomorrow</button>
+          <button type="button" class="btn btn-white" id="btn-tired-parent" data-i18n="parentChange">I'm a parent — change time</button>
+        </section>
       </div>
       <div class="toast" id="toast" role="status"></div>
     </div>
   </div>
   <script src="js/app.js"></script>
+  <script src="js/fun.js"></script>
 </body>
 </html>
