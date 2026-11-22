@@ -114,6 +114,13 @@
       reels: "Chotu Reels",
       reelsSub: "Swipe to learn — songs, stories and quick games",
       reelsTitle: "Chotu Reels",
+      courseMap: "Full course map",
+      courseMapSub: "All 10 English and 10 Maths units for this year",
+      mapLegend: "Finish a unit's star check to unlock the next one. Thinking and Logic is woven into the units marked with a puzzle piece.",
+      unlockPremium: "Unlock Premium for this demo",
+      unlockPremiumHint: "No payment. Lets you try Talk to Chotu, Hindi, the coached slate and parent reports.",
+      mapTitle: "Course map",
+      unitTitle: "Unit",
       newEpisode: "New episode today",
       newTag: "New",
       rewards: "Stickers & outfits",
@@ -252,6 +259,13 @@
       reels: "छोटू रील्स",
       reelsSub: "स्वाइप करो — गीत, कहानियाँ और तेज़ खेल",
       reelsTitle: "छोटू रील्स",
+      courseMap: "पूरा कोर्स मानचित्र",
+      courseMapSub: "इस वर्ष की 10 अंग्रेज़ी और 10 गणित इकाई",
+      mapLegend: "स्टार जाँच पूरी करो, तब अगली इकाई खुलेगी। पहेली चिह्न वाली इकाई में तर्क भी है।",
+      unlockPremium: "इस डेमो में प्रीमियम खोलो",
+      unlockPremiumHint: "कोई भुगतान नहीं। छोटू से बातें, हिन्दी, कोच स्लेट और रिपोर्ट आज़मा सकते हो।",
+      mapTitle: "कोर्स मानचित्र",
+      unitTitle: "इकाई",
       newEpisode: "आज का नया एपिसोड",
       newTag: "नया",
       rewards: "स्टिकर और पोशाक",
@@ -517,6 +531,7 @@
     if (state.screen === "maths") renderMaths(false);
     if (state.screen === "logic") renderLogic(false);
     if (window.ChotuFun && window.ChotuFun.onI18n) window.ChotuFun.onI18n();
+    if (window.ChotuCourse && window.ChotuCourse.onI18n) window.ChotuCourse.onI18n();
   }
 
   function screenTitleKey(id) {
@@ -524,7 +539,8 @@
       splash: "appName", parent: "parentTitle", home: "homeTitle",
       english: "englishTitle", maths: "mathsTitle", logic: "logicTitle",
       slate: "slateTitle", talk: "talkTitle", report: "reportTitle", rupees: "rupeeTitle",
-      reels: "reelsTitle", rewards: "rewards", limit: "timeLimit", gate: "parentGate", tired: "tiredTitle"
+      reels: "reelsTitle", rewards: "rewards", limit: "timeLimit", gate: "parentGate", tired: "tiredTitle",
+      map: "mapTitle", unit: "unitTitle"
     };
     return titles[id] || "appName";
   }
@@ -546,6 +562,7 @@
     const phone = $("#phone");
     if (phone) phone.classList.toggle("reels-on", id === "reels");
     if (window.ChotuFun && window.ChotuFun.onScreen) window.ChotuFun.onScreen(id);
+    if (window.ChotuCourse && window.ChotuCourse.onScreen) window.ChotuCourse.onScreen(id);
   }
 
   function pickVoice(langCode) {
@@ -1417,7 +1434,7 @@
 
   function bind() {
     $("#back-btn").addEventListener("click", () => {
-      const map = { parent: "splash", home: "parent", english: "home", maths: "home", logic: "home", slate: "home", talk: "home", report: "home", rupees: "home", reels: "home", rewards: "home", limit: "home", gate: "home", tired: "home" };
+      const map = { parent: "splash", home: "parent", english: "home", maths: "home", logic: "home", slate: "home", talk: "home", report: "home", rupees: "home", reels: "home", rewards: "home", limit: "home", gate: "home", tired: "home", map: "home", unit: "map" };
       showScreen(map[state.screen] || "home");
     });
     $("#lang-btn").addEventListener("click", () => { state.lang = state.lang === "en" ? "hi" : "en"; applyI18n(); });
@@ -1428,9 +1445,9 @@
     $("#btn-premium").addEventListener("click", () => setPlan("premium"));
     $("#btn-family").addEventListener("click", () => setPlan("family"));
     $$(".age-chip").forEach((b) => b.addEventListener("click", () => setAge(b.getAttribute("data-age"))));
-    $("#card-english").addEventListener("click", startEnglish);
-    $("#card-maths").addEventListener("click", startMaths);
-    $("#card-logic").addEventListener("click", startLogic);
+    $("#card-english").addEventListener("click", () => { if (window.ChotuCourse) window.ChotuCourse.openMap(); else startEnglish(); });
+    $("#card-maths").addEventListener("click", () => { if (window.ChotuCourse) window.ChotuCourse.openMap(); else startMaths(); });
+    $("#card-logic").addEventListener("click", () => { if (window.ChotuCourse) window.ChotuCourse.openMap(); else startLogic(); });
     $("#card-slate").addEventListener("click", () => { state.slateIndex = 0; showScreen("slate"); setTimeout(resizeSlate, 40); });
     $("#card-talk").addEventListener("click", () => showScreen("talk"));
     $("#card-rupees").addEventListener("click", () => { newRupeeRound(); showScreen("rupees"); });
@@ -1471,6 +1488,8 @@
     applyI18n();
     showScreen("splash");
     if (window.ChotuFun && window.ChotuFun.boot) window.ChotuFun.boot();
+    if (window.ChotuCourse && window.ChotuCourse.boot) window.ChotuCourse.boot();
+    if (window.ChotuReels && window.ChotuReels.boot) window.ChotuReels.boot();
   }
 
   window.Chotu = {

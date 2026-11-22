@@ -130,6 +130,7 @@
   }
 
   function openReels() {
+    if (window.ChotuReels && window.ChotuReels.open) { window.ChotuReels.open(); return; }
     if (isTired()) { C().showScreen("tired"); return; }
     reelIndex = 0;
     if (!save.watchedEpisode) {

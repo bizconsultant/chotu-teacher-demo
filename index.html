@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/course.css" />
   <link rel="icon" href="assets/chotu.png" />
 </head>
 <body>
@@ -66,6 +67,11 @@
             </div>
             <button type="button" class="btn btn-white" id="btn-family" data-i18n="chooseFamily">Choose Family Premium</button>
             <p class="demo-note" data-i18n="demoOnly">Demo only — no payment is collected.</p>
+            <label class="demo-toggle">
+              <input type="checkbox" id="toggle-premium" />
+              <span><span data-i18n="unlockPremium">Unlock Premium for this demo</span>
+              <small data-i18n="unlockPremiumHint">No payment. Lets you try Talk to Chotu, Hindi, the coached slate and parent reports.</small></span>
+            </label>
           </div>
         </section>
 
@@ -90,7 +96,9 @@
             <span data-i18n="reels">Chotu Reels</span>
             <small class="card-sub" data-i18n="reelsSub">Swipe to learn — songs, stories and quick games</small>
           </button>
+          <p class="home-course-progress" id="home-course-progress"></p>
           <div class="card-grid">
+            <button type="button" class="lesson-card wide" id="card-map"><span class="emoji">🗺️</span><span data-i18n="courseMap">Full course map</span><small class="card-sub" data-i18n="courseMapSub">All 10 English and 10 Maths units for this year</small></button>
             <button type="button" class="lesson-card" id="card-english"><span class="emoji">🔤</span><span data-i18n="english">English</span><small class="card-sub" id="english-card-sub"></small></button>
             <button type="button" class="lesson-card" id="card-maths"><span class="emoji">🔢</span><span data-i18n="maths">Maths</span><small class="card-sub" id="maths-card-sub"></small></button>
             <button type="button" class="lesson-card" id="card-logic"><span class="tag tag-basic" data-i18n="basicTag">Basic</span><span class="emoji">🧩</span><span data-i18n="logic">Thinking &amp; Logic</span></button>
@@ -216,6 +224,21 @@
           <div class="feedback" id="gate-feedback"></div>
         </section>
 
+        <section class="screen" id="screen-map">
+          <p class="hint" id="map-progress"></p>
+          <p class="map-legend" data-i18n="mapLegend">Finish a unit's star check to unlock the next one. Thinking &amp; Logic is woven into the units marked 🧩.</p>
+          <div id="map-root"></div>
+        </section>
+
+        <section class="screen" id="screen-unit">
+          <div class="unit-steps" id="unit-steps"></div>
+          <div class="progress-wrap"><div class="progress-track"><div class="progress-bar" id="unit-progress"></div></div><span class="progress-label" id="unit-progress-label"></span></div>
+          <div id="unit-stage"></div>
+          <div class="feedback" id="unit-feedback"></div>
+          <button type="button" class="btn btn-sun" id="btn-unit-next" data-i18n="nextQ">Next</button>
+          <button type="button" class="btn btn-white hidden" id="btn-unit-home" data-i18n="doneLesson">All done! Home</button>
+        </section>
+
         <section class="screen" id="screen-tired">
           <img class="chotu small" src="assets/chotu.png" alt="Chotu" />
           <h1 class="h1" data-i18n="tiredTitle">Chotu is tired</h1>
@@ -228,6 +251,10 @@
       <div class="toast" id="toast" role="status"></div>
     </div>
   </div>
+  <script src="js/sfx.js"></script>
+  <script src="js/course-data.js"></script>
+  <script src="js/course.js"></script>
+  <script src="js/reels.js"></script>
   <script src="js/app.js"></script>
   <script src="js/fun.js"></script>
 </body>
