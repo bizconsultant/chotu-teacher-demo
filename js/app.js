@@ -652,6 +652,7 @@
     state.slateIndex = 0;
     $$(".age-chip").forEach((b) => b.classList.toggle("active", b.getAttribute("data-age") === age));
     renderHome();
+    if (window.ChotuCourse && window.ChotuCourse.updateHomeProgress) window.ChotuCourse.updateHomeProgress();
   }
 
   function renderHome() {

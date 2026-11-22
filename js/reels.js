@@ -71,7 +71,7 @@
       }
     ],
     lkg: [
-      { id: "lr1", unitId: "lkg-eng-4", scene: "school",
+      { id: "lr1", unitId: "lkg-eng-1", scene: "school",
         titleEn: "Blend c-a-t", titleHi: "c-a-t जोड़ो",
         lines: [
           { pose: "point", anim: "bob", capEn: "C… a… t… Cat!", capHi: "C… a… t… कैट!", speakEn: "C, a, t. Blend it. Cat!", speakHi: "C, a, t। जोड़ो। कैट!" },
