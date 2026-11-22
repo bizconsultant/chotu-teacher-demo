@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#4EC3F7" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <title>Chotu Teacher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/chotu.png" />
+</head>
+<body>
+  <div id="app">
+    <div id="phone">
+      <header class="topbar">
+        <button type="button" class="back-btn hidden" id="back-btn" aria-label="Back">←</button>
+        <div class="title" id="top-title">Chotu Teacher</div>
+        <div class="star-pill" title="Stars"><span aria-hidden="true">⭐</span><span id="star-count">0</span></div>
+        <button type="button" class="lang-btn" id="lang-btn">हिन्दी</button>
+      </header>
+
+      <div class="screens">
+        <section class="screen active" id="screen-splash">
+          <img class="chotu" src="assets/chotu.png" alt="Chotu, a smiling boy holding a slate" />
+          <h1 class="h1" data-i18n="splashHello">Hi! I am Chotu Teacher.</h1>
+          <p class="sub" data-i18n="splashLine">Let's learn English and Maths together — with lots of fun!</p>
+          <button type="button" class="btn btn-sun" id="btn-greet" data-i18n="greet">Hi Chotu!</button>
+          <button type="button" class="btn btn-primary" id="btn-start" data-i18n="start">Let's go!</button>
+        </section>
+
+        <section class="screen" id="screen-parent">
+          <p class="badge" data-i18n="trialBadge">3-day free trial</p>
+          <p class="sub" data-i18n="parentIntro">Try free for 3 days, then choose a plan. This demo does not take payment.</p>
+
+          <div class="plan-card" id="plan-basic-card">
+            <h3 data-i18n="basicName">Basic</h3>
+            <div class="price">₹499 <span data-i18n="perMonth">/ month</span></div>
+            <ul data-i18n-list="basicList"></ul>
+          </div>
+
+          <div class="plan-card" id="plan-premium-card">
+            <h3 data-i18n="premiumName">Premium</h3>
+            <div class="price">₹999 <span data-i18n="perMonth">/ month</span></div>
+            <ul data-i18n-list="premiumList"></ul>
+          </div>
+
+          <div class="plan-actions">
+            <button type="button" class="btn btn-leaf" id="btn-trial" data-i18n="startTrial">Start 3-day trial</button>
+            <div class="row">
+              <button type="button" class="btn btn-sky" id="btn-basic" data-i18n="chooseBasic">Choose Basic</button>
+              <button type="button" class="btn btn-primary" id="btn-premium" data-i18n="choosePremium">Choose Premium</button>
+            </div>
+            <p class="demo-note" data-i18n="demoOnly">Demo only — no payment is collected.</p>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-home">
+          <img class="chotu small" src="assets/chotu.png" alt="Chotu" />
+          <p class="hint" id="plan-banner"></p>
+          <p class="sub" data-i18n="pickAge">Pick an age band</p>
+          <div class="age-row">
+            <button type="button" class="age-chip active" data-age="nursery"><span data-i18n="nursery">Nursery</span><small data-i18n="nurseryAge">3–4 years</small></button>
+            <button type="button" class="age-chip" data-age="lkg"><span data-i18n="lkg">LKG</span><small data-i18n="lkgAge">4–5 years</small></button>
+            <button type="button" class="age-chip" data-age="ukg"><span data-i18n="ukg">UKG</span><small data-i18n="ukgAge">5–6 years</small></button>
+          </div>
+          <div class="card-grid">
+            <button type="button" class="lesson-card" id="card-english"><span class="emoji">🔤</span><span data-i18n="english">English</span></button>
+            <button type="button" class="lesson-card" id="card-maths"><span class="emoji">🔢</span><span data-i18n="maths">Maths</span></button>
+            <button type="button" class="lesson-card wide" id="card-slate"><span class="emoji">✏️</span><span data-i18n="slate">Slate</span></button>
+            <button type="button" class="lesson-card" id="card-talk"><span class="tag" data-i18n="premiumTag">Premium</span><span class="emoji">🎙️</span><span data-i18n="talk">Talk to Chotu</span></button>
+            <button type="button" class="lesson-card" id="card-rupees"><span class="tag" data-i18n="premiumTag">Premium</span><span class="emoji">🪙</span><span data-i18n="rupees">Rupee coins</span></button>
+            <button type="button" class="lesson-card wide" id="card-report"><span class="tag" data-i18n="premiumTag">Premium</span><span class="emoji">📝</span><span data-i18n="report">Parent report</span></button>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-english">
+          <p class="sub" data-i18n="tapLetter">Tap a letter. Chotu will say it!</p>
+          <div class="letters letter-pad">
+            <button type="button" class="letter-btn active" data-letter="A">A</button>
+            <button type="button" class="letter-btn" data-letter="B">B</button>
+            <button type="button" class="letter-btn" data-letter="C">C</button>
+            <button type="button" class="letter-btn" data-letter="D">D</button>
+            <button type="button" class="letter-btn" data-letter="E">E</button>
+          </div>
+          <div class="phonic" id="phonic"><span class="big">A</span>A for Apple · A se Aam (mango)</div>
+          <button type="button" class="btn btn-primary" id="btn-english-quiz" data-i18n="startQuiz">Find the letter</button>
+        </section>
+
+        <section class="screen" id="screen-english-quiz">
+          <p class="sub" data-i18n="findLetter">Find this letter:</p>
+          <div class="phonic"><span class="big" id="quiz-letter">A</span></div>
+          <div class="quiz-options" id="quiz-options"></div>
+          <div class="feedback" id="english-feedback"></div>
+          <button type="button" class="btn btn-sky" id="btn-english-next" data-i18n="nextQ">Next</button>
+          <button type="button" class="btn btn-white" id="btn-english-home" data-i18n="doneLesson">All done! Home</button>
+        </section>
+
+        <section class="screen" id="screen-maths">
+          <p class="sub" data-i18n="countIntro">Count the mangoes and laddoos.</p>
+          <div class="objects" id="maths-objects"></div>
+          <p class="feedback" id="maths-label"></p>
+          <button type="button" class="btn btn-sun" id="btn-maths-count" data-i18n="hearCount">Hear Chotu count</button>
+          <button type="button" class="btn btn-primary" id="btn-maths-quiz" data-i18n="startMathsQuiz">How many?</button>
+        </section>
+
+        <section class="screen" id="screen-maths-quiz">
+          <p class="sub" data-i18n="howMany">How many?</p>
+          <div class="objects" id="maths-quiz-objects"></div>
+          <div class="quiz-options nums" id="maths-options"></div>
+          <div class="feedback" id="maths-feedback"></div>
+          <button type="button" class="btn btn-sky" id="btn-maths-next" data-i18n="nextQ">Next</button>
+          <button type="button" class="btn btn-white" id="btn-maths-home" data-i18n="doneLesson">All done! Home</button>
+        </section>
+
+        <section class="screen" id="screen-slate">
+          <p class="sub" data-i18n="slateHint">Trace the letter or number with your finger.</p>
+          <p class="phonic" style="min-height:auto;margin-bottom:10px"><span class="big" id="slate-glyph">A</span></p>
+          <div class="slate-wrap">
+            <canvas id="slate" width="360" height="280" aria-label="Tracing slate"></canvas>
+          </div>
+          <div class="slate-tools">
+            <button type="button" class="btn btn-white" id="btn-slate-clear" data-i18n="clear">Clear</button>
+            <button type="button" class="btn btn-sky" id="btn-slate-next" data-i18n="nextGlyph">Next</button>
+            <button type="button" class="btn btn-leaf" id="btn-slate-done" data-i18n="done">Done</button>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-talk">
+          <img class="chotu tiny" src="assets/chotu.png" alt="Chotu" />
+          <p class="sub" data-i18n="talkHint">Say a letter A to E, or a number 1 to 10.</p>
+          <p class="mic-status" id="talk-support"></p>
+          <p class="feedback" id="talk-heard"></p>
+          <button type="button" class="btn btn-mic" id="btn-mic" data-i18n="mic">Speak to Chotu</button>
+          <div class="fallback-pad" id="talk-fallback">
+            <p class="hint" data-i18n="fallbackTitle">Or tap here:</p>
+            <div id="talk-keys"></div>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-report">
+          <div class="report">
+            <span class="sample" data-i18n="sampleData">Sample data — not a real child</span>
+            <h3 data-i18n="reportTitle">Weekly parent report</h3>
+            <div class="stat"><span data-i18n="childName">Child</span><strong data-i18n="sampleChild">Aarav, LKG</strong></div>
+            <div class="stat"><span data-i18n="week">Week of 16 Nov 2026</span><span></span></div>
+            <div class="stat"><span data-i18n="englishProgress">English</span><strong data-i18n="engVal">Letters A–E, starting sounds</strong></div>
+            <div class="stat"><span data-i18n="mathsProgress">Maths</span><strong data-i18n="mathVal">Counting to 10, rupee play</strong></div>
+            <div class="stat"><span data-i18n="speaking">Speaking practice</span><strong data-i18n="speakVal">Said 12 words clearly</strong></div>
+            <div class="stat"><span data-i18n="hindiPath">Hindi akshar</span><strong data-i18n="hindiVal">Swar अ आ इ</strong></div>
+            <div class="stat"><span data-i18n="nextFocus">Next week</span><strong data-i18n="nextVal">Letter F, numbers 11–20</strong></div>
+          </div>
+          <img class="chotu small" src="assets/chotu.png" alt="Chotu" style="margin-top:16px" />
+        </section>
+
+        <section class="screen" id="screen-rupees">
+          <p class="sub" data-i18n="rupeeQ">How many rupees in all?</p>
+          <div class="objects coins" id="coin-row"></div>
+          <div class="quiz-options nums" id="rupee-options"></div>
+          <div class="feedback" id="rupee-feedback"></div>
+          <button type="button" class="btn btn-sky" id="btn-rupee-next" data-i18n="rupeeNext">Next coins</button>
+        </section>
+      </div>
+      <div class="toast" id="toast" role="status"></div>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
