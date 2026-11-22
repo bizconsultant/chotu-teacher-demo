@@ -115,6 +115,53 @@
         beat: { type: "choice", promptEn: "p-a-n is…", promptHi: "p-a-n है…",
           options: ["pan", "pin", "pen"], answer: "pan" }
       }
+    ],
+    ukg: [
+      { id: "ur1", unitId: "ukg-eng-1", scene: "school",
+        titleEn: "The sh and ch chant", titleHi: "sh और ch का गीत",
+        lines: [
+          { pose: "wave", anim: "wave", capEn: "Sh… is for ship. Ch… is for chin.", capHi: "Sh… जहाज़ के लिए। Ch… ठुड्डी के लिए।", speakEn: "Sh is one sound in ship. Ch is one sound in chin.", speakHi: "Sh, ship में एक ध्वनि है। Ch, chin में एक ध्वनि है।" },
+          { pose: "listen", anim: "listen", capEn: "Listen close. Ship or chip?", capHi: "ध्यान से सुनो। ship या chip?", speakEn: "I will say ship. Which word did you hear?", speakHi: "मैं ship कहूँगा। कौन सा शब्द सुना?" }
+        ],
+        beat: { type: "choice", promptEn: "Sh-i-p is…", promptHi: "Sh-i-p है…",
+          options: [{ value: "ship", label: "ship", emoji: "🚢" }, { value: "chip", label: "chip", emoji: "🍟" }, { value: "sip", label: "sip", emoji: "🥤" }], answer: "ship" }
+      },
+      { id: "ur2", unitId: "ukg-math-5", scene: "market",
+        titleEn: "Rupees and change", titleHi: "रुपये और वापसी",
+        lines: [
+          { pose: "wave", anim: "wave", capEn: "A bun is 7 rupees. You have 10 rupees.", capHi: "बन 7 रुपये का है। तुम्हारे पास 10 रुपये हैं।", speakEn: "A bun is seven rupees. You have ten rupees. Yes, it is enough.", speakHi: "बन सात रुपये का है। तुम्हारे पास दस रुपये हैं। हाँ, काफी है।" },
+          { pose: "point", anim: "bob", capEn: "What comes back as change?", capHi: "वापसी में क्या आएगा?", speakEn: "Ten take away seven. What is the change?", speakHi: "दस में से सात। वापसी कितनी?" }
+        ],
+        beat: { type: "choice", promptEn: "You pay ₹10 for a ₹7 bun. Change?", promptHi: "₹7 के बन पर ₹10 दिए। वापसी?",
+          options: ["₹3", "₹17", "₹7"], answer: "₹3" }
+      },
+      { id: "ur3", unitId: "ukg-eng-8", scene: "monsoon",
+        titleEn: "How might Mini feel?", titleHi: "मिनी कैसा महसूस कर सकती हैं?",
+        lines: [
+          { pose: "listen", anim: "listen", capEn: "Mini's paper boat sits in a puddle. She smiles and claps.", capHi: "मिनी की कागज़ की नाव गड्ढे में है। वे मुस्कराती और ताली बजाती हैं।", speakEn: "Mini smiles and claps at her paper boat in the puddle.", speakHi: "मिनी गड्ढे में अपनी कागज़ की नाव देखकर मुस्कराती और ताली बजाती हैं।" },
+          { pose: "wave", anim: "wave", capEn: "How might she feel, and why?", capHi: "वे कैसा महसूस कर सकती हैं, और क्यों?", speakEn: "Use a clue from the story.", speakHi: "कहानी के संकेत का उपयोग करो।" }
+        ],
+        beat: { type: "choice", promptEn: "Mini smiles and claps. How might she feel?", promptHi: "मिनी मुस्कराती और ताली बजाती हैं। कैसा लग सकता है?",
+          options: [{ value: "happy", label: "happy", emoji: "😊" }, { value: "cross", label: "cross", emoji: "😠" }, { value: "lost", label: "lost, with no clue", emoji: "🧭" }], answer: "happy" }
+      },
+      { id: "ur4", unitId: "ukg-math-8", scene: "school",
+        titleEn: "Why is it a cylinder?", titleHi: "यह बेलन क्यों है?",
+        lines: [
+          { pose: "point", anim: "bob", capEn: "A steel glass can roll on its side. That is a clue.", capHi: "स्टील का गिलास करवट पर लुढ़क सकता है। यह एक संकेत है।", speakEn: "We name a shape by its properties. A glass can roll, like a cylinder.", speakHi: "आकृति को गुणों से नाम देते हैं। गिलास लुढ़क सकता है, बेलन की तरह।" },
+          { pose: "wave", anim: "wave", capEn: "Which object is most like a cylinder?", capHi: "कौन सी वस्तु बेलन जैसी है?", speakEn: "Which object is most like a cylinder, and why?", speakHi: "कौन सी वस्तु बेलन जैसी है, और क्यों?" }
+        ],
+        beat: { type: "choice", promptEn: "Most like a cylinder?", promptHi: "बेलन जैसी सबसे ज्यादा?",
+          options: [{ value: "glass", label: "a steel glass", emoji: "🥛" }, { value: "ball", label: "a football", emoji: "⚽" }, { value: "book", label: "a book", emoji: "📘" }], answer: "glass" }
+      },
+      { id: "ur5", unitId: "ukg-eng-2", scene: "monsoon",
+        titleEn: "The rain vowel team", titleHi: "rain का स्वर युग्म",
+        lines: [
+          { pose: "wave", anim: "wave", capEn: "Ai is one sound. R… ai… n. Rain!", capHi: "Ai एक ध्वनि है। R… ai… n. Rain!", speakEn: "A I together say ay. Rain, like the monsoon rain.", speakHi: "A और I मिलकर ay कहते हैं। Rain, मानसून की बारिश जैसा।" },
+          { pose: "clap", anim: "clap", capEn: "Tap the word we built.", capHi: "बनाया शब्द टैप करो।", speakEn: "Which word did we blend?", speakHi: "कौन सा शब्द जोड़ा?" }
+        ],
+        beat: { type: "choice", promptEn: "r-ai-n is…", promptHi: "r-ai-n है…",
+          options: ["rain", "ran", "run"], answer: "rain" }
+      }
     ]
   };
 
