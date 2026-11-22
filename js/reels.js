@@ -162,6 +162,53 @@
         beat: { type: "choice", promptEn: "r-ai-n is…", promptHi: "r-ai-n है…",
           options: ["rain", "ran", "run"], answer: "rain" }
       }
+    ],
+    class1: [
+      { id: "cr1", unitId: "class1-eng-1", scene: "school",
+        titleEn: "Two little hands", titleHi: "दो छोटे हाथ",
+        lines: [
+          { pose: "clap", anim: "clap", capEn: "Two little hands can clap, snap and wave.", capHi: "दो छोटे हाथ ताली, चुटकी और हिला सकते हैं।", speakEn: "Two little hands can clap. Clap is an action word.", speakHi: "दो छोटे हाथ ताली बजा सकते हैं। Clap एक क्रिया शब्द है।" },
+          { pose: "wave", anim: "wave", capEn: "Which word is an action word?", capHi: "क्रिया शब्द कौन सा है?", speakEn: "Which word is an action word?", speakHi: "क्रिया शब्द कौन सा है?" }
+        ],
+        beat: { type: "choice", promptEn: "Which is an action word?", promptHi: "क्रिया शब्द कौन सा?",
+          options: [{ value: "clap", label: "clap", emoji: "👏" }, { value: "red", label: "red", emoji: "🔴" }, { value: "the", label: "the" }], answer: "clap" }
+      },
+      { id: "cr2", unitId: "class1-eng-4", scene: "school",
+        titleEn: "The cap-seller and the monkeys", titleHi: "टोपी वाला और बंदर",
+        lines: [
+          { pose: "listen", anim: "listen", capEn: "A cap-seller rests under a tree. Monkeys take the caps.", capHi: "टोपी वाला पेड़ के नीचे आराम करता है। बंदर टोपियाँ ले जाते हैं।", speakEn: "The cap-seller rests under a tree. Why might he rest?", speakHi: "टोपी वाला पेड़ के नीचे आराम करता है। वे आराम क्यों कर सकते हैं?" },
+          { pose: "point", anim: "bob", capEn: "He throws his cap down. What might the monkeys do?", capHi: "वह टोपी नीचे फेंकता है। बंदर क्या कर सकते हैं?", speakEn: "The monkeys like to copy. What might they do?", speakHi: "बंदर नकल करना पसंद करते हैं। वे क्या कर सकते हैं?" }
+        ],
+        beat: { type: "choice", promptEn: "When he throws his cap down, the monkeys…", promptHi: "जब वह टोपी नीचे फेंकता है, बंदर…",
+          options: [{ value: "copy", label: "copy him", emoji: "🐒" }, { value: "bake", label: "bake roti", emoji: "🫓" }, { value: "fly", label: "fly to space", emoji: "🚀" }], answer: "copy" }
+      },
+      { id: "cr3", unitId: "class1-math-4", scene: "home",
+        titleEn: "Tomatoes on the farm", titleHi: "खेत के टमाटर",
+        lines: [
+          { pose: "wave", anim: "wave", capEn: "12 tomatoes on the plant. We pick 5.", capHi: "पौधे पर 12 टमाटर। हम 5 तोड़ते हैं।", speakEn: "Twelve tomatoes, pick five. How many are left?", speakHi: "बारह टमाटर, पाँच तोड़े। कितने बचे?" },
+          { pose: "point", anim: "bob", capEn: "How did you know?", capHi: "कैसे पता चला?", speakEn: "I took away, because we picked some.", speakHi: "मैंने घटाया, क्योंकि कुछ तोड़े।" }
+        ],
+        beat: { type: "choice", promptEn: "12 tomatoes, pick 5. How many left?", promptHi: "12 टमाटर, 5 तोड़े। कितने बचे?",
+          options: ["7", "17", "5"], answer: "7" }
+      },
+      { id: "cr4", unitId: "class1-math-9", scene: "home",
+        titleEn: "Idlis in equal groups", titleHi: "बराबर समूहों में इडली",
+        lines: [
+          { pose: "wave", anim: "wave", capEn: "3 plates, 2 idlis on each plate.", capHi: "3 प्लेटें, हर प्लेट पर 2 इडली।", speakEn: "Three plates with two idlis each. That is two plus two plus two.", speakHi: "तीन प्लेटों में दो-दो इडली। यह दो और दो और दो है।" },
+          { pose: "clap", anim: "clap", capEn: "How many idlis in all?", capHi: "कुल कितनी इडली?", speakEn: "How many in all?", speakHi: "कुल कितनी?" }
+        ],
+        beat: { type: "choice", promptEn: "3 groups of 2 is…", promptHi: "2 के 3 समूह हैं…",
+          options: ["6", "5", "32"], answer: "6" }
+      },
+      { id: "cr5", unitId: "class1-eng-9", scene: "school",
+        titleEn: "Colours of the flag", titleHi: "झंडे के रंग",
+        lines: [
+          { pose: "wave", anim: "wave", capEn: "Saffron, white and green. The chakra is blue.", capHi: "केसरिया, सफेद और हरा। चक्र नीला है।", speakEn: "The Indian flag has saffron, white and green, with a blue chakra.", speakHi: "भारतीय झंडे में केसरिया, सफेद और हरा है, नीले चक्र के साथ।" },
+          { pose: "point", anim: "bob", capEn: "Which set names the flag colours?", capHi: "झंडे के रंग कौन सा समूह बताता है?", speakEn: "Which set names the Indian flag colours?", speakHi: "भारतीय झंडे के रंग कौन सा समूह बताता है?" }
+        ],
+        beat: { type: "choice", promptEn: "The Indian flag colours are…", promptHi: "भारतीय झंडे के रंग हैं…",
+          options: [{ value: "flag", label: "saffron, white and green", emoji: "🇮🇳" }, { value: "pink", label: "only pink and gold", emoji: "🌸" }, { value: "black", label: "only black", emoji: "⬛" }], answer: "flag" }
+      }
     ]
   };
 

@@ -19388,5 +19388,6210 @@ window.COURSE_UNITS = [
     "masteryNeed": 4,
     "masteryCount": 5,
     "logic": false
+  },
+  {
+    "id": "class1-eng-1",
+    "level": "class1",
+    "subject": "english",
+    "n": 1,
+    "titleEn": "Two Little Hands: action words and a sound revisit",
+    "titleHi": "दो छोटे हाथ: क्रिया शब्द और ध्वनि दोहराई",
+    "shortEn": "From Mridang: clap, snap, wave. Then revisit sh, ch and a short caption.",
+    "shortHi": "मृदंग से: ताली, चुटकी, हाथ हिलाओ। फिर sh, ch और एक छोटा वाक्य दोहराओ।",
+    "scene": "school",
+    "teach": {
+      "pose": "clap",
+      "anim": "clap",
+      "capEn": "Two little hands can clap, snap and wave. These are action words. We also keep our Phase 3 sounds strong.",
+      "capHi": "दो छोटे हाथ ताली, चुटकी और हिला सकते हैं। ये क्रिया शब्द हैं। चरण 3 की ध्वनियाँ भी पक्की रखते हैं।",
+      "speakEn": "This year follows the NCERT book Mridang. Action words tell us what we do. Clap, snap, wave. Then read: I can clap my hands.",
+      "speakHi": "यह वर्ष एनसीईआरटी की पुस्तक मृदंग का अनुसरण करता है। क्रिया शब्द बताते हैं हम क्या करते हैं। ताली, चुटकी, हाथ हिलाना। फिर पढ़ो: I can clap my hands."
+    },
+    "activities": [
+      {
+        "type": "match",
+        "titleEn": "Match the actions",
+        "titleHi": "क्रियाएँ मिलाओ",
+        "pairs": [
+          {
+            "key": "clap",
+            "leftEn": "clap",
+            "leftHi": "ताली",
+            "rightEn": "two hands meet",
+            "rightHi": "दो हाथ मिलते हैं"
+          },
+          {
+            "key": "wave",
+            "leftEn": "wave",
+            "leftHi": "हाथ हिलाना",
+            "rightEn": "say hello",
+            "rightHi": "नमस्ते कहना"
+          },
+          {
+            "key": "snap",
+            "leftEn": "snap",
+            "leftHi": "चुटकी",
+            "rightEn": "a quick finger click",
+            "rightHi": "उंगली की तेज़ आवाज़"
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "titleEn": "An action word",
+        "titleHi": "एक क्रिया शब्द",
+        "qEn": "Which word is an action word?",
+        "qHi": "क्रिया शब्द कौन सा है?",
+        "promptEn": "Which word is an action word?",
+        "promptHi": "क्रिया शब्द कौन सा है?",
+        "options": [
+          "clap",
+          "red",
+          "the"
+        ],
+        "answer": "clap"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "A sound revisit",
+        "titleHi": "ध्वनि दोहराई",
+        "qEn": "sh-i-p is still…",
+        "qHi": "sh-i-p अभी भी…",
+        "promptEn": "sh-i-p is still…",
+        "promptHi": "sh-i-p अभी भी…",
+        "options": [
+          "ship",
+          "chip",
+          "sip"
+        ],
+        "answer": "ship"
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "Clap is an…",
+        "qHi": "Clap है एक…",
+        "options": [
+          "action word",
+          "colour"
+        ],
+        "answer": "action word",
+        "speakEn": "Clap is an…",
+        "speakHi": "Clap है एक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Wave can mean we…",
+        "qHi": "Wave मतलब हम…",
+        "options": [
+          "say hello with a hand",
+          "eat a wave"
+        ],
+        "answer": "say hello with a hand",
+        "speakEn": "Wave can mean we…",
+        "speakHi": "Wave मतलब हम…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "I can clap my hands. The action is…",
+        "qHi": "I can clap my hands. क्रिया है…",
+        "options": [
+          "clap",
+          "hands only"
+        ],
+        "answer": "clap",
+        "speakEn": "I can clap my hands. The action is…",
+        "speakHi": "I can clap my hands. क्रिया है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Snap uses our…",
+        "qHi": "Snap में उपयोग होते हैं हमारे…",
+        "options": [
+          "fingers",
+          "toes only"
+        ],
+        "answer": "fingers",
+        "speakEn": "Snap uses our…",
+        "speakHi": "Snap में उपयोग होते हैं हमारे…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "ch-i-n is…",
+        "qHi": "ch-i-n है…",
+        "options": [
+          "chin",
+          "thin",
+          "shin"
+        ],
+        "answer": "chin",
+        "speakEn": "ch-i-n is…",
+        "speakHi": "ch-i-n है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "An action word tells us what we…",
+        "qHi": "क्रिया शब्द बताता है हम क्या…",
+        "options": [
+          "do",
+          "paint only"
+        ],
+        "answer": "do",
+        "speakEn": "An action word tells us what we…",
+        "speakHi": "क्रिया शब्द बताता है हम क्या…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Two little hands come from the book…",
+        "qHi": "दो छोटे हाथ पुस्तक… से",
+        "options": [
+          "Mridang",
+          "a hidden menu"
+        ],
+        "answer": "Mridang",
+        "speakEn": "Two little hands come from the book…",
+        "speakHi": "दो छोटे हाथ पुस्तक… से"
+      },
+      {
+        "type": "mcq",
+        "qEn": "I can wave. Who can wave?",
+        "qHi": "I can wave. कौन हिला सकता है?",
+        "options": [
+          "I",
+          "the wall"
+        ],
+        "answer": "I",
+        "speakEn": "I can wave. Who can wave?",
+        "speakHi": "I can wave. कौन हिला सकता है?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "r-ai-n is still…",
+        "qHi": "r-ai-n अभी भी…",
+        "options": [
+          "rain",
+          "ran",
+          "run"
+        ],
+        "answer": "rain",
+        "speakEn": "r-ai-n is still…",
+        "speakHi": "r-ai-n अभी भी…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "We revisit sounds so they stay…",
+        "qHi": "ध्वनियाँ दोहराते हैं ताकि वे… रहें",
+        "options": [
+          "secure",
+          "forgotten"
+        ],
+        "answer": "secure",
+        "speakEn": "We revisit sounds so they stay…",
+        "speakHi": "ध्वनियाँ दोहराते हैं ताकि वे… रहें"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Which sentence has an action word?",
+        "qHi": "किस वाक्य में क्रिया शब्द है?",
+        "options": [
+          {
+            "value": "I can snap.",
+            "label": "I can snap."
+          },
+          {
+            "value": "A red bag.",
+            "label": "A red bag."
+          }
+        ],
+        "answer": "I can snap.",
+        "speakEn": "Which sentence has an action word?",
+        "speakHi": "किस वाक्य में क्रिया शब्द है?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Class 1 starts by linking a poem to…",
+        "qHi": "कक्षा 1 कविता को जोड़ती है… से",
+        "options": [
+          {
+            "value": "actions we can do",
+            "label": "actions we can do"
+          },
+          {
+            "value": "only a silent test",
+            "label": "only a silent test"
+          }
+        ],
+        "answer": "actions we can do",
+        "speakEn": "Class 1 starts by linking a poem to…",
+        "speakHi": "कक्षा 1 कविता को जोड़ती है… से"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "premium": false,
+    "logic": false
+  },
+  {
+    "id": "class1-eng-2",
+    "level": "class1",
+    "subject": "english",
+    "n": 2,
+    "titleEn": "Greetings, including namaste, and a written greeting",
+    "titleHi": "अभिवादन, नमस्ते सहित, और लिखा अभिवादन",
+    "shortEn": "Say namaste, good morning and hello. Then write a short greeting.",
+    "shortHi": "नमस्ते, गुड मॉर्निंग और हैलो कहो। फिर एक छोटा अभिवादन लिखो।",
+    "scene": "home",
+    "teach": {
+      "pose": "wave",
+      "anim": "wave",
+      "capEn": "We greet people in more than one way. Namaste. Good morning. Hello. Then we can write: Namaste, Amma.",
+      "capHi": "हम कई तरह से अभिवादन करते हैं। नमस्ते। गुड मॉर्निंग। हैलो। फिर लिख सकते हैं: Namaste, Amma.",
+      "speakEn": "A greeting is how we start talking to someone. In India we often say namaste. We also say good morning and hello. Let's choose the right greeting, then write one.",
+      "speakHi": "अभिवादन वह है जिससे हम किसी से बात शुरू करते हैं। भारत में अक्सर नमस्ते कहते हैं। गुड मॉर्निंग और हैलो भी। सही अभिवादन चुनो, फिर एक लिखो।"
+    },
+    "activities": [
+      {
+        "type": "mcq",
+        "titleEn": "A morning greeting",
+        "titleHi": "सुबह का अभिवादन",
+        "qEn": "In the morning we often say…",
+        "qHi": "सुबह हम अक्सर कहते हैं…",
+        "promptEn": "In the morning we often say…",
+        "promptHi": "सुबह हम अक्सर कहते हैं…",
+        "options": [
+          {
+            "value": "Good morning",
+            "label": "Good morning"
+          },
+          {
+            "value": "Good night",
+            "label": "Good night"
+          }
+        ],
+        "answer": "Good morning"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "An Indian greeting",
+        "titleHi": "भारतीय अभिवादन",
+        "qEn": "Which greeting is often used in India?",
+        "qHi": "भारत में कौन सा अभिवादन अक्सर होता है?",
+        "promptEn": "Which greeting is often used in India?",
+        "promptHi": "भारत में कौन सा अभिवादन अक्सर होता है?",
+        "options": [
+          {
+            "value": "Namaste",
+            "label": "Namaste"
+          },
+          {
+            "value": "only a whistle",
+            "label": "only a whistle"
+          }
+        ],
+        "answer": "Namaste"
+      },
+      {
+        "type": "sequence",
+        "titleEn": "Write a greeting in order",
+        "titleHi": "अभिवादन क्रम से लिखो",
+        "items": [
+          "Namaste,",
+          "Amma."
+        ],
+        "order": [
+          "Namaste,",
+          "Amma."
+        ]
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "Namaste is a…",
+        "qHi": "नमस्ते है एक…",
+        "options": [
+          "greeting",
+          "number"
+        ],
+        "answer": "greeting",
+        "speakEn": "Namaste is a…",
+        "speakHi": "नमस्ते है एक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Hello is a way to say…",
+        "qHi": "Hello कहने का तरीका है…",
+        "options": [
+          "hi",
+          "goodbye only"
+        ],
+        "answer": "hi",
+        "speakEn": "Hello is a way to say…",
+        "speakHi": "Hello कहने का तरीका है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Good night is for…",
+        "qHi": "Good night है… के लिए",
+        "options": [
+          "bedtime",
+          "breakfast"
+        ],
+        "answer": "bedtime",
+        "speakEn": "Good night is for…",
+        "speakHi": "Good night है… के लिए"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A written greeting might be…",
+        "qHi": "लिखा अभिवादन हो सकता है…",
+        "options": [
+          {
+            "value": "Namaste, Amma.",
+            "label": "Namaste, Amma."
+          },
+          {
+            "value": "Banana 7.",
+            "label": "Banana 7."
+          }
+        ],
+        "answer": "Namaste, Amma.",
+        "speakEn": "A written greeting might be…",
+        "speakHi": "लिखा अभिवादन हो सकता है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "We start a greeting with a…",
+        "qHi": "अभिवादन शुरू करते हैं… से",
+        "options": [
+          "capital",
+          "tiny mark only"
+        ],
+        "answer": "capital",
+        "speakEn": "We start a greeting with a…",
+        "speakHi": "अभिवादन शुरू करते हैं… से"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A greeting often ends with a…",
+        "qHi": "अभिवादन अक्सर खत्म होता है… पर",
+        "options": [
+          "full stop",
+          "question only always"
+        ],
+        "answer": "full stop",
+        "speakEn": "A greeting often ends with a…",
+        "speakHi": "अभिवादन अक्सर खत्म होता है… पर"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Good afternoon is used later in the…",
+        "qHi": "Good afternoon उपयोग होता है दिन में…",
+        "options": [
+          "day",
+          "night only"
+        ],
+        "answer": "day",
+        "speakEn": "Good afternoon is used later in the…",
+        "speakHi": "Good afternoon उपयोग होता है दिन में…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "We say namaste to show…",
+        "qHi": "नमस्ते कहते हैं दिखाने के लिए…",
+        "options": [
+          "respect",
+          "anger only"
+        ],
+        "answer": "respect",
+        "speakEn": "We say namaste to show…",
+        "speakHi": "नमस्ते कहते हैं दिखाने के लिए…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Hello, Mini. Who is greeted?",
+        "qHi": "Hello, Mini. अभिवादन किसका?",
+        "options": [
+          "Mini",
+          "a wall"
+        ],
+        "answer": "Mini",
+        "speakEn": "Hello, Mini. Who is greeted?",
+        "speakHi": "Hello, Mini. अभिवादन किसका?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Greetings start a…",
+        "qHi": "अभिवादन शुरू करते हैं एक…",
+        "options": [
+          "conversation",
+          "silent exam only"
+        ],
+        "answer": "conversation",
+        "speakEn": "Greetings start a…",
+        "speakHi": "अभिवादन शुरू करते हैं एक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Please and thank you are…",
+        "qHi": "Please और thank you हैं…",
+        "options": [
+          {
+            "value": "polite words",
+            "label": "polite words"
+          },
+          {
+            "value": "shapes",
+            "label": "shapes"
+          }
+        ],
+        "answer": "polite words",
+        "speakEn": "Please and thank you are…",
+        "speakHi": "Please और thank you हैं…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "In Hindi, namaste is written…",
+        "qHi": "हिन्दी में नमस्ते लिखा जाता है…",
+        "options": [
+          "नमस्ते",
+          "hello only"
+        ],
+        "answer": "नमस्ते",
+        "speakEn": "In Hindi, namaste is written…",
+        "speakHi": "हिन्दी में नमस्ते लिखा जाता है…"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "premium": false,
+    "logic": false
+  },
+  {
+    "id": "class1-eng-3",
+    "level": "class1",
+    "subject": "english",
+    "n": 3,
+    "titleEn": "Picture Time: a new 4- or 5-word sentence",
+    "titleHi": "चित्र समय: नया 4 या 5 शब्द का वाक्य",
+    "shortEn": "Look at a picture and read a new sentence of four or five words. Who is doing what?",
+    "shortHi": "चित्र देखो और चार या पाँच शब्दों का नया वाक्य पढ़ो। कौन क्या कर रहा है?",
+    "scene": "market",
+    "teach": {
+      "pose": "point",
+      "anim": "bob",
+      "capEn": "A new sentence: The girl has a red bag. Four or five words can already tell a whole idea.",
+      "capHi": "नया वाक्य: The girl has a red bag. चार या पाँच शब्द पूरा विचार बता सकते हैं।",
+      "speakEn": "Picture Time in Mridang asks us to look, read and talk. The girl has a red bag. Who has the bag? What colour is it? This sentence is new, not only one we memorised.",
+      "speakHi": "मृदंग के चित्र समय में देखो, पढ़ो और बात करो। The girl has a red bag. बैग किसके पास? रंग क्या है? यह नया वाक्य है, केवल रटा हुआ नहीं।"
+    },
+    "activities": [
+      {
+        "type": "mcq",
+        "titleEn": "Who?",
+        "titleHi": "कौन?",
+        "qEn": "The girl has a red bag. Who has the bag?",
+        "qHi": "The girl has a red bag. बैग किसके पास है?",
+        "promptEn": "The girl has a red bag. Who has the bag?",
+        "promptHi": "The girl has a red bag. बैग किसके पास है?",
+        "options": [
+          {
+            "value": "the girl",
+            "label": "the girl",
+            "emoji": "👧"
+          },
+          {
+            "value": "a goat",
+            "label": "a goat",
+            "emoji": "🐐"
+          }
+        ],
+        "answer": "the girl",
+        "sentence": "The girl has a red bag."
+      },
+      {
+        "type": "mcq",
+        "titleEn": "What colour?",
+        "titleHi": "कौन सा रंग?",
+        "qEn": "What colour is the bag?",
+        "qHi": "बैग का रंग क्या है?",
+        "promptEn": "What colour is the bag?",
+        "promptHi": "बैग का रंग क्या है?",
+        "options": [
+          "red",
+          "blue",
+          "green"
+        ],
+        "answer": "red"
+      },
+      {
+        "type": "sequence",
+        "titleEn": "Build a 5-word sentence",
+        "titleHi": "5 शब्दों का वाक्य बनाओ",
+        "items": [
+          "The",
+          "girl",
+          "has",
+          "a",
+          "bag."
+        ],
+        "order": [
+          "The",
+          "girl",
+          "has",
+          "a",
+          "bag."
+        ]
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "A Class 1 sentence can have about…",
+        "qHi": "कक्षा 1 के वाक्य में लगभग हो सकते हैं…",
+        "options": [
+          {
+            "value": "4 or 5 words",
+            "label": "4 or 5 words"
+          },
+          {
+            "value": "only 1 letter",
+            "label": "only 1 letter"
+          }
+        ],
+        "answer": "4 or 5 words",
+        "speakEn": "A Class 1 sentence can have about…",
+        "speakHi": "कक्षा 1 के वाक्य में लगभग हो सकते हैं…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The girl has a red bag. The bag is…",
+        "qHi": "बैग है…",
+        "options": [
+          "red",
+          "green"
+        ],
+        "answer": "red",
+        "speakEn": "The girl has a red bag. The bag is…",
+        "speakHi": "बैग है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "has tells us the girl…",
+        "qHi": "has बताता है लड़की…",
+        "options": [
+          {
+            "value": "owns or holds",
+            "label": "owns or holds"
+          },
+          {
+            "value": "is asleep only",
+            "label": "is asleep only"
+          }
+        ],
+        "answer": "owns or holds",
+        "speakEn": "has tells us the girl…",
+        "speakHi": "has बताता है लड़की…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The first word needs a…",
+        "qHi": "पहले शब्द को चाहिए…",
+        "options": [
+          "capital",
+          "comma only"
+        ],
+        "answer": "capital",
+        "speakEn": "The first word needs a…",
+        "speakHi": "पहले शब्द को चाहिए…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The last mark is a…",
+        "qHi": "अंतिम चिह्न है…",
+        "options": [
+          "full stop",
+          "arrow"
+        ],
+        "answer": "full stop",
+        "speakEn": "The last mark is a…",
+        "speakHi": "अंतिम चिह्न है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The man has a blue cap. Who has the cap?",
+        "qHi": "टोपी किसके पास?",
+        "options": [
+          "the man",
+          "the cap itself"
+        ],
+        "answer": "the man",
+        "speakEn": "The man has a blue cap. Who has the cap?",
+        "speakHi": "टोपी किसके पास?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A new sentence is one we…",
+        "qHi": "नया वाक्य वह है जिसे हम…",
+        "options": [
+          {
+            "value": "have not only memorised",
+            "label": "have not only memorised"
+          },
+          {
+            "value": "must never read",
+            "label": "must never read"
+          }
+        ],
+        "answer": "have not only memorised",
+        "speakEn": "A new sentence is one we…",
+        "speakHi": "नया वाक्य वह है जिसे हम…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The boy has a big pan. What does he have?",
+        "qHi": "उसके पास क्या है?",
+        "options": [
+          "a big pan",
+          "a rocket"
+        ],
+        "answer": "a big pan",
+        "speakEn": "The boy has a big pan. What does he have?",
+        "speakHi": "उसके पास क्या है?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Picture Time means we look and then we…",
+        "qHi": "चित्र समय मतलब देखते हैं फिर…",
+        "options": [
+          "read and talk",
+          "close our eyes forever"
+        ],
+        "answer": "read and talk",
+        "speakEn": "Picture Time means we look and then we…",
+        "speakHi": "चित्र समय मतलब देखते हैं फिर…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "How many words in: The girl has a bag.",
+        "qHi": "The girl has a bag. में कितने शब्द?",
+        "options": [
+          "5",
+          "2"
+        ],
+        "answer": "5",
+        "speakEn": "How many words in: The girl has a bag.",
+        "speakHi": "The girl has a bag. में कितने शब्द?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "red describes the…",
+        "qHi": "red वर्णन करता है… का",
+        "options": [
+          "bag",
+          "verb only"
+        ],
+        "answer": "bag",
+        "speakEn": "red describes the…",
+        "speakHi": "red वर्णन करता है… का"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Who and what questions check that we…",
+        "qHi": "कौन और क्या प्रश्न जाँचते हैं कि हम…",
+        "options": [
+          "understood",
+          "skipped the words"
+        ],
+        "answer": "understood",
+        "speakEn": "Who and what questions check that we…",
+        "speakHi": "कौन और क्या प्रश्न जाँचते हैं कि हम…"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "premium": false,
+    "logic": false
+  },
+  {
+    "id": "class1-eng-4",
+    "level": "class1",
+    "subject": "english",
+    "n": 4,
+    "titleEn": "The Cap-seller and the Monkeys: story, infer, two sentences",
+    "titleHi": "टोपी वाला और बंदर: कहानी, अनुमान, दो वाक्य",
+    "shortEn": "A cap-seller rests under a tree. Infer why, then write or choose two sentences.",
+    "shortHi": "टोपी वाला पेड़ के नीचे आराम करता है। अनुमान लगाओ क्यों, फिर दो वाक्य चुनो या लिखो।",
+    "scene": "school",
+    "teach": {
+      "pose": "wave",
+      "anim": "wave",
+      "capEn": "A cap-seller rests under a tree. Monkeys take the caps. He throws his cap down, and the monkeys do the same.",
+      "capHi": "टोपी वाला पेड़ के नीचे आराम करता है। बंदर टोपियाँ ले जाते हैं। वह अपनी टोपी नीचे फेंकता है, बंदर भी वैसा ही करते हैं।",
+      "speakEn": "This is a famous story from the Class 1 book. We infer: he might be tired, so he rests. The monkeys copy him. Then we can say two sentences about the story.",
+      "speakHi": "यह कक्षा 1 की प्रसिद्ध कहानी है। अनुमान: वे थके हो सकते हैं, इसलिए आराम करते हैं। बंदर नकल करते हैं। फिर कहानी पर दो वाक्य कह सकते हैं।"
+    },
+    "activities": [
+      {
+        "type": "mcq",
+        "titleEn": "Infer why he rests",
+        "titleHi": "अनुमान: वे आराम क्यों करते हैं",
+        "qEn": "Why might the cap-seller rest under the tree?",
+        "qHi": "टोपी वाला पेड़ के नीचे आराम क्यों कर सकता है?",
+        "promptEn": "Why might the cap-seller rest under the tree?",
+        "promptHi": "टोपी वाला पेड़ के नीचे आराम क्यों कर सकता है?",
+        "options": [
+          {
+            "value": "He might be tired",
+            "label": "He might be tired"
+          },
+          {
+            "value": "The story says he is a fish",
+            "label": "The story says he is a fish"
+          }
+        ],
+        "answer": "He might be tired"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "What do the monkeys do?",
+        "titleHi": "बंदर क्या करते हैं?",
+        "qEn": "When he throws his cap down, the monkeys…",
+        "qHi": "जब वह टोपी नीचे फेंकता है, बंदर…",
+        "promptEn": "When he throws his cap down, the monkeys…",
+        "promptHi": "जब वह टोपी नीचे फेंकता है, बंदर…",
+        "options": [
+          {
+            "value": "copy him and throw the caps down",
+            "label": "copy him and throw the caps down"
+          },
+          {
+            "value": "bake roti",
+            "label": "bake roti"
+          }
+        ],
+        "answer": "copy him and throw the caps down"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "Two sentences",
+        "titleHi": "दो वाक्य",
+        "qEn": "Which pair retells the story fairly?",
+        "qHi": "कौन सा जोड़ा कहानी ठीक बताता है?",
+        "promptEn": "Which pair retells the story fairly?",
+        "promptHi": "कौन सा जोड़ा कहानी ठीक बताता है?",
+        "options": [
+          {
+            "value": "The man rests under a tree. The monkeys copy him.",
+            "label": "The man rests under a tree. The monkeys copy him."
+          },
+          {
+            "value": "The man goes to space. The monkeys drive a bus.",
+            "label": "The man goes to space. The monkeys drive a bus."
+          }
+        ],
+        "answer": "The man rests under a tree. The monkeys copy him."
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "The seller has many…",
+        "qHi": "विक्रेता के पास कई… हैं",
+        "options": [
+          "caps",
+          "rivers"
+        ],
+        "answer": "caps",
+        "speakEn": "The seller has many…",
+        "speakHi": "विक्रेता के पास कई… हैं"
+      },
+      {
+        "type": "mcq",
+        "qEn": "He rests under a…",
+        "qHi": "वे आराम करते हैं एक… के नीचे",
+        "options": [
+          "tree",
+          "cloud house"
+        ],
+        "answer": "tree",
+        "speakEn": "He rests under a…",
+        "speakHi": "वे आराम करते हैं एक… के नीचे"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Infer means we use a clue to…",
+        "qHi": "अनुमान मतलब संकेत से हम…",
+        "options": [
+          {
+            "value": "work it out",
+            "label": "ignore the story"
+          },
+          {
+            "value": "ignore the story",
+            "label": "ignore the story"
+          }
+        ],
+        "answer": "work it out",
+        "speakEn": "Infer means we use a clue to…",
+        "speakHi": "अनुमान मतलब संकेत से हम…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The monkeys like to…",
+        "qHi": "बंदर करना पसंद करते हैं…",
+        "options": [
+          "copy",
+          "write exams only"
+        ],
+        "answer": "copy",
+        "speakEn": "The monkeys like to…",
+        "speakHi": "बंदर करना पसंद करते हैं…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A cap is worn on the…",
+        "qHi": "टोपी पहनी जाती है… पर",
+        "options": [
+          "head",
+          "foot only"
+        ],
+        "answer": "head",
+        "speakEn": "A cap is worn on the…",
+        "speakHi": "टोपी पहनी जाती है… पर"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Two sentences should stay on the…",
+        "qHi": "दो वाक्य रहने चाहिए… पर",
+        "options": [
+          "story",
+          "unrelated space trip"
+        ],
+        "answer": "story",
+        "speakEn": "Two sentences should stay on the…",
+        "speakHi": "दो वाक्य रहने चाहिए… पर"
+      },
+      {
+        "type": "mcq",
+        "qEn": "He throws his cap…",
+        "qHi": "वह अपनी टोपी… फेंकता है",
+        "options": [
+          "down",
+          "into a locked safe"
+        ],
+        "answer": "down",
+        "speakEn": "He throws his cap…",
+        "speakHi": "वह अपनी टोपी… फेंकता है"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Why questions ask for a…",
+        "qHi": "क्यों प्रश्न माँगते हैं एक…",
+        "options": [
+          "reason",
+          "colour only"
+        ],
+        "answer": "reason",
+        "speakEn": "Why questions ask for a…",
+        "speakHi": "क्यों प्रश्न माँगते हैं एक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "This story is from the Class 1…",
+        "qHi": "यह कहानी कक्षा 1 की… से है",
+        "options": [
+          "book",
+          "hidden advert"
+        ],
+        "answer": "book",
+        "speakEn": "This story is from the Class 1…",
+        "speakHi": "यह कहानी कक्षा 1 की… से है"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A cap-seller is a person who…",
+        "qHi": "टोपी वाला वह व्यक्ति है जो…",
+        "options": [
+          {
+            "value": "sells caps",
+            "label": "sells caps"
+          },
+          {
+            "value": "is a monkey",
+            "label": "is a monkey"
+          }
+        ],
+        "answer": "sells caps",
+        "speakEn": "A cap-seller is a person who…",
+        "speakHi": "टोपी वाला वह व्यक्ति है जो…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The end of the story is when the caps…",
+        "qHi": "कहानी का अंत तब है जब टोपियाँ…",
+        "options": [
+          {
+            "value": "come down",
+            "label": "vanish forever with no clue"
+          },
+          {
+            "value": "vanish forever with no clue",
+            "label": "vanish forever with no clue"
+          }
+        ],
+        "answer": "come down",
+        "speakEn": "The end of the story is when the caps…",
+        "speakHi": "कहानी का अंत तब है जब टोपियाँ…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "We write two sentences, not yet a…",
+        "qHi": "हम दो वाक्य लिखते हैं, अभी नहीं…",
+        "options": [
+          "long essay",
+          "letter of the alphabet only"
+        ],
+        "answer": "long essay",
+        "speakEn": "We write two sentences, not yet a…",
+        "speakHi": "हम दो वाक्य लिखते हैं, अभी नहीं…"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "premium": false,
+    "logic": false
+  },
+  {
+    "id": "class1-eng-5",
+    "level": "class1",
+    "subject": "english",
+    "n": 5,
+    "titleEn": "A farm: a rhyme, words and new sentences",
+    "titleHi": "एक खेत: तुक, शब्द और नए वाक्य",
+    "shortEn": "Farm words like hen, cow and corn. Read a new sentence about the farm.",
+    "shortHi": "खेत के शब्द जैसे hen, cow और corn। खेत पर एक नया वाक्य पढ़ो।",
+    "scene": "home",
+    "teach": {
+      "pose": "wave",
+      "anim": "wave",
+      "capEn": "On the farm we can see a hen, a cow and corn. A new sentence: The hen is on the farm.",
+      "capHi": "खेत पर मुर्गी, गाय और मक्का दिख सकते हैं। नया वाक्य: The hen is on the farm.",
+      "speakEn": "A rhyme helps us hear words, then we use those words in new sentences, not only in the poem. The cow has a bell. The corn is tall.",
+      "speakHi": "तुक शब्दों को सुनने में मदद करती है, फिर उन शब्दों को नई वाक्यों में उपयोग करते हैं, केवल कविता में नहीं। The cow has a bell. The corn is tall."
+    },
+    "activities": [
+      {
+        "type": "sort",
+        "titleEn": "Farm words and other words",
+        "titleHi": "खेत के शब्द और अन्य",
+        "groups": [
+          {
+            "id": "farm",
+            "en": "farm",
+            "hi": "खेत",
+            "items": [
+              {
+                "en": "hen",
+                "hi": "मुर्गी"
+              },
+              {
+                "en": "cow",
+                "hi": "गाय"
+              },
+              {
+                "en": "corn",
+                "hi": "मक्का"
+              }
+            ]
+          },
+          {
+            "id": "other",
+            "en": "not farm",
+            "hi": "खेत नहीं",
+            "items": [
+              {
+                "en": "bus",
+                "hi": "बस"
+              },
+              {
+                "en": "pencil",
+                "hi": "पेंसिल"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "titleEn": "A new sentence",
+        "titleHi": "एक नया वाक्य",
+        "qEn": "The hen is on the farm. Where is the hen?",
+        "qHi": "The hen is on the farm. मुर्गी कहाँ है?",
+        "promptEn": "The hen is on the farm. Where is the hen?",
+        "promptHi": "The hen is on the farm. मुर्गी कहाँ है?",
+        "options": [
+          {
+            "value": "on the farm",
+            "label": "on the farm"
+          },
+          {
+            "value": "on the moon",
+            "label": "on the moon"
+          }
+        ],
+        "answer": "on the farm",
+        "sentence": "The hen is on the farm."
+      },
+      {
+        "type": "mcq",
+        "titleEn": "Another sentence",
+        "titleHi": "एक और वाक्य",
+        "qEn": "The cow has a bell. What does the cow have?",
+        "qHi": "गाय के पास क्या है?",
+        "promptEn": "The cow has a bell. What does the cow have?",
+        "promptHi": "गाय के पास क्या है?",
+        "options": [
+          {
+            "value": "a bell",
+            "label": "a bell"
+          },
+          {
+            "value": "a laptop",
+            "label": "a laptop"
+          }
+        ],
+        "answer": "a bell"
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "A hen is a farm…",
+        "qHi": "मुर्गी है खेत का…",
+        "options": [
+          "animal",
+          "vehicle"
+        ],
+        "answer": "animal",
+        "speakEn": "A hen is a farm…",
+        "speakHi": "मुर्गी है खेत का…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Corn is a kind of…",
+        "qHi": "मक्का एक तरह का… है",
+        "options": [
+          "crop",
+          "shoe"
+        ],
+        "answer": "crop",
+        "speakEn": "Corn is a kind of…",
+        "speakHi": "मक्का एक तरह का… है"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The cow has a bell. The animal is…",
+        "qHi": "जानवर है…",
+        "options": [
+          "the cow",
+          "the bell"
+        ],
+        "answer": "the cow",
+        "speakEn": "The cow has a bell. The animal is…",
+        "speakHi": "जानवर है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Farm words should come back in…",
+        "qHi": "खेत के शब्द लौटने चाहिए… में",
+        "options": [
+          {
+            "value": "new sentences",
+            "label": "new sentences"
+          },
+          {
+            "value": "only one forgotten list",
+            "label": "only one forgotten list"
+          }
+        ],
+        "answer": "new sentences",
+        "speakEn": "Farm words should come back in…",
+        "speakHi": "खेत के शब्द लौटने चाहिए… में"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The corn is tall. Tall is about…",
+        "qHi": "Tall है… के बारे में",
+        "options": [
+          "height",
+          "colour only"
+        ],
+        "answer": "height",
+        "speakEn": "The corn is tall. Tall is about…",
+        "speakHi": "Tall है… के बारे में"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A rhyme lets us hear…",
+        "qHi": "तुक हमें सुनने देती है…",
+        "options": [
+          "words",
+          "silence only"
+        ],
+        "answer": "words",
+        "speakEn": "A rhyme lets us hear…",
+        "speakHi": "तुक हमें सुनने देती है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Which word belongs on a farm?",
+        "qHi": "खेत पर कौन सा शब्द?",
+        "options": [
+          "hen",
+          "subway"
+        ],
+        "answer": "hen",
+        "speakEn": "Which word belongs on a farm?",
+        "speakHi": "खेत पर कौन सा शब्द?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The hen is on the farm has how many words?",
+        "qHi": "The hen is on the farm में कितने शब्द?",
+        "options": [
+          "6",
+          "2"
+        ],
+        "answer": "6",
+        "speakEn": "The hen is on the farm has how many words?",
+        "speakHi": "The hen is on the farm में कितने शब्द?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A bell can make a…",
+        "qHi": "घंटी बना सकती है एक…",
+        "options": [
+          "sound",
+          "cloud"
+        ],
+        "answer": "sound",
+        "speakEn": "A bell can make a…",
+        "speakHi": "घंटी बना सकती है एक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "We sort words to see which ones…",
+        "qHi": "शब्द छाँटते हैं यह देखने कि कौन…",
+        "options": [
+          {
+            "value": "belong together",
+            "label": "belong together"
+          },
+          {
+            "value": "must be deleted",
+            "label": "must be deleted"
+          }
+        ],
+        "answer": "belong together",
+        "speakEn": "We sort words to see which ones…",
+        "speakHi": "शब्द छाँटते हैं यह देखने कि कौन…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A new sentence about the farm might start with…",
+        "qHi": "खेत का नया वाक्य शुरू हो सकता है… से",
+        "options": [
+          {
+            "value": "The",
+            "label": "zzzz"
+          },
+          {
+            "value": "zzzz",
+            "label": "zzzz"
+          }
+        ],
+        "answer": "The",
+        "speakEn": "A new sentence about the farm might start with…",
+        "speakHi": "खेत का नया वाक्य शुरू हो सकता है… से"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Class 1 reading uses words from the…",
+        "qHi": "कक्षा 1 का पढ़ना शब्दों का उपयोग करता है… से",
+        "options": [
+          "lesson",
+          "hidden code"
+        ],
+        "answer": "lesson",
+        "speakEn": "Class 1 reading uses words from the…",
+        "speakHi": "कक्षा 1 का पढ़ना शब्दों का उपयोग करता है… से"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "premium": false,
+    "logic": false
+  },
+  {
+    "id": "class1-eng-6",
+    "level": "class1",
+    "subject": "english",
+    "n": 6,
+    "titleEn": "Fun with pictures, and What we eat: 2 or 3 sentences",
+    "titleHi": "चित्रों का मज़ा और हम जो खाते हैं: 2 या 3 वाक्य",
+    "shortEn": "Talk about Indian food in two or three sentences: roti, dal and a mango.",
+    "shortHi": "भारतीय भोजन पर दो या तीन वाक्य: रोटी, दाल और आम।",
+    "scene": "home",
+    "teach": {
+      "pose": "wave",
+      "anim": "wave",
+      "capEn": "What we eat can make a short writing. I like roti. Dal is in the bowl. The mango is sweet.",
+      "capHi": "हम जो खाते हैं, उससे छोटा लेख बन सकता है। I like roti. Dal is in the bowl. The mango is sweet.",
+      "speakEn": "Two or three linked sentences are enough. Stay on the food. Roti, dal and mango are Indian examples children already know.",
+      "speakHi": "दो या तीन जुड़े वाक्य काफी हैं। भोजन पर रहो। रोटी, दाल और आम भारतीय उदाहरण हैं जिन्हें बच्चे पहले से जानते हैं।"
+    },
+    "activities": [
+      {
+        "type": "mcq",
+        "titleEn": "A linked set",
+        "titleHi": "एक जुड़ा समूह",
+        "qEn": "Which set stays on food?",
+        "qHi": "कौन सा समूह भोजन पर रहता है?",
+        "promptEn": "Which set stays on food?",
+        "promptHi": "कौन सा समूह भोजन पर रहता है?",
+        "options": [
+          {
+            "value": "I like roti. Dal is in the bowl. The mango is sweet.",
+            "label": "I like roti. Dal is in the bowl. The mango is sweet."
+          },
+          {
+            "value": "I like roti. Then a bus turns into a star. Then I subtract shoes.",
+            "label": "I like roti. Then a bus turns into a star. Then I subtract shoes."
+          }
+        ],
+        "answer": "I like roti. Dal is in the bowl. The mango is sweet."
+      },
+      {
+        "type": "match",
+        "titleEn": "Hindi bridge foods",
+        "titleHi": "हिन्दी पुल भोजन",
+        "pairs": [
+          {
+            "key": "roti",
+            "leftEn": "roti",
+            "leftHi": "रोटी",
+            "rightEn": "bread",
+            "rightHi": "रोटी"
+          },
+          {
+            "key": "dal",
+            "leftEn": "dal",
+            "leftHi": "दाल",
+            "rightEn": "lentils",
+            "rightHi": "दाल"
+          },
+          {
+            "key": "mango",
+            "leftEn": "aam",
+            "leftHi": "आम",
+            "rightEn": "mango",
+            "rightHi": "आम"
+          }
+        ]
+      },
+      {
+        "type": "sequence",
+        "titleEn": "Order three food sentences",
+        "titleHi": "तीन भोजन वाक्य क्रम में",
+        "items": [
+          "I like roti",
+          "Dal is in the bowl",
+          "The mango is sweet"
+        ],
+        "order": [
+          "I like roti",
+          "Dal is in the bowl",
+          "The mango is sweet"
+        ]
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "Roti is a kind of…",
+        "qHi": "रोटी एक तरह की… है",
+        "options": [
+          "food",
+          "shoe"
+        ],
+        "answer": "food",
+        "speakEn": "Roti is a kind of…",
+        "speakHi": "रोटी एक तरह की… है"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Dal is often eaten with…",
+        "qHi": "दाल अक्सर खाई जाती है… के साथ",
+        "options": [
+          "roti",
+          "a pencil"
+        ],
+        "answer": "roti",
+        "speakEn": "Dal is often eaten with…",
+        "speakHi": "दाल अक्सर खाई जाती है… के साथ"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Aam means…",
+        "qHi": "आम मतलब…",
+        "options": [
+          "mango",
+          "salt"
+        ],
+        "answer": "mango",
+        "speakEn": "Aam means…",
+        "speakHi": "आम मतलब…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Sweet describes the…",
+        "qHi": "मीठा वर्णन करता है… का",
+        "options": [
+          "mango",
+          "plate only"
+        ],
+        "answer": "mango",
+        "speakEn": "Sweet describes the…",
+        "speakHi": "मीठा वर्णन करता है… का"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Two or three sentences can make a short…",
+        "qHi": "दो या तीन वाक्य बना सकते हैं छोटा…",
+        "options": [
+          "writing",
+          "novel tonight"
+        ],
+        "answer": "writing",
+        "speakEn": "Two or three sentences can make a short…",
+        "speakHi": "दो या तीन वाक्य बना सकते हैं छोटा…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Linked means we stay on…",
+        "qHi": "जुड़े मतलब हम रहते हैं… पर",
+        "options": [
+          "one idea",
+          "random topics"
+        ],
+        "answer": "one idea",
+        "speakEn": "Linked means we stay on…",
+        "speakHi": "जुड़े मतलब हम रहते हैं… पर"
+      },
+      {
+        "type": "mcq",
+        "qEn": "I like roti. The food is…",
+        "qHi": "भोजन है…",
+        "options": [
+          "roti",
+          "a kite"
+        ],
+        "answer": "roti",
+        "speakEn": "I like roti. The food is…",
+        "speakHi": "भोजन है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The bowl holds the…",
+        "qHi": "कटोरे में है…",
+        "options": [
+          "dal",
+          "a bus"
+        ],
+        "answer": "dal",
+        "speakEn": "The bowl holds the…",
+        "speakHi": "कटोरे में है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Indian examples help children…",
+        "qHi": "भारतीय उदाहरण बच्चों को मदद करते हैं…",
+        "options": [
+          {
+            "value": "use home words",
+            "label": "forget home"
+          },
+          {
+            "value": "forget home",
+            "label": "forget home"
+          }
+        ],
+        "answer": "use home words",
+        "speakEn": "Indian examples help children…",
+        "speakHi": "भारतीय उदाहरण बच्चों को मदद करते हैं…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A picture of a thali can start our…",
+        "qHi": "थाली का चित्र शुरू कर सकता है हमारा…",
+        "options": [
+          "talk",
+          "secret code"
+        ],
+        "answer": "talk",
+        "speakEn": "A picture of a thali can start our…",
+        "speakHi": "थाली का चित्र शुरू कर सकता है हमारा…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The third sentence is about the…",
+        "qHi": "तीसरा वाक्य है… के बारे में",
+        "options": [
+          "mango",
+          "planet only"
+        ],
+        "answer": "mango",
+        "speakEn": "The third sentence is about the…",
+        "speakHi": "तीसरा वाक्य है… के बारे में"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Fun with pictures means we look first, then we…",
+        "qHi": "चित्रों का मज़ा मतलब पहले देखो, फिर…",
+        "options": [
+          "speak or write",
+          "hide the picture"
+        ],
+        "answer": "speak or write",
+        "speakEn": "Fun with pictures means we look first, then we…",
+        "speakHi": "चित्रों का मज़ा मतलब पहले देखो, फिर…"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "premium": false,
+    "logic": false
+  },
+  {
+    "id": "class1-eng-7",
+    "level": "class1",
+    "subject": "english",
+    "n": 7,
+    "titleEn": "Reading together, a written answer, and a word revisit",
+    "titleHi": "साथ पढ़ना, लिखा उत्तर, और शब्द दोहराई",
+    "shortEn": "Read a short text with Chotu. Write a one-sentence answer. Revisit a known word.",
+    "shortHi": "छोटू के साथ छोटी पाठ पढ़ो। एक वाक्य में उत्तर लिखो। एक जाना शब्द दोहराओ।",
+    "scene": "school",
+    "teach": {
+      "pose": "listen",
+      "anim": "listen",
+      "capEn": "We read together: Mini has a paper boat. The boat is in the puddle. Then we write: The boat is in the puddle.",
+      "capHi": "साथ पढ़ते हैं: Mini has a paper boat. The boat is in the puddle. फिर लिखते हैं: The boat is in the puddle.",
+      "speakEn": "Shared reading means I read, you join in, then you answer in a full sentence, not only one word. We also come back to words like boat and puddle.",
+      "speakHi": "साथ पढ़ना मतलब मैं पढ़ता हूँ, तुम साथ देते हो, फिर पूरे वाक्य में उत्तर देते हो, केवल एक शब्द नहीं। boat और puddle जैसे शब्द भी दोहराते हैं।"
+    },
+    "activities": [
+      {
+        "type": "mcq",
+        "titleEn": "A written answer",
+        "titleHi": "लिखा उत्तर",
+        "qEn": "Where is the boat? Choose a full sentence.",
+        "qHi": "नाव कहाँ है? पूरा वाक्य चुनो।",
+        "promptEn": "Where is the boat? Choose a full sentence.",
+        "promptHi": "नाव कहाँ है? पूरा वाक्य चुनो।",
+        "options": [
+          {
+            "value": "The boat is in the puddle.",
+            "label": "The boat is in the puddle."
+          },
+          {
+            "value": "puddle",
+            "label": "puddle"
+          }
+        ],
+        "answer": "The boat is in the puddle.",
+        "sentence": "Mini has a paper boat. The boat is in the puddle."
+      },
+      {
+        "type": "mcq",
+        "titleEn": "Revisit boat",
+        "titleHi": "boat दोहराओ",
+        "qEn": "b-oa-t is…",
+        "qHi": "b-oa-t है…",
+        "promptEn": "b-oa-t is…",
+        "promptHi": "b-oa-t है…",
+        "options": [
+          "boat",
+          "bat",
+          "bit"
+        ],
+        "answer": "boat"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "A full sentence",
+        "titleHi": "एक पूरा वाक्य",
+        "qEn": "A written answer in Class 1 should be…",
+        "qHi": "कक्षा 1 में लिखा उत्तर होना चाहिए…",
+        "promptEn": "A written answer in Class 1 should be…",
+        "promptHi": "कक्षा 1 में लिखा उत्तर होना चाहिए…",
+        "options": [
+          {
+            "value": "a full sentence",
+            "label": "a full sentence"
+          },
+          {
+            "value": "only one loose word when a sentence is asked",
+            "label": "only one loose word when a sentence is asked"
+          }
+        ],
+        "answer": "a full sentence"
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "Shared reading means we read…",
+        "qHi": "साथ पढ़ना मतलब हम पढ़ते हैं…",
+        "options": [
+          {
+            "value": "together",
+            "label": "together"
+          },
+          {
+            "value": "only in silence forever",
+            "label": "only in silence forever"
+          }
+        ],
+        "answer": "together",
+        "speakEn": "Shared reading means we read…",
+        "speakHi": "साथ पढ़ना मतलब हम पढ़ते हैं…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A full sentence has a capital and a…",
+        "qHi": "पूरे वाक्य में बड़ा अक्षर और… होता है",
+        "options": [
+          "full stop",
+          "scribble only"
+        ],
+        "answer": "full stop",
+        "speakEn": "A full sentence has a capital and a…",
+        "speakHi": "पूरे वाक्य में बड़ा अक्षर और… होता है"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Mini has a paper boat. Who has the boat?",
+        "qHi": "नाव किसके पास?",
+        "options": [
+          "Mini",
+          "a stone"
+        ],
+        "answer": "Mini",
+        "speakEn": "Mini has a paper boat. Who has the boat?",
+        "speakHi": "नाव किसके पास?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The boat is in the puddle. The place is…",
+        "qHi": "स्थान है…",
+        "options": [
+          "the puddle",
+          "a cupboard"
+        ],
+        "answer": "the puddle",
+        "speakEn": "The boat is in the puddle. The place is…",
+        "speakHi": "स्थान है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "boat has the vowel team…",
+        "qHi": "boat में स्वर युग्म…",
+        "options": [
+          "oa",
+          "ee"
+        ],
+        "answer": "oa",
+        "speakEn": "boat has the vowel team…",
+        "speakHi": "boat में स्वर युग्म…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A word revisit keeps older words…",
+        "qHi": "शब्द दोहराई पुराने शब्द… रखती है",
+        "options": [
+          "strong",
+          "deleted"
+        ],
+        "answer": "strong",
+        "speakEn": "A word revisit keeps older words…",
+        "speakHi": "शब्द दोहराई पुराने शब्द… रखती है"
+      },
+      {
+        "type": "mcq",
+        "qEn": "paper describes the…",
+        "qHi": "कागज़ वर्णन करता है… का",
+        "options": [
+          "boat",
+          "sky only"
+        ],
+        "answer": "boat",
+        "speakEn": "paper describes the…",
+        "speakHi": "कागज़ वर्णन करता है… का"
+      },
+      {
+        "type": "mcq",
+        "qEn": "If the question is where, the answer names a…",
+        "qHi": "अगर प्रश्न कहाँ है, उत्तर बताता है एक…",
+        "options": [
+          "place",
+          "colour only always"
+        ],
+        "answer": "place",
+        "speakEn": "If the question is where, the answer names a…",
+        "speakHi": "अगर प्रश्न कहाँ है, उत्तर बताता है एक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "We write the answer after we…",
+        "qHi": "उत्तर लिखते हैं बाद में जब…",
+        "options": [
+          "read",
+          "guess with eyes closed"
+        ],
+        "answer": "read",
+        "speakEn": "We write the answer after we…",
+        "speakHi": "उत्तर लिखते हैं बाद में जब…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The boat is in the puddle. is a…",
+        "qHi": "The boat is in the puddle. है एक…",
+        "options": [
+          "sentence",
+          "single letter"
+        ],
+        "answer": "sentence",
+        "speakEn": "The boat is in the puddle. is a…",
+        "speakHi": "The boat is in the puddle. है एक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Joining in means the child…",
+        "qHi": "साथ देना मतलब बच्चा…",
+        "options": [
+          {
+            "value": "says some of the words",
+            "label": "stays fully silent"
+          },
+          {
+            "value": "stays fully silent",
+            "label": "stays fully silent"
+          }
+        ],
+        "answer": "says some of the words",
+        "speakEn": "Joining in means the child…",
+        "speakHi": "साथ देना मतलब बच्चा…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A good written answer uses words from the…",
+        "qHi": "अच्छा लिखा उत्तर शब्दों का उपयोग करता है… से",
+        "options": [
+          "text",
+          "unrelated advert"
+        ],
+        "answer": "text",
+        "speakEn": "A good written answer uses words from the…",
+        "speakHi": "अच्छा लिखा उत्तर शब्दों का उपयोग करता है… से"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "premium": false,
+    "logic": false
+  },
+  {
+    "id": "class1-eng-8",
+    "level": "class1",
+    "subject": "english",
+    "n": 8,
+    "titleEn": "Four seasons: compare, explain, three sentences",
+    "titleHi": "चार मौसम: तुलना, समझाना, तीन वाक्य",
+    "shortEn": "Compare summer and monsoon. Explain one difference. Write three linked sentences.",
+    "shortHi": "गर्मी और मानसून की तुलना। एक अंतर समझाओ। तीन जुड़े वाक्य लिखो।",
+    "scene": "monsoon",
+    "teach": {
+      "pose": "point",
+      "anim": "bob",
+      "capEn": "India has seasons. Summer can be hot and dry. The monsoon brings rain. Winter can feel cool.",
+      "capHi": "भारत में मौसम होते हैं। गर्मी गर्म और सूखी लग सकती है। मानसून बारिश लाता है। सर्दी ठंडी लग सकती है।",
+      "speakEn": "Compare means we say how two seasons are different or the same. The monsoon is wetter than summer because it brings rain. Then we write three sentences that stay on seasons.",
+      "speakHi": "तुलना मतलब दो मौसम कैसे अलग या समान हैं। मानसून गर्मी से अधिक गीला है क्योंकि बारिश लाता है। फिर मौसम पर तीन वाक्य लिखो।"
+    },
+    "activities": [
+      {
+        "type": "mcq",
+        "titleEn": "Compare",
+        "titleHi": "तुलना",
+        "qEn": "The monsoon is wetter than summer because…",
+        "qHi": "मानसून गर्मी से अधिक गीला है क्योंकि…",
+        "promptEn": "The monsoon is wetter than summer because…",
+        "promptHi": "मानसून गर्मी से अधिक गीला है क्योंकि…",
+        "options": [
+          {
+            "value": "it brings rain",
+            "label": "it brings rain"
+          },
+          {
+            "value": "it brings a desert only",
+            "label": "it brings a desert only"
+          }
+        ],
+        "answer": "it brings rain"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "Which season?",
+        "titleHi": "कौन सा मौसम?",
+        "qEn": "Which season can feel cool?",
+        "qHi": "कौन सा मौसम ठंडा लग सकता है?",
+        "promptEn": "Which season can feel cool?",
+        "promptHi": "कौन सा मौसम ठंडा लग सकता है?",
+        "options": [
+          {
+            "value": "winter",
+            "label": "winter"
+          },
+          {
+            "value": "a hidden fifth season called lunch",
+            "label": "a hidden fifth season called lunch"
+          }
+        ],
+        "answer": "winter"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "Three sentences",
+        "titleHi": "तीन वाक्य",
+        "qEn": "Which set stays on seasons?",
+        "qHi": "कौन सा समूह मौसम पर रहता है?",
+        "promptEn": "Which set stays on seasons?",
+        "promptHi": "कौन सा समूह मौसम पर रहता है?",
+        "options": [
+          {
+            "value": "Summer can be hot. The monsoon brings rain. Winter can feel cool.",
+            "label": "Summer can be hot. The monsoon brings rain. Winter can feel cool."
+          },
+          {
+            "value": "Summer can be hot. Then I eat a shoe. Then a bus does sums.",
+            "label": "Summer can be hot. Then I eat a shoe. Then a bus does sums."
+          }
+        ],
+        "answer": "Summer can be hot. The monsoon brings rain. Winter can feel cool."
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "Compare means we look at how things are…",
+        "qHi": "तुलना मतलब हम देखते हैं चीज़ें कैसे…",
+        "options": [
+          {
+            "value": "the same or different",
+            "label": "the same or different"
+          },
+          {
+            "value": "only numbered",
+            "label": "only numbered"
+          }
+        ],
+        "answer": "the same or different",
+        "speakEn": "Compare means we look at how things are…",
+        "speakHi": "तुलना मतलब हम देखते हैं चीज़ें कैसे…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The monsoon brings…",
+        "qHi": "मानसून लाता है…",
+        "options": [
+          "rain",
+          "snow in every street always"
+        ],
+        "answer": "rain",
+        "speakEn": "The monsoon brings…",
+        "speakHi": "मानसून लाता है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Summer can feel…",
+        "qHi": "गर्मी लग सकती है…",
+        "options": [
+          "hot",
+          "frozen always"
+        ],
+        "answer": "hot",
+        "speakEn": "Summer can feel…",
+        "speakHi": "गर्मी लग सकती है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Winter can feel…",
+        "qHi": "सर्दी लग सकती है…",
+        "options": [
+          "cool",
+          "boiling always"
+        ],
+        "answer": "cool",
+        "speakEn": "Winter can feel…",
+        "speakHi": "सर्दी लग सकती है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Because introduces a…",
+        "qHi": "Because शुरू करता है एक…",
+        "options": [
+          "reason",
+          "colour only"
+        ],
+        "answer": "reason",
+        "speakEn": "Because introduces a…",
+        "speakHi": "Because शुरू करता है एक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "India's rainy season is often called the…",
+        "qHi": "भारत का बारिश का मौसम अक्सर कहलाता है…",
+        "options": [
+          "monsoon",
+          "lunch break"
+        ],
+        "answer": "monsoon",
+        "speakEn": "India's rainy season is often called the…",
+        "speakHi": "भारत का बारिश का मौसम अक्सर कहलाता है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Three linked sentences stay on…",
+        "qHi": "तीन जुड़े वाक्य रहते हैं… पर",
+        "options": [
+          "one topic",
+          "five topics at once"
+        ],
+        "answer": "one topic",
+        "speakEn": "Three linked sentences stay on…",
+        "speakHi": "तीन जुड़े वाक्य रहते हैं… पर"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Wetter means there is more…",
+        "qHi": "गीला ज्यादा मतलब अधिक…",
+        "options": [
+          "rain or water",
+          "dust only"
+        ],
+        "answer": "rain or water",
+        "speakEn": "Wetter means there is more…",
+        "speakHi": "गीला ज्यादा मतलब अधिक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A season is a time of the…",
+        "qHi": "मौसम है एक समय… का",
+        "options": [
+          "year",
+          "minute only"
+        ],
+        "answer": "year",
+        "speakEn": "A season is a time of the…",
+        "speakHi": "मौसम है एक समय… का"
+      },
+      {
+        "type": "mcq",
+        "qEn": "If we explain, we say…",
+        "qHi": "अगर समझाते हैं, हम कहते हैं…",
+        "options": [
+          "why",
+          "nothing"
+        ],
+        "answer": "why",
+        "speakEn": "If we explain, we say…",
+        "speakHi": "अगर समझाते हैं, हम कहते हैं…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Hot and cool are words about…",
+        "qHi": "गर्म और ठंडा शब्द हैं… के बारे में",
+        "options": [
+          "how it feels",
+          "only spelling z"
+        ],
+        "answer": "how it feels",
+        "speakEn": "Hot and cool are words about…",
+        "speakHi": "गर्म और ठंडा शब्द हैं… के बारे में"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A good comparison names both…",
+        "qHi": "अच्छी तुलना दोनों… का नाम लेती है",
+        "options": [
+          "seasons",
+          "planets only"
+        ],
+        "answer": "seasons",
+        "speakEn": "A good comparison names both…",
+        "speakHi": "अच्छी तुलना दोनों… का नाम लेती है"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "premium": false,
+    "logic": false
+  },
+  {
+    "id": "class1-eng-9",
+    "level": "class1",
+    "subject": "english",
+    "n": 9,
+    "titleEn": "Anandi's Rainbow: colours, the flag, linked sentences",
+    "titleHi": "आनंदी का इंद्रधनुष: रंग, झंडा, जुड़े वाक्य",
+    "shortEn": "Name colours in a rainbow and in the flag. Write linked sentences about them.",
+    "shortHi": "इंद्रधनुष और झंडे के रंग नाम लो। उन पर जुड़े वाक्य लिखो।",
+    "scene": "diwali",
+    "teach": {
+      "pose": "wave",
+      "anim": "wave",
+      "capEn": "Anandi sees a rainbow. We also look at the Indian flag: saffron, white and green, with a blue chakra.",
+      "capHi": "आनंदी इंद्रधनुष देखती हैं। भारतीय झंडा भी: केसरिया, सफेद और हरा, नीले चक्र के साथ।",
+      "speakEn": "Colours can live in a rainbow and in our flag. Saffron, white and green are flag colours. Let's name them and write sentences that stay on this idea.",
+      "speakHi": "रंग इंद्रधनुष और हमारे झंडे में हो सकते हैं। केसरिया, सफेद और हरा झंडे के रंग हैं। नाम लो और इसी विचार पर वाक्य लिखो।"
+    },
+    "activities": [
+      {
+        "type": "mcq",
+        "titleEn": "Flag colours",
+        "titleHi": "झंडे के रंग",
+        "qEn": "Which set names the Indian flag colours?",
+        "qHi": "कौन सा समूह भारतीय झंडे के रंग बताता है?",
+        "promptEn": "Which set names the Indian flag colours?",
+        "promptHi": "कौन सा समूह भारतीय झंडे के रंग बताता है?",
+        "options": [
+          {
+            "value": "saffron, white and green",
+            "label": "saffron, white and green"
+          },
+          {
+            "value": "only pink and gold",
+            "label": "only pink and gold"
+          }
+        ],
+        "answer": "saffron, white and green"
+      },
+      {
+        "type": "match",
+        "titleEn": "Match the colours",
+        "titleHi": "रंग मिलाओ",
+        "pairs": [
+          {
+            "key": "saffron",
+            "leftEn": "saffron",
+            "leftHi": "केसरिया",
+            "rightEn": "top band of the flag",
+            "rightHi": "झंडे की ऊपरी पट्टी"
+          },
+          {
+            "key": "white",
+            "leftEn": "white",
+            "leftHi": "सफेद",
+            "rightEn": "middle band",
+            "rightHi": "बीच की पट्टी"
+          },
+          {
+            "key": "green",
+            "leftEn": "green",
+            "leftHi": "हरा",
+            "rightEn": "bottom band",
+            "rightHi": "निचली पट्टी"
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "titleEn": "Linked sentences",
+        "titleHi": "जुड़े वाक्य",
+        "qEn": "Which set stays on the flag and rainbow?",
+        "qHi": "कौन सा समूह झंडे और इंद्रधनुष पर रहता है?",
+        "promptEn": "Which set stays on the flag and rainbow?",
+        "promptHi": "कौन सा समूह झंडे और इंद्रधनुष पर रहता है?",
+        "options": [
+          {
+            "value": "Anandi sees a rainbow. The flag has saffron, white and green. I like the colours.",
+            "label": "Anandi sees a rainbow. The flag has saffron, white and green. I like the colours."
+          },
+          {
+            "value": "Anandi sees a rainbow. Then we subtract a bus. Then a shoe sings.",
+            "label": "Anandi sees a rainbow. Then we subtract a bus. Then a shoe sings."
+          }
+        ],
+        "answer": "Anandi sees a rainbow. The flag has saffron, white and green. I like the colours."
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "A rainbow has many…",
+        "qHi": "इंद्रधनुष में कई… होते हैं",
+        "options": [
+          "colours",
+          "numbers only"
+        ],
+        "answer": "colours",
+        "speakEn": "A rainbow has many…",
+        "speakHi": "इंद्रधनुष में कई… होते हैं"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The top band of the flag is…",
+        "qHi": "झंडे की ऊपरी पट्टी है…",
+        "options": [
+          "saffron",
+          "black only"
+        ],
+        "answer": "saffron",
+        "speakEn": "The top band of the flag is…",
+        "speakHi": "झंडे की ऊपरी पट्टी है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The middle band is…",
+        "qHi": "बीच की पट्टी है…",
+        "options": [
+          "white",
+          "orange only"
+        ],
+        "answer": "white",
+        "speakEn": "The middle band is…",
+        "speakHi": "बीच की पट्टी है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The bottom band is…",
+        "qHi": "निचली पट्टी है…",
+        "options": [
+          "green",
+          "gold only"
+        ],
+        "answer": "green",
+        "speakEn": "The bottom band is…",
+        "speakHi": "निचली पट्टी है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The chakra is…",
+        "qHi": "चक्र है…",
+        "options": [
+          "blue",
+          "yellow only"
+        ],
+        "answer": "blue",
+        "speakEn": "The chakra is…",
+        "speakHi": "चक्र है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Anandi is the…",
+        "qHi": "आनंदी हैं…",
+        "options": [
+          {
+            "value": "child in the lesson",
+            "label": "child in the lesson"
+          },
+          {
+            "value": "name of a river only",
+            "label": "name of a river only"
+          }
+        ],
+        "answer": "child in the lesson",
+        "speakEn": "Anandi is the…",
+        "speakHi": "आनंदी हैं…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Linked sentences stay on…",
+        "qHi": "जुड़े वाक्य रहते हैं… पर",
+        "options": [
+          "colours",
+          "unrelated sums"
+        ],
+        "answer": "colours",
+        "speakEn": "Linked sentences stay on…",
+        "speakHi": "जुड़े वाक्य रहते हैं… पर"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Saffron is a…",
+        "qHi": "केसरिया है एक…",
+        "options": [
+          "colour",
+          "animal"
+        ],
+        "answer": "colour",
+        "speakEn": "Saffron is a…",
+        "speakHi": "केसरिया है एक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The flag belongs to…",
+        "qHi": "झंडा है… का",
+        "options": [
+          "India",
+          "a random shop"
+        ],
+        "answer": "India",
+        "speakEn": "The flag belongs to…",
+        "speakHi": "झंडा है… का"
+      },
+      {
+        "type": "mcq",
+        "qEn": "I like the colours. This sentence shows…",
+        "qHi": "यह वाक्य दिखाता है…",
+        "options": [
+          "a feeling",
+          "a secret code"
+        ],
+        "answer": "a feeling",
+        "speakEn": "I like the colours. This sentence shows…",
+        "speakHi": "यह वाक्य दिखाता है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A rainbow often appears after…",
+        "qHi": "इंद्रधनुष अक्सर दिखता है… के बाद",
+        "options": [
+          "rain",
+          "a maths test only"
+        ],
+        "answer": "rain",
+        "speakEn": "A rainbow often appears after…",
+        "speakHi": "इंद्रधनुष अक्सर दिखता है… के बाद"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Naming colours helps us write…",
+        "qHi": "रंगों के नाम लिखने में मदद करते हैं…",
+        "options": [
+          {
+            "value": "clear sentences",
+            "label": "clear sentences"
+          },
+          {
+            "value": "nothing at all",
+            "label": "nothing at all"
+          }
+        ],
+        "answer": "clear sentences",
+        "speakEn": "Naming colours helps us write…",
+        "speakHi": "रंगों के नाम लिखने में मदद करते हैं…"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "premium": false,
+    "logic": false
+  },
+  {
+    "id": "class1-eng-10",
+    "level": "class1",
+    "subject": "english",
+    "n": 10,
+    "titleEn": "NIPUN Class 1 check: new sentences and a short piece of writing",
+    "titleHi": "निपुण कक्षा 1 जाँच: नए वाक्य और छोटा लेख",
+    "shortEn": "Read a new sentence, answer in a full sentence, and choose a short 2- or 3-sentence writing.",
+    "shortHi": "नया वाक्य पढ़ो, पूरे वाक्य में उत्तर दो, और 2 या 3 वाक्यों का छोटा लेख चुनो।",
+    "scene": "school",
+    "teach": {
+      "pose": "clap",
+      "anim": "clap",
+      "capEn": "NIPUN asks if a Class 1 child can read a new sentence and write a short piece, not only copy a memorised line.",
+      "capHi": "निपुण पूछता है क्या कक्षा 1 का बच्चा नया वाक्य पढ़ सकता है और छोटा लेख लिख सकता है, केवल रटी पंक्ति नहीं।",
+      "speakEn": "Let's mix the year. Read a new sentence. Answer in a full sentence. Then choose three linked sentences about food, a story or the flag.",
+      "speakHi": "वर्ष मिलाते हैं। नया वाक्य पढ़ो। पूरे वाक्य में उत्तर दो। फिर भोजन, कहानी या झंडे पर तीन जुड़े वाक्य चुनो।"
+    },
+    "activities": [
+      {
+        "type": "mcq",
+        "titleEn": "Read a new sentence",
+        "titleHi": "नया वाक्य पढ़ो",
+        "qEn": "The girl has a red bag. What does the girl have?",
+        "qHi": "लड़की के पास क्या है?",
+        "promptEn": "The girl has a red bag. What does the girl have?",
+        "promptHi": "लड़की के पास क्या है?",
+        "options": [
+          {
+            "value": "a red bag",
+            "label": "a red bag"
+          },
+          {
+            "value": "a blue cow",
+            "label": "a blue cow"
+          }
+        ],
+        "answer": "a red bag",
+        "sentence": "The girl has a red bag."
+      },
+      {
+        "type": "mcq",
+        "titleEn": "Answer in a sentence",
+        "titleHi": "वाक्य में उत्तर",
+        "qEn": "Where is the boat? Pick a full sentence.",
+        "qHi": "नाव कहाँ है? पूरा वाक्य चुनो।",
+        "promptEn": "Where is the boat? Pick a full sentence.",
+        "promptHi": "नाव कहाँ है? पूरा वाक्य चुनो।",
+        "options": [
+          {
+            "value": "The boat is in the puddle.",
+            "label": "The boat is in the puddle."
+          },
+          {
+            "value": "puddle",
+            "label": "puddle"
+          }
+        ],
+        "answer": "The boat is in the puddle."
+      },
+      {
+        "type": "mcq",
+        "titleEn": "A short writing",
+        "titleHi": "एक छोटा लेख",
+        "qEn": "Which short writing is ready for a NIPUN check?",
+        "qHi": "कौन सा छोटा लेख निपुण जाँच के लिए तैयार है?",
+        "promptEn": "Which short writing is ready for a NIPUN check?",
+        "promptHi": "कौन सा छोटा लेख निपुण जाँच के लिए तैयार है?",
+        "options": [
+          {
+            "value": "I like roti. Dal is in the bowl. The mango is sweet.",
+            "label": "I like roti. Dal is in the bowl. The mango is sweet."
+          },
+          {
+            "value": "Roti. Space. Shoe.",
+            "label": "Roti. Space. Shoe."
+          }
+        ],
+        "answer": "I like roti. Dal is in the bowl. The mango is sweet."
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "NIPUN is a government goal for…",
+        "qHi": "निपुण है सरकारी लक्ष्य… के लिए",
+        "options": [
+          {
+            "value": "reading and writing in early grades",
+            "label": "reading and writing in early grades"
+          },
+          {
+            "value": "only a game high score",
+            "label": "only a game high score"
+          }
+        ],
+        "answer": "reading and writing in early grades",
+        "speakEn": "NIPUN is a government goal for…",
+        "speakHi": "निपुण है सरकारी लक्ष्य… के लिए"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A new sentence is one we can…",
+        "qHi": "नया वाक्य वह है जिसे हम…",
+        "options": [
+          {
+            "value": "read without only memorising it",
+            "label": "read without only memorising it"
+          },
+          {
+            "value": "never look at",
+            "label": "never look at"
+          }
+        ],
+        "answer": "read without only memorising it",
+        "speakEn": "A new sentence is one we can…",
+        "speakHi": "नया वाक्य वह है जिसे हम…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "clap is an…",
+        "qHi": "clap है एक…",
+        "options": [
+          "action word",
+          "colour"
+        ],
+        "answer": "action word",
+        "speakEn": "clap is an…",
+        "speakHi": "clap है एक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Namaste is a…",
+        "qHi": "नमस्ते है एक…",
+        "options": [
+          "greeting",
+          "number"
+        ],
+        "answer": "greeting",
+        "speakEn": "Namaste is a…",
+        "speakHi": "नमस्ते है एक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The monkeys in the cap story…",
+        "qHi": "टोपी वाली कहानी में बंदर…",
+        "options": [
+          "copy the man",
+          "bake a cake"
+        ],
+        "answer": "copy the man",
+        "speakEn": "The monkeys in the cap story…",
+        "speakHi": "टोपी वाली कहानी में बंदर…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The hen is on the farm. The place is…",
+        "qHi": "स्थान है…",
+        "options": [
+          "the farm",
+          "the moon"
+        ],
+        "answer": "the farm",
+        "speakEn": "The hen is on the farm. The place is…",
+        "speakHi": "स्थान है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Aam means…",
+        "qHi": "आम मतलब…",
+        "options": [
+          "mango",
+          "salt"
+        ],
+        "answer": "mango",
+        "speakEn": "Aam means…",
+        "speakHi": "आम मतलब…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The monsoon brings…",
+        "qHi": "मानसून लाता है…",
+        "options": [
+          "rain",
+          "a desert only"
+        ],
+        "answer": "rain",
+        "speakEn": "The monsoon brings…",
+        "speakHi": "मानसून लाता है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The Indian flag has saffron, white and…",
+        "qHi": "भारतीय झंडे में केसरिया, सफेद और…",
+        "options": [
+          "green",
+          "pink only"
+        ],
+        "answer": "green",
+        "speakEn": "The Indian flag has saffron, white and…",
+        "speakHi": "भारतीय झंडे में केसरिया, सफेद और…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A full-sentence answer starts with a…",
+        "qHi": "पूरे वाक्य का उत्तर शुरू होता है… से",
+        "options": [
+          "capital",
+          "scribble"
+        ],
+        "answer": "capital",
+        "speakEn": "A full-sentence answer starts with a…",
+        "speakHi": "पूरे वाक्य का उत्तर शुरू होता है… से"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Two or three linked sentences make a short…",
+        "qHi": "दो या तीन जुड़े वाक्य बनाते हैं छोटा…",
+        "options": [
+          "writing",
+          "phone book"
+        ],
+        "answer": "writing",
+        "speakEn": "Two or three linked sentences make a short…",
+        "speakHi": "दो या तीन जुड़े वाक्य बनाते हैं छोटा…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Mastery means these skills are still…",
+        "qHi": "महारत मतलब ये कौशल अभी भी…",
+        "options": [
+          "secure",
+          "thrown away"
+        ],
+        "answer": "secure",
+        "speakEn": "Mastery means these skills are still…",
+        "speakHi": "महारत मतलब ये कौशल अभी भी…"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "premium": false,
+    "logic": false
+  },
+  {
+    "id": "class1-math-1",
+    "level": "class1",
+    "subject": "maths",
+    "n": 1,
+    "titleEn": "Shape properties and a reasoned sort",
+    "titleHi": "आकृति गुण और तर्क से छाँट",
+    "shortEn": "Sort shapes by a property, such as can roll, and say why each one belongs.",
+    "shortHi": "गुण से आकृतियाँ छाँटो, जैसे लुढ़क सकती हैं, और बताओ क्यों।",
+    "scene": "school",
+    "teach": {
+      "pose": "point",
+      "anim": "bob",
+      "capEn": "We sort by a property, not only by a name. A ball can roll. A book cannot. Why? The ball is a sphere.",
+      "capHi": "हम गुण से छाँटते हैं, केवल नाम से नहीं। गेंद लुढ़क सकती है। किताब नहीं। क्यों? गेंद गोला है।",
+      "speakEn": "Class 1 geometry asks for a reason. A cube has square faces, so it slides. A cylinder can roll on its side. Let's sort and say why.",
+      "speakHi": "कक्षा 1 की ज्यामिति कारण माँगती है। घन की वर्गाकार सतहें, इसलिए सरकता है। बेलन करवट पर लुढ़क सकता है। छाँटो और क्यों बताओ।"
+    },
+    "activities": [
+      {
+        "type": "sort",
+        "titleEn": "Sort by can roll",
+        "titleHi": "लुढ़कने से छाँटो",
+        "groups": [
+          {
+            "id": "roll",
+            "en": "can roll",
+            "hi": "लुढ़क सकती हैं",
+            "items": [
+              {
+                "en": "ball",
+                "hi": "गेंद"
+              },
+              {
+                "en": "steel glass",
+                "hi": "स्टील गिलास"
+              }
+            ]
+          },
+          {
+            "id": "slide",
+            "en": "slide, not roll",
+            "hi": "सरकें, लुढ़कें नहीं",
+            "items": [
+              {
+                "en": "book",
+                "hi": "किताब"
+              },
+              {
+                "en": "dice",
+                "hi": "पासा"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "titleEn": "Say why",
+        "titleHi": "क्यों बताओ",
+        "qEn": "A ball can roll because it is a…",
+        "qHi": "गेंद लुढ़क सकती है क्योंकि यह है…",
+        "promptEn": "A ball can roll because it is a…",
+        "promptHi": "गेंद लुढ़क सकती है क्योंकि यह है…",
+        "options": [
+          "sphere",
+          "cube"
+        ],
+        "answer": "sphere"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "A cube",
+        "titleHi": "एक घन",
+        "qEn": "A dice is often a cube because it has…",
+        "qHi": "पासा अक्सर घन है क्योंकि इसमें…",
+        "promptEn": "A dice is often a cube because it has…",
+        "promptHi": "पासा अक्सर घन है क्योंकि इसमें…",
+        "options": [
+          {
+            "value": "square faces",
+            "label": "square faces"
+          },
+          {
+            "value": "no faces",
+            "label": "no faces"
+          }
+        ],
+        "answer": "square faces"
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "A property is a fact about how a shape…",
+        "qHi": "गुण वह तथ्य है कि आकृति कैसे…",
+        "options": [
+          "looks or moves",
+          "forgets its name"
+        ],
+        "answer": "looks or moves",
+        "speakEn": "A property is a fact about how a shape…",
+        "speakHi": "गुण वह तथ्य है कि आकृति कैसे…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A book usually…",
+        "qHi": "किताब आमतौर पर…",
+        "options": [
+          {
+            "value": "slides, not rolls",
+            "label": "slides, not rolls"
+          },
+          {
+            "value": "is a sphere",
+            "label": "is a sphere"
+          }
+        ],
+        "answer": "slides, not rolls",
+        "speakEn": "A book usually…",
+        "speakHi": "किताब आमतौर पर…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A steel glass is often a…",
+        "qHi": "स्टील गिलास अक्सर है…",
+        "options": [
+          "cylinder",
+          "cube"
+        ],
+        "answer": "cylinder",
+        "speakEn": "A steel glass is often a…",
+        "speakHi": "स्टील गिलास अक्सर है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A cone can remind us of a…",
+        "qHi": "शंकु याद दिला सकता है…",
+        "options": [
+          "ice-cream cornet",
+          "bus"
+        ],
+        "answer": "ice-cream cornet",
+        "speakEn": "A cone can remind us of a…",
+        "speakHi": "शंकु याद दिला सकता है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "We sort by a rule so the groups…",
+        "qHi": "नियम से छाँटते हैं ताकि समूह…",
+        "options": [
+          {
+            "value": "make sense",
+            "label": "are random"
+          },
+          {
+            "value": "are random",
+            "label": "are random"
+          }
+        ],
+        "answer": "make sense",
+        "speakEn": "We sort by a rule so the groups…",
+        "speakHi": "नियम से छाँटते हैं ताकि समूह…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A cuboid is often like a…",
+        "qHi": "घनाभ अक्सर जैसा…",
+        "options": [
+          "box",
+          "ball"
+        ],
+        "answer": "box",
+        "speakEn": "A cuboid is often like a…",
+        "speakHi": "घनाभ अक्सर जैसा…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Why questions turn a sort into…",
+        "qHi": "क्यों प्रश्न छाँट को बनाते हैं…",
+        "options": [
+          {
+            "value": "reasoned work",
+            "label": "only colouring"
+          },
+          {
+            "value": "only colouring",
+            "label": "only colouring"
+          }
+        ],
+        "answer": "reasoned work",
+        "speakEn": "Why questions turn a sort into…",
+        "speakHi": "क्यों प्रश्न छाँट को बनाते हैं…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A football is a…",
+        "qHi": "फुटबॉल है…",
+        "options": [
+          "sphere",
+          "cube"
+        ],
+        "answer": "sphere",
+        "speakEn": "A football is a…",
+        "speakHi": "फुटबॉल है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A cube has how many square faces?",
+        "qHi": "घन की कितनी वर्गाकार सतहें?",
+        "options": [
+          "6",
+          "1"
+        ],
+        "answer": "6",
+        "speakEn": "A cube has how many square faces?",
+        "speakHi": "घन की कितनी वर्गाकार सतहें?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "If it can roll on its side, it may be a…",
+        "qHi": "अगर करवट पर लुढ़के, हो सकता है…",
+        "options": [
+          "cylinder",
+          "flat square only"
+        ],
+        "answer": "cylinder",
+        "speakEn": "If it can roll on its side, it may be a…",
+        "speakHi": "अगर करवट पर लुढ़के, हो सकता है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A dice is often a…",
+        "qHi": "पासा अक्सर है…",
+        "options": [
+          "cube",
+          "sphere"
+        ],
+        "answer": "cube",
+        "speakEn": "A dice is often a…",
+        "speakHi": "पासा अक्सर है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Reasoned means we can say…",
+        "qHi": "तर्क मतलब हम कह सकते हैं…",
+        "options": [
+          "why",
+          "nothing"
+        ],
+        "answer": "why",
+        "speakEn": "Reasoned means we can say…",
+        "speakHi": "तर्क मतलब हम कह सकते हैं…"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "premium": false,
+    "logic": false
+  },
+  {
+    "id": "class1-math-2",
+    "level": "class1",
+    "subject": "maths",
+    "n": 2,
+    "titleEn": "Making 10, and teen numbers as 10 and ones",
+    "titleHi": "10 बनाना, और किशोर संख्याएँ 10 और इकाई के रूप में",
+    "shortEn": "Make 10 quickly. 16 is 10 and 6. Use this for later place value.",
+    "shortHi": "जल्दी 10 बनाओ। 16 है 10 और 6। यह बाद के स्थानीय मान के लिए है।",
+    "scene": "school",
+    "teach": {
+      "pose": "clap",
+      "anim": "clap",
+      "capEn": "Making 10 is a key Class 1 habit. 7 and 3 make 10. 16 is a ten and 6 ones, not a new name only.",
+      "capHi": "10 बनाना कक्षा 1 की मुख्य आदत है। 7 और 3 मिलकर 10। 16 एक दस और 6 इकाई है, केवल नया नाम नहीं।",
+      "speakEn": "If you can make 10, adding later becomes easier. Teen numbers are ten and some ones. Let's show 16 on a double idea: a full ten-frame and 6 more.",
+      "speakHi": "अगर 10 बना सको, बाद का जोड़ आसान होता है। किशोर संख्याएँ दस और कुछ इकाई हैं। 16 दिखाओ: भरा दस-फ्रेम और 6 और।"
+    },
+    "activities": [
+      {
+        "type": "ten-frame",
+        "titleEn": "Make 10",
+        "titleHi": "10 बनाओ",
+        "filled": 7,
+        "qEn": "7 are filled. How many more to make 10?",
+        "qHi": "7 भरे हैं। 10 के लिए कितने और?",
+        "options": [
+          "2",
+          "3",
+          "4"
+        ],
+        "answer": "3"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "A teen number",
+        "titleHi": "एक किशोर संख्या",
+        "qEn": "16 is…",
+        "qHi": "16 है…",
+        "promptEn": "16 is…",
+        "promptHi": "16 है…",
+        "options": [
+          {
+            "value": "10 and 6 ones",
+            "label": "10 and 6 ones"
+          },
+          {
+            "value": "1 and 6 only",
+            "label": "1 and 6 only"
+          },
+          {
+            "value": "60",
+            "label": "60"
+          }
+        ],
+        "answer": "10 and 6 ones"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "Make 10 mentally",
+        "titleHi": "मन से 10 बनाओ",
+        "qEn": "9 and how many make 10?",
+        "qHi": "9 और कितने मिलकर 10?",
+        "promptEn": "9 and how many make 10?",
+        "promptHi": "9 और कितने मिलकर 10?",
+        "options": [
+          "1",
+          "9",
+          "19"
+        ],
+        "answer": "1"
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "8 and how many make 10?",
+        "qHi": "8 और कितने मिलकर 10?",
+        "options": [
+          "2",
+          "8"
+        ],
+        "answer": "2",
+        "speakEn": "8 and how many make 10?",
+        "speakHi": "8 और कितने मिलकर 10?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "6 and how many make 10?",
+        "qHi": "6 और कितने मिलकर 10?",
+        "options": [
+          "4",
+          "6"
+        ],
+        "answer": "4",
+        "speakEn": "6 and how many make 10?",
+        "speakHi": "6 और कितने मिलकर 10?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "14 is 10 and…",
+        "qHi": "14 है 10 और…",
+        "options": [
+          "4 ones",
+          "40"
+        ],
+        "answer": "4 ones",
+        "speakEn": "14 is 10 and…",
+        "speakHi": "14 है 10 और…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "11 is 10 and…",
+        "qHi": "11 है 10 और…",
+        "options": [
+          "1 one",
+          "11 tens"
+        ],
+        "answer": "1 one",
+        "speakEn": "11 is 10 and…",
+        "speakHi": "11 है 10 और…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "19 is 10 and…",
+        "qHi": "19 है 10 और…",
+        "options": [
+          "9 ones",
+          "90"
+        ],
+        "answer": "9 ones",
+        "speakEn": "19 is 10 and…",
+        "speakHi": "19 है 10 और…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "20 is…",
+        "qHi": "20 है…",
+        "options": [
+          {
+            "value": "two tens",
+            "label": "two tens"
+          },
+          {
+            "value": "2 ones",
+            "label": "2 ones"
+          }
+        ],
+        "answer": "two tens",
+        "speakEn": "20 is…",
+        "speakHi": "20 है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "5 and 5 make…",
+        "qHi": "5 और 5 मिलकर…",
+        "options": [
+          "10",
+          "55"
+        ],
+        "answer": "10",
+        "speakEn": "5 and 5 make…",
+        "speakHi": "5 और 5 मिलकर…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "10 and 7 ones is…",
+        "qHi": "10 और 7 इकाई है…",
+        "options": [
+          "17",
+          "107"
+        ],
+        "answer": "17",
+        "speakEn": "10 and 7 ones is…",
+        "speakHi": "10 और 7 इकाई है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Making 10 helps us later when we…",
+        "qHi": "10 बनाना बाद में मदद करता है जब हम…",
+        "options": [
+          "add",
+          "forget numbers"
+        ],
+        "answer": "add",
+        "speakEn": "Making 10 helps us later when we…",
+        "speakHi": "10 बनाना बाद में मदद करता है जब हम…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "13 is not 31 because the 1 stands for a…",
+        "qHi": "13, 31 नहीं क्योंकि 1 का मतलब है…",
+        "options": [
+          "ten",
+          "one only"
+        ],
+        "answer": "ten",
+        "speakEn": "13 is not 31 because the 1 stands for a…",
+        "speakHi": "13, 31 नहीं क्योंकि 1 का मतलब है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "0 and 10 make…",
+        "qHi": "0 और 10 मिलकर…",
+        "options": [
+          "10",
+          "0"
+        ],
+        "answer": "10",
+        "speakEn": "0 and 10 make…",
+        "speakHi": "0 और 10 मिलकर…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A teen number is built from…",
+        "qHi": "किशोर संख्या बनती है… से",
+        "options": [
+          {
+            "value": "ten and ones",
+            "label": "ten and ones"
+          },
+          {
+            "value": "only colours",
+            "label": "only colours"
+          }
+        ],
+        "answer": "ten and ones",
+        "speakEn": "A teen number is built from…",
+        "speakHi": "किशोर संख्या बनती है… से"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "premium": false,
+    "logic": false
+  },
+  {
+    "id": "class1-math-3",
+    "level": "class1",
+    "subject": "maths",
+    "n": 3,
+    "titleEn": "One-digit add and subtract, including a missing number",
+    "titleHi": "एक अंक का जोड़-घटाव, गुम संख्या सहित",
+    "shortEn": "7 + 5, 12 − 4, and 6 + ☐ = 10. Say the strategy.",
+    "shortHi": "7 + 5, 12 − 4, और 6 + ☐ = 10। युक्ति बताओ।",
+    "scene": "home",
+    "teach": {
+      "pose": "point",
+      "anim": "bob",
+      "capEn": "We add and subtract one-digit numbers, and we find a missing number. 6 and what make 10? The missing number is 4.",
+      "capHi": "एक अंक की संख्याएँ जोड़ते-घटाते हैं, और गुम संख्या ढूँढते हैं। 6 और क्या मिलकर 10? गुम संख्या 4 है।",
+      "speakEn": "A missing number is like a small puzzle. 7 + 5 can be 7 + 3 + 2, because 7 and 3 make 10, then 2 more is 12. Always say the strategy.",
+      "speakHi": "गुम संख्या छोटी पहेली है। 7 + 5 हो सकता है 7 + 3 + 2, क्योंकि 7 और 3 मिलकर 10, फिर 2 और हैं 12। युक्ति हमेशा बताओ।"
+    },
+    "activities": [
+      {
+        "type": "mcq",
+        "titleEn": "Add 7 and 5",
+        "titleHi": "7 और 5 जोड़ो",
+        "qEn": "7 + 5 = 12 because…",
+        "qHi": "7 + 5 = 12 क्योंकि…",
+        "promptEn": "7 + 5 = 12 because…",
+        "promptHi": "7 + 5 = 12 क्योंकि…",
+        "options": [
+          {
+            "value": "I made 10: 7 and 3, then 2 more",
+            "label": "I made 10: 7 and 3, then 2 more"
+          },
+          {
+            "value": "I guessed 100",
+            "label": "I guessed 100"
+          }
+        ],
+        "answer": "I made 10: 7 and 3, then 2 more"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "Subtract",
+        "titleHi": "घटाओ",
+        "qEn": "12 − 4 is…",
+        "qHi": "12 − 4 है…",
+        "promptEn": "12 − 4 is…",
+        "promptHi": "12 − 4 है…",
+        "options": [
+          "8",
+          "16",
+          "4"
+        ],
+        "answer": "8"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "Missing number",
+        "titleHi": "गुम संख्या",
+        "qEn": "6 + ☐ = 10. The missing number is…",
+        "qHi": "6 + ☐ = 10। गुम संख्या है…",
+        "promptEn": "6 + ☐ = 10. The missing number is…",
+        "promptHi": "6 + ☐ = 10। गुम संख्या है…",
+        "options": [
+          "4",
+          "16",
+          "6"
+        ],
+        "answer": "4"
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "8 + 5 =",
+        "qHi": "8 + 5 =",
+        "options": [
+          "13",
+          "85"
+        ],
+        "answer": "13",
+        "speakEn": "8 + 5 =",
+        "speakHi": "8 + 5 ="
+      },
+      {
+        "type": "mcq",
+        "qEn": "9 + 6 =",
+        "qHi": "9 + 6 =",
+        "options": [
+          "15",
+          "96"
+        ],
+        "answer": "15",
+        "speakEn": "9 + 6 =",
+        "speakHi": "9 + 6 ="
+      },
+      {
+        "type": "mcq",
+        "qEn": "14 − 5 =",
+        "qHi": "14 − 5 =",
+        "options": [
+          "9",
+          "19"
+        ],
+        "answer": "9",
+        "speakEn": "14 − 5 =",
+        "speakHi": "14 − 5 ="
+      },
+      {
+        "type": "mcq",
+        "qEn": "11 − 3 =",
+        "qHi": "11 − 3 =",
+        "options": [
+          "8",
+          "14"
+        ],
+        "answer": "8",
+        "speakEn": "11 − 3 =",
+        "speakHi": "11 − 3 ="
+      },
+      {
+        "type": "mcq",
+        "qEn": "4 + ☐ = 10. Missing?",
+        "qHi": "4 + ☐ = 10। गुम?",
+        "options": [
+          "6",
+          "14"
+        ],
+        "answer": "6",
+        "speakEn": "4 + ☐ = 10. Missing?",
+        "speakHi": "4 + ☐ = 10। गुम?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "9 + ☐ = 10. Missing?",
+        "qHi": "9 + ☐ = 10। गुम?",
+        "options": [
+          "1",
+          "19"
+        ],
+        "answer": "1",
+        "speakEn": "9 + ☐ = 10. Missing?",
+        "speakHi": "9 + ☐ = 10। गुम?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "☐ + 7 = 10. Missing?",
+        "qHi": "☐ + 7 = 10। गुम?",
+        "options": [
+          "3",
+          "17"
+        ],
+        "answer": "3",
+        "speakEn": "☐ + 7 = 10. Missing?",
+        "speakHi": "☐ + 7 = 10। गुम?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "15 − 6 =",
+        "qHi": "15 − 6 =",
+        "options": [
+          "9",
+          "21"
+        ],
+        "answer": "9",
+        "speakEn": "15 − 6 =",
+        "speakHi": "15 − 6 ="
+      },
+      {
+        "type": "mcq",
+        "qEn": "A strategy might be: make 10, then…",
+        "qHi": "युक्ति हो सकती है: 10 बनाओ, फिर…",
+        "options": [
+          {
+            "value": "add the rest",
+            "label": "forget the rest"
+          },
+          {
+            "value": "forget the rest",
+            "label": "forget the rest"
+          }
+        ],
+        "answer": "add the rest",
+        "speakEn": "A strategy might be: make 10, then…",
+        "speakHi": "युक्ति हो सकती है: 10 बनाओ, फिर…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "7 − 0 =",
+        "qHi": "7 − 0 =",
+        "options": [
+          "7",
+          "0"
+        ],
+        "answer": "7",
+        "speakEn": "7 − 0 =",
+        "speakHi": "7 − 0 ="
+      },
+      {
+        "type": "mcq",
+        "qEn": "10 − 10 =",
+        "qHi": "10 − 10 =",
+        "options": [
+          "0",
+          "20"
+        ],
+        "answer": "0",
+        "speakEn": "10 − 10 =",
+        "speakHi": "10 − 10 ="
+      },
+      {
+        "type": "mcq",
+        "qEn": "A missing number completes the…",
+        "qHi": "गुम संख्या पूरी करती है…",
+        "options": [
+          "sentence",
+          "colouring only"
+        ],
+        "answer": "sentence",
+        "speakEn": "A missing number completes the…",
+        "speakHi": "गुम संख्या पूरी करती है…"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "premium": false,
+    "logic": false
+  },
+  {
+    "id": "class1-math-4",
+    "level": "class1",
+    "subject": "maths",
+    "n": 4,
+    "titleEn": "A vegetable farm: everyday problems to 20",
+    "titleHi": "सब्ज़ी का खेत: 20 तक रोज़मर्रा के सवाल",
+    "shortEn": "12 tomatoes, pick 5. How many left? 8 onions and 7 more. How many, and how did you know?",
+    "shortHi": "12 टमाटर, 5 तोड़े। कितने बचे? 8 प्याज और 7 और। कितने, और कैसे पता चला?",
+    "scene": "home",
+    "teach": {
+      "pose": "wave",
+      "anim": "wave",
+      "capEn": "A farm story can be a maths problem. 12 tomatoes, pick 5, 7 are left. 8 onions and 7 more make 15.",
+      "capHi": "खेत की कहानी गणित का सवाल बन सकती है। 12 टमाटर, 5 तोड़े, 7 बचे। 8 प्याज और 7 और मिलकर 15।",
+      "speakEn": "Everyday problems use Indian farms and markets, and we always say how we knew. I took away because we picked some. I added because more were harvested.",
+      "speakHi": "रोज़मर्रा के सवाल भारतीय खेत और बाज़ार के हैं, और हम हमेशा बताते हैं कैसे पता चला। घटाया क्योंकि कुछ तोड़े। जोड़ा क्योंकि और काटी गईं।"
+    },
+    "activities": [
+      {
+        "type": "mcq",
+        "titleEn": "Tomatoes left",
+        "titleHi": "बचे टमाटर",
+        "qEn": "12 tomatoes, pick 5. How many are left?",
+        "qHi": "12 टमाटर, 5 तोड़े। कितने बचे?",
+        "promptEn": "12 tomatoes, pick 5. How many are left?",
+        "promptHi": "12 टमाटर, 5 तोड़े। कितने बचे?",
+        "options": [
+          "7",
+          "17",
+          "5"
+        ],
+        "answer": "7"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "Onions",
+        "titleHi": "प्याज",
+        "qEn": "8 onions and 7 more. How many now?",
+        "qHi": "8 प्याज और 7 और। अब कितने?",
+        "promptEn": "8 onions and 7 more. How many now?",
+        "promptHi": "8 प्याज और 7 और। अब कितने?",
+        "options": [
+          "15",
+          "1",
+          "87"
+        ],
+        "answer": "15"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "How did you know?",
+        "titleHi": "कैसे पता चला?",
+        "qEn": "I knew 12 pick 5 leaves 7 because…",
+        "qHi": "पता चला 12 में से 5 लेने पर 7 क्योंकि…",
+        "promptEn": "I knew 12 pick 5 leaves 7 because…",
+        "promptHi": "पता चला 12 में से 5 लेने पर 7 क्योंकि…",
+        "options": [
+          {
+            "value": "I took away",
+            "label": "I took away"
+          },
+          {
+            "value": "I added a huge number",
+            "label": "I added a huge number"
+          }
+        ],
+        "answer": "I took away"
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "9 palak bunches and 6 more. Total?",
+        "qHi": "9 पालक गट्ठर और 6 और। कुल?",
+        "options": [
+          "15",
+          "3"
+        ],
+        "answer": "15",
+        "speakEn": "9 palak bunches and 6 more. Total?",
+        "speakHi": "9 पालक गट्ठर और 6 और। कुल?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "20 carrots, 4 are sold. Left?",
+        "qHi": "20 गाजर, 4 बिकीं। बचीं?",
+        "options": [
+          "16",
+          "24"
+        ],
+        "answer": "16",
+        "speakEn": "20 carrots, 4 are sold. Left?",
+        "speakHi": "20 गाजर, 4 बिकीं। बचीं?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "11 chillies and 2 more. Total?",
+        "qHi": "11 मिर्च और 2 और। कुल?",
+        "options": [
+          "13",
+          "9"
+        ],
+        "answer": "13",
+        "speakEn": "11 chillies and 2 more. Total?",
+        "speakHi": "11 मिर्च और 2 और। कुल?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "15 beans, eat 5. Left?",
+        "qHi": "15 फलियाँ, 5 खाईं। बचीं?",
+        "options": [
+          "10",
+          "20"
+        ],
+        "answer": "10",
+        "speakEn": "15 beans, eat 5. Left?",
+        "speakHi": "15 फलियाँ, 5 खाईं। बचीं?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A 'picked' story is usually…",
+        "qHi": "'तोड़े' वाली कहानी आमतौर पर…",
+        "options": [
+          "subtraction",
+          "addition"
+        ],
+        "answer": "subtraction",
+        "speakEn": "A 'picked' story is usually…",
+        "speakHi": "'तोड़े' वाली कहानी आमतौर पर…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A 'more harvested' story is usually…",
+        "qHi": "'और काटी' वाली कहानी आमतौर पर…",
+        "options": [
+          "addition",
+          "subtraction"
+        ],
+        "answer": "addition",
+        "speakEn": "A 'more harvested' story is usually…",
+        "speakHi": "'और काटी' वाली कहानी आमतौर पर…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "7 + 7 on the farm is…",
+        "qHi": "खेत पर 7 + 7…",
+        "options": [
+          "14",
+          "77"
+        ],
+        "answer": "14",
+        "speakEn": "7 + 7 on the farm is…",
+        "speakHi": "खेत पर 7 + 7…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "18 − 8 =",
+        "qHi": "18 − 8 =",
+        "options": [
+          "10",
+          "26"
+        ],
+        "answer": "10",
+        "speakEn": "18 − 8 =",
+        "speakHi": "18 − 8 ="
+      },
+      {
+        "type": "mcq",
+        "qEn": "How you knew should name add or…",
+        "qHi": "कैसे पता चला में जोड़ या… हो",
+        "options": [
+          "take away",
+          "a colour only"
+        ],
+        "answer": "take away",
+        "speakEn": "How you knew should name add or…",
+        "speakHi": "कैसे पता चला में जोड़ या… हो"
+      },
+      {
+        "type": "mcq",
+        "qEn": "4 brinjals and 9 more. Total?",
+        "qHi": "4 बैंगन और 9 और। कुल?",
+        "options": [
+          "13",
+          "5"
+        ],
+        "answer": "13",
+        "speakEn": "4 brinjals and 9 more. Total?",
+        "speakHi": "4 बैंगन और 9 और। कुल?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "16 take away 6 leaves…",
+        "qHi": "16 में से 6 बचते…",
+        "options": [
+          "10",
+          "22"
+        ],
+        "answer": "10",
+        "speakEn": "16 take away 6 leaves…",
+        "speakHi": "16 में से 6 बचते…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Everyday problems should feel like…",
+        "qHi": "रोज़मर्रा के सवाल लगने चाहिए जैसे…",
+        "options": [
+          {
+            "value": "real farm or market talk",
+            "label": "only abstract marks"
+          },
+          {
+            "value": "only abstract marks",
+            "label": "only abstract marks"
+          }
+        ],
+        "answer": "real farm or market talk",
+        "speakEn": "Everyday problems should feel like…",
+        "speakHi": "रोज़मर्रा के सवाल लगने चाहिए जैसे…"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "premium": false,
+    "logic": false
+  },
+  {
+    "id": "class1-math-5",
+    "level": "class1",
+    "subject": "maths",
+    "n": 5,
+    "titleEn": "21 to 99: order, before and after, who is near 50",
+    "titleHi": "21 से 99: क्रम, पहले-बाद, कौन 50 के पास",
+    "shortEn": "What comes after 49? Put 21, 50, 99 in order. Which is nearer to 50, 47 or 61?",
+    "shortHi": "49 के बाद क्या? 21, 50, 99 क्रम में। 50 के अधिक पास कौन, 47 या 61?",
+    "scene": "school",
+    "teach": {
+      "pose": "point",
+      "anim": "bob",
+      "capEn": "From 21 to 99 we order numbers, name the one before and after, and see which is nearer to a landmark like 50.",
+      "capHi": "21 से 99 तक संख्याएँ क्रम में लगाते हैं, पहले और बाद वाली बताते हैं, और देखते हैं कौन 50 जैसे पड़ाव के पास है।",
+      "speakEn": "After 49 comes 50. Before 21 is 20. 47 is nearer to 50 than 61, because 47 is only 3 away, and 61 is 11 away.",
+      "speakHi": "49 के बाद 50। 21 से पहले 20। 47, 61 से 50 के अधिक पास है, क्योंकि 47 केवल 3 दूर है, 61 है 11 दूर।"
+    },
+    "activities": [
+      {
+        "type": "sequence",
+        "titleEn": "Order 21, 50, 99",
+        "titleHi": "21, 50, 99 क्रम में",
+        "items": [
+          "21",
+          "50",
+          "99"
+        ],
+        "order": [
+          "21",
+          "50",
+          "99"
+        ]
+      },
+      {
+        "type": "mcq",
+        "titleEn": "After 49",
+        "titleHi": "49 के बाद",
+        "qEn": "The number just after 49 is…",
+        "qHi": "49 के ठीक बाद…",
+        "promptEn": "The number just after 49 is…",
+        "promptHi": "49 के ठीक बाद…",
+        "options": [
+          "50",
+          "48",
+          "59"
+        ],
+        "answer": "50"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "Near 50",
+        "titleHi": "50 के पास",
+        "qEn": "Which is nearer to 50, 47 or 61?",
+        "qHi": "50 के अधिक पास कौन, 47 या 61?",
+        "promptEn": "Which is nearer to 50, 47 or 61?",
+        "promptHi": "50 के अधिक पास कौन, 47 या 61?",
+        "options": [
+          "47",
+          "61"
+        ],
+        "answer": "47"
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "Just before 21 is…",
+        "qHi": "21 के ठीक पहले…",
+        "options": [
+          "20",
+          "22"
+        ],
+        "answer": "20",
+        "speakEn": "Just before 21 is…",
+        "speakHi": "21 के ठीक पहले…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Just after 99 is…",
+        "qHi": "99 के ठीक बाद…",
+        "options": [
+          "100",
+          "98"
+        ],
+        "answer": "100",
+        "speakEn": "Just after 99 is…",
+        "speakHi": "99 के ठीक बाद…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Which is more, 38 or 83?",
+        "qHi": "कौन अधिक, 38 या 83?",
+        "options": [
+          "83",
+          "38"
+        ],
+        "answer": "83",
+        "speakEn": "Which is more, 38 or 83?",
+        "speakHi": "कौन अधिक, 38 या 83?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The smallest of 21, 50, 99 is…",
+        "qHi": "21, 50, 99 में सबसे छोटी…",
+        "options": [
+          "21",
+          "99"
+        ],
+        "answer": "21",
+        "speakEn": "The smallest of 21, 50, 99 is…",
+        "speakHi": "21, 50, 99 में सबसे छोटी…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The greatest of 21, 50, 99 is…",
+        "qHi": "21, 50, 99 में सबसे बड़ी…",
+        "options": [
+          "99",
+          "21"
+        ],
+        "answer": "99",
+        "speakEn": "The greatest of 21, 50, 99 is…",
+        "speakHi": "21, 50, 99 में सबसे बड़ी…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "45 is nearer to 50 than…",
+        "qHi": "45, 50 के अधिक पास है… से",
+        "options": [
+          "20",
+          "90"
+        ],
+        "answer": "20",
+        "speakEn": "45 is nearer to 50 than…",
+        "speakHi": "45, 50 के अधिक पास है… से"
+      },
+      {
+        "type": "mcq",
+        "qEn": "60 is 1 ten more than…",
+        "qHi": "60, 1 दस अधिक है… से",
+        "options": [
+          "50",
+          "6"
+        ],
+        "answer": "50",
+        "speakEn": "60 is 1 ten more than…",
+        "speakHi": "60, 1 दस अधिक है… से"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Just after 29 is…",
+        "qHi": "29 के ठीक बाद…",
+        "options": [
+          "30",
+          "28"
+        ],
+        "answer": "30",
+        "speakEn": "Just after 29 is…",
+        "speakHi": "29 के ठीक बाद…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Near means a smaller…",
+        "qHi": "पास मतलब छोटी…",
+        "options": [
+          "difference",
+          "letter"
+        ],
+        "answer": "difference",
+        "speakEn": "Near means a smaller…",
+        "speakHi": "पास मतलब छोटी…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "47 is 3 away from 50. 61 is…",
+        "qHi": "47, 50 से 3 दूर। 61 है…",
+        "options": [
+          "11 away",
+          "1 away"
+        ],
+        "answer": "11 away",
+        "speakEn": "47 is 3 away from 50. 61 is…",
+        "speakHi": "47, 50 से 3 दूर। 61 है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Order means we go from…",
+        "qHi": "क्रम मतलब हम जाते हैं… से",
+        "options": [
+          {
+            "value": "smaller to greater, or the other way carefully",
+            "label": "smaller to greater, or the other way carefully"
+          },
+          {
+            "value": "a random mix",
+            "label": "a random mix"
+          }
+        ],
+        "answer": "smaller to greater, or the other way carefully",
+        "speakEn": "Order means we go from…",
+        "speakHi": "क्रम मतलब हम जाते हैं… से"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The tens digit in 47 is…",
+        "qHi": "47 में दहाई का अंक…",
+        "options": [
+          "4",
+          "7"
+        ],
+        "answer": "4",
+        "speakEn": "The tens digit in 47 is…",
+        "speakHi": "47 में दहाई का अंक…"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "premium": false,
+    "logic": false
+  },
+  {
+    "id": "class1-math-6",
+    "level": "class1",
+    "subject": "maths",
+    "n": 6,
+    "titleEn": "Estimate, then measure with a hand span or a cup",
+    "titleHi": "अनुमान, फिर हथेली या कप से माप",
+    "shortEn": "Guess the length or capacity, measure with a hand span or a cup, and compare.",
+    "shortHi": "लंबाई या धारिता का अनुमान, हथेली या कप से माप, और तुलना।",
+    "scene": "home",
+    "teach": {
+      "pose": "point",
+      "anim": "bob",
+      "capEn": "Guess first: maybe the mat is 6 hand spans. Then measure. We also measure how many cups fill a jug.",
+      "capHi": "पहले अनुमान: शायद चटाई 6 बीता है। फिर मापो। जग में कितने प्याले आते हैं, यह भी मापते हैं।",
+      "speakEn": "Class 1 still uses informal units, then we record the number and the unit. Was our estimate close, too high or too low?",
+      "speakHi": "कक्षा 1 अभी अनौपचारिक इकाइयाँ इस्तेमाल करती है, फिर संख्या और इकाई लिखते हैं। अनुमान पास था, अधिक था या कम?"
+    },
+    "activities": [
+      {
+        "type": "mcq",
+        "titleEn": "A record",
+        "titleHi": "एक रिकॉर्ड",
+        "qEn": "The mat is 6 hand spans. A good record includes…",
+        "qHi": "चटाई 6 बीता है। अच्छे रिकॉर्ड में…",
+        "promptEn": "The mat is 6 hand spans. A good record includes…",
+        "promptHi": "चटाई 6 बीता है। अच्छे रिकॉर्ड में…",
+        "options": [
+          {
+            "value": "the number and the unit",
+            "label": "the number and the unit"
+          },
+          {
+            "value": "only a doodle",
+            "label": "only a doodle"
+          }
+        ],
+        "answer": "the number and the unit"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "Estimate then check",
+        "titleHi": "अनुमान फिर जाँच",
+        "qEn": "You guessed 5 cups. The jug held 4. Your guess was…",
+        "qHi": "अनुमान 5 प्याले। जग में 4 आए। अनुमान था…",
+        "promptEn": "You guessed 5 cups. The jug held 4. Your guess was…",
+        "promptHi": "अनुमान 5 प्याले। जग में 4 आए। अनुमान था…",
+        "options": [
+          {
+            "value": "a little too high",
+            "label": "a little too high"
+          },
+          {
+            "value": "exact",
+            "label": "exact"
+          },
+          {
+            "value": "a thousand too low",
+            "label": "a thousand too low"
+          }
+        ],
+        "answer": "a little too high"
+      },
+      {
+        "type": "compare",
+        "titleEn": "Which is longer?",
+        "titleHi": "कौन लंबी?",
+        "qEn": "After measuring, which mat is longer?",
+        "qHi": "मापने के बाद कौन सी चटाई लंबी?",
+        "items": [
+          {
+            "id": "six",
+            "en": "6 hand spans",
+            "hi": "6 बीता",
+            "size": 4,
+            "color": "#457b9d"
+          },
+          {
+            "id": "three",
+            "en": "3 hand spans",
+            "hi": "3 बीता",
+            "size": 2,
+            "color": "#a8dadc"
+          }
+        ],
+        "answer": "six"
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "Estimate comes…",
+        "qHi": "अनुमान आता है…",
+        "options": [
+          {
+            "value": "before measuring",
+            "label": "after we forget"
+          },
+          {
+            "value": "after we forget",
+            "label": "after we forget"
+          }
+        ],
+        "answer": "before measuring",
+        "speakEn": "Estimate comes…",
+        "speakHi": "अनुमान आता है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A hand span measures…",
+        "qHi": "बीता नापती है…",
+        "options": [
+          "length",
+          "songs"
+        ],
+        "answer": "length",
+        "speakEn": "A hand span measures…",
+        "speakHi": "बीता नापती है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A cup can measure…",
+        "qHi": "कप नाप सकता है…",
+        "options": [
+          {
+            "value": "how much a jug holds",
+            "label": "how much a jug holds"
+          },
+          {
+            "value": "the alphabet",
+            "label": "the alphabet"
+          }
+        ],
+        "answer": "how much a jug holds",
+        "speakEn": "A cup can measure…",
+        "speakHi": "कप नाप सकता है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "If you guessed 4 and measured 4, the guess was…",
+        "qHi": "अनुमान 4, माप 4, अनुमान था…",
+        "options": [
+          "exact",
+          "wildly wrong"
+        ],
+        "answer": "exact",
+        "speakEn": "If you guessed 4 and measured 4, the guess was…",
+        "speakHi": "अनुमान 4, माप 4, अनुमान था…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "If you guessed 2 and measured 7, the guess was…",
+        "qHi": "अनुमान 2, माप 7, अनुमान था…",
+        "options": [
+          "too low",
+          "too high"
+        ],
+        "answer": "too low",
+        "speakEn": "If you guessed 2 and measured 7, the guess was…",
+        "speakHi": "अनुमान 2, माप 7, अनुमान था…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The unit in 6 hand spans is…",
+        "qHi": "6 बीता में इकाई है…",
+        "options": [
+          "hand spans",
+          "nothing"
+        ],
+        "answer": "hand spans",
+        "speakEn": "The unit in 6 hand spans is…",
+        "speakHi": "6 बीता में इकाई है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "3 cups and 2 more cups is…",
+        "qHi": "3 प्याले और 2 और…",
+        "options": [
+          "5 cups",
+          "32 cups"
+        ],
+        "answer": "5 cups",
+        "speakEn": "3 cups and 2 more cups is…",
+        "speakHi": "3 प्याले और 2 और…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "We compare two lengths using the same…",
+        "qHi": "दो लंबाई की तुलना एक ही… से",
+        "options": [
+          "unit",
+          "random mix"
+        ],
+        "answer": "unit",
+        "speakEn": "We compare two lengths using the same…",
+        "speakHi": "दो लंबाई की तुलना एक ही… से"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A careful estimate is not a…",
+        "qHi": "सावधान अनुमान नहीं होता…",
+        "options": [
+          {
+            "value": "wild number with no looking",
+            "label": "wild number with no looking"
+          },
+          {
+            "value": "measured check",
+            "label": "measured check"
+          }
+        ],
+        "answer": "wild number with no looking",
+        "speakEn": "A careful estimate is not a…",
+        "speakHi": "सावधान अनुमान नहीं होता…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "8 hand spans is longer than…",
+        "qHi": "8 बीता लंबी है… से",
+        "options": [
+          "3 hand spans",
+          "80 only always"
+        ],
+        "answer": "3 hand spans",
+        "speakEn": "8 hand spans is longer than…",
+        "speakHi": "8 बीता लंबी है… से"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Checking tells us if we were…",
+        "qHi": "जाँच बताती है क्या हम…",
+        "options": [
+          "close",
+          "asleep"
+        ],
+        "answer": "close",
+        "speakEn": "Checking tells us if we were…",
+        "speakHi": "जाँच बताती है क्या हम…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Informal units come before a ruler in…",
+        "qHi": "अनौपचारिक इकाइयाँ पहले आती हैं स्केल से… में",
+        "options": [
+          "centimetres",
+          "forgetting size"
+        ],
+        "answer": "centimetres",
+        "speakEn": "Informal units come before a ruler in…",
+        "speakHi": "अनौपचारिक इकाइयाँ पहले आती हैं स्केल से… में"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "premium": false,
+    "logic": false
+  },
+  {
+    "id": "class1-math-7",
+    "level": "class1",
+    "subject": "maths",
+    "n": 7,
+    "logic": true,
+    "titleEn": "A festival: patterns and state the rule",
+    "titleHi": "उत्सव: पैटर्न और नियम बताओ",
+    "shortEn": "Diwali diyas or Holi colours in a pattern. What comes next, and what is the rule?",
+    "shortHi": "दिवाली के दीए या होली के रंगों का पैटर्न। आगे क्या, और नियम क्या है?",
+    "scene": "diwali",
+    "teach": {
+      "pose": "clap",
+      "anim": "clap",
+      "capEn": "A festival pattern might be diya, sweet, diya, sweet. The rule is ABAB. A growing pattern might add one diya each time.",
+      "capHi": "त्योहार का पैटर्न हो सकता है दीया, मिठाई, दीया, मिठाई। नियम ABAB है। बढ़ता पैटर्न हर बार एक दीया जोड़ सकता है।",
+      "speakEn": "Logic is woven in when we state the rule, not only tap the next picture. Repeat two parts, or add one each time. Let's try both.",
+      "speakHi": "तर्क तब जुड़ता है जब हम नियम बताते हैं, केवल अगला चित्र नहीं। दो भाग दोहराओ, या हर बार एक जोड़ो। दोनों आज़माते हैं।"
+    },
+    "activities": [
+      {
+        "type": "sequence",
+        "titleEn": "What comes next?",
+        "titleHi": "आगे क्या?",
+        "items": [
+          "🪔",
+          "🍬",
+          "🪔",
+          "🍬",
+          "🪔",
+          "?"
+        ],
+        "order": [
+          "🪔",
+          "🍬",
+          "🪔",
+          "🍬",
+          "🪔",
+          "🍬"
+        ]
+      },
+      {
+        "type": "mcq",
+        "titleEn": "State the rule",
+        "titleHi": "नियम बताओ",
+        "qEn": "Diya, sweet, diya, sweet. The rule is…",
+        "qHi": "दीया, मिठाई, दीया, मिठाई। नियम है…",
+        "promptEn": "Diya, sweet, diya, sweet. The rule is…",
+        "promptHi": "दीया, मिठाई, दीया, मिठाई। नियम है…",
+        "options": [
+          {
+            "value": "repeat two parts, ABAB",
+            "label": "repeat two parts, ABAB"
+          },
+          {
+            "value": "add ten every time",
+            "label": "add ten every time"
+          }
+        ],
+        "answer": "repeat two parts, ABAB"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "A growing pattern",
+        "titleHi": "बढ़ता पैटर्न",
+        "qEn": "1 diya, 2 diyas, 3 diyas. What comes next, and why?",
+        "qHi": "1 दीया, 2, 3। आगे क्या, और क्यों?",
+        "promptEn": "1 diya, 2 diyas, 3 diyas. What comes next, and why?",
+        "promptHi": "1 दीया, 2, 3। आगे क्या, और क्यों?",
+        "options": [
+          {
+            "value": "4, because we add one each time",
+            "label": "4, because we add one each time"
+          },
+          {
+            "value": "1 again, with no reason",
+            "label": "1 again, with no reason"
+          }
+        ],
+        "answer": "4, because we add one each time"
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "In 🔴🟢🔴🟢__, next is…",
+        "qHi": "🔴🟢🔴🟢__ आगे…",
+        "options": [
+          "🔴",
+          "🟢"
+        ],
+        "answer": "🔴",
+        "speakEn": "In 🔴🟢🔴🟢__, next is…",
+        "speakHi": "🔴🟢🔴🟢__ आगे…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "An ABAB rule means two parts that…",
+        "qHi": "ABAB नियम मतलब दो भाग जो…",
+        "options": [
+          {
+            "value": "take turns",
+            "label": "take turns"
+          },
+          {
+            "value": "never repeat",
+            "label": "never repeat"
+          }
+        ],
+        "answer": "take turns",
+        "speakEn": "An ABAB rule means two parts that…",
+        "speakHi": "ABAB नियम मतलब दो भाग जो…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A growing pattern…",
+        "qHi": "बढ़ता पैटर्न…",
+        "options": [
+          {
+            "value": "gets bigger each time",
+            "label": "gets bigger each time"
+          },
+          {
+            "value": "stays the same size",
+            "label": "stays the same size"
+          }
+        ],
+        "answer": "gets bigger each time",
+        "speakEn": "A growing pattern…",
+        "speakHi": "बढ़ता पैटर्न…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The rule of 2, 4, 6, 8 is…",
+        "qHi": "2, 4, 6, 8 का नियम…",
+        "options": [
+          {
+            "value": "add 2 each time",
+            "label": "add 2 each time"
+          },
+          {
+            "value": "add 100",
+            "label": "add 100"
+          }
+        ],
+        "answer": "add 2 each time",
+        "speakEn": "The rule of 2, 4, 6, 8 is…",
+        "speakHi": "2, 4, 6, 8 का नियम…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Next in 5, 10, 15 is…",
+        "qHi": "5, 10, 15 में आगे…",
+        "options": [
+          "20",
+          "6"
+        ],
+        "answer": "20",
+        "speakEn": "Next in 5, 10, 15 is…",
+        "speakHi": "5, 10, 15 में आगे…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Stating the rule is the…",
+        "qHi": "नियम बताना है…",
+        "options": [
+          {
+            "value": "thinking part",
+            "label": "colouring only"
+          },
+          {
+            "value": "colouring only",
+            "label": "colouring only"
+          }
+        ],
+        "answer": "thinking part",
+        "speakEn": "Stating the rule is the…",
+        "speakHi": "नियम बताना है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Diya, diya, sweet. Next is…",
+        "qHi": "दीया, दीया, मिठाई। आगे…",
+        "options": [
+          "diya",
+          "a bus always"
+        ],
+        "answer": "diya",
+        "speakEn": "Diya, diya, sweet. Next is…",
+        "speakHi": "दीया, दीया, मिठाई। आगे…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "If the rule is add 1, after 8 comes…",
+        "qHi": "अगर नियम 1 जोड़ना हो, 8 के बाद…",
+        "options": [
+          "9",
+          "80"
+        ],
+        "answer": "9",
+        "speakEn": "If the rule is add 1, after 8 comes…",
+        "speakHi": "अगर नियम 1 जोड़ना हो, 8 के बाद…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A festival pattern can use…",
+        "qHi": "त्योहार का पैटर्न उपयोग कर सकता है…",
+        "options": [
+          {
+            "value": "diyas, colours or sweets",
+            "label": "diyas, colours or sweets"
+          },
+          {
+            "value": "only algebra signs",
+            "label": "only algebra signs"
+          }
+        ],
+        "answer": "diyas, colours or sweets",
+        "speakEn": "A festival pattern can use…",
+        "speakHi": "त्योहार का पैटर्न उपयोग कर सकता है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "ABAB after blue, yellow, blue is…",
+        "qHi": "नीला, पीला, नीला के बाद ABAB में…",
+        "options": [
+          "yellow",
+          "red always"
+        ],
+        "answer": "yellow",
+        "speakEn": "ABAB after blue, yellow, blue is…",
+        "speakHi": "नीला, पीला, नीला के बाद ABAB में…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Logic is woven in when we…",
+        "qHi": "तर्क तब जुड़ता है जब हम…",
+        "options": [
+          {
+            "value": "explain the rule",
+            "label": "skip the rule"
+          },
+          {
+            "value": "skip the rule",
+            "label": "skip the rule"
+          }
+        ],
+        "answer": "explain the rule",
+        "speakEn": "Logic is woven in when we…",
+        "speakHi": "तर्क तब जुड़ता है जब हम…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Next in 10, 20, 30 is…",
+        "qHi": "10, 20, 30 में आगे…",
+        "options": [
+          "40",
+          "21"
+        ],
+        "answer": "40",
+        "speakEn": "Next in 10, 20, 30 is…",
+        "speakHi": "10, 20, 30 में आगे…"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "premium": false
+  },
+  {
+    "id": "class1-math-8",
+    "level": "class1",
+    "subject": "maths",
+    "n": 8,
+    "titleEn": "How my day goes: sequence, hour, and duration",
+    "titleHi": "मेरा दिन कैसे बीतता है: क्रम, घंटा, अवधि",
+    "shortEn": "Order the day. It is 8 o'clock. School is about 4 hours, which is a duration.",
+    "shortHi": "दिन क्रम में लगाओ। 8 बज रहे हैं। स्कूल लगभग 4 घंटे है, यह अवधि है।",
+    "scene": "home",
+    "teach": {
+      "pose": "wave",
+      "anim": "wave",
+      "capEn": "A day has an order, a time on the hour, and a duration: how long something lasts. School might last about 4 hours.",
+      "capHi": "दिन का क्रम होता है, पूरे घंटे का समय, और अवधि: कोई चीज़ कितनी देर चलती है। स्कूल लगभग 4 घंटे चल सकता है।",
+      "speakEn": "We already know 8 o'clock. Duration is new: morning assembly is short, school is longer, a nap may be shorter than school. Let's order the day and talk about how long.",
+      "speakHi": "हम 8 बजे पहले से जानते हैं। अवधि नई है: प्रार्थना छोटी, स्कूल लंबा, झपकी स्कूल से छोटी हो सकती है। दिन क्रम में लगाओ और कितनी देर की बात करो।"
+    },
+    "activities": [
+      {
+        "type": "sequence",
+        "titleEn": "Order the day",
+        "titleHi": "दिन क्रम में",
+        "items": [
+          "wake",
+          "school",
+          "play",
+          "bed"
+        ],
+        "order": [
+          "wake",
+          "school",
+          "play",
+          "bed"
+        ]
+      },
+      {
+        "type": "mcq",
+        "titleEn": "8 o'clock",
+        "titleHi": "8 बजे",
+        "qEn": "The short hand is on 8 and the long hand is on 12. The time is…",
+        "qHi": "छोटी सुई 8 पर, बड़ी 12 पर। समय है…",
+        "promptEn": "The short hand is on 8 and the long hand is on 12. The time is…",
+        "promptHi": "छोटी सुई 8 पर, बड़ी 12 पर। समय है…",
+        "options": [
+          {
+            "value": "8 o'clock",
+            "label": "8 o'clock"
+          },
+          {
+            "value": "12 o'clock",
+            "label": "12 o'clock"
+          }
+        ],
+        "answer": "8 o'clock"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "Duration",
+        "titleHi": "अवधि",
+        "qEn": "Which usually lasts longer?",
+        "qHi": "कौन आमतौर पर अधिक देर चलता है?",
+        "promptEn": "Which usually lasts longer?",
+        "promptHi": "कौन आमतौर पर अधिक देर चलता है?",
+        "options": [
+          {
+            "value": "school",
+            "label": "school"
+          },
+          {
+            "value": "a short clap",
+            "label": "a short clap"
+          }
+        ],
+        "answer": "school"
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "Duration means how…",
+        "qHi": "अवधि मतलब कितनी…",
+        "options": [
+          {
+            "value": "long something lasts",
+            "label": "long something lasts"
+          },
+          {
+            "value": "loud a song is",
+            "label": "loud a song is"
+          }
+        ],
+        "answer": "long something lasts",
+        "speakEn": "Duration means how…",
+        "speakHi": "अवधि मतलब कितनी…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "On the hour the long hand points to…",
+        "qHi": "पूरे घंटे पर बड़ी सुई… पर",
+        "options": [
+          "12",
+          "8 always"
+        ],
+        "answer": "12",
+        "speakEn": "On the hour the long hand points to…",
+        "speakHi": "पूरे घंटे पर बड़ी सुई… पर"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Play usually comes after…",
+        "qHi": "खेल आमतौर पर बाद आता है… के",
+        "options": [
+          "school",
+          "bed first always"
+        ],
+        "answer": "school",
+        "speakEn": "Play usually comes after…",
+        "speakHi": "खेल आमतौर पर बाद आता है… के"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Bed comes at the…",
+        "qHi": "सोना आता है… पर",
+        "options": [
+          "end of the day",
+          "start of assembly"
+        ],
+        "answer": "end of the day",
+        "speakEn": "Bed comes at the…",
+        "speakHi": "सोना आता है… पर"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A nap is often… than school.",
+        "qHi": "झपकी अक्सर स्कूल से… होती है",
+        "options": [
+          "shorter",
+          "longer than a week"
+        ],
+        "answer": "shorter",
+        "speakEn": "A nap is often… than school.",
+        "speakHi": "झपकी अक्सर स्कूल से… होती है"
+      },
+      {
+        "type": "mcq",
+        "qEn": "2 o'clock has the short hand on…",
+        "qHi": "2 बजे छोटी सुई… पर",
+        "options": [
+          "2",
+          "12 only"
+        ],
+        "answer": "2",
+        "speakEn": "2 o'clock has the short hand on…",
+        "speakHi": "2 बजे छोटी सुई… पर"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Morning is when we often…",
+        "qHi": "सुबह अक्सर हम…",
+        "options": [
+          "wake",
+          "go to midnight first"
+        ],
+        "answer": "wake",
+        "speakEn": "Morning is when we often…",
+        "speakHi": "सुबह अक्सर हम…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "4 hours of school is a…",
+        "qHi": "स्कूल के 4 घंटे हैं एक…",
+        "options": [
+          "duration",
+          "colour"
+        ],
+        "answer": "duration",
+        "speakEn": "4 hours of school is a…",
+        "speakHi": "स्कूल के 4 घंटे हैं एक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A short clap lasts…",
+        "qHi": "एक छोटी ताली चलती है…",
+        "options": [
+          {
+            "value": "a short time",
+            "label": "a short time"
+          },
+          {
+            "value": "all night always",
+            "label": "all night always"
+          }
+        ],
+        "answer": "a short time",
+        "speakEn": "A short clap lasts…",
+        "speakHi": "एक छोटी ताली चलती है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The sequence of the day helps us talk about…",
+        "qHi": "दिन का क्रम बात करने में मदद करता है…",
+        "options": [
+          "time",
+          "only shapes"
+        ],
+        "answer": "time",
+        "speakEn": "The sequence of the day helps us talk about…",
+        "speakHi": "दिन का क्रम बात करने में मदद करता है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "11 o'clock has the short hand on…",
+        "qHi": "11 बजे छोटी सुई… पर",
+        "options": [
+          "11",
+          "1"
+        ],
+        "answer": "11",
+        "speakEn": "11 o'clock has the short hand on…",
+        "speakHi": "11 बजे छोटी सुई… पर"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Longer and shorter compare…",
+        "qHi": "लंबी और छोटी तुलना करती हैं… की",
+        "options": [
+          "duration",
+          "letters only"
+        ],
+        "answer": "duration",
+        "speakEn": "Longer and shorter compare…",
+        "speakHi": "लंबी और छोटी तुलना करती हैं… की"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "premium": false,
+    "logic": false
+  },
+  {
+    "id": "class1-math-9",
+    "level": "class1",
+    "subject": "maths",
+    "n": 9,
+    "titleEn": "How many times: equal groups and repeated adding",
+    "titleHi": "कितनी बार: बराबर समूह और बार-बार जोड़ना",
+    "shortEn": "3 plates with 2 idlis each. How many in all? That is 2 + 2 + 2, or 3 groups of 2.",
+    "shortHi": "3 प्लेटों में 2-2 इडली। कुल कितनी? यह 2 + 2 + 2 है, या 2 के 3 समूह।",
+    "scene": "home",
+    "teach": {
+      "pose": "clap",
+      "anim": "clap",
+      "capEn": "Equal groups have the same number in each group. 3 plates of 2 idlis is 2 + 2 + 2, which is 6.",
+      "capHi": "बराबर समूहों में हर समूह में समान संख्या होती है। 2 इडली की 3 प्लेटें हैं 2 + 2 + 2, यानी 6।",
+      "speakEn": "How many times is the start of multiplication, but we stay with equal groups and repeated adding. We do not rush a memorised table before this picture is clear.",
+      "speakHi": "कितनी बार गुणन की शुरुआत है, पर हम बराबर समूह और बार-बार जोड़ पर रहते हैं। चित्र साफ़ होने से पहले रटा पहाड़ा नहीं दौड़ाते।"
+    },
+    "activities": [
+      {
+        "type": "mcq",
+        "titleEn": "Idlis on plates",
+        "titleHi": "प्लेटों पर इडली",
+        "qEn": "3 plates with 2 idlis each. How many in all?",
+        "qHi": "3 प्लेटों में 2-2 इडली। कुल कितनी?",
+        "promptEn": "3 plates with 2 idlis each. How many in all?",
+        "promptHi": "3 प्लेटों में 2-2 इडली। कुल कितनी?",
+        "options": [
+          "6",
+          "5",
+          "32"
+        ],
+        "answer": "6"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "Repeated adding",
+        "titleHi": "बार-बार जोड़ना",
+        "qEn": "2 + 2 + 2 is the same as…",
+        "qHi": "2 + 2 + 2 वही है जो…",
+        "promptEn": "2 + 2 + 2 is the same as…",
+        "promptHi": "2 + 2 + 2 वही है जो…",
+        "options": [
+          {
+            "value": "3 groups of 2",
+            "label": "3 groups of 2"
+          },
+          {
+            "value": "20 groups of 2",
+            "label": "20 groups of 2"
+          }
+        ],
+        "answer": "3 groups of 2"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "Groups of 5",
+        "titleHi": "5 के समूह",
+        "qEn": "2 groups of 5 ladoos is…",
+        "qHi": "5 लड्डू के 2 समूह हैं…",
+        "promptEn": "2 groups of 5 ladoos is…",
+        "promptHi": "5 लड्डू के 2 समूह हैं…",
+        "options": [
+          "10",
+          "7",
+          "25"
+        ],
+        "answer": "10"
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "4 groups of 2 is…",
+        "qHi": "2 के 4 समूह…",
+        "options": [
+          "8",
+          "42"
+        ],
+        "answer": "8",
+        "speakEn": "4 groups of 2 is…",
+        "speakHi": "2 के 4 समूह…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "5 groups of 2 is…",
+        "qHi": "2 के 5 समूह…",
+        "options": [
+          "10",
+          "52"
+        ],
+        "answer": "10",
+        "speakEn": "5 groups of 2 is…",
+        "speakHi": "2 के 5 समूह…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "2 + 2 + 2 + 2 =",
+        "qHi": "2 + 2 + 2 + 2 =",
+        "options": [
+          "8",
+          "2222"
+        ],
+        "answer": "8",
+        "speakEn": "2 + 2 + 2 + 2 =",
+        "speakHi": "2 + 2 + 2 + 2 ="
+      },
+      {
+        "type": "mcq",
+        "qEn": "3 groups of 5 is…",
+        "qHi": "5 के 3 समूह…",
+        "options": [
+          "15",
+          "35"
+        ],
+        "answer": "15",
+        "speakEn": "3 groups of 5 is…",
+        "speakHi": "5 के 3 समूह…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "1 group of 4 is…",
+        "qHi": "4 का 1 समूह…",
+        "options": [
+          "4",
+          "14"
+        ],
+        "answer": "4",
+        "speakEn": "1 group of 4 is…",
+        "speakHi": "4 का 1 समूह…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Equal groups means each group has the…",
+        "qHi": "बराबर समूह मतलब हर समूह में…",
+        "options": [
+          {
+            "value": "same number",
+            "label": "same number"
+          },
+          {
+            "value": "a random number",
+            "label": "a random number"
+          }
+        ],
+        "answer": "same number",
+        "speakEn": "Equal groups means each group has the…",
+        "speakHi": "बराबर समूह मतलब हर समूह में…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Repeated adding of 5, two times, is…",
+        "qHi": "5 को दो बार जोड़ना…",
+        "options": [
+          "10",
+          "5"
+        ],
+        "answer": "10",
+        "speakEn": "Repeated adding of 5, two times, is…",
+        "speakHi": "5 को दो बार जोड़ना…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "If the groups are not equal, we should…",
+        "qHi": "अगर समूह बराबर न हों, हमें चाहिए…",
+        "options": [
+          {
+            "value": "not call it equal groups",
+            "label": "still name a table"
+          },
+          {
+            "value": "still name a table",
+            "label": "still name a table"
+          }
+        ],
+        "answer": "not call it equal groups",
+        "speakEn": "If the groups are not equal, we should…",
+        "speakHi": "अगर समूह बराबर न हों, हमें चाहिए…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "4 + 4 + 4 =",
+        "qHi": "4 + 4 + 4 =",
+        "options": [
+          "12",
+          "444"
+        ],
+        "answer": "12",
+        "speakEn": "4 + 4 + 4 =",
+        "speakHi": "4 + 4 + 4 ="
+      },
+      {
+        "type": "mcq",
+        "qEn": "How many times asks how many…",
+        "qHi": "कितनी बार पूछता है कितने…",
+        "options": [
+          "groups",
+          "colours"
+        ],
+        "answer": "groups",
+        "speakEn": "How many times asks how many…",
+        "speakHi": "कितनी बार पूछता है कितने…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "2 groups of 4 is…",
+        "qHi": "4 के 2 समूह…",
+        "options": [
+          "8",
+          "24"
+        ],
+        "answer": "8",
+        "speakEn": "2 groups of 4 is…",
+        "speakHi": "4 के 2 समूह…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "This prepares later…",
+        "qHi": "यह बाद के… की तैयारी है",
+        "options": [
+          {
+            "value": "multiplication",
+            "label": "forgetfulness"
+          },
+          {
+            "value": "forgetfulness",
+            "label": "forgetfulness"
+          }
+        ],
+        "answer": "multiplication",
+        "speakEn": "This prepares later…",
+        "speakHi": "यह बाद के… की तैयारी है"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "premium": false,
+    "logic": false
+  },
+  {
+    "id": "class1-math-10",
+    "level": "class1",
+    "subject": "maths",
+    "n": 10,
+    "titleEn": "Money and data, mastery and puzzles",
+    "titleHi": "पैसा और आँकड़े, महारत और पहेलियाँ",
+    "shortEn": "Mix the year: a rupee story, a graph question, tens and ones, and an equal-groups puzzle.",
+    "shortHi": "वर्ष मिलाओ: रुपये की कहानी, ग्राफ का प्रश्न, दहाई-इकाई, और बराबर समूहों की पहेली।",
+    "scene": "market",
+    "teach": {
+      "pose": "clap",
+      "anim": "clap",
+      "capEn": "Mastery mixes money, data, numbers to 99, measures, patterns and equal groups, with a reason each time.",
+      "capHi": "महारत मिलाती है पैसे, आँकड़े, 99 तक संख्याएँ, माप, पैटर्न और बराबर समूह, हर बार एक कारण के साथ।",
+      "speakEn": "A bun is ₹8 and you have ₹10: the change is ₹2. A graph of 6 bananas and 4 mangoes: 2 more bananas. 47 is 4 tens and 7 ones. 3 groups of 2 is 6.",
+      "speakHi": "बन ₹8, पास ₹10: वापसी ₹2। 6 केले और 4 आम के ग्राफ: 2 अधिक केले। 47 है 4 दहाई और 7 इकाई। 2 के 3 समूह हैं 6।"
+    },
+    "activities": [
+      {
+        "type": "mcq",
+        "titleEn": "A rupee story",
+        "titleHi": "रुपये की कहानी",
+        "qEn": "A bun is ₹8. You pay ₹10. The change is…",
+        "qHi": "बन ₹8। ₹10 दिए। वापसी…",
+        "promptEn": "A bun is ₹8. You pay ₹10. The change is…",
+        "promptHi": "बन ₹8। ₹10 दिए। वापसी…",
+        "options": [
+          "₹2",
+          "₹18",
+          "₹8"
+        ],
+        "answer": "₹2"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "A graph question",
+        "titleHi": "ग्राफ का प्रश्न",
+        "qEn": "Bananas 6, mangoes 4. How many more bananas?",
+        "qHi": "केले 6, आम 4। कितने अधिक केले?",
+        "promptEn": "Bananas 6, mangoes 4. How many more bananas?",
+        "promptHi": "केले 6, आम 4। कितने अधिक केले?",
+        "options": [
+          "2",
+          "10",
+          "6"
+        ],
+        "answer": "2"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "Tens and ones",
+        "titleHi": "दहाई और इकाई",
+        "qEn": "47 is…",
+        "qHi": "47 है…",
+        "promptEn": "47 is…",
+        "promptHi": "47 है…",
+        "options": [
+          {
+            "value": "4 tens and 7 ones",
+            "label": "4 tens and 7 ones"
+          },
+          {
+            "value": "7 tens and 4 ones",
+            "label": "7 tens and 4 ones"
+          }
+        ],
+        "answer": "4 tens and 7 ones"
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "7 and how many make 10?",
+        "qHi": "7 और कितने मिलकर 10?",
+        "options": [
+          "3",
+          "17"
+        ],
+        "answer": "3",
+        "speakEn": "7 and how many make 10?",
+        "speakHi": "7 और कितने मिलकर 10?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "16 is…",
+        "qHi": "16 है…",
+        "options": [
+          {
+            "value": "10 and 6 ones",
+            "label": "10 and 6 ones"
+          },
+          {
+            "value": "1 and 6 only",
+            "label": "1 and 6 only"
+          }
+        ],
+        "answer": "10 and 6 ones",
+        "speakEn": "16 is…",
+        "speakHi": "16 है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "12 tomatoes, pick 5. Left?",
+        "qHi": "12 टमाटर, 5 तोड़े। बचे?",
+        "options": [
+          "7",
+          "17"
+        ],
+        "answer": "7",
+        "speakEn": "12 tomatoes, pick 5. Left?",
+        "speakHi": "12 टमाटर, 5 तोड़े। बचे?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Just after 49 is…",
+        "qHi": "49 के ठीक बाद…",
+        "options": [
+          "50",
+          "48"
+        ],
+        "answer": "50",
+        "speakEn": "Just after 49 is…",
+        "speakHi": "49 के ठीक बाद…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A cube has…",
+        "qHi": "घन में होते हैं…",
+        "options": [
+          {
+            "value": "square faces",
+            "label": "square faces"
+          },
+          {
+            "value": "no faces",
+            "label": "no faces"
+          }
+        ],
+        "answer": "square faces",
+        "speakEn": "A cube has…",
+        "speakHi": "घन में होते हैं…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "You guessed 5 cups and measured 4. The guess was…",
+        "qHi": "अनुमान 5, माप 4। अनुमान था…",
+        "options": [
+          {
+            "value": "a little too high",
+            "label": "exact zero"
+          },
+          {
+            "value": "exact zero",
+            "label": "exact zero"
+          }
+        ],
+        "answer": "a little too high",
+        "speakEn": "You guessed 5 cups and measured 4. The guess was…",
+        "speakHi": "अनुमान 5, माप 4। अनुमान था…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Diya, sweet, diya, sweet. Next is…",
+        "qHi": "दीया, मिठाई, दीया, मिठाई। आगे…",
+        "options": [
+          "diya",
+          "a bus"
+        ],
+        "answer": "diya",
+        "speakEn": "Diya, sweet, diya, sweet. Next is…",
+        "speakHi": "दीया, मिठाई, दीया, मिठाई। आगे…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "School usually lasts… than a clap.",
+        "qHi": "स्कूल आमतौर पर ताली से… चलता है",
+        "options": [
+          "longer",
+          "shorter always"
+        ],
+        "answer": "longer",
+        "speakEn": "School usually lasts… than a clap.",
+        "speakHi": "स्कूल आमतौर पर ताली से… चलता है"
+      },
+      {
+        "type": "mcq",
+        "qEn": "3 groups of 2 is…",
+        "qHi": "2 के 3 समूह…",
+        "options": [
+          "6",
+          "32"
+        ],
+        "answer": "6",
+        "speakEn": "3 groups of 2 is…",
+        "speakHi": "2 के 3 समूह…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A toy is ₹20. You have ₹15. Enough?",
+        "qHi": "खिलौना ₹20। पास ₹15। काफी?",
+        "options": [
+          "no",
+          "yes"
+        ],
+        "answer": "no",
+        "speakEn": "A toy is ₹20. You have ₹15. Enough?",
+        "speakHi": "खिलौना ₹20। पास ₹15। काफी?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Which is nearer to 50, 47 or 61?",
+        "qHi": "50 के अधिक पास, 47 या 61?",
+        "options": [
+          "47",
+          "61"
+        ],
+        "answer": "47",
+        "speakEn": "Which is nearer to 50, 47 or 61?",
+        "speakHi": "50 के अधिक पास, 47 या 61?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Mastery means the year's maths is still…",
+        "qHi": "महारत मतलब वर्ष का गणित अभी भी…",
+        "options": [
+          "secure",
+          "thrown away"
+        ],
+        "answer": "secure",
+        "speakEn": "Mastery means the year's maths is still…",
+        "speakHi": "महारत मतलब वर्ष का गणित अभी भी…"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "premium": false,
+    "logic": false
+  },
+  {
+    "id": "class1-prem-1",
+    "level": "class1",
+    "subject": "premium",
+    "n": 1,
+    "premium": true,
+    "titleEn": "Talk to Chotu: a Class 1 conversation",
+    "titleHi": "छोटू से बात: कक्षा 1 की बातचीत",
+    "shortEn": "Read a new sentence, answer in a full sentence, and chat about why.",
+    "shortHi": "नया वाक्य पढ़ो, पूरे वाक्य में उत्तर दो, और क्यों पर बात करो।",
+    "scene": "school",
+    "teach": {
+      "pose": "listen",
+      "anim": "listen",
+      "capEn": "Read with me: The girl has a red bag. Then say a full sentence: The girl has a red bag. Why might she have a bag?",
+      "capHi": "साथ पढ़ो: The girl has a red bag. फिर पूरा वाक्य कहो। उसके पास बैग क्यों हो सकता है?",
+      "speakEn": "Class 1 talk is a short conversation: read, answer in a sentence, and give a reason. If the mic cannot hear, tap the matching sentence and I will still cheer.",
+      "speakHi": "कक्षा 1 की बात छोटी बातचीत है: पढ़ो, वाक्य में उत्तर दो, और कारण दो। अगर माइक न सुने, मिलता वाक्य दबाओ, मैं शाबाशी दूँगा।"
+    },
+    "activities": [
+      {
+        "type": "mcq",
+        "titleEn": "Read and answer",
+        "titleHi": "पढ़ो और उत्तर दो",
+        "qEn": "The girl has a red bag. What does she have? Say a full sentence.",
+        "qHi": "लड़की के पास क्या है? पूरा वाक्य कहो।",
+        "promptEn": "The girl has a red bag. What does she have? Say a full sentence.",
+        "promptHi": "लड़की के पास क्या है? पूरा वाक्य कहो।",
+        "options": [
+          {
+            "value": "She has a red bag.",
+            "label": "She has a red bag."
+          },
+          {
+            "value": "bag",
+            "label": "bag"
+          }
+        ],
+        "answer": "She has a red bag.",
+        "sentence": "The girl has a red bag."
+      },
+      {
+        "type": "mcq",
+        "titleEn": "A why chat",
+        "titleHi": "एक क्यों बात",
+        "qEn": "Why might she have a bag?",
+        "qHi": "उसके पास बैग क्यों हो सकता है?",
+        "promptEn": "Why might she have a bag?",
+        "promptHi": "उसके पास बैग क्यों हो सकता है?",
+        "options": [
+          {
+            "value": "She might be going out or to school",
+            "label": "She might be going out or to school"
+          },
+          {
+            "value": "The text says the bag is a cow",
+            "label": "The text says the bag is a cow"
+          }
+        ],
+        "answer": "She might be going out or to school"
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "A Class 1 conversation includes a…",
+        "qHi": "कक्षा 1 की बातचीत में होता है एक…",
+        "options": [
+          "reason",
+          "blank stare only"
+        ],
+        "answer": "reason",
+        "speakEn": "A Class 1 conversation includes a…",
+        "speakHi": "कक्षा 1 की बातचीत में होता है एक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A full-sentence answer starts with a…",
+        "qHi": "पूरे वाक्य का उत्तर शुरू होता है… से",
+        "options": [
+          "capital",
+          "scribble"
+        ],
+        "answer": "capital",
+        "speakEn": "A full-sentence answer starts with a…",
+        "speakHi": "पूरे वाक्य का उत्तर शुरू होता है… से"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Talk to Chotu is…",
+        "qHi": "छोटू से बात है…",
+        "options": [
+          "Premium",
+          "a shop fine"
+        ],
+        "answer": "Premium",
+        "speakEn": "Talk to Chotu is…",
+        "speakHi": "छोटू से बात है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "If the mic cannot hear, we…",
+        "qHi": "अगर माइक न सुने, हम…",
+        "options": [
+          {
+            "value": "tap the matching sentence",
+            "label": "give up"
+          },
+          {
+            "value": "give up",
+            "label": "give up"
+          }
+        ],
+        "answer": "tap the matching sentence",
+        "speakEn": "If the mic cannot hear, we…",
+        "speakHi": "अगर माइक न सुने, हम…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The girl has a red bag. The colour is…",
+        "qHi": "रंग है…",
+        "options": [
+          "red",
+          "green"
+        ],
+        "answer": "red",
+        "speakEn": "The girl has a red bag. The colour is…",
+        "speakHi": "रंग है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Why questions ask us to…",
+        "qHi": "क्यों प्रश्न हमसे कहते हैं…",
+        "options": [
+          "infer",
+          "ignore the sentence"
+        ],
+        "answer": "infer",
+        "speakEn": "Why questions ask us to…",
+        "speakHi": "क्यों प्रश्न हमसे कहते हैं…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "This chat can be in…",
+        "qHi": "यह बात हो सकती है… में",
+        "options": [
+          {
+            "value": "English and Hindi",
+            "label": "English and Hindi"
+          },
+          {
+            "value": "only a secret code",
+            "label": "only a secret code"
+          }
+        ],
+        "answer": "English and Hindi",
+        "speakEn": "This chat can be in…",
+        "speakHi": "यह बात हो सकती है… में"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Mini has a paper boat. Who has the boat?",
+        "qHi": "नाव किसके पास?",
+        "options": [
+          "Mini",
+          "a wall"
+        ],
+        "answer": "Mini",
+        "speakEn": "Mini has a paper boat. Who has the boat?",
+        "speakHi": "नाव किसके पास?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "We read first, then we…",
+        "qHi": "पहले पढ़ते हैं, फिर…",
+        "options": [
+          "talk",
+          "cover our ears"
+        ],
+        "answer": "talk",
+        "speakEn": "We read first, then we…",
+        "speakHi": "पहले पढ़ते हैं, फिर…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Namaste, Amma. is a…",
+        "qHi": "Namaste, Amma. है एक…",
+        "options": [
+          "greeting",
+          "number"
+        ],
+        "answer": "greeting",
+        "speakEn": "Namaste, Amma. is a…",
+        "speakHi": "Namaste, Amma. है एक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A good spoken answer sounds like a…",
+        "qHi": "अच्छा बोला उत्तर लगता है एक… जैसा",
+        "options": [
+          "sentence",
+          "single grunt"
+        ],
+        "answer": "sentence",
+        "speakEn": "A good spoken answer sounds like a…",
+        "speakHi": "अच्छा बोला उत्तर लगता है एक… जैसा"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Chotu cheers when the child…",
+        "qHi": "छोटू तब शाबाशी देते हैं जब बच्चा…",
+        "options": [
+          {
+            "value": "speaks clearly",
+            "label": "stays silent always"
+          },
+          {
+            "value": "stays silent always",
+            "label": "stays silent always"
+          }
+        ],
+        "answer": "speaks clearly",
+        "speakEn": "Chotu cheers when the child…",
+        "speakHi": "छोटू तब शाबाशी देते हैं जब बच्चा…"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "logic": false
+  },
+  {
+    "id": "class1-prem-2",
+    "level": "class1",
+    "subject": "premium",
+    "n": 2,
+    "premium": true,
+    "titleEn": "Fluency coaching on a new text",
+    "titleHi": "नई पाठ पर धाराप्रवाहता की कोचिंग",
+    "shortEn": "Read a new 4- or 5-word sentence smoothly, then answer a question about it.",
+    "shortHi": "नया 4 या 5 शब्द का वाक्य धाराप्रवाह पढ़ो, फिर उसके बारे में एक प्रश्न का उत्तर दो।",
+    "scene": "school",
+    "teach": {
+      "pose": "listen",
+      "anim": "listen",
+      "capEn": "Fluency means a new sentence sounds like talking: The girl has a red bag. Then we show we understood it.",
+      "capHi": "धाराप्रवाहता मतलब नया वाक्य बातचीत जैसा लगे: The girl has a red bag. फिर दिखाते हैं हम समझ गए।",
+      "speakEn": "Premium coaching listens for smoothness, not only the right words. We do not stop on every word. Then we answer a question so fluency still carries meaning.",
+      "speakHi": "प्रीमियम कोचिंग चिकनाई सुनती है, केवल सही शब्द नहीं। हर शब्द पर नहीं रुकते। फिर प्रश्न का उत्तर देते हैं ताकि अर्थ भी रहे।"
+    },
+    "activities": [
+      {
+        "type": "mcq",
+        "titleEn": "Read smoothly",
+        "titleHi": "धाराप्रवाह पढ़ो",
+        "qEn": "The girl has a red bag. Who has the bag?",
+        "qHi": "बैग किसके पास है?",
+        "promptEn": "The girl has a red bag. Who has the bag?",
+        "promptHi": "बैग किसके पास है?",
+        "options": [
+          {
+            "value": "the girl",
+            "label": "the girl"
+          },
+          {
+            "value": "a goat",
+            "label": "a goat"
+          }
+        ],
+        "answer": "the girl",
+        "sentence": "The girl has a red bag."
+      },
+      {
+        "type": "clap",
+        "titleEn": "Feel the sentence rhythm",
+        "titleHi": "वाक्य की लय महसूस करो",
+        "beats": 6,
+        "promptEn": "Tap once for each word: The girl has a red bag.",
+        "promptHi": "हर शब्द पर एक टैप: The girl has a red bag."
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "Fluency means we read…",
+        "qHi": "धाराप्रवाहता मतलब हम पढ़ते हैं…",
+        "options": [
+          {
+            "value": "smoothly",
+            "label": "smoothly"
+          },
+          {
+            "value": "with a long stop on every word",
+            "label": "with a long stop on every word"
+          }
+        ],
+        "answer": "smoothly",
+        "speakEn": "Fluency means we read…",
+        "speakHi": "धाराप्रवाहता मतलब हम पढ़ते हैं…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A new text is one we have…",
+        "qHi": "नई पाठ वह है जिसे हमने…",
+        "options": [
+          {
+            "value": "not only memorised",
+            "label": "not only memorised"
+          },
+          {
+            "value": "never been allowed later",
+            "label": "never been allowed later"
+          }
+        ],
+        "answer": "not only memorised",
+        "speakEn": "A new text is one we have…",
+        "speakHi": "नई पाठ वह है जिसे हमने…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Meaning still matters, so we also…",
+        "qHi": "अर्थ अभी भी ज़रूरी, इसलिए हम… भी",
+        "options": [
+          "answer a question",
+          "ignore the words"
+        ],
+        "answer": "answer a question",
+        "speakEn": "Meaning still matters, so we also…",
+        "speakHi": "अर्थ अभी भी ज़रूरी, इसलिए हम… भी"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The hen is on the farm. The place is…",
+        "qHi": "स्थान है…",
+        "options": [
+          "the farm",
+          "the moon"
+        ],
+        "answer": "the farm",
+        "speakEn": "The hen is on the farm. The place is…",
+        "speakHi": "स्थान है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "This coaching is…",
+        "qHi": "यह कोचिंग है…",
+        "options": [
+          "Premium",
+          "a bus ticket"
+        ],
+        "answer": "Premium",
+        "speakEn": "This coaching is…",
+        "speakHi": "यह कोचिंग है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The boat is in the puddle has a vowel team in…",
+        "qHi": "The boat is in the puddle में स्वर युग्म है… में",
+        "options": [
+          "boat",
+          "the"
+        ],
+        "answer": "boat",
+        "speakEn": "The boat is in the puddle has a vowel team in…",
+        "speakHi": "The boat is in the puddle में स्वर युग्म है… में"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Smooth reading still keeps each…",
+        "qHi": "धाराप्रवाह पढ़ने में भी हर… रहती है",
+        "options": [
+          "sound",
+          "secret"
+        ],
+        "answer": "sound",
+        "speakEn": "Smooth reading still keeps each…",
+        "speakHi": "धाराप्रवाह पढ़ने में भी हर… रहती है"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A 5-word sentence might be…",
+        "qHi": "5 शब्दों का वाक्य हो सकता है…",
+        "options": [
+          {
+            "value": "The girl has a bag.",
+            "label": "The girl has a bag."
+          },
+          {
+            "value": "A.",
+            "label": "A."
+          }
+        ],
+        "answer": "The girl has a bag.",
+        "speakEn": "A 5-word sentence might be…",
+        "speakHi": "5 शब्दों का वाक्य हो सकता है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Copying Chotu helps the…",
+        "qHi": "छोटू की नकल मदद करती है…",
+        "options": [
+          "mouth and ear",
+          "feet only"
+        ],
+        "answer": "mouth and ear",
+        "speakEn": "Copying Chotu helps the…",
+        "speakHi": "छोटू की नकल मदद करती है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "If reading is bumpy, we…",
+        "qHi": "अगर पढ़ना ऊबड़ है, हम…",
+        "options": [
+          {
+            "value": "try the sentence again",
+            "label": "give up forever"
+          },
+          {
+            "value": "give up forever",
+            "label": "give up forever"
+          }
+        ],
+        "answer": "try the sentence again",
+        "speakEn": "If reading is bumpy, we…",
+        "speakHi": "अगर पढ़ना ऊबड़ है, हम…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "red describes the…",
+        "qHi": "red वर्णन करता है… का",
+        "options": [
+          "bag",
+          "verb only"
+        ],
+        "answer": "bag",
+        "speakEn": "red describes the…",
+        "speakHi": "red वर्णन करता है… का"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Fluency plus a question is how we check…",
+        "qHi": "धाराप्रवाहता और प्रश्न से जाँचते हैं…",
+        "options": [
+          "understanding",
+          "only speed"
+        ],
+        "answer": "understanding",
+        "speakEn": "Fluency plus a question is how we check…",
+        "speakHi": "धाराप्रवाहता और प्रश्न से जाँचते हैं…"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "logic": false
+  },
+  {
+    "id": "class1-prem-3",
+    "level": "class1",
+    "subject": "premium",
+    "n": 3,
+    "premium": true,
+    "titleEn": "Hindi with matras",
+    "titleHi": "मात्राओं के साथ हिन्दी",
+    "shortEn": "Meet ा, ि and ी. Read का, कि and की, then a short word with a matra.",
+    "shortHi": "ा, ि और ी से मिलो। का, कि और की पढ़ो, फिर मात्रा वाला छोटा शब्द।",
+    "scene": "home",
+    "teach": {
+      "pose": "wave",
+      "anim": "wave",
+      "capEn": "A matra is a vowel sign. ा can turn क into का. ि and ी change the sound too. Now we can read more Hindi words.",
+      "capHi": "मात्रा एक स्वर चिह्न है। ा, क को का बना सकता है। ि और ी भी ध्वनि बदलते हैं। अब और हिन्दी शब्द पढ़ सकते हैं।",
+      "speakEn": "Class 1 Premium Hindi adds matras after words without matras feel secure. Hear the change: क, का, कि, की. Then read a short word.",
+      "speakHi": "कक्षा 1 प्रीमियम हिन्दी में मात्राएँ तब आती हैं जब बिना मात्रा के शब्द पक्के लगें। बदलाव सुनो: क, का, कि, की। फिर छोटा शब्द पढ़ो।"
+    },
+    "activities": [
+      {
+        "type": "match",
+        "titleEn": "Match the matras",
+        "titleHi": "मात्राएँ मिलाओ",
+        "pairs": [
+          {
+            "key": "ka",
+            "leftEn": "का",
+            "leftHi": "का",
+            "rightEn": "ka with aa",
+            "rightHi": "का, आ की मात्रा"
+          },
+          {
+            "key": "ki",
+            "leftEn": "कि",
+            "leftHi": "कि",
+            "rightEn": "ki with a short i",
+            "rightHi": "कि, इ की मात्रा"
+          },
+          {
+            "key": "kii",
+            "leftEn": "की",
+            "leftHi": "की",
+            "rightEn": "kee with a long ii",
+            "rightHi": "की, ई की मात्रा"
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "titleEn": "Read का",
+        "titleHi": "का पढ़ो",
+        "qEn": "Which letter has the aa matra?",
+        "qHi": "किसमें आ की मात्रा है?",
+        "promptEn": "Which letter has the aa matra?",
+        "promptHi": "किसमें आ की मात्रा है?",
+        "options": [
+          "का",
+          "क",
+          "कि"
+        ],
+        "answer": "का"
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "A matra is a…",
+        "qHi": "मात्रा है एक…",
+        "options": [
+          "vowel sign",
+          "number"
+        ],
+        "answer": "vowel sign",
+        "speakEn": "A matra is a…",
+        "speakHi": "मात्रा है एक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "का has the sound…",
+        "qHi": "का की ध्वनि…",
+        "options": [
+          "kaa",
+          "ka without a matra"
+        ],
+        "answer": "kaa",
+        "speakEn": "का has the sound…",
+        "speakHi": "का की ध्वनि…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "कि has a…",
+        "qHi": "कि में है एक…",
+        "options": [
+          "short i matra",
+          "aa matra only"
+        ],
+        "answer": "short i matra",
+        "speakEn": "कि has a…",
+        "speakHi": "कि में है एक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "की has a…",
+        "qHi": "की में है एक…",
+        "options": [
+          "long ii matra",
+          "no matra"
+        ],
+        "answer": "long ii matra",
+        "speakEn": "की has a…",
+        "speakHi": "की में है एक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "क without a matra is…",
+        "qHi": "बिना मात्रा का क है…",
+        "options": [
+          "ka",
+          "kee"
+        ],
+        "answer": "ka",
+        "speakEn": "क without a matra is…",
+        "speakHi": "बिना मात्रा का क है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Matras come after basic words feel…",
+        "qHi": "मात्राएँ तब आती हैं जब मूल शब्द लगें…",
+        "options": [
+          "secure",
+          "forgotten"
+        ],
+        "answer": "secure",
+        "speakEn": "Matras come after basic words feel…",
+        "speakHi": "मात्राएँ तब आती हैं जब मूल शब्द लगें…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "This Hindi path is…",
+        "qHi": "यह हिन्दी पथ है…",
+        "options": [
+          "Premium",
+          "a late fee"
+        ],
+        "answer": "Premium",
+        "speakEn": "This Hindi path is…",
+        "speakHi": "यह हिन्दी पथ है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "माँ uses a matra on…",
+        "qHi": "माँ में मात्रा है… पर",
+        "options": [
+          "म",
+          "a digit"
+        ],
+        "answer": "म",
+        "speakEn": "माँ uses a matra on…",
+        "speakHi": "माँ में मात्रा है… पर"
+      },
+      {
+        "type": "mcq",
+        "qEn": "We hear the change first, then we…",
+        "qHi": "पहले बदलाव सुनते हैं, फिर…",
+        "options": [
+          "read",
+          "cover the letter"
+        ],
+        "answer": "read",
+        "speakEn": "We hear the change first, then we…",
+        "speakHi": "पहले बदलाव सुनते हैं, फिर…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Which is की?",
+        "qHi": "की कौन सी है?",
+        "options": [
+          "की",
+          "क",
+          "का"
+        ],
+        "answer": "की",
+        "speakEn": "Which is की?",
+        "speakHi": "की कौन सी है?"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A short Hindi word with a matra might be…",
+        "qHi": "मात्रा वाला छोटा हिन्दी शब्द हो सकता है…",
+        "options": [
+          "का",
+          "xyz"
+        ],
+        "answer": "का",
+        "speakEn": "A short Hindi word with a matra might be…",
+        "speakHi": "मात्रा वाला छोटा हिन्दी शब्द हो सकता है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Matching the sign to the sound checks…",
+        "qHi": "चिह्न को ध्वनि से मिलाना जाँचता है…",
+        "options": [
+          "understanding",
+          "only ink colour"
+        ],
+        "answer": "understanding",
+        "speakEn": "Matching the sign to the sound checks…",
+        "speakHi": "चिह्न को ध्वनि से मिलाना जाँचता है…"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "logic": false
+  },
+  {
+    "id": "class1-prem-4",
+    "level": "class1",
+    "subject": "premium",
+    "n": 4,
+    "premium": true,
+    "titleEn": "Coached slate for sentences and numerals to 99",
+    "titleHi": "वाक्यों और 99 तक अंकों की कोच वाली स्लेट",
+    "shortEn": "Write a short sentence with a capital and a full stop, and form a two-digit numeral.",
+    "shortHi": "बड़े अक्षर और पूर्ण विराम वाला छोटा वाक्य लिखो, और दो अंक की संख्या बनाओ।",
+    "scene": "school",
+    "teach": {
+      "pose": "point",
+      "anim": "bob",
+      "capEn": "The slate now holds a sentence and a two-digit number. Write: I am six. Then form 47 carefully.",
+      "capHi": "अब स्लेट पर एक वाक्य और दो अंक की संख्या है। लिखो: I am six. फिर 47 सावधानी से बनाओ।",
+      "speakEn": "Premium coaching watches the letter path, word spacing, a capital, a full stop, and how we write tens and ones, so 47 does not look like 74.",
+      "speakHi": "प्रीमियम कोचिंग अक्षर मार्ग, शब्द अंतर, बड़ा अक्षर, पूर्ण विराम, और दहाई-इकाई लिखना देखती है, ताकि 47, 74 न लगे।"
+    },
+    "activities": [
+      {
+        "type": "trace",
+        "titleEn": "Start the sentence: I",
+        "titleHi": "वाक्य शुरू करो: I",
+        "glyph": "I"
+      },
+      {
+        "type": "trace",
+        "titleEn": "Form the tens digit 4",
+        "titleHi": "दहाई का अंक 4 बनाओ",
+        "glyph": "4"
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "A sentence on the slate needs a…",
+        "qHi": "स्लेट के वाक्य को चाहिए…",
+        "options": [
+          "capital",
+          "random scribble only"
+        ],
+        "answer": "capital",
+        "speakEn": "A sentence on the slate needs a…",
+        "speakHi": "स्लेट के वाक्य को चाहिए…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "It should end with a…",
+        "qHi": "यह खत्म होना चाहिए… पर",
+        "options": [
+          "full stop",
+          "empty space only"
+        ],
+        "answer": "full stop",
+        "speakEn": "It should end with a…",
+        "speakHi": "यह खत्म होना चाहिए… पर"
+      },
+      {
+        "type": "mcq",
+        "qEn": "47 has tens digit…",
+        "qHi": "47 में दहाई का अंक…",
+        "options": [
+          "4",
+          "7"
+        ],
+        "answer": "4",
+        "speakEn": "47 has tens digit…",
+        "speakHi": "47 में दहाई का अंक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "47 has ones digit…",
+        "qHi": "47 में इकाई का अंक…",
+        "options": [
+          "7",
+          "4"
+        ],
+        "answer": "7",
+        "speakEn": "47 has ones digit…",
+        "speakHi": "47 में इकाई का अंक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "If we swap the digits, 47 becomes…",
+        "qHi": "अगर अंक बदल दें, 47 बन जाता है…",
+        "options": [
+          "74",
+          "same always"
+        ],
+        "answer": "74",
+        "speakEn": "If we swap the digits, 47 becomes…",
+        "speakHi": "अगर अंक बदल दें, 47 बन जाता है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "This slate is…",
+        "qHi": "यह स्लेट है…",
+        "options": [
+          "Premium",
+          "a bus pass"
+        ],
+        "answer": "Premium",
+        "speakEn": "This slate is…",
+        "speakHi": "यह स्लेट है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "I am six. starts with…",
+        "qHi": "I am six. शुरू होता है…",
+        "options": [
+          "I",
+          "six"
+        ],
+        "answer": "I",
+        "speakEn": "I am six. starts with…",
+        "speakHi": "I am six. शुरू होता है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Word spacing means a gap…",
+        "qHi": "शब्द अंतर मतलब गैप…",
+        "options": [
+          {
+            "value": "between words",
+            "label": "inside every letter"
+          },
+          {
+            "value": "inside every letter",
+            "label": "inside every letter"
+          }
+        ],
+        "answer": "between words",
+        "speakEn": "Word spacing means a gap…",
+        "speakHi": "शब्द अंतर मतलब गैप…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Numerals to 99 are two-digit…",
+        "qHi": "99 तक अंक हैं दो अंक की…",
+        "options": [
+          "numbers",
+          "colours"
+        ],
+        "answer": "numbers",
+        "speakEn": "Numerals to 99 are two-digit…",
+        "speakHi": "99 तक अंक हैं दो अंक की…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Careful formation keeps writing…",
+        "qHi": "सावधान बनाना लिखावट… रखता है",
+        "options": [
+          "neat",
+          "invisible"
+        ],
+        "answer": "neat",
+        "speakEn": "Careful formation keeps writing…",
+        "speakHi": "सावधान बनाना लिखावट… रखता है"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The last mark in I am six. is a…",
+        "qHi": "I am six. में अंतिम चिह्न…",
+        "options": [
+          "full stop",
+          "comma only"
+        ],
+        "answer": "full stop",
+        "speakEn": "The last mark in I am six. is a…",
+        "speakHi": "I am six. में अंतिम चिह्न…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Coaching looks at the path, not only the…",
+        "qHi": "कोचिंग मार्ग देखती है, केवल… नहीं",
+        "options": [
+          "finished mark",
+          "finished mark"
+        ],
+        "answer": "finished mark",
+        "speakEn": "Coaching looks at the path, not only the…",
+        "speakHi": "कोचिंग मार्ग देखती है, केवल… नहीं"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "logic": false
+  },
+  {
+    "id": "class1-prem-5",
+    "level": "class1",
+    "subject": "premium",
+    "n": 5,
+    "premium": true,
+    "titleEn": "A weekly parent report mapped to NIPUN goals",
+    "titleHi": "निपुण लक्ष्यों से जुड़ी साप्ताहिक अभिभावक रिपोर्ट",
+    "shortEn": "See whether the child can read a new sentence and write a short piece, in school language.",
+    "shortHi": "देखो क्या बच्चा नया वाक्य पढ़ सकता है और छोटा लेख लिख सकता है, स्कूल की भाषा में।",
+    "scene": "home",
+    "teach": {
+      "pose": "wave",
+      "anim": "wave",
+      "capEn": "The weekly report uses NIPUN language: can the child read a new Class 1 sentence, and write 2 or 3 linked sentences?",
+      "capHi": "साप्ताहिक रिपोर्ट निपुण की भाषा इस्तेमाल करती है: क्या बच्चा कक्षा 1 का नया वाक्य पढ़ सकता है, और 2 या 3 जुड़े वाक्य लिख सकता है?",
+      "speakEn": "Parents see more than stars. A note might say: reading a new 5-word sentence is secure; short writing needs practice staying on one idea. That maps to government Class 1 goals.",
+      "speakHi": "अभिभावक केवल सितारे नहीं देखते। नोट कह सकती है: नया 5-शब्द का वाक्य पढ़ना पक्का है; छोटे लेख में एक विचार पर रहना अभ्यास चाहता है। यह सरकारी कक्षा 1 लक्ष्यों से जुड़ता है।"
+    },
+    "activities": [
+      {
+        "type": "mcq",
+        "titleEn": "A useful report",
+        "titleHi": "उपयोगी रिपोर्ट",
+        "qEn": "A useful NIPUN-mapped report tells a parent…",
+        "qHi": "उपयोगी निपुण रिपोर्ट अभिभावक को बताती है…",
+        "promptEn": "A useful NIPUN-mapped report tells a parent…",
+        "promptHi": "उपयोगी निपुण रिपोर्ट अभिभावक को बताती है…",
+        "options": [
+          {
+            "value": "whether new sentences and short writing are secure",
+            "label": "whether new sentences and short writing are secure"
+          },
+          {
+            "value": "only a star total with no meaning",
+            "label": "only a star total with no meaning"
+          }
+        ],
+        "answer": "whether new sentences and short writing are secure"
+      },
+      {
+        "type": "mcq",
+        "titleEn": "A next step",
+        "titleHi": "अगला कदम",
+        "qEn": "If short writing jumps topic, a good next step is…",
+        "qHi": "अगर छोटा लेख विषय बदल दे, अच्छा अगला कदम…",
+        "promptEn": "If short writing jumps topic, a good next step is…",
+        "promptHi": "अगर छोटा लेख विषय बदल दे, अच्छा अगला कदम…",
+        "options": [
+          {
+            "value": "practise three linked sentences on one picture",
+            "label": "practise three linked sentences on one picture"
+          },
+          {
+            "value": "skip to a long essay",
+            "label": "skip to a long essay"
+          }
+        ],
+        "answer": "practise three linked sentences on one picture"
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "NIPUN is a government goal for early…",
+        "qHi": "निपुण है शुरुआती… का सरकारी लक्ष्य",
+        "options": [
+          {
+            "value": "reading and writing",
+            "label": "reading and writing"
+          },
+          {
+            "value": "only a game score",
+            "label": "only a game score"
+          }
+        ],
+        "answer": "reading and writing",
+        "speakEn": "NIPUN is a government goal for early…",
+        "speakHi": "निपुण है शुरुआती… का सरकारी लक्ष्य"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The report is for the…",
+        "qHi": "रिपोर्ट है… के लिए",
+        "options": [
+          "parent",
+          "stranger on a train"
+        ],
+        "answer": "parent",
+        "speakEn": "The report is for the…",
+        "speakHi": "रिपोर्ट है… के लिए"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Secure means the skill is…",
+        "qHi": "पक्का मतलब कौशल है…",
+        "options": [
+          "steady",
+          "forgotten"
+        ],
+        "answer": "steady",
+        "speakEn": "Secure means the skill is…",
+        "speakHi": "पक्का मतलब कौशल है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A new sentence check uses a text the child has…",
+        "qHi": "नए वाक्य की जाँच उस पाठ से होती है जिसे बच्चा…",
+        "options": [
+          {
+            "value": "not only memorised",
+            "label": "not only memorised"
+          },
+          {
+            "value": "never seen later",
+            "label": "never seen later"
+          }
+        ],
+        "answer": "not only memorised",
+        "speakEn": "A new sentence check uses a text the child has…",
+        "speakHi": "नए वाक्य की जाँच उस पाठ से होती है जिसे बच्चा…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Short writing in Class 1 is about…",
+        "qHi": "कक्षा 1 में छोटा लेख है… के बारे में",
+        "options": [
+          {
+            "value": "2 or 3 linked sentences",
+            "label": "2 or 3 linked sentences"
+          },
+          {
+            "value": "a novel",
+            "label": "a novel"
+          }
+        ],
+        "answer": "2 or 3 linked sentences",
+        "speakEn": "Short writing in Class 1 is about…",
+        "speakHi": "कक्षा 1 में छोटा लेख है… के बारे में"
+      },
+      {
+        "type": "mcq",
+        "qEn": "This report is…",
+        "qHi": "यह रिपोर्ट है…",
+        "options": [
+          "Premium",
+          "a hidden shop charge"
+        ],
+        "answer": "Premium",
+        "speakEn": "This report is…",
+        "speakHi": "यह रिपोर्ट है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Mapped means the words match…",
+        "qHi": "जुड़ी मतलब शब्द मेल खाते हैं… से",
+        "options": [
+          {
+            "value": "school goals",
+            "label": "school goals"
+          },
+          {
+            "value": "a secret code",
+            "label": "a secret code"
+          }
+        ],
+        "answer": "school goals",
+        "speakEn": "Mapped means the words match…",
+        "speakHi": "जुड़ी मतलब शब्द मेल खाते हैं… से"
+      },
+      {
+        "type": "mcq",
+        "qEn": "If 47 and 74 are mixed, the report should…",
+        "qHi": "अगर 47 और 74 मिल जाएँ, रिपोर्ट को चाहिए…",
+        "options": [
+          {
+            "value": "say so, and suggest place-value practice",
+            "label": "hide it"
+          },
+          {
+            "value": "hide it",
+            "label": "hide it"
+          }
+        ],
+        "answer": "say so, and suggest place-value practice",
+        "speakEn": "If 47 and 74 are mixed, the report should…",
+        "speakHi": "अगर 47 और 74 मिल जाएँ, रिपोर्ट को चाहिए…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A next step is something the child can…",
+        "qHi": "अगला कदम वह है जो बच्चा…",
+        "options": [
+          "try next",
+          "never attempt"
+        ],
+        "answer": "try next",
+        "speakEn": "A next step is something the child can…",
+        "speakHi": "अगला कदम वह है जो बच्चा…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Stars alone do not tell a parent…",
+        "qHi": "केवल सितारे अभिभावक को नहीं बताते…",
+        "options": [
+          {
+            "value": "which skill is weak",
+            "label": "which skill is weak"
+          },
+          {
+            "value": "that the app opened",
+            "label": "that the app opened"
+          }
+        ],
+        "answer": "which skill is weak",
+        "speakEn": "Stars alone do not tell a parent…",
+        "speakHi": "केवल सितारे अभिभावक को नहीं बताते…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Maths notes can mention numbers to…",
+        "qHi": "गणित की नोट में संख्याएँ हो सकती हैं… तक",
+        "options": [
+          "99",
+          "only 3 always"
+        ],
+        "answer": "99",
+        "speakEn": "Maths notes can mention numbers to…",
+        "speakHi": "गणित की नोट में संख्याएँ हो सकती हैं… तक"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A short weekly note is better than…",
+        "qHi": "छोटी साप्ताहिक नोट बेहतर है… से",
+        "options": [
+          {
+            "value": "a long unread essay",
+            "label": "a long unread essay"
+          },
+          {
+            "value": "silence",
+            "label": "silence"
+          }
+        ],
+        "answer": "a long unread essay",
+        "speakEn": "A short weekly note is better than…",
+        "speakHi": "छोटी साप्ताहिक नोट बेहतर है… से"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "logic": false
+  },
+  {
+    "id": "class1-prem-6",
+    "level": "class1",
+    "subject": "premium",
+    "n": 6,
+    "premium": true,
+    "titleEn": "Shared reading of a Mridang chapter",
+    "titleHi": "मृदंग अध्याय का साथ पढ़ना",
+    "shortEn": "Read a short extract with Chotu, join in, then answer in a sentence.",
+    "shortHi": "छोटू के साथ छोटा अंश पढ़ो, साथ दो, फिर वाक्य में उत्तर दो।",
+    "scene": "school",
+    "teach": {
+      "pose": "wave",
+      "anim": "wave",
+      "capEn": "We share a Mridang-style extract: Two little hands can clap. I can clap my hands. You join in, then you answer.",
+      "capHi": "मृदंग जैसा अंश साथ पढ़ते हैं: Two little hands can clap. I can clap my hands. तुम साथ देते हो, फिर उत्तर देते हो।",
+      "speakEn": "Shared reading is Premium time with a real lesson text. I read, you join the words you know, then you answer in a full sentence.",
+      "speakHi": "साथ पढ़ना असली पाठ के साथ प्रीमियम समय है। मैं पढ़ता हूँ, तुम जाने शब्द साथ देते हो, फिर पूरे वाक्य में उत्तर देते हो।"
+    },
+    "activities": [
+      {
+        "type": "mcq",
+        "titleEn": "Join the extract",
+        "titleHi": "अंश के साथ दो",
+        "qEn": "Two little hands can clap. What can the hands do?",
+        "qHi": "दो छोटे हाथ क्या कर सकते हैं?",
+        "promptEn": "Two little hands can clap. What can the hands do?",
+        "promptHi": "दो छोटे हाथ क्या कर सकते हैं?",
+        "options": [
+          "clap",
+          "sleep only"
+        ],
+        "answer": "clap",
+        "sentence": "Two little hands can clap."
+      },
+      {
+        "type": "mcq",
+        "titleEn": "A sentence answer",
+        "titleHi": "वाक्य में उत्तर",
+        "qEn": "What can you do with your hands? Pick a full sentence.",
+        "qHi": "अपने हाथों से क्या कर सकते हो? पूरा वाक्य चुनो।",
+        "promptEn": "What can you do with your hands? Pick a full sentence.",
+        "promptHi": "अपने हाथों से क्या कर सकते हो? पूरा वाक्य चुनो।",
+        "options": [
+          {
+            "value": "I can clap my hands.",
+            "label": "I can clap my hands."
+          },
+          {
+            "value": "hands",
+            "label": "hands"
+          }
+        ],
+        "answer": "I can clap my hands."
+      }
+    ],
+    "practice": [
+      {
+        "type": "mcq",
+        "qEn": "Mridang is the NCERT…",
+        "qHi": "मृदंग है एनसीईआरटी की…",
+        "options": [
+          "Class 1 English book",
+          "hidden advert"
+        ],
+        "answer": "Class 1 English book",
+        "speakEn": "Mridang is the NCERT…",
+        "speakHi": "मृदंग है एनसीईआरटी की…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Shared reading means we read…",
+        "qHi": "साथ पढ़ना मतलब हम पढ़ते हैं…",
+        "options": [
+          {
+            "value": "together",
+            "label": "together"
+          },
+          {
+            "value": "only in silence forever",
+            "label": "only in silence forever"
+          }
+        ],
+        "answer": "together",
+        "speakEn": "Shared reading means we read…",
+        "speakHi": "साथ पढ़ना मतलब हम पढ़ते हैं…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Clap is an…",
+        "qHi": "Clap है एक…",
+        "options": [
+          "action word",
+          "colour"
+        ],
+        "answer": "action word",
+        "speakEn": "Clap is an…",
+        "speakHi": "Clap है एक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A full-sentence answer might be…",
+        "qHi": "पूरे वाक्य का उत्तर हो सकता है…",
+        "options": [
+          {
+            "value": "I can clap my hands.",
+            "label": "I can clap my hands."
+          },
+          {
+            "value": "clap",
+            "label": "clap"
+          }
+        ],
+        "answer": "I can clap my hands.",
+        "speakEn": "A full-sentence answer might be…",
+        "speakHi": "पूरे वाक्य का उत्तर हो सकता है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "This shared reading is…",
+        "qHi": "यह साथ पढ़ना है…",
+        "options": [
+          "Premium",
+          "a late fee"
+        ],
+        "answer": "Premium",
+        "speakEn": "This shared reading is…",
+        "speakHi": "यह साथ पढ़ना है…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Joining in means the child…",
+        "qHi": "साथ देना मतलब बच्चा…",
+        "options": [
+          {
+            "value": "says some of the words",
+            "label": "stays fully silent"
+          },
+          {
+            "value": "stays fully silent",
+            "label": "stays fully silent"
+          }
+        ],
+        "answer": "says some of the words",
+        "speakEn": "Joining in means the child…",
+        "speakHi": "साथ देना मतलब बच्चा…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "Two little hands is a…",
+        "qHi": "Two little hands है एक…",
+        "options": [
+          "poem start",
+          "number bond"
+        ],
+        "answer": "poem start",
+        "speakEn": "Two little hands is a…",
+        "speakHi": "Two little hands है एक…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "We answer after we…",
+        "qHi": "उत्तर देते हैं बाद में जब…",
+        "options": [
+          "read",
+          "guess with eyes closed"
+        ],
+        "answer": "read",
+        "speakEn": "We answer after we…",
+        "speakHi": "उत्तर देते हैं बाद में जब…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "A good answer uses words from the…",
+        "qHi": "अच्छा उत्तर शब्दों का उपयोग करता है… से",
+        "options": [
+          "extract",
+          "unrelated advert"
+        ],
+        "answer": "extract",
+        "speakEn": "A good answer uses words from the…",
+        "speakHi": "अच्छा उत्तर शब्दों का उपयोग करता है… से"
+      },
+      {
+        "type": "mcq",
+        "qEn": "I can wave is another…",
+        "qHi": "I can wave एक और… है",
+        "options": [
+          "action sentence",
+          "colour name"
+        ],
+        "answer": "action sentence",
+        "speakEn": "I can wave is another…",
+        "speakHi": "I can wave एक और… है"
+      },
+      {
+        "type": "mcq",
+        "qEn": "The extract should feel like the…",
+        "qHi": "अंश जैसा लगना चाहिए…",
+        "options": [
+          "school book",
+          "random meme only"
+        ],
+        "answer": "school book",
+        "speakEn": "The extract should feel like the…",
+        "speakHi": "अंश जैसा लगना चाहिए…"
+      },
+      {
+        "type": "mcq",
+        "qEn": "After the read, a question checks…",
+        "qHi": "पढ़ने के बाद प्रश्न जाँचता है…",
+        "options": [
+          "meaning",
+          "only the font"
+        ],
+        "answer": "meaning",
+        "speakEn": "After the read, a question checks…",
+        "speakHi": "पढ़ने के बाद प्रश्न जाँचता है…"
+      }
+    ],
+    "masteryNeed": 4,
+    "masteryCount": 5,
+    "logic": false
   }
 ];
