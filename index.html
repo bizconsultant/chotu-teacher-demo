@@ -33,27 +33,38 @@
         </section>
 
         <section class="screen" id="screen-parent">
-          <p class="badge" data-i18n="trialBadge">3-day free trial</p>
-          <p class="sub" data-i18n="parentIntro">Try free for 3 days, then choose a plan. This demo does not take payment.</p>
+          <p class="badge" data-i18n="trialBadge">7-day free trial</p>
+          <p class="sub" data-i18n="parentIntro">Try free for 7 days, then choose a plan. This demo does not take payment.</p>
 
           <div class="plan-card" id="plan-basic-card">
             <h3 data-i18n="basicName">Basic</h3>
-            <div class="price">₹499 <span data-i18n="perMonth">/ month</span></div>
+            <div class="price">₹249 <span data-i18n="perMonth">/ month</span></div>
+            <p class="price-alt">₹949 <span data-i18n="perYear">/ year</span></p>
             <ul data-i18n-list="basicList"></ul>
           </div>
 
           <div class="plan-card" id="plan-premium-card">
             <h3 data-i18n="premiumName">Premium</h3>
-            <div class="price">₹999 <span data-i18n="perMonth">/ month</span></div>
+            <div class="price">₹349 <span data-i18n="perMonth">/ month</span></div>
+            <p class="price-alt">₹1,949 <span data-i18n="perYear">/ year</span></p>
             <ul data-i18n-list="premiumList"></ul>
           </div>
 
+          <div class="plan-card" id="plan-family-card">
+            <h3 data-i18n="familyName">Family Premium</h3>
+            <p class="hint tight" data-i18n="familyKids">For 2 children</p>
+            <div class="price">₹2,999 <span data-i18n="perYear">/ year</span></div>
+            <p class="price-alt" data-i18n="familyEach">About ₹1,500 per child per year</p>
+            <ul data-i18n-list="familyList"></ul>
+          </div>
+
           <div class="plan-actions">
-            <button type="button" class="btn btn-leaf" id="btn-trial" data-i18n="startTrial">Start 3-day trial</button>
+            <button type="button" class="btn btn-leaf" id="btn-trial" data-i18n="startTrial">Start 7-day trial</button>
             <div class="row">
               <button type="button" class="btn btn-sky" id="btn-basic" data-i18n="chooseBasic">Choose Basic</button>
               <button type="button" class="btn btn-primary" id="btn-premium" data-i18n="choosePremium">Choose Premium</button>
             </div>
+            <button type="button" class="btn btn-white" id="btn-family" data-i18n="chooseFamily">Choose Family Premium</button>
             <p class="demo-note" data-i18n="demoOnly">Demo only — no payment is collected.</p>
           </div>
         </section>
@@ -61,59 +72,52 @@
         <section class="screen" id="screen-home">
           <img class="chotu small" src="assets/chotu.png" alt="Chotu" />
           <p class="hint" id="plan-banner"></p>
-          <p class="sub" data-i18n="pickAge">Pick an age band</p>
-          <div class="age-row">
-            <button type="button" class="age-chip active" data-age="nursery"><span data-i18n="nursery">Nursery</span><small data-i18n="nurseryAge">3–4 years</small></button>
-            <button type="button" class="age-chip" data-age="lkg"><span data-i18n="lkg">LKG</span><small data-i18n="lkgAge">4–5 years</small></button>
-            <button type="button" class="age-chip" data-age="ukg"><span data-i18n="ukg">UKG</span><small data-i18n="ukgAge">5–6 years</small></button>
+          <p class="sub" data-i18n="pickAge">Pick a level</p>
+          <div class="age-row" id="age-row">
+            <button type="button" class="age-chip active" data-age="nursery"><span data-i18n="nursery">Nursery</span><small data-i18n="nurseryAge">Age 3</small></button>
+            <button type="button" class="age-chip" data-age="lkg"><span data-i18n="lkg">LKG</span><small data-i18n="lkgAge">Age 4</small></button>
+            <button type="button" class="age-chip" data-age="ukg"><span data-i18n="ukg">UKG</span><small data-i18n="ukgAge">Age 5</small></button>
+            <button type="button" class="age-chip" data-age="class1"><span data-i18n="class1">Class 1</span><small data-i18n="class1Age">Age 6</small></button>
           </div>
+          <p class="level-blurb" id="level-blurb"></p>
           <div class="card-grid">
-            <button type="button" class="lesson-card" id="card-english"><span class="emoji">🔤</span><span data-i18n="english">English</span></button>
-            <button type="button" class="lesson-card" id="card-maths"><span class="emoji">🔢</span><span data-i18n="maths">Maths</span></button>
-            <button type="button" class="lesson-card wide" id="card-slate"><span class="emoji">✏️</span><span data-i18n="slate">Slate</span></button>
+            <button type="button" class="lesson-card" id="card-english"><span class="emoji">🔤</span><span data-i18n="english">English</span><small class="card-sub" id="english-card-sub"></small></button>
+            <button type="button" class="lesson-card" id="card-maths"><span class="emoji">🔢</span><span data-i18n="maths">Maths</span><small class="card-sub" id="maths-card-sub"></small></button>
+            <button type="button" class="lesson-card" id="card-logic"><span class="tag tag-basic" data-i18n="basicTag">Basic</span><span class="emoji">🧩</span><span data-i18n="logic">Thinking &amp; Logic</span></button>
+            <button type="button" class="lesson-card" id="card-slate"><span class="emoji">✏️</span><span data-i18n="slate">Slate</span></button>
             <button type="button" class="lesson-card" id="card-talk"><span class="tag" data-i18n="premiumTag">Premium</span><span class="emoji">🎙️</span><span data-i18n="talk">Talk to Chotu</span></button>
             <button type="button" class="lesson-card" id="card-rupees"><span class="tag" data-i18n="premiumTag">Premium</span><span class="emoji">🪙</span><span data-i18n="rupees">Rupee coins</span></button>
             <button type="button" class="lesson-card wide" id="card-report"><span class="tag" data-i18n="premiumTag">Premium</span><span class="emoji">📝</span><span data-i18n="report">Parent report</span></button>
           </div>
+          <h2 class="section-label" data-i18n="courseUnits">This year's units</h2>
+          <div class="unit-list" id="unit-list"></div>
         </section>
 
         <section class="screen" id="screen-english">
-          <p class="sub" data-i18n="tapLetter">Tap a letter. Chotu will say it!</p>
-          <div class="letters letter-pad">
-            <button type="button" class="letter-btn active" data-letter="A">A</button>
-            <button type="button" class="letter-btn" data-letter="B">B</button>
-            <button type="button" class="letter-btn" data-letter="C">C</button>
-            <button type="button" class="letter-btn" data-letter="D">D</button>
-            <button type="button" class="letter-btn" data-letter="E">E</button>
-          </div>
-          <div class="phonic" id="phonic"><span class="big">A</span>A for Apple · A se Aam (mango)</div>
-          <button type="button" class="btn btn-primary" id="btn-english-quiz" data-i18n="startQuiz">Find the letter</button>
-        </section>
-
-        <section class="screen" id="screen-english-quiz">
-          <p class="sub" data-i18n="findLetter">Find this letter:</p>
-          <div class="phonic"><span class="big" id="quiz-letter">A</span></div>
-          <div class="quiz-options" id="quiz-options"></div>
+          <p class="sub" id="english-intro"></p>
+          <div id="english-stage"></div>
           <div class="feedback" id="english-feedback"></div>
+          <button type="button" class="btn btn-sun" id="btn-english-hear" data-i18n="hearChotu">Hear Chotu</button>
           <button type="button" class="btn btn-sky" id="btn-english-next" data-i18n="nextQ">Next</button>
           <button type="button" class="btn btn-white" id="btn-english-home" data-i18n="doneLesson">All done! Home</button>
         </section>
 
         <section class="screen" id="screen-maths">
-          <p class="sub" data-i18n="countIntro">Count the mangoes and laddoos.</p>
-          <div class="objects" id="maths-objects"></div>
-          <p class="feedback" id="maths-label"></p>
-          <button type="button" class="btn btn-sun" id="btn-maths-count" data-i18n="hearCount">Hear Chotu count</button>
-          <button type="button" class="btn btn-primary" id="btn-maths-quiz" data-i18n="startMathsQuiz">How many?</button>
-        </section>
-
-        <section class="screen" id="screen-maths-quiz">
-          <p class="sub" data-i18n="howMany">How many?</p>
-          <div class="objects" id="maths-quiz-objects"></div>
-          <div class="quiz-options nums" id="maths-options"></div>
+          <p class="sub" id="maths-intro"></p>
+          <div id="maths-stage"></div>
           <div class="feedback" id="maths-feedback"></div>
+          <button type="button" class="btn btn-sun" id="btn-maths-hear" data-i18n="hearChotu">Hear Chotu</button>
           <button type="button" class="btn btn-sky" id="btn-maths-next" data-i18n="nextQ">Next</button>
           <button type="button" class="btn btn-white" id="btn-maths-home" data-i18n="doneLesson">All done! Home</button>
+        </section>
+
+        <section class="screen" id="screen-logic">
+          <p class="sub" id="logic-intro"></p>
+          <div id="logic-stage"></div>
+          <div class="feedback" id="logic-feedback"></div>
+          <button type="button" class="btn btn-sun" id="btn-logic-hear" data-i18n="hearChotu">Hear Chotu</button>
+          <button type="button" class="btn btn-sky" id="btn-logic-next" data-i18n="nextQ">Next</button>
+          <button type="button" class="btn btn-white" id="btn-logic-home" data-i18n="doneLesson">All done! Home</button>
         </section>
 
         <section class="screen" id="screen-slate">
@@ -131,7 +135,7 @@
 
         <section class="screen" id="screen-talk">
           <img class="chotu tiny" src="assets/chotu.png" alt="Chotu" />
-          <p class="sub" data-i18n="talkHint">Say a letter A to E, or a number 1 to 10.</p>
+          <p class="sub" id="talk-hint" data-i18n="talkHint">Say a sound, a word, or a number.</p>
           <p class="mic-status" id="talk-support"></p>
           <p class="feedback" id="talk-heard"></p>
           <button type="button" class="btn btn-mic" id="btn-mic" data-i18n="mic">Speak to Chotu</button>
@@ -145,13 +149,13 @@
           <div class="report">
             <span class="sample" data-i18n="sampleData">Sample data — not a real child</span>
             <h3 data-i18n="reportTitle">Weekly parent report</h3>
-            <div class="stat"><span data-i18n="childName">Child</span><strong data-i18n="sampleChild">Aarav, LKG</strong></div>
+            <div class="stat"><span data-i18n="childName">Child</span><strong id="report-child"></strong></div>
             <div class="stat"><span data-i18n="week">Week of 16 Nov 2026</span><span></span></div>
-            <div class="stat"><span data-i18n="englishProgress">English</span><strong data-i18n="engVal">Letters A–E, starting sounds</strong></div>
-            <div class="stat"><span data-i18n="mathsProgress">Maths</span><strong data-i18n="mathVal">Counting to 10, rupee play</strong></div>
-            <div class="stat"><span data-i18n="speaking">Speaking practice</span><strong data-i18n="speakVal">Said 12 words clearly</strong></div>
-            <div class="stat"><span data-i18n="hindiPath">Hindi akshar</span><strong data-i18n="hindiVal">Swar अ आ इ</strong></div>
-            <div class="stat"><span data-i18n="nextFocus">Next week</span><strong data-i18n="nextVal">Letter F, numbers 11–20</strong></div>
+            <div class="stat"><span data-i18n="englishProgress">English</span><strong id="report-eng"></strong></div>
+            <div class="stat"><span data-i18n="mathsProgress">Maths</span><strong id="report-math"></strong></div>
+            <div class="stat"><span data-i18n="speaking">Speaking practice</span><strong id="report-speak"></strong></div>
+            <div class="stat"><span data-i18n="hindiPath">Hindi path</span><strong id="report-hindi"></strong></div>
+            <div class="stat"><span data-i18n="nextFocus">Next week</span><strong id="report-next"></strong></div>
           </div>
           <img class="chotu small" src="assets/chotu.png" alt="Chotu" style="margin-top:16px" />
         </section>

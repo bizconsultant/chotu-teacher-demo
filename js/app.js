@@ -11,89 +11,92 @@
       start: "Let's go!",
       back: "Back",
       parentTitle: "For parents",
-      parentIntro: "Try free for 3 days, then choose a plan. This demo does not take payment.",
-      trialBadge: "3-day free trial",
+      parentIntro: "Try free for 7 days, then choose a plan. This demo does not take payment.",
+      trialBadge: "7-day free trial",
       basicName: "Basic",
       premiumName: "Premium",
+      familyName: "Family Premium",
+      familyKids: "For 2 children",
+      familyEach: "About ₹1,500 per child per year",
       perMonth: "/ month",
+      perYear: "/ year",
       basicList: [
-        "English and Maths basics for Nursery, LKG and UKG",
+        "Deeper English and Maths for Nursery, LKG, UKG and Class 1",
+        "Step-by-step phonics and story questions",
+        "Hands-on maths: ten-frames, number bonds and rupees",
+        "Thinking and Logic puzzles in Basic",
         "Chotu speaks every instruction in English or Hindi",
-        "Letters, phonics, numbers, shapes and counting",
         "Finger tracing on the slate",
-        "Stars and a simple activity log"
+        "A simple parent progress view"
       ],
       premiumList: [
         "Everything in Basic",
         "Talk to Chotu — the child answers by voice",
         "Pronunciation coaching in English and Hindi",
-        "Hindi akshar path (swar, vyanjan, simple words)",
-        "Indian everyday maths, including rupee coins",
-        "Weekly parent report mapped to school topics",
+        "Hindi reading and writing, with matras in Class 1",
+        "A coached slate that guides handwriting",
         "Smart practice that reteaches a weak skill",
+        "Weekly parent report mapped to NCF and NIPUN",
         "Offline lesson packs and a PIN screen-time lock"
       ],
-      startTrial: "Start 3-day trial",
+      familyList: [
+        "Premium features for 2 children",
+        "Each child gets Talk to Chotu, Hindi literacy and reports"
+      ],
+      startTrial: "Start 7-day trial",
       chooseBasic: "Choose Basic",
       choosePremium: "Choose Premium",
+      chooseFamily: "Choose Family Premium",
       demoOnly: "Demo only — no payment is collected.",
       homeTitle: "Let's learn!",
-      pickAge: "Pick an age band",
+      pickAge: "Pick a level",
       nursery: "Nursery",
-      nurseryAge: "3–4 years",
+      nurseryAge: "Age 3",
       lkg: "LKG",
-      lkgAge: "4–5 years",
+      lkgAge: "Age 4",
       ukg: "UKG",
-      ukgAge: "5–6 years",
+      ukgAge: "Age 5",
+      class1: "Class 1",
+      class1Age: "Age 6",
       english: "English",
       maths: "Maths",
+      logic: "Thinking & Logic",
       slate: "Slate",
       talk: "Talk to Chotu",
       rupees: "Rupee coins",
       report: "Parent report",
       premiumTag: "Premium",
+      basicTag: "Basic",
+      courseUnits: "This year's units",
       stars: "Stars",
-      englishTitle: "Letters A–E",
-      tapLetter: "Tap a letter. Chotu will say it!",
-      startQuiz: "Find the letter",
-      quizTitle: "Find the letter",
-      findLetter: "Find this letter:",
+      hearChotu: "Hear Chotu",
       nextQ: "Next",
       doneLesson: "All done! Home",
-      mathsTitle: "Counting 1–10",
-      countIntro: "Count the mangoes and laddoos.",
-      howMany: "How many?",
-      hearCount: "Hear Chotu count",
-      startMathsQuiz: "How many?",
-      mathsQuizTitle: "How many?",
+      englishTitle: "English",
+      mathsTitle: "Maths",
+      logicTitle: "Thinking & Logic",
       slateTitle: "Chotu's slate",
       slateHint: "Trace the letter or number with your finger.",
       clear: "Clear",
       nextGlyph: "Next",
       done: "Done",
       talkTitle: "Talk to Chotu",
-      talkHint: "Say a letter A to E, or a number 1 to 10.",
-      listen: "I'm listening… say a letter or number",
+      talkHint: "Say a sound, a word, or a number.",
+      listen: "I'm listening… say a sound, a word or a number",
       tapMic: "Tap the mic and speak",
-      noSpeech: "Voice listening is not available in this browser. Tap a letter or number instead.",
+      noSpeech: "Voice listening is not available in this browser. Tap a button instead.",
       fallbackTitle: "Or tap here:",
       mic: "Speak to Chotu",
       stop: "Stop",
       reportTitle: "Weekly parent report",
       sampleData: "Sample data — not a real child",
       childName: "Child",
-      sampleChild: "Aarav, LKG",
       week: "Week of 16 Nov 2026",
       englishProgress: "English",
       mathsProgress: "Maths",
       speaking: "Speaking practice",
-      hindiPath: "Hindi akshar",
+      hindiPath: "Hindi path",
       nextFocus: "Next week",
-      engVal: "Letters A–E, starting sounds",
-      mathVal: "Counting to 10, rupee play",
-      speakVal: "Said 12 words clearly",
-      hindiVal: "Swar अ आ इ",
-      nextVal: "Letter F, numbers 11–20",
       rupeeTitle: "Rupee coins",
       rupeeQ: "How many rupees in all?",
       rupeeNext: "Next coins",
@@ -101,29 +104,13 @@
       tryAgain: "Almost! Try again.",
       heard: "I heard:",
       greetSpeech: "Hi! I am Chotu Teacher. Let's learn English and Maths together, with lots of fun!",
-      letterSpeech: {
-        A: "A for Apple. A se Aam.",
-        B: "B for Ball. B se Bandar.",
-        C: "C for Cat. C se Chidiya.",
-        D: "D for Dog. D se Diya.",
-        E: "E for Elephant. E se Elephant."
-      },
-      letterLabel: {
-        A: "A for Apple · A se Aam (mango)",
-        B: "B for Ball · B se Bandar (monkey)",
-        C: "C for Cat · C se Chidiya (bird)",
-        D: "D for Dog · D se Diya (lamp)",
-        E: "E for Elephant · E se Elephant"
-      },
-      mangoes: "mangoes",
-      laddoos: "laddoos",
-      countSpeech: (n, item) => "There are " + n + " " + item + ".",
       praise: ["Yes! Super star!", "Wah! Very good!", "Fantastic!", "You did it!"],
       retry: ["Almost! Try again.", "Have another look.", "You can do it!"],
-      planTrial: "You are on the 3-day free trial. All Premium previews are open.",
+      planTrial: "You are on the 7-day free trial. All Premium previews are open.",
       planBasic: "Basic plan (demo). Premium cards still open as a preview.",
       planPremium: "Premium plan (demo). Enjoy Talk to Chotu and more!",
-      heardUnknown: "I did not catch a letter or number. Please try again, or tap a button."
+      planFamily: "Family Premium (demo). Premium features for 2 children.",
+      heardUnknown: "I did not catch that. Please try again, or tap a button."
     },
     hi: {
       appName: "छोटू टीचर",
@@ -134,149 +121,302 @@
       start: "चलो शुरू करें!",
       back: "वापस",
       parentTitle: "माता-पिता के लिए",
-      parentIntro: "3 दिन मुफ़्त आज़माएँ, फिर योजना चुनें। यह डेमो भुगतान नहीं लेता।",
-      trialBadge: "3 दिन का मुफ़्त ट्रायल",
+      parentIntro: "7 दिन मुफ़्त आज़माएँ, फिर योजना चुनें। यह डेमो भुगतान नहीं लेता।",
+      trialBadge: "7 दिन का मुफ़्त ट्रायल",
       basicName: "बेसिक",
       premiumName: "प्रीमियम",
+      familyName: "फ़ैमिली प्रीमियम",
+      familyKids: "2 बच्चों के लिए",
+      familyEach: "लगभग ₹1,500 प्रति बच्चा प्रति वर्ष",
       perMonth: "/ महीना",
+      perYear: "/ वर्ष",
       basicList: [
-        "नर्सरी, एलकेजी और यूकेजी के लिए अंग्रेज़ी और गणित की मूल बातें",
+        "नर्सरी, एलकेजी, यूकेजी और कक्षा 1 के लिए गहरा अंग्रेज़ी और गणित पाठ्यक्रम",
+        "क्रमबद्ध ध्वनि-विज्ञान और कहानी के प्रश्न",
+        "हाथों से गणित: दस-फ्रेम, संख्या जोड़ और रुपये",
+        "बेसिक में सोच और तर्क के पहेलियाँ",
         "छोटू हर निर्देश अंग्रेज़ी या हिन्दी में बोलता है",
-        "अक्षर, ध्वनियाँ, संख्याएँ, आकृतियाँ और गिनती",
         "स्लेट पर उँगली से अक्षर बनाना",
-        "सितारे और एक सरल गतिविधि सूची"
+        "अभिभावकों के लिए सरल प्रगति दृश्य"
       ],
       premiumList: [
         "बेसिक की सारी बातें",
         "छोटू से बातें — बच्चा आवाज़ में जवाब दे",
         "अंग्रेज़ी और हिन्दी में उच्चारण की मदद",
-        "हिन्दी अक्षर पथ (स्वर, व्यंजन, सरल शब्द)",
-        "भारतीय रोज़मर्रा का गणित, रुपये के सिक्के सहित",
-        "स्कूल के विषयों से जुड़ी साप्ताहिक रिपोर्ट",
+        "हिन्दी पढ़ना-लिखना, कक्षा 1 में मात्राओं के साथ",
+        "हस्तलेखन सिखाने वाली कोच स्लेट",
         "कमज़ोर कौशल को फिर से सिखाने वाला अभ्यास",
+        "एनसीएफ और निपुण से जुड़ी साप्ताहिक रिपोर्ट",
         "ऑफ़लाइन पाठ और पिन वाला स्क्रीन-टाइम लॉक"
       ],
-      startTrial: "3 दिन का ट्रायल शुरू करें",
+      familyList: [
+        "2 बच्चों के लिए प्रीमियम सुविधाएँ",
+        "हर बच्चे को छोटू से बातें, हिन्दी पाठ और रिपोर्ट मिलती है"
+      ],
+      startTrial: "7 दिन का ट्रायल शुरू करें",
       chooseBasic: "बेसिक चुनें",
       choosePremium: "प्रीमियम चुनें",
+      chooseFamily: "फ़ैमिली प्रीमियम चुनें",
       demoOnly: "केवल डेमो — कोई भुगतान नहीं लिया जाता।",
       homeTitle: "चलो सीखें!",
-      pickAge: "आयु वर्ग चुनें",
+      pickAge: "स्तर चुनें",
       nursery: "नर्सरी",
-      nurseryAge: "3–4 साल",
+      nurseryAge: "3 साल",
       lkg: "एलकेजी",
-      lkgAge: "4–5 साल",
+      lkgAge: "4 साल",
       ukg: "यूकेजी",
-      ukgAge: "5–6 साल",
+      ukgAge: "5 साल",
+      class1: "कक्षा 1",
+      class1Age: "6 साल",
       english: "अंग्रेज़ी",
       maths: "गणित",
+      logic: "सोच और तर्क",
       slate: "स्लेट",
       talk: "छोटू से बातें",
       rupees: "रुपये के सिक्के",
       report: "अभिभावक रिपोर्ट",
       premiumTag: "प्रीमियम",
+      basicTag: "बेसिक",
+      courseUnits: "इस वर्ष की इकाइयाँ",
       stars: "सितारे",
-      englishTitle: "अक्षर A–E",
-      tapLetter: "एक अक्षर दबाएँ। छोटू उसे बोलेगा!",
-      startQuiz: "अक्षर ढूँढो",
-      quizTitle: "अक्षर ढूँढो",
-      findLetter: "यह अक्षर ढूँढो:",
+      hearChotu: "छोटू से सुनो",
       nextQ: "अगला",
       doneLesson: "हो गया! होम",
-      mathsTitle: "गिनती 1–10",
-      countIntro: "आम और लड्डू गिनो।",
-      howMany: "कितने हैं?",
-      hearCount: "छोटू से गिनती सुनो",
-      startMathsQuiz: "कितने हैं?",
-      mathsQuizTitle: "कितने हैं?",
+      englishTitle: "अंग्रेज़ी",
+      mathsTitle: "गणित",
+      logicTitle: "सोच और तर्क",
       slateTitle: "छोटू की स्लेट",
       slateHint: "उँगली से अक्षर या संख्या बनाओ।",
       clear: "साफ़ करो",
       nextGlyph: "अगला",
       done: "हो गया",
       talkTitle: "छोटू से बातें",
-      talkHint: "A से E तक कोई अक्षर, या 1 से 10 तक कोई संख्या बोलो।",
-      listen: "मैं सुन रहा हूँ… एक अक्षर या संख्या बोलो",
+      talkHint: "एक ध्वनि, शब्द या संख्या बोलो।",
+      listen: "मैं सुन रहा हूँ… एक ध्वनि, शब्द या संख्या बोलो",
       tapMic: "माइक दबाकर बोलो",
-      noSpeech: "इस ब्राउज़र में आवाज़ सुनना उपलब्ध नहीं है। अक्षर या संख्या दबाएँ।",
+      noSpeech: "इस ब्राउज़र में आवाज़ सुनना उपलब्ध नहीं है। बटन दबाएँ।",
       fallbackTitle: "या यहाँ दबाएँ:",
       mic: "छोटू से बोलो",
       stop: "रोको",
       reportTitle: "साप्ताहिक अभिभावक रिपोर्ट",
-      sampleData: "नमूना डेटा — यह कोई असली बच्चा नहीं है",
+      sampleData: "नमूना डेटा — कोई असली बच्चा नहीं",
       childName: "बच्चा",
-      sampleChild: "आरव, एलकेजी",
-      week: "सप्ताह: 16 नवम्बर 2026",
+      week: "सप्ताह, 16 नवम्बर 2026",
       englishProgress: "अंग्रेज़ी",
       mathsProgress: "गणित",
       speaking: "बोलने का अभ्यास",
-      hindiPath: "हिन्दी अक्षर",
+      hindiPath: "हिन्दी पथ",
       nextFocus: "अगला सप्ताह",
-      engVal: "अक्षर A–E, पहली ध्वनियाँ",
-      mathVal: "10 तक गिनती, रुपये का खेल",
-      speakVal: "12 शब्द साफ़ बोले",
-      hindiVal: "स्वर अ आ इ",
-      nextVal: "अक्षर F, संख्या 11–20",
       rupeeTitle: "रुपये के सिक्के",
       rupeeQ: "कुल कितने रुपये हैं?",
       rupeeNext: "अगले सिक्के",
       great: "हाँ! सुपर स्टार!",
-      tryAgain: "लगभग! फिर से कोशिश करो।",
+      tryAgain: "लगभग! फिर कोशिश करो।",
       heard: "मैंने सुना:",
-      greetSpeech: "नमस्ते! मैं छोटू टीचर हूँ। चलो, अंग्रेज़ी और गणित मज़े-मज़े से सीखते हैं!",
-      letterSpeech: {
-        A: "A फॉर एपल। अ से आम।",
-        B: "B फॉर बॉल। ब से बंदर।",
-        C: "C फॉर कैट। च से चिड़िया।",
-        D: "D फॉर डॉग। द से दिया।",
-        E: "E फॉर एलिफेंट। ई से एलिफेंट।"
-      },
-      letterLabel: {
-        A: "A for Apple · अ से आम",
-        B: "B for Ball · ब से बंदर",
-        C: "C for Cat · च से चिड़िया",
-        D: "D for Dog · द से दिया",
-        E: "E for Elephant · ई से एलिफेंट"
-      },
-      mangoes: "आम",
-      laddoos: "लड्डू",
-      countSpeech: (n, item) => item + " हैं " + n + "।",
-      praise: ["हाँ! सुपर स्टार!", "वाह! बहुत अच्छे!", "शानदार!", "कर लिया तुमने!"],
-      retry: ["लगभग! फिर से देखो।", "एक और बार देखो।", "तुम कर सकते हो!"],
-      planTrial: "आप 3 दिन के मुफ़्त ट्रायल पर हैं। सारे प्रीमियम पूर्वावलोकन खुले हैं।",
+      greetSpeech: "नमस्ते! मैं छोटू टीचर हूँ। चलो अंग्रेज़ी और गणित मज़े-मज़े से सीखते हैं!",
+      praise: ["हाँ! सुपर स्टार!", "वाह! बहुत अच्छे!", "शानदार!", "तुमने कर दिखाया!"],
+      retry: ["लगभग! फिर कोशिश करो।", "एक बार और देखो।", "तुम कर सकते हो!"],
+      planTrial: "आप 7 दिन के मुफ़्त ट्रायल पर हैं। सारे प्रीमियम प्रिव्यू खुले हैं।",
       planBasic: "बेसिक योजना (डेमो)। प्रीमियम कार्ड पूर्वावलोकन के रूप में खुले हैं।",
-      planPremium: "प्रीमियम योजना (डेमो)। छोटू से बातें और भी मज़ेदार हैं!",
-      heardUnknown: "मुझे अक्षर या संख्या साफ़ नहीं सुनाई दी। फिर से बोलो, या बटन दबाओ।"
+      planPremium: "प्रीमियम योजना (डेमो)। छोटू से बातें और और भी मज़ा लें!",
+      planFamily: "फ़ैमिली प्रीमियम (डेमो)। 2 बच्चों के लिए प्रीमियम सुविधाएँ।",
+      heardUnknown: "समझ नहीं आया। फिर कोशिश करो, या बटन दबाओ।"
     }
   };
 
-  const LETTERS = ["A", "B", "C", "D", "E"];
-  const GLYPHS = ["A", "B", "C", "1", "2", "5"];
+  const LEVELS = {
+    nursery: {
+      blurbEn: "Nursery, age 3: listening and first sounds, then s, a, t, p. Maths starts with subitising and numbers to 10.",
+      blurbHi: "नर्सरी, 3 साल: सुनना और पहली ध्वनियाँ, फिर s, a, t, p। गणित में झट से पहचान और 10 तक गिनती।",
+      engPlayEn: "Beginning sounds",
+      engPlayHi: "शुरू की ध्वनियाँ",
+      mathPlayEn: "See and count mangoes",
+      mathPlayHi: "आम देखो और गिनो",
+      engUnits: [
+        "Phase 1 listening: environmental and voice sounds",
+        "Rhyme, rhythm and syllable claps",
+        "Oral blending, still before the full alphabet",
+        "First letter set s, a, t, p, and first words",
+        "Daily story talk: who, what, predict",
+        "Second letter set i, n, m, d, with a revisit",
+        "Vocabulary clusters with a Hindi bridge",
+        "Picture comprehension, including a simple why",
+        "Meaningful marks and traces only for known sounds",
+        "Spaced mastery: listening, rhyme, first words, story questions"
+      ],
+      mathUnits: [
+        "Sort, classify, and odd one out, with a reason",
+        "Subitise 2 and 3, then 4, and a five-frame, with maths talk",
+        "Numbers 1 to 5 with CPA: objects, pictures, then numerals",
+        "Numbers 6 to 10 on a ten-frame, and how many more",
+        "Shapes in real life and a simple spatial puzzle",
+        "Early measurement: length and weight by direct comparison",
+        "Patterns, including find the mistake",
+        "Number bonds within 5, part-whole with objects",
+        "Join and take away within 5, objects only, with an explanation",
+        "Spaced mixed mastery, plus a logic puzzle"
+      ],
+      premiumUnits: ["Talk to Chotu", "Pronunciation coaching", "Hindi literacy start", "Coached slate", "Adaptive reteach and parent report"],
+      glyphs: ["s", "a", "t", "p", "1", "2", "5"],
+      report: {
+        childEn: "Aarav, Nursery (sample)", childHi: "आरव, नर्सरी (नमूना)",
+        engEn: "Listening, rhyme, and first sounds s, a, t, p", engHi: "सुनना, तुक और पहली ध्वनियाँ s, a, t, p",
+        mathEn: "Subitising and counting mangoes to 5", mathHi: "झट से पहचान और आम 5 तक गिनना",
+        speakEn: "Said first sounds clearly (sample)", speakHi: "पहली ध्वनियाँ साफ़ बोलीं (नमूना)",
+        hindiEn: "Swar अ आ इ (Premium)", hindiHi: "स्वर अ आ इ (प्रीमियम)",
+        nextEn: "Set i, n, m, d and bonds within 5", nextHi: "समूह i, n, m, d और 5 के जोड़"
+      }
+    },
+    lkg: {
+      blurbEn: "LKG, age 4: Phase 2 phonics and CVC words like cat. Maths uses ten-frames and number bonds to 10.",
+      blurbHi: "एलकेजी, 4 साल: चरण 2 ध्वनियाँ और cat जैसे शब्द। गणित में दस-फ्रेम और 10 के जोड़।",
+      engPlayEn: "Blend CVC words", engPlayHi: "तीन-अक्षर शब्द जोड़ो",
+      mathPlayEn: "Ten-frames and bonds to 10", mathPlayHi: "दस-फ्रेम और 10 के जोड़",
+      engUnits: [
+        "Four-block start, and fluency on s, a, t, p, i, n, m, d",
+        "Sets 3 and 4: g, o, c, k, then ck, e, u, r, blend and segment",
+        "Set 5, and first captions with tricky words the, to, no, go, I",
+        "CVC fluency across Phase 2, including pot, pan and lid",
+        "Story comprehension and a planned vocabulary set",
+        "Writing from dictation of known sounds",
+        "Oral language: describe a picture in three sentences",
+        "A Phase 2 mini book, and a retell in order",
+        "Vocabulary themes and word webs: animals, food, school",
+        "Spaced mastery of Phase 2 reading, writing and story questions"
+      ],
+      mathUnits: [
+        "Ten-frames, subitise to 5, and secure 1 to 10 with maths talk",
+        "Number bonds to 5, then to 10, with CPA",
+        "11 to 20 as 10 and some ones, on a double ten-frame",
+        "CPA addition within 10, including how many more",
+        "Take away within 10, zero, and a missing part",
+        "Compare and order to 20, then write 21 to 50 if 1 to 20 is secure",
+        "Informal measurement with a hand span, footsteps or a cup",
+        "ABC and growing patterns, and state the rule",
+        "A first object graph, with two questions",
+        "Spaced mastery: bonds to 10, add and take away with a reason"
+      ],
+      premiumUnits: ["Talk to Chotu, word reading out loud", "Pronunciation and phonics coaching", "Hindi literacy", "Coached slate for letters and words", "Adaptive reteach and weekly parent report"],
+      glyphs: ["c", "a", "t", "p", "n", "5", "10"],
+      report: {
+        childEn: "Aarav, LKG (sample)", childHi: "आरव, एलकेजी (नमूना)",
+        engEn: "Blending CVC words such as cat, pin and pot", engHi: "cat, pin और pot जैसे शब्द जोड़ना",
+        mathEn: "Ten-frames and number bonds to 10", mathHi: "दस-फ्रेम और 10 तक के जोड़",
+        speakEn: "Read 8 CVC words aloud (sample)", speakHi: "8 तीन-अक्षर शब्द ज़ोर से पढ़े (नमूना)",
+        hindiEn: "Swar and early vyanjan (Premium)", hindiHi: "स्वर और शुरुआती व्यंजन (प्रीमियम)",
+        nextEn: "Captions with tricky words, and 11 to 20 as 10 and ones", nextHi: "कठिन शब्दों वाले वाक्य, और 11 से 20"
+      }
+    },
+    ukg: {
+      blurbEn: "UKG, age 5: digraphs such as sh and ch, and short sentences. Maths includes rupee shop problems within 20.",
+      blurbHi: "यूकेजी, 5 साल: sh और ch जैसी संयुक्त ध्वनियाँ और छोटे वाक्य। गणित में 20 रुपये तक की दुकान।",
+      engPlayEn: "Digraphs and sentences", engPlayHi: "संयुक्त ध्वनियाँ और वाक्य",
+      mathPlayEn: "Rupee shop within 20", mathPlayHi: "20 रुपये तक की दुकान",
+      engUnits: [
+        "Phase 2 fluency, then Phase 3: j, v, w, x, y, z, qu, and sh, ch, th, ng",
+        "More Phase 3 vowel digraphs, such as ai, ee, igh, oa and oo",
+        "Phase 4 adjacent consonants: st, tr, cl, mp and similar",
+        "Decodable readers with why and predict, in an Indian setting",
+        "Write sentences from sounds, with a capital and a full stop",
+        "Grammar in meaning: is, am, are, these and those",
+        "Retell beginning, middle and end, and reuse new words",
+        "Read an unseen short text, and infer a feeling",
+        "Write three connected sentences about a picture or a festival",
+        "Class 1 readiness: fluency, four comprehension questions, three sentences"
+      ],
+      mathUnits: [
+        "Bonds to 10 by heart, and mental make-10 talk",
+        "Bonds to 20, and add or subtract within 20 with CPA and a reason",
+        "Tens and ones to 100, with bundles, and place-value talk",
+        "Story problems with a part-whole or bar picture, and how do you know",
+        "Rupee reasoning: enough or not enough, and simple change",
+        "Time at o'clock, a day's sequence, and which activity takes longer",
+        "Measurement with informal units, estimate then check",
+        "3D shape properties, roll or stack, and a shape logic puzzle",
+        "Pictograph or simple table, with three questions",
+        "Spaced mastery and a puzzle week: mental add or subtract within 20"
+      ],
+      premiumUnits: ["Talk to Chotu, reading aloud and conversation", "Pronunciation and fluency coaching", "Hindi literacy, words without matra", "Coached slate for words and sentences", "Adaptive reteach and NCF-mapped parent report", "Tables of 2 and 5, as a stretch only"],
+      glyphs: ["s", "h", "A", "I", "10", "20"],
+      report: {
+        childEn: "Aarav, UKG (sample)", childHi: "आरव, यूकेजी (नमूना)",
+        engEn: "Digraphs sh and ch, and short decodable sentences", engHi: "sh और ch ध्वनियाँ, और छोटे वाक्य",
+        mathEn: "Rupee shop problems and addition within 20", mathHi: "रुपये की दुकान और 20 तक जोड़ना",
+        speakEn: "Read 2 short sentences smoothly (sample)", speakHi: "2 छोटे वाक्य आसानी से पढ़े (नमूना)",
+        hindiEn: "Words without matra (Premium)", hindiHi: "मात्रा के बिना शब्द (प्रीमियम)",
+        nextEn: "Phase 4 blends, and place value to 100", nextHi: "चरण 4 मिश्र ध्वनियाँ, और 100 तक स्थानीय मान"
+      }
+    },
+    class1: {
+      blurbEn: "Class 1, age 6: NCERT stories, unseen sentences and a story question. Maths includes tens and ones, and equal groups.",
+      blurbHi: "कक्षा 1, 6 साल: एनसीईआरटी कहानियाँ और प्रश्न। गणित में दहाई-इकाई और बराबर समूह।",
+      engPlayEn: "Read and answer", engPlayHi: "पढ़ो और जवाब दो",
+      mathPlayEn: "Equal groups and tens", mathPlayHi: "बराबर समूह और दहाई",
+      engUnits: [
+        "Mridang, Two Little Hands: action words, labels, and a phonics revisit",
+        "Greetings, including Namaste, and a written greeting",
+        "Picture Time, and decode an unfamiliar 4 or 5 word sentence",
+        "The Cap-seller and the Monkeys: retell, infer, act, and write two sentences",
+        "A Farm: rhyme, vocabulary, and unseen sentences",
+        "Fun with Pictures and The Food we Eat: Indian food, and 2 or 3 sentences",
+        "Shared reading plus a written response, and a spaced vocabulary revisit",
+        "The Four Seasons: compare, explain, and write three sentences",
+        "Anandi's Rainbow: colours, the national flag, inference, and connected sentences",
+        "NIPUN Class 1 literacy check: unseen sentences and a short written response"
+      ],
+      mathUnits: [
+        "Shape properties and a logic sort, from What is Long? What is Round?",
+        "Making 10, teens as 10 and ones, and mental bond fluency",
+        "How Many: add and subtract single digits with a strategy",
+        "Vegetable Farm: daily-life problems to 20, two representations",
+        "Fun with Numbers, 21 to 99: order, count on and back, which is closer",
+        "Lina's Family: estimate, measure, record, with hand span or a cup",
+        "Utsav: festival patterns and number patterns, and state the rule",
+        "How do I Spend my Day: sequence, o'clock, and informal duration",
+        "How Many Times: equal groups, arrays, and repeated addition as times",
+        "Money and data, plus mixed mastery and puzzles"
+      ],
+      premiumUnits: ["Talk to Chotu, Class 1 conversation", "Fluency coaching on a new text", "Hindi literacy with matra", "Coached slate for sentences and numerals to 99", "Adaptive reteach and NIPUN-mapped parent report", "Shared reading of a Mridang chapter"],
+      glyphs: ["A", "M", "20", "47", "99"],
+      report: {
+        childEn: "Aarav, Class 1 (sample)", childHi: "आरव, कक्षा 1 (नमूना)",
+        engEn: "The Cap-seller and the Monkeys: inference and two sentences", engHi: "टोपी वाला और बंदर: अनुमान और दो वाक्य",
+        mathEn: "Equal groups (3 times 2) and tens and ones to 47", mathHi: "बराबर समूह (3 गुना 2) और 47 तक दहाई-इकाई",
+        speakEn: "Read a new 5-word sentence (sample)", speakHi: "एक नया 5-शब्द वाक्य पढ़ा (नमूना)",
+        hindiEn: "Hindi with matras, aligned to Sarangi (Premium)", hindiHi: "सारंगी के साथ मात्राएँ (प्रीमियम)",
+        nextEn: "A Farm unseen sentences, and measure with a cup", nextHi: "फार्म के नए वाक्य, और कप से माप"
+      }
+    }
+  };
+
+  const ENG_HI_UNITS = {
+    nursery: ["चरण 1 सुनना: आस-पास और आवाज़ की ध्वनियाँ", "तुक, लय और अक्षर-तालियाँ", "मुँह से शब्द जोड़ना, पूरी वर्णमाला से पहले", "पहला अक्षर समूह s, a, t, p और पहले शब्द", "रोज़ कहानी: कौन, क्या, आगे क्या होगा", "दूसरा समूह i, n, m, d, और पहले समूह की दोहराई", "शब्द समूह, हिन्दी से अंग्रेज़ी पुल के साथ", "चित्र समझ, एक सरल क्यों सहित", "जानी हुई ध्वनियों के लिए अर्थपूर्ण निशान", "अंतराल के बाद महारत: सुनना, तुक, शब्द, प्रश्न"],
+    lkg: ["चार खंडों की शुरुआत, और s, a, t, p, i, n, m, d पर धाराप्रवाहता", "समूह 3 और 4: g, o, c, k, फिर ck, e, u, r", "समूह 5, और the, to, no, go, I वाले छोटे वाक्य", "चरण 2 के CVC शब्द, जैसे pot, pan और lid", "कहानी समझ और नियोजित शब्द भंडार", "जानी हुई ध्वनियों की श्रुतलेख और अक्षर रचना", "मौखिक भाषा: चित्र पर तीन वाक्य", "चरण 2 की छोटी किताब, और क्रम से दोहराना", "शब्द जाल: जानवर, भोजन, स्कूल", "चरण 2 पढ़ने, लिखने और प्रश्नों की महारत"],
+    ukg: ["चरण 2 के बाद चरण 3: sh, ch, th, ng सहित", "और स्वर युग्म: ai, ee, igh, oa, oo", "चरण 4 पास-पास व्यंजन: st, tr, cl, mp", "भारतीय परिवेश में पढ़ने योग्य कहानियाँ", "ध्वनियों से वाक्य, बड़े अक्षर और पूर्ण विराम के साथ", "अर्थ में व्याकरण: is, am, are, these, those", "शुरुआत, मध्य, अंत दोहराना", "नई छोटी पाठ पढ़ना, और भावना का अनुमान", "चित्र या त्योहार पर तीन जुड़े वाक्य", "कक्षा 1 की तैयारी: धाराप्रवाहता, प्रश्न, तीन वाक्य"],
+    class1: ["मृदंग, दो छोटे हाथ: क्रिया शब्द और ध्वनि दोहराई", "अभिवादन, नमस्ते सहित, और लिखा अभिवादन", "चित्र समय, और नया 4 या 5 शब्द का वाक्य पढ़ना", "टोपी वाला और बंदर: कहानी, अनुमान, दो वाक्य", "एक खेत: तुक, शब्द, नए वाक्य", "चित्रों का मज़ा और हम जो खाते हैं: 2 या 3 वाक्य", "साथ पढ़ना, लिखा उत्तर, और शब्द दोहराई", "चार मौसम: तुलना, समझाना, तीन वाक्य", "आनंदी का इंद्रधनुष: रंग, झंडा, जुड़े वाक्य", "निपुण कक्षा 1 जाँच: नए वाक्य और छोटा लेख"]
+  };
+  const MATH_HI_UNITS = {
+    nursery: ["छाँटना, वर्गीकरण, और अलग वस्तु, कारण के साथ", "2, 3, फिर 4 को झट से पहचानना, पाँच-फ्रेम पर", "1 से 5: वस्तु, चित्र, फिर अंक", "6 से 10 दस-फ्रेम पर, और कितने और", "असली जीवन की आकृतियाँ और एक स्थान पहेली", "लंबाई और भार की सीधी तुलना", "पैटर्न, गलती ढूँढना सहित", "5 के अंदर संख्या जोड़, भाग-पूरा", "5 के अंदर जोड़ना और निकालना, कारण के साथ", "मिश्रित महारत, और एक तर्क पहेली"],
+    lkg: ["दस-फ्रेम, 5 तक झट से पहचान, 1 से 10 पक्का", "5, फिर 10 तक के जोड़", "11 से 20: 10 और कुछ इकाई", "10 के अंदर जोड़ना, कितने और", "10 के अंदर घटाना, शून्य, और गायब भाग", "20 तक तुलना, फिर 21 से 50 यदि 1 से 20 पक्का हो", "हथेली, कदम या कप से अनौपचारिक माप", "पैटर्न, और नियम बताना", "पहला वस्तु ग्राफ, दो प्रश्नों के साथ", "10 के जोड़ और जोड़ना-घटाना की महारत"],
+    ukg: ["10 के जोड़ याद, और मानसिक 10 बनाओ", "20 के जोड़, और 20 तक जोड़ना-घटाना कारण के साथ", "100 तक दहाई और इकाई", "कहानी सवाल, चित्र के साथ, और कैसे पता चला", "रुपये: काफी है या नहीं, और वापसी", "पूरे घंटे का समय, दिन का क्रम", "अनुमान लगाओ, फिर मापकर जाँचो", "3D आकृति गुण और आकृति पहेली", "चित्र ग्राफ या तालिका, तीन प्रश्नों के साथ", "महारत सप्ताह: 20 तक मानसिक जोड़-घटाव"],
+    class1: ["आकृति गुण और तर्क छाँट", "10 बनाना, किशोर संख्याएँ 10 और इकाई", "एक अंक जोड़ना-घटाना, गायब संख्या सहित", "सब्ज़ी का खेत: 20 तक रोज़मर्रा के सवाल", "21 से 99: क्रम, आगे-पीछे, कौन 50 के पास", "अनुमान, माप, हथेली या कप से", "उत्सव: पैटर्न और नियम बताना", "मेरा दिन कैसे बीतता है: क्रम, घंटा, अवधि", "कितनी बार: बराबर समूह और बार-बार जोड़ना", "पैसा और आँकड़े, महारत और पहेलियाँ"]
+  };
+  const PREM_HI_UNITS = {
+    nursery: ["छोटू से बातें", "उच्चारण की मदद", "हिन्दी साक्षरता की शुरुआत", "कोच स्लेट", "फिर से अभ्यास और रिपोर्ट"],
+    lkg: ["छोटू से बातें, शब्द ज़ोर से", "उच्चारण और ध्वनि मदद", "हिन्दी साक्षरता", "अक्षरों और शब्दों की कोच स्लेट", "फिर से अभ्यास और साप्ताहिक रिपोर्ट"],
+    ukg: ["छोटू से बातें, पढ़ना और बातचीत", "उच्चारण और धाराप्रवाहता", "हिन्दी साक्षरता, मात्रा के बिना शब्द", "शब्दों और वाक्यों की कोच स्लेट", "एनसीएफ रिपोर्ट", "2 और 5 के पहाड़े, केवल अतिरिक्त"],
+    class1: ["छोटू से बातें, कक्षा 1 बातचीत", "नए पाठ पर धाराप्रवाहता", "मात्राओं के साथ हिन्दी", "वाक्यों और 99 तक अंकों की कोच स्लेट", "निपुण रिपोर्ट", "मृदंग अध्याय का साथ पढ़ना"]
+  };
 
   const state = {
-    lang: "en",
-    stars: 0,
-    plan: "none",
-    age: "nursery",
-    screen: "splash",
-    selectedLetter: "A",
-    quizIndex: 0,
-    quizCorrect: "A",
-    quizChoices: ["A", "B", "C"],
-    mathsCount: 3,
-    mathsItem: "mango",
-    mathsChoices: [2, 3, 4],
-    quizAnswered: false,
-    slateIndex: 0,
-    rupeeCoins: [1, 2, 2],
-    rupeeChoices: [3, 5, 7],
-    rupeeAnswered: false,
-    listening: false
+    lang: "en", stars: 0, plan: "none", age: "nursery", screen: "splash",
+    quizAnswered: false, slateIndex: 0, rupeeCoins: [1, 2, 2], rupeeChoices: [3, 5, 7],
+    rupeeAnswered: false, listening: false, engIndex: 0, mathIndex: 0, logicIndex: 0,
+    currentAnswer: null, currentSpeak: ""
   };
 
   let recognition = null;
   const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition || null;
-
   const $ = (sel, root) => (root || document).querySelector(sel);
   const $$ = (sel, root) => Array.from((root || document).querySelectorAll(sel));
 
@@ -284,16 +424,16 @@
     const pack = I18N[state.lang] || I18N.en;
     return pack[key];
   }
+  function txt(en, hi) { return state.lang === "hi" ? hi : en; }
+  function level() { return LEVELS[state.age] || LEVELS.nursery; }
 
   function applyI18n() {
     $$("[data-i18n]").forEach((el) => {
-      const key = el.getAttribute("data-i18n");
-      const val = t(key);
+      const val = t(el.getAttribute("data-i18n"));
       if (typeof val === "string") el.textContent = val;
     });
     $$("[data-i18n-list]").forEach((el) => {
-      const key = el.getAttribute("data-i18n-list");
-      const items = t(key);
+      const items = t(el.getAttribute("data-i18n-list"));
       el.innerHTML = "";
       if (Array.isArray(items)) {
         items.forEach((item) => {
@@ -313,26 +453,20 @@
     const mic = $("#btn-mic");
     if (mic) mic.textContent = state.listening ? t("stop") : t("mic");
     updatePlanBanner();
-    updatePhonic();
-    updateQuizPrompt();
-    updateMathsView();
-    updateRupeeView();
+    renderHome();
     updateTalkStatus();
+    updateRupeeView();
+    renderReport();
+    if (state.screen === "english") renderEnglish(false);
+    if (state.screen === "maths") renderMaths(false);
+    if (state.screen === "logic") renderLogic(false);
   }
 
   function screenTitleKey(id) {
     const titles = {
-      splash: "appName",
-      parent: "parentTitle",
-      home: "homeTitle",
-      english: "englishTitle",
-      "english-quiz": "quizTitle",
-      maths: "mathsTitle",
-      "maths-quiz": "mathsQuizTitle",
-      slate: "slateTitle",
-      talk: "talkTitle",
-      report: "reportTitle",
-      rupees: "rupeeTitle"
+      splash: "appName", parent: "parentTitle", home: "homeTitle",
+      english: "englishTitle", maths: "mathsTitle", logic: "logicTitle",
+      slate: "slateTitle", talk: "talkTitle", report: "reportTitle", rupees: "rupeeTitle"
     };
     return titles[id] || "appName";
   }
@@ -348,6 +482,8 @@
     if (title) title.textContent = t(screenTitleKey(id));
     if (id === "slate") setTimeout(resizeSlate, 40);
     if (id === "talk") updateTalkStatus();
+    if (id === "report") renderReport();
+    if (id === "home") renderHome();
     if (state.listening) stopListening();
   }
 
@@ -356,12 +492,9 @@
     if (!voices.length) return null;
     const want = langCode.toLowerCase();
     const norm = (v) => (v.lang || "").toLowerCase().replace("_", "-");
-    return (
-      voices.find((v) => norm(v) === want) ||
+    return voices.find((v) => norm(v) === want) ||
       voices.find((v) => norm(v).startsWith(want.slice(0, 2) + "-in")) ||
-      voices.find((v) => norm(v).startsWith(want.slice(0, 2))) ||
-      null
-    );
+      voices.find((v) => norm(v).startsWith(want.slice(0, 2))) || null;
   }
 
   function speakRaw(text, langOverride) {
@@ -377,9 +510,7 @@
     speechSynthesis.speak(u);
   }
 
-  function greet() {
-    speakRaw(t("greetSpeech"));
-  }
+  function greet() { speakRaw(t("greetSpeech")); }
 
   function addStars(n) {
     state.stars += n;
@@ -401,12 +532,22 @@
     setTimeout(() => el.classList.remove("show"), 1600);
   }
 
+  function praise() {
+    const list = t("praise") || I18N.en.praise;
+    return list[Math.floor(Math.random() * list.length)];
+  }
+  function retry() {
+    const list = t("retry") || I18N.en.retry;
+    return list[Math.floor(Math.random() * list.length)];
+  }
+
   function updatePlanBanner() {
     const el = $("#plan-banner");
     if (!el) return;
     if (state.plan === "trial") el.textContent = t("planTrial");
     else if (state.plan === "basic") el.textContent = t("planBasic");
     else if (state.plan === "premium") el.textContent = t("planPremium");
+    else if (state.plan === "family") el.textContent = t("planFamily");
     else el.textContent = "";
   }
 
@@ -414,31 +555,64 @@
     state.plan = plan;
     updatePlanBanner();
     showScreen("home");
+    const words = {
+      trial: txt("7-day trial started. Enjoy the preview!", "7 दिन का ट्रायल शुरू। प्रिव्यू देखें!"),
+      basic: txt("Basic plan selected (demo).", "बेसिक योजना चुनी गई (डेमो)।"),
+      premium: txt("Premium plan selected (demo).", "प्रीमियम योजना चुनी गई (डेमो)।"),
+      family: txt("Family Premium selected (demo).", "फ़ैमिली प्रीमियम चुना गया (डेमो)।")
+    };
+    toast(words[plan] || "");
   }
 
   function setAge(age) {
     state.age = age;
+    state.engIndex = 0;
+    state.mathIndex = 0;
+    state.logicIndex = 0;
+    state.slateIndex = 0;
     $$(".age-chip").forEach((b) => b.classList.toggle("active", b.getAttribute("data-age") === age));
+    renderHome();
   }
 
-  function updatePhonic() {
-    const letter = state.selectedLetter;
-    const pack = I18N[state.lang];
-    const box = $("#phonic");
-    if (!box) return;
-    box.innerHTML = '<span class="big">' + letter + "</span>" + (pack.letterLabel[letter] || "");
-  }
-
-  function sayLetter(letter) {
-    state.selectedLetter = letter;
-    $$(".letter-pad .letter-btn").forEach((b) =>
-      b.classList.toggle("active", b.getAttribute("data-letter") === letter)
-    );
-    updatePhonic();
-    const pack = I18N[state.lang];
-    const text = pack.letterSpeech[letter];
-    const lang = state.lang === "hi" ? "hi-IN" : "en-IN";
-    speakRaw(text, lang);
+  function renderHome() {
+    const L = level();
+    const blurb = $("#level-blurb");
+    if (blurb) blurb.textContent = txt(L.blurbEn, L.blurbHi);
+    const eSub = $("#english-card-sub");
+    if (eSub) eSub.textContent = txt(L.engPlayEn, L.engPlayHi);
+    const mSub = $("#maths-card-sub");
+    if (mSub) mSub.textContent = txt(L.mathPlayEn, L.mathPlayHi);
+    const list = $("#unit-list");
+    if (!list) return;
+    list.innerHTML = "";
+    const blocks = [
+      { label: txt("English · Basic", "अंग्रेज़ी · बेसिक"), items: L.engUnits, hi: ENG_HI_UNITS[state.age], tier: "basic" },
+      { label: txt("Maths · Basic", "गणित · बेसिक"), items: L.mathUnits, hi: MATH_HI_UNITS[state.age], tier: "basic" },
+      { label: txt("Premium", "प्रीमियम"), items: L.premiumUnits, hi: PREM_HI_UNITS[state.age], tier: "premium" }
+    ];
+    blocks.forEach((block) => {
+      const head = document.createElement("p");
+      head.className = "subject-chip";
+      head.textContent = block.label;
+      list.appendChild(head);
+      block.items.forEach((title, i) => {
+        const row = document.createElement("div");
+        row.className = "unit-item";
+        const n = document.createElement("span");
+        n.className = "unit-n";
+        n.textContent = String(i + 1);
+        const text = document.createElement("div");
+        text.className = "unit-text";
+        text.textContent = state.lang === "hi" && block.hi && block.hi[i] ? block.hi[i] : title;
+        const pill = document.createElement("span");
+        pill.className = "pill " + (block.tier === "premium" ? "pill-premium" : "pill-basic");
+        pill.textContent = block.tier === "premium" ? t("premiumTag") : t("basicTag");
+        row.appendChild(n);
+        row.appendChild(text);
+        row.appendChild(pill);
+        list.appendChild(row);
+      });
+    });
   }
 
   function shuffle(arr) {
@@ -452,431 +626,555 @@
     return a;
   }
 
-  function newLetterQuiz() {
-    const correct = LETTERS[state.quizIndex % LETTERS.length];
-    const others = shuffle(LETTERS.filter((l) => l !== correct)).slice(0, 2);
-    state.quizCorrect = correct;
-    state.quizChoices = shuffle([correct].concat(others));
-    state.quizAnswered = false;
-    updateQuizPrompt();
-    const fb = $("#english-feedback");
-    if (fb) {
-      fb.textContent = "";
-      fb.className = "feedback";
-    }
-  }
-
-  function updateQuizPrompt() {
-    const el = $("#quiz-letter");
-    if (el) el.textContent = state.quizCorrect;
-    const box = $("#quiz-options");
-    if (!box) return;
-    box.innerHTML = "";
-    state.quizChoices.forEach((l) => {
+  function optionButtons(options, onPick) {
+    const wrap = document.createElement("div");
+    wrap.className = "choice-row";
+    options.forEach((opt) => {
       const b = document.createElement("button");
       b.type = "button";
-      b.className = "letter-btn";
-      b.textContent = l;
-      b.setAttribute("data-choice", l);
-      b.addEventListener("click", () => answerLetter(l));
-      box.appendChild(b);
+      b.className = "choice-btn";
+      if (typeof opt === "object") {
+        b.innerHTML = (opt.emoji ? '<span class="emoji">' + opt.emoji + "</span>" : "") + (opt.label || opt.value);
+        b.setAttribute("data-value", String(opt.value));
+      } else {
+        b.textContent = String(opt);
+        b.setAttribute("data-value", String(opt));
+      }
+      b.addEventListener("click", () => onPick(b.getAttribute("data-value"), b, wrap));
+      wrap.appendChild(b);
     });
+    return wrap;
   }
 
-  function answerLetter(choice) {
-    if (state.quizAnswered) return;
-    const fb = $("#english-feedback");
-    const pack = I18N[state.lang];
-    if (choice === state.quizCorrect) {
-      state.quizAnswered = true;
-      const msg = pack.praise[Math.floor(Math.random() * pack.praise.length)];
-      if (fb) {
-        fb.textContent = msg;
-        fb.className = "feedback ok";
+  function markAnswer(wrap, btn, ok) {
+    $$(".choice-btn, .pic-btn, .sound-tile", wrap).forEach((el) => {
+      el.classList.remove("selected", "wrong");
+    });
+    btn.classList.add(ok ? "selected" : "wrong");
+  }
+
+  function setFeedback(id, ok) {
+    const el = $(id);
+    if (!el) return;
+    const msg = ok ? praise() : retry();
+    el.textContent = msg;
+    el.className = "feedback " + (ok ? "ok" : "no");
+    speakRaw(msg);
+  }
+
+  function handleAnswer(isCorrect, feedbackId) {
+    if (isCorrect) {
+      if (!state.quizAnswered) {
+        state.quizAnswered = true;
+        addStars(1);
       }
-      speakRaw(msg);
-      addStars(1);
+      setFeedback(feedbackId, true);
     } else {
-      const msg = pack.retry[Math.floor(Math.random() * pack.retry.length)];
-      if (fb) {
-        fb.textContent = msg;
-        fb.className = "feedback no";
-      }
-      speakRaw(msg);
+      setFeedback(feedbackId, false);
     }
+  }
+
+  function englishBank() {
+    if (state.age === "lkg") {
+      return [
+        { tiles: ["c", "a", "t"], word: "cat", options: [{ value: "cat", label: "cat", emoji: "🐱" }, { value: "cap", label: "cap", emoji: "🧢" }, { value: "cot", label: "cot", emoji: "🛏️" }] },
+        { tiles: ["p", "i", "n"], word: "pin", options: [{ value: "pin", label: "pin", emoji: "📌" }, { value: "pan", label: "pan", emoji: "🍳" }, { value: "pen", label: "pen", emoji: "🖊️" }] },
+        { tiles: ["p", "o", "t"], word: "pot", options: [{ value: "pot", label: "pot", emoji: "🪴" }, { value: "pat", label: "pat", emoji: "👋" }, { value: "pit", label: "pit", emoji: "🕳️" }] },
+        { tiles: ["m", "a", "n"], word: "man", options: [{ value: "man", label: "man", emoji: "👨" }, { value: "mat", label: "mat", emoji: "🟩" }, { value: "pan", label: "pan", emoji: "🍳" }] },
+        { tiles: ["l", "i", "d"], word: "lid", options: [{ value: "lid", label: "lid", emoji: "🥫" }, { value: "lad", label: "lad", emoji: "👦" }, { value: "led", label: "led", emoji: "💡" }] },
+        { tiles: ["p", "a", "n"], word: "pan", options: [{ value: "pan", label: "pan", emoji: "🍳" }, { value: "pin", label: "pin", emoji: "📌" }, { value: "pen", label: "pen", emoji: "🖊️" }] }
+      ];
+    }
+    if (state.age === "ukg") {
+      return [
+        { sentence: "The ship is on the sand.", qEn: "Tap the word with the sh sound.", qHi: "sh ध्वनि वाला शब्द दबाओ।", options: ["ship", "is", "the"], answer: "ship", speakEn: "The ship is on the sand. Which word has the sh sound?", speakHi: "शिप इज़ ऑन द सैंड। sh ध्वनि वाला शब्द कौन सा है?" },
+        { sentence: "I can see the shop.", qEn: "What can you see?", qHi: "तुम क्या देख सकते हो?", options: ["the shop", "the frog", "the cap"], answer: "the shop", speakEn: "I can see the shop. What can you see?", speakHi: "मैं दुकान देख सकता हूँ। तुम क्या देखते हो?" },
+        { sentence: "The child sits on the chair.", qEn: "Tap the word with the ch sound.", qHi: "ch ध्वनि वाला शब्द दबाओ।", options: ["chair", "sits", "The"], answer: "chair", speakEn: "The child sits on the chair. Which word has the ch sound?", speakHi: "चाइल्ड चेयर पर बैठा है। ch वाला शब्द कौन सा है?" },
+        { sentence: "I like this thin chapati.", qEn: "Tap the word with the th sound.", qHi: "th ध्वनि वाला शब्द दबाओ।", options: ["thin", "like", "this"], answer: "thin", speakEn: "I like this thin chapati. Which word has the th sound at the start?", speakHi: "मुझे यह पतली रोटी पसंद है। th से शुरू शब्द कौन सा है?" }
+      ];
+    }
+    if (state.age === "class1") {
+      return [
+        { sentence: "The monkeys took the caps.", qEn: "Who took the caps?", qHi: "टोपी कौन ले गया?", options: ["the monkeys", "the frogs", "the birds"], answer: "the monkeys", speakEn: "The monkeys took the caps. Who took the caps?", speakHi: "बंदर टोपियाँ ले गए। टोपी कौन ले गया?" },
+        { sentence: "The frog is in the pond.", qEn: "Where is the frog?", qHi: "मेंढक कहाँ है?", options: ["in the pond", "on the cap", "in the shop"], answer: "in the pond", speakEn: "The frog is in the pond. Where is the frog?", speakHi: "मेंढक तालाब में है। मेंढक कहाँ है?" },
+        { sentence: "Anandi saw a rainbow in the sky.", qEn: "What did Anandi see?", qHi: "आनंदी ने क्या देखा?", options: ["a rainbow", "a monkey", "a ship"], answer: "a rainbow", speakEn: "Anandi saw a rainbow in the sky. What did Anandi see?", speakHi: "आनंदी ने आसमान में इंद्रधनुष देखा। उसने क्या देखा?" }
+      ];
+    }
+    return [
+      { word: "sun", hi: "सूरज", emoji: "☀️", sound: "s", options: ["s", "a", "t"], speakEn: "Sun. What is the first sound?", speakHi: "सन, सूरज। पहली ध्वनि क्या है?" },
+      { word: "ant", hi: "चींटी", emoji: "🐜", sound: "a", options: ["s", "a", "p"], speakEn: "Ant. What is the first sound?", speakHi: "ऐंट, चींटी। पहली ध्वनि क्या है?" },
+      { word: "tap", hi: "नल", emoji: "🚰", sound: "t", options: ["t", "p", "n"], speakEn: "Tap. What is the first sound?", speakHi: "टैप, नल। पहली ध्वनि क्या है?" },
+      { word: "pot", hi: "गमला", emoji: "🪴", sound: "p", options: ["p", "s", "m"], speakEn: "Pot. What is the first sound?", speakHi: "पॉट, गमला। पहली ध्वनि क्या है?" },
+      { word: "pin", hi: "पिन", emoji: "📌", sound: "p", options: ["p", "i", "n"], speakEn: "Pin. What is the first sound?", speakHi: "पिन। पहली ध्वनि क्या है?" },
+      { word: "man", hi: "आदमी", emoji: "👨", sound: "m", options: ["m", "s", "a"], speakEn: "Man. What is the first sound?", speakHi: "मैन, आदमी। पहली ध्वनि क्या है?" }
+    ];
+  }
+
+  function startEnglish() {
+    state.engIndex = 0;
+    state.quizAnswered = false;
+    renderEnglish(true);
+    showScreen("english");
+    speakRaw(state.currentSpeak);
+  }
+
+  function renderEnglish(resetFeedback) {
+    const bank = englishBank();
+    const item = bank[state.engIndex % bank.length];
+    const intro = $("#english-intro");
+    const stage = $("#english-stage");
+    if (!stage) return;
+    if (resetFeedback) {
+      const fb = $("#english-feedback");
+      if (fb) { fb.textContent = ""; fb.className = "feedback"; }
+    }
+    stage.innerHTML = "";
+    const card = document.createElement("div");
+    card.className = "prompt-card";
+    const onPick = (val, btn, wrap) => {
+      const ok = String(val) === String(state.currentAnswer);
+      markAnswer(wrap, btn, ok);
+      handleAnswer(ok, "#english-feedback");
+    };
+    if (state.age === "nursery") {
+      if (intro) intro.textContent = txt("What is the first sound?", "पहली ध्वनि क्या है?");
+      state.currentAnswer = item.sound;
+      state.currentSpeak = txt(item.speakEn, item.speakHi);
+      card.innerHTML = '<span class="emoji" style="font-size:3rem">' + item.emoji + '</span><span class="word">' + item.word + "</span><p>" + txt(item.word + " · " + item.hi, item.hi + " · " + item.word) + "</p>";
+      stage.appendChild(card);
+      stage.appendChild(optionButtons(item.options, onPick));
+    } else if (state.age === "lkg") {
+      if (intro) intro.textContent = txt("Blend the sounds. What word is this?", "ध्वनियाँ जोड़ो। यह कौन सा शब्द है?");
+      state.currentAnswer = item.word;
+      state.currentSpeak = txt(item.tiles.join("... ") + ". What word is this?", item.tiles.join("... ") + "। यह कौन सा शब्द है?");
+      const tiles = item.tiles.map((s) => '<span class="sound-tile">' + s + "</span>").join("");
+      card.innerHTML = '<div class="sound-tiles">' + tiles + "</div><p>" + txt("Say it together", "एक साथ बोलो") + "</p>";
+      stage.appendChild(card);
+      stage.appendChild(optionButtons(shuffle(item.options), onPick));
+    } else {
+      if (intro) intro.textContent = txt(item.qEn, item.qHi);
+      state.currentAnswer = item.answer;
+      state.currentSpeak = txt(item.speakEn, item.speakHi);
+      card.innerHTML = '<p class="sentence">' + item.sentence + "</p>";
+      stage.appendChild(card);
+      stage.appendChild(optionButtons(item.options, onPick));
+    }
+  }
+
+  function nextEnglish() {
+    state.engIndex += 1;
+    state.quizAnswered = false;
+    renderEnglish(true);
+    speakRaw(state.currentSpeak);
   }
 
   function mangoSVG() {
-    return (
-      '<svg class="obj" viewBox="0 0 64 64" aria-hidden="true">' +
-      '<ellipse cx="32" cy="38" rx="18" ry="22" fill="#FFB703" transform="rotate(-18 32 38)"/>' +
-      '<ellipse cx="32" cy="38" rx="12" ry="16" fill="#FCD34D" transform="rotate(-18 32 38)" opacity="0.7"/>' +
-      '<path d="M40 16 Q46 8 54 12" stroke="#2D6A4F" fill="none" stroke-width="3" stroke-linecap="round"/>' +
-      '<ellipse cx="50" cy="14" rx="8" ry="4" fill="#40916C" transform="rotate(-28 50 14)"/>' +
-      "</svg>"
-    );
+    return '<svg class="obj" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="28" cy="36" rx="18" ry="22" fill="#f4c430"/><ellipse cx="24" cy="28" rx="7" ry="10" fill="#ffe566"/><path d="M36 16c8-2 14 4 16 10" stroke="#2f6b2f" fill="none" stroke-width="3"/><ellipse cx="40" cy="14" rx="8" ry="5" fill="#3fa34d" transform="rotate(-20 40 14)"/></svg>';
   }
-
   function laddooSVG() {
-    return (
-      '<svg class="obj" viewBox="0 0 64 64" aria-hidden="true">' +
-      '<circle cx="32" cy="34" r="20" fill="#C17F2A"/>' +
-      '<circle cx="32" cy="32" r="18" fill="#E09F3E"/>' +
-      '<circle cx="32" cy="32" r="12" fill="#F4D35E"/>' +
-      '<circle cx="24" cy="26" r="2.2" fill="#C17F2A"/>' +
-      '<circle cx="36" cy="24" r="2" fill="#C17F2A"/>' +
-      '<circle cx="40" cy="34" r="2.1" fill="#C17F2A"/>' +
-      '<circle cx="28" cy="38" r="1.8" fill="#C17F2A"/>' +
-      "</svg>"
-    );
+    return '<svg class="obj" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="34" r="18" fill="#e0a106"/><circle cx="32" cy="34" r="13" fill="#f5c542"/><circle cx="26" cy="28" r="3" fill="#fff3c4"/><circle cx="36" cy="30" r="2" fill="#c47c00"/><circle cx="30" cy="38" r="2" fill="#c47c00"/></svg>';
   }
 
-  function renderObjects(container, count, item) {
-    if (!container) return;
-    container.innerHTML = "";
-    const html = item === "laddoo" ? laddooSVG() : mangoSVG();
-    for (let i = 0; i < count; i++) container.insertAdjacentHTML("beforeend", html);
-  }
-
-  function setupMathsLesson() {
-    state.mathsCount = 4;
-    state.mathsItem = "mango";
-    updateMathsView();
-    speakCount();
-  }
-
-  function updateMathsView() {
-    const lessonBox = $("#maths-objects");
-    if (lessonBox && state.screen === "maths") {
-      renderObjects(lessonBox, state.mathsCount, state.mathsItem);
-    }
-    const quizBox = $("#maths-quiz-objects");
-    if (quizBox && state.screen === "maths-quiz") {
-      renderObjects(quizBox, state.mathsCount, state.mathsItem);
-    }
-    const label = $("#maths-label");
-    if (label) {
-      const item = state.mathsItem === "laddoo" ? t("laddoos") : t("mangoes");
-      label.textContent = state.mathsCount + " " + item;
-    }
-    const opts = $("#maths-options");
-    if (opts && state.screen === "maths-quiz") {
-      opts.innerHTML = "";
-      state.mathsChoices.forEach((n) => {
-        const b = document.createElement("button");
-        b.type = "button";
-        b.className = "letter-btn";
-        b.textContent = String(n);
-        b.addEventListener("click", () => answerMaths(n));
-        opts.appendChild(b);
-      });
-    }
-  }
-
-  function speakCount() {
-    const item = state.mathsItem === "laddoo" ? t("laddoos") : t("mangoes");
-    const pack = I18N[state.lang];
-    speakRaw(pack.countSpeech(state.mathsCount, item));
-  }
-
-  function cycleMathsLesson() {
-    const n = (state.mathsCount % 10) + 1;
-    state.mathsCount = n;
-    state.mathsItem = n % 2 === 0 ? "laddoo" : "mango";
-    updateMathsView();
-    speakCount();
-  }
-
-  function newMathsQuiz() {
-    const n = 1 + Math.floor(Math.random() * 10);
-    state.mathsCount = n;
-    state.mathsItem = n % 2 === 0 ? "laddoo" : "mango";
-    const wrongs = [];
-    while (wrongs.length < 2) {
-      const w = 1 + Math.floor(Math.random() * 10);
-      if (w !== n && wrongs.indexOf(w) === -1) wrongs.push(w);
-    }
-    state.mathsChoices = shuffle([n].concat(wrongs));
+  function startMaths() {
+    state.mathIndex = 0;
     state.quizAnswered = false;
-    const fb = $("#maths-feedback");
-    if (fb) {
-      fb.textContent = "";
-      fb.className = "feedback";
-    }
-    updateMathsView();
+    renderMaths(true);
+    showScreen("maths");
+    speakRaw(state.currentSpeak);
   }
 
-  function answerMaths(n) {
-    if (state.quizAnswered) return;
-    const fb = $("#maths-feedback");
-    const pack = I18N[state.lang];
-    if (n === state.mathsCount) {
-      state.quizAnswered = true;
-      const msg = pack.praise[Math.floor(Math.random() * pack.praise.length)];
-      if (fb) {
-        fb.textContent = msg;
-        fb.className = "feedback ok";
+  function renderMaths(resetFeedback) {
+    const stage = $("#maths-stage");
+    const intro = $("#maths-intro");
+    if (!stage) return;
+    if (resetFeedback) {
+      const fb = $("#maths-feedback");
+      if (fb) { fb.textContent = ""; fb.className = "feedback"; }
+    }
+    stage.innerHTML = "";
+    const onPick = (val, btn, wrap) => {
+      const ok = String(val) === String(state.currentAnswer);
+      markAnswer(wrap, btn, ok);
+      handleAnswer(ok, "#maths-feedback");
+    };
+
+    if (state.age === "nursery") {
+      const counts = [2, 3, 4, 5, 3, 4];
+      const n = counts[state.mathIndex % counts.length];
+      state.currentAnswer = n;
+      state.currentSpeak = txt("Look first. How many mangoes?", "पहले देखो। कितने आम हैं?");
+      if (intro) intro.textContent = txt("Look first, then tell. How many mangoes?", "पहले देखो, फिर बताओ। कितने आम हैं?");
+      const box = document.createElement("div");
+      box.className = "objects";
+      box.innerHTML = Array.from({ length: n }, mangoSVG).join("");
+      stage.appendChild(box);
+      const opts = shuffle([n, n === 5 ? 4 : n + 1, n === 2 ? 3 : n - 1].filter((v, i, a) => a.indexOf(v) === i && v >= 1));
+      stage.appendChild(optionButtons(opts, onPick));
+    } else if (state.age === "lkg") {
+      const filleds = [6, 7, 4, 9, 5, 8];
+      const filled = filleds[state.mathIndex % filleds.length];
+      const need = 10 - filled;
+      state.currentAnswer = need;
+      state.currentSpeak = txt("There are " + filled + " on the ten-frame. How many more to make 10?", "दस-फ्रेम पर " + filled + " हैं। 10 बनाने के लिए कितने और चाहिए?");
+      if (intro) intro.textContent = txt("How many more to make 10?", "10 बनाने के लिए कितने और?");
+      const frame = document.createElement("div");
+      frame.className = "ten-frame";
+      for (let i = 0; i < 10; i++) {
+        const cell = document.createElement("div");
+        cell.className = "tf-cell";
+        if (i < filled) cell.innerHTML = '<span class="tf-dot"></span>';
+        frame.appendChild(cell);
       }
-      speakRaw(msg);
-      addStars(1);
+      stage.appendChild(frame);
+      const opts = shuffle([need, need === 1 ? 2 : need - 1, need === 6 ? 4 : need + 1].filter((v, i, a) => a.indexOf(v) === i && v >= 0 && v <= 10));
+      stage.appendChild(optionButtons(opts, onPick));
+    } else if (state.age === "ukg") {
+      const shops = [
+        { items: [{ e: "✏️", nEn: "pencil", nHi: "पेंसिल", p: 8 }, { e: "📒", nEn: "eraser", nHi: "रबर", p: 5 }], have: null, answer: 13, options: [12, 13, 15], qEn: "How much in all?", qHi: "कुल कितने रुपये?", speakEn: "A pencil is 8 rupees. An eraser is 5 rupees. How much in all?", speakHi: "पेंसिल 8 रुपये, रबर 5 रुपये। कुल कितने?" },
+        { items: [{ e: "📓", nEn: "notebook", nHi: "कॉपी", p: 12 }], have: 20, answer: 8, options: [6, 8, 10], qEn: "You have ₹20. How much comes back?", qHi: "तुम्हारे पास ₹20 हैं। कितने वापस आएँगे?", speakEn: "A notebook is 12 rupees. You have 20 rupees. How much comes back?", speakHi: "कॉपी 12 रुपये की है। तुम्हारे पास 20 हैं। कितने वापस?" },
+        { items: [{ e: "🍬", nEn: "toffee", nHi: "टॉफ़ी", p: 7 }], have: 10, answer: 3, options: [2, 3, 4], qEn: "You have ₹10. How much comes back?", qHi: "तुम्हारे पास ₹10 हैं। कितने वापस आएँगे?", speakEn: "A toffee is 7 rupees. You have 10 rupees. How much comes back?", speakHi: "टॉफ़ी 7 रुपये की है। तुम्हारे पास 10 हैं। कितने वापस?" }
+      ];
+      const item = shops[state.mathIndex % shops.length];
+      state.currentAnswer = item.answer;
+      state.currentSpeak = txt(item.speakEn, item.speakHi);
+      if (intro) intro.textContent = txt(item.qEn, item.qHi);
+      const row = document.createElement("div");
+      row.className = "shop-items";
+      item.items.forEach((it) => {
+        const d = document.createElement("div");
+        d.className = "shop-item";
+        d.innerHTML = '<span class="emoji">' + it.e + "</span>" + txt(it.nEn, it.nHi) + "<div>₹" + it.p + "</div>";
+        row.appendChild(d);
+      });
+      stage.appendChild(row);
+      if (item.have != null) {
+        const w = document.createElement("p");
+        w.className = "wallet";
+        w.textContent = txt("You have ₹" + item.have, "तुम्हारे पास ₹" + item.have + " हैं");
+        stage.appendChild(w);
+      }
+      stage.appendChild(optionButtons(item.options, onPick));
     } else {
-      const msg = pack.retry[Math.floor(Math.random() * pack.retry.length)];
-      if (fb) {
-        fb.textContent = msg;
-        fb.className = "feedback no";
+      const sets = [
+        { type: "groups", groups: 3, each: 2, answer: 6, options: [5, 6, 8], qEn: "3 plates with 2 laddoos. 2 + 2 + 2 = ?", qHi: "3 थालियों में 2-2 लड्डू। 2 + 2 + 2 = ?", speakEn: "Three plates with two laddoos each. Two plus two plus two. That is 3 times 2. How many in all?", speakHi: "तीन थालियों में दो-दो लड्डू। 2 जमा 2 जमा 2। यह 3 गुना 2 है। कुल कितने?" },
+        { type: "groups", groups: 4, each: 2, answer: 8, options: [6, 8, 10], qEn: "4 plates with 2 laddoos. 2 + 2 + 2 + 2 = ?", qHi: "4 थालियों में 2-2 लड्डू। 2 + 2 + 2 + 2 = ?", speakEn: "Four plates with two laddoos each. That is 4 times 2. How many in all?", speakHi: "चार थालियों में दो-दो लड्डू। यह 4 गुना 2 है। कुल कितने?" },
+        { type: "place", tens: 4, ones: 7, answer: 47, options: [47, 74, 40], qEn: "4 tens and 7 ones. What number is this?", qHi: "4 दहाई और 7 इकाई। यह कौन सी संख्या है?", speakEn: "Four tens and seven ones. What number is this?", speakHi: "चार दहाई और सात इकाई। यह कौन सी संख्या है?" },
+        { type: "place", tens: 2, ones: 5, answer: 25, options: [25, 52, 20], qEn: "2 tens and 5 ones. What number is this?", qHi: "2 दहाई और 5 इकाई। यह कौन सी संख्या है?", speakEn: "Two tens and five ones. What number is this?", speakHi: "दो दहाई और पाँच इकाई। यह कौन सी संख्या है?" }
+      ];
+      const item = sets[state.mathIndex % sets.length];
+      state.currentAnswer = item.answer;
+      state.currentSpeak = txt(item.speakEn, item.speakHi);
+      if (intro) intro.textContent = txt(item.qEn, item.qHi);
+      if (item.type === "groups") {
+        const plates = document.createElement("div");
+        plates.className = "plates";
+        for (let g = 0; g < item.groups; g++) {
+          const p = document.createElement("div");
+          p.className = "plate";
+          p.innerHTML = Array.from({ length: item.each }, laddooSVG).join("");
+          plates.appendChild(p);
+        }
+        stage.appendChild(plates);
+      } else {
+        const box = document.createElement("div");
+        box.className = "place-value";
+        const tens = document.createElement("div");
+        tens.className = "bundle";
+        tens.innerHTML = "<div>" + Array.from({ length: item.tens }, () => '<span class="stick"></span>').join("") + "</div><small>" + txt(item.tens + " tens", item.tens + " दहाई") + "</small>";
+        const ones = document.createElement("div");
+        ones.className = "bundle";
+        ones.innerHTML = "<div>" + Array.from({ length: item.ones }, () => '<span class="ones-dot"></span>').join("") + "</div><small>" + txt(item.ones + " ones", item.ones + " इकाई") + "</small>";
+        box.appendChild(tens);
+        box.appendChild(ones);
+        stage.appendChild(box);
       }
-      speakRaw(msg);
+      stage.appendChild(optionButtons(item.options, onPick));
     }
   }
 
-  /* Slate */
-  const slate = {
-    ctx: null,
-    canvas: null,
-    drawing: false,
-    last: null
-  };
+  function nextMaths() {
+    state.mathIndex += 1;
+    state.quizAnswered = false;
+    renderMaths(true);
+    speakRaw(state.currentSpeak);
+  }
+
+  function startLogic() {
+    state.logicIndex = 0;
+    state.quizAnswered = false;
+    renderLogic(true);
+    showScreen("logic");
+    speakRaw(state.currentSpeak);
+  }
+
+  function renderLogic(resetFeedback) {
+    const stage = $("#logic-stage");
+    const intro = $("#logic-intro");
+    if (!stage) return;
+    if (resetFeedback) {
+      const fb = $("#logic-feedback");
+      if (fb) { fb.textContent = ""; fb.className = "feedback"; }
+    }
+    stage.innerHTML = "";
+    const onPick = (val, btn, wrap) => {
+      const ok = String(val) === String(state.currentAnswer);
+      markAnswer(wrap, btn, ok);
+      handleAnswer(ok, "#logic-feedback");
+    };
+    const banks = {
+      nursery: [
+        { show: ["☕", "☕", "🍌", "☕"], qEn: "Which one does not belong? Why?", qHi: "कौन सा मेल नहीं खाता? क्यों?", options: [{ value: "banana", label: "banana", emoji: "🍌" }, { value: "cup", label: "cup", emoji: "☕" }], answer: "banana", speakEn: "Cups, cups, banana, cups. Which one does not belong?", speakHi: "कप, कप, केला, कप। कौन सा मेल नहीं खाता?" },
+        { show: ["🐱", "🎩", "🥭", "🦇"], qEn: "Which word does not rhyme: cat, hat, mango, bat?", qHi: "कौन सा शब्द तुक नहीं मिलाता: cat, hat, mango, bat?", options: [{ value: "mango", label: "mango", emoji: "🥭" }, { value: "cat", label: "cat", emoji: "🐱" }, { value: "hat", label: "hat", emoji: "🎩" }], answer: "mango", speakEn: "Cat, hat, mango, bat. Which word does not rhyme?", speakHi: "कैट, हैट, मैंगो, बैट। कौन सा तुक नहीं मिलाता?" }
+      ],
+      lkg: [
+        { pattern: ["🔴", "🔵", "🔴", "🔵", "?"], qEn: "What comes next? Say the rule.", qHi: "आगे क्या आएगा? नियम बताओ।", options: [{ value: "red", label: "red", emoji: "🔴" }, { value: "blue", label: "blue", emoji: "🔵" }, { value: "green", label: "green", emoji: "🟢" }], answer: "red", speakEn: "Red, blue, red, blue. What comes next?", speakHi: "लाल, नीला, लाल, नीला। आगे क्या आएगा?" },
+        { pattern: ["▲", "▲", "●", "▲", "▲", "?"], qEn: "What comes next in this pattern?", qHi: "इस पैटर्न में आगे क्या आएगा?", options: [{ value: "circle", label: "circle", emoji: "●" }, { value: "triangle", label: "triangle", emoji: "▲" }], answer: "circle", speakEn: "Triangle, triangle, circle. What comes next?", speakHi: "त्रिभुज, त्रिभुज, वृत्त। आगे क्या?" }
+      ],
+      ukg: [
+        { show: ["⬜", "⬜", "🔺", "⬜"], qEn: "Which shape does not belong?", qHi: "कौन सी आकृति मेल नहीं खाती?", options: [{ value: "triangle", label: "triangle", emoji: "🔺" }, { value: "square", label: "square", emoji: "⬜" }], answer: "triangle", speakEn: "Squares and one triangle. Which shape does not belong?", speakHi: "वर्ग और एक त्रिभुज। कौन सी आकृति अलग है?" },
+        { pattern: ["1", "2", "1", "2", "?"], qEn: "What comes next? State the rule.", qHi: "आगे क्या आएगा? नियम बताओ।", options: ["1", "2", "3"], answer: "1", speakEn: "One, two, one, two. What comes next?", speakHi: "एक, दो, एक, दो। आगे क्या?" }
+      ],
+      class1: [
+        { pattern: ["2", "4", "6", "?"], qEn: "What comes next? Say the rule.", qHi: "आगे क्या आएगा? नियम बताओ।", options: ["7", "8", "10"], answer: "8", speakEn: "Two, four, six. What comes next? The rule is add 2.", speakHi: "2, 4, 6। आगे क्या? नियम है 2 जोड़ना।" },
+        { show: ["47", "50", "74"], qEn: "Which is closer to 50: 47 or 74? Why?", qHi: "50 के पास कौन है: 47 या 74? क्यों?", options: ["47", "74", "40"], answer: "47", speakEn: "Which is closer to 50, 47 or 74?", speakHi: "50 के पास कौन है, 47 या 74?" }
+      ]
+    };
+    const bank = banks[state.age] || banks.nursery;
+    const item = bank[state.logicIndex % bank.length];
+    state.currentAnswer = item.answer;
+    state.currentSpeak = txt(item.speakEn, item.speakHi);
+    if (intro) intro.textContent = txt(item.qEn, item.qHi);
+    if (item.show || item.pattern) {
+      const row = document.createElement("div");
+      row.className = "pattern-row";
+      (item.show || item.pattern).forEach((sym) => {
+        const d = document.createElement("div");
+        d.className = "pat" + (sym === "?" ? " mystery" : "");
+        d.textContent = sym;
+        row.appendChild(d);
+      });
+      stage.appendChild(row);
+    }
+    stage.appendChild(optionButtons(item.options, onPick));
+  }
+
+  function nextLogic() {
+    state.logicIndex += 1;
+    state.quizAnswered = false;
+    renderLogic(true);
+    speakRaw(state.currentSpeak);
+  }
+
+  function glyphs() { return level().glyphs; }
 
   function resizeSlate() {
-    const c = $("#slate");
-    if (!c) return;
-    const rect = c.getBoundingClientRect();
-    const dpr = window.devicePixelRatio || 1;
-    c.width = Math.max(1, Math.floor(rect.width * dpr));
-    c.height = Math.max(1, Math.floor(280 * dpr));
-    slate.canvas = c;
-    slate.ctx = c.getContext("2d");
+    const canvas = $("#slate");
+    if (!canvas) return;
+    const wrap = canvas.parentElement;
+    const w = Math.min(wrap.clientWidth || 360, 400);
+    const ratio = window.devicePixelRatio || 1;
+    canvas.style.width = w + "px";
+    canvas.style.height = "280px";
+    canvas.width = Math.floor(w * ratio);
+    canvas.height = Math.floor(280 * ratio);
+    const ctx = canvas.getContext("2d");
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
     drawGlyphGuide();
   }
 
   function drawGlyphGuide() {
-    const c = slate.canvas;
-    const ctx = slate.ctx;
-    if (!c || !ctx) return;
-    ctx.clearRect(0, 0, c.width, c.height);
+    const canvas = $("#slate");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    const w = canvas.clientWidth;
+    const h = canvas.clientHeight;
     ctx.fillStyle = "#2b2b2b";
-    ctx.fillRect(0, 0, c.width, c.height);
-    const g = GLYPHS[state.slateIndex % GLYPHS.length];
-    ctx.save();
-    ctx.fillStyle = "rgba(255,255,255,0.16)";
-    ctx.font = "bold " + Math.floor(c.height * 0.72) + "px " + "Fredoka, system-ui, sans-serif";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-    ctx.fillText(g, c.width / 2, c.height / 2 + c.height * 0.04);
-    ctx.restore();
+    ctx.fillRect(0, 0, w, h);
+    const g = glyphs()[state.slateIndex % glyphs().length];
     const label = $("#slate-glyph");
     if (label) label.textContent = g;
+    ctx.strokeStyle = "rgba(244,241,232,0.28)";
+    ctx.lineWidth = 8;
+    ctx.lineJoin = "round";
+    ctx.lineCap = "round";
+    ctx.font = "bold 160px Fredoka, sans-serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.strokeText(g, w / 2, h / 2 + 8);
+    state._slateDrawing = false;
   }
 
   function slatePos(e) {
-    const c = slate.canvas;
-    const r = c.getBoundingClientRect();
-    const src = e.touches ? e.touches[0] : e;
-    return {
-      x: ((src.clientX - r.left) / r.width) * c.width,
-      y: ((src.clientY - r.top) / r.height) * c.height
-    };
+    const canvas = $("#slate");
+    const rect = canvas.getBoundingClientRect();
+    const pt = e.touches ? e.touches[0] : e;
+    return { x: pt.clientX - rect.left, y: pt.clientY - rect.top };
   }
-
   function slateStart(e) {
     e.preventDefault();
-    slate.drawing = true;
-    slate.last = slatePos(e);
-  }
-
-  function slateMove(e) {
-    if (!slate.drawing) return;
-    e.preventDefault();
+    const canvas = $("#slate");
+    const ctx = canvas.getContext("2d");
     const p = slatePos(e);
-    const ctx = slate.ctx;
+    ctx.beginPath();
     ctx.strokeStyle = "#f4f1e8";
-    ctx.lineWidth = Math.max(10, slate.canvas.width * 0.028);
+    ctx.lineWidth = 5;
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
-    ctx.beginPath();
-    ctx.moveTo(slate.last.x, slate.last.y);
+    ctx.moveTo(p.x, p.y);
+    state._slateDrawing = true;
+  }
+  function slateMove(e) {
+    if (!state._slateDrawing) return;
+    e.preventDefault();
+    const canvas = $("#slate");
+    const ctx = canvas.getContext("2d");
+    const p = slatePos(e);
     ctx.lineTo(p.x, p.y);
     ctx.stroke();
-    slate.last = p;
   }
-
   function slateEnd(e) {
     if (e) e.preventDefault();
-    slate.drawing = false;
-    slate.last = null;
+    state._slateDrawing = false;
   }
 
-  /* Talk to Chotu */
-  function parseSpeech(text) {
-    const s = (text || "").toLowerCase().trim();
+  function talkKeys() {
     const map = {
-      a: "A",
-      ay: "A",
-      eh: "A",
-      apple: "A",
-      aam: "A",
-      "ए": "A",
-      "अ": "A",
-      "आम": "A",
-      b: "B",
-      bee: "B",
-      ball: "B",
-      bandar: "B",
-      "बी": "B",
-      "ब": "B",
-      "बंदर": "B",
-      c: "C",
-      see: "C",
-      sea: "C",
-      cat: "C",
-      chidiya: "C",
-      "सी": "C",
-      "च": "C",
-      "चिड़िया": "C",
-      d: "D",
-      dee: "D",
-      dog: "D",
-      diya: "D",
-      "डी": "D",
-      "द": "D",
-      "दिया": "D",
-      e: "E",
-      ee: "E",
-      elephant: "E",
-      "ई": "E",
-      "एलीफेंट": "E",
-      one: "1",
-      "1": "1",
-      ek: "1",
-      "एक": "1",
-      two: "2",
-      "2": "2",
-      do: "2",
-      "दो": "2",
-      three: "3",
-      "3": "3",
-      teen: "3",
-      "तीन": "3",
-      four: "4",
-      "4": "4",
-      char: "4",
-      "चार": "4",
-      five: "5",
-      "5": "5",
-      paanch: "5",
-      panch: "5",
-      "पाँच": "5",
-      "पांच": "5",
-      six: "6",
-      "6": "6",
-      chhe: "6",
-      "छह": "6",
-      seven: "7",
-      "7": "7",
-      saat: "7",
-      "सात": "7",
-      eight: "8",
-      "8": "8",
-      aath: "8",
-      "आठ": "8",
-      nine: "9",
-      "9": "9",
-      nau: "9",
-      "नौ": "9",
-      ten: "10",
-      "10": "10",
-      das: "10",
-      "दस": "10"
+      nursery: ["s", "a", "t", "p", "1", "2", "3", "5"],
+      lkg: ["cat", "pin", "pot", "10"],
+      ukg: ["ship", "shop", "sh", "20"],
+      class1: ["caps", "frogs", "6", "47"]
     };
-    if (map[s]) return map[s];
-    const words = s.split(/[\s,।.]+/);
-    for (let i = 0; i < words.length; i++) {
-      if (map[words[i]]) return map[words[i]];
+    return map[state.age] || map.nursery;
+  }
+  function talkHint() {
+    const map = {
+      nursery: txt("Say a first sound, like sss, or a number 1 to 5.", "कोई पहली ध्वनि बोलो, जैसे sss, या 1 से 5 कोई संख्या।"),
+      lkg: txt("Say a word like cat or pin, or the number 10.", "cat या pin जैसा शब्द बोलो, या संख्या 10।"),
+      ukg: txt("Say ship, shop, or the sh sound, or 20.", "ship, shop, या sh ध्वनि, या 20 बोलो।"),
+      class1: txt("Say caps, frogs, 6, or 47.", "caps, frogs, 6, या 47 बोलो।")
+    };
+    return map[state.age] || map.nursery;
+  }
+
+  function parseSpeech(text) {
+    const raw = (text || "").toLowerCase().trim();
+    if (!raw) return null;
+    const tokens = raw.replace(/[^a-z0-9\u0900-\u097F ]/g, " ").split(/\s+/);
+    const table = [
+      ["sun", "sun"], ["ant", "ant"], ["tap", "tap"], ["pot", "pot"], ["pin", "pin"], ["man", "man"],
+      ["cat", "cat"], ["cap", "cap"], ["lid", "lid"], ["pan", "pan"],
+      ["ship", "ship"], ["shop", "shop"], ["chair", "chair"],
+      ["monkey", "monkeys"], ["monkeys", "monkeys"], ["caps", "caps"], ["frog", "frogs"], ["frogs", "frogs"],
+      ["rainbow", "rainbow"], ["सूरज", "sun"], ["चींटी", "ant"], ["बिल्ली", "cat"], ["दुकान", "shop"], ["बंदर", "monkeys"]
+    ];
+    for (let i = 0; i < table.length; i++) {
+      const k = table[i][0];
+      const v = table[i][1];
+      if (raw === k || tokens.indexOf(k) !== -1) return v;
     }
-    const m = s.match(/\b([1-9]|10)\b/);
+    if (raw === "s" || raw.indexOf("ss") === 0) return "s";
+    if (raw === "a" || raw === "ae") return "a";
+    if (raw === "t" || raw === "tee") return "t";
+    if (raw === "p" || raw === "pee") return "p";
+    if (raw === "sh" || raw.indexOf("shh") !== -1) return "sh";
+    const nums = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, ten: 10, twenty: 20, "एक": 1, "दो": 2, "तीन": 3, "चार": 4, "पाँच": 5, "पांच": 5, "छह": 6, "दस": 10 };
+    if (nums[raw] != null) return String(nums[raw]);
+    const m = raw.match(/\b(\d{1,2})\b/);
     if (m) return m[1];
-    const letter = s.match(/\b([a-e])\b/i);
-    if (letter) return letter[1].toUpperCase();
+    if (raw.length === 1 && /[a-z]/.test(raw)) return raw;
     return null;
   }
 
   function respondToToken(token) {
-    const status = $("#talk-heard");
-    if (LETTERS.indexOf(token) !== -1) {
-      if (status) status.textContent = t("heard") + " " + token;
-      sayLetter(token);
-      addStars(1);
-      return;
+    const heard = $("#talk-heard");
+    const replies = {
+      s: txt("Yes! Sss is the first sound of sun and sat.", "हाँ! sss, सन और सैट की पहली ध्वनि है।"),
+      a: txt("Yes! A is the first sound of ant and apple. A se aam.", "हाँ! a, ऐंट और एप्पल की ध्वनि है। A से आम।"),
+      t: txt("Yes! T is the first sound of tap.", "हाँ! t, टैप की पहली ध्वनि है।"),
+      p: txt("Yes! P is the first sound of pot and pin.", "हाँ! p, पॉट और पिन की पहली ध्वनि है।"),
+      cat: txt("Cat! C-a-t, cat. Super blending!", "कैट! c-a-t, कैट। शानदार!"),
+      pin: txt("Pin! P-i-n, pin.", "पिन! p-i-n, पिन।"),
+      pot: txt("Pot! P-o-t, pot.", "पॉट! p-o-t, पॉट।"),
+      ship: txt("Ship! That has the sh sound. Well done.", "शिप! इसमें sh ध्वनि है। बहुत अच्छे।"),
+      shop: txt("Shop! Sh-o-p, shop. I can see the shop.", "शॉप! मैं दुकान देख सकता हूँ।"),
+      sh: txt("Sh! That sound is in ship and shop.", "sh! यह ध्वनि शिप और शॉप में है।"),
+      monkeys: txt("The monkeys took the caps! You remembered the story.", "बंदर टोपियाँ ले गए! तुम्हें कहानी याद है।"),
+      caps: txt("Yes, the monkeys took the caps.", "हाँ, बंदर टोपियाँ ले गए।"),
+      frogs: txt("The frog is in the pond.", "मेंढक तालाब में है।"),
+      "1": txt("One!", "एक!"), "2": txt("Two!", "दो!"), "3": txt("Three!", "तीन!"),
+      "5": txt("Five mangoes! You can see them in a flash.", "पाँच आम! झट से दिख सकते हैं।"),
+      "6": txt("Six! That is 3 times 2. 2 plus 2 plus 2.", "छह! यह 3 गुना 2 है।"),
+      "10": txt("Ten! A full ten-frame.", "दस! पूरा दस-फ्रेम।"),
+      "20": txt("Twenty rupees. Is it enough for a 12 rupee notebook? Yes, 8 come back.", "बीस रुपये। 12 रुपये की कॉपी के लिए काफ़ी हैं, 8 वापस।"),
+      "47": txt("Forty-seven. That is 4 tens and 7 ones.", "सैंतालीस। 4 दहाई और 7 इकाई।")
+    };
+    const msg = replies[token] || txt("Yes! I heard " + token + ".", "हाँ! मैंने " + token + " सुना।");
+    if (heard) {
+      heard.textContent = t("heard") + " " + token + ". " + msg;
+      heard.className = "feedback ok";
     }
-    if (/^(?:[1-9]|10)$/.test(token)) {
-      const n = parseInt(token, 10);
-      state.mathsCount = n;
-      state.mathsItem = n % 2 === 0 ? "laddoo" : "mango";
-      if (status) status.textContent = t("heard") + " " + token;
-      speakCount();
-      addStars(1);
-      return;
-    }
-    if (status) status.textContent = t("heardUnknown");
-    speakRaw(t("heardUnknown"));
+    speakRaw(msg);
+    addStars(1);
   }
 
   function updateTalkStatus() {
-    const hint = $("#talk-support");
-    const fallback = $("#talk-fallback");
-    if (!hint || !fallback) return;
-    if (!SpeechRec) {
-      hint.textContent = t("noSpeech");
-      fallback.classList.remove("hidden");
-    } else if (state.listening) {
-      hint.textContent = t("listen");
-    } else {
-      hint.textContent = t("tapMic");
-    }
+    const el = $("#talk-support");
+    const hint = $("#talk-hint");
+    if (hint) hint.textContent = talkHint();
+    if (!el) return;
+    if (!SpeechRec) el.textContent = t("noSpeech");
+    else if (state.listening) el.textContent = t("listen");
+    else el.textContent = t("tapMic");
+    buildTalkFallback();
+  }
+
+  function buildTalkFallback() {
+    const box = $("#talk-keys");
+    if (!box) return;
+    box.innerHTML = "";
+    box.className = "choice-row";
+    talkKeys().forEach((k) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "choice-btn";
+      b.textContent = k;
+      b.addEventListener("click", () => respondToToken(k));
+      box.appendChild(b);
+    });
   }
 
   function startListening() {
-    if (!SpeechRec) {
-      updateTalkStatus();
-      return;
-    }
+    if (!SpeechRec) { updateTalkStatus(); return; }
+    if (state.listening) { stopListening(); return; }
     try {
-      if (recognition) {
-        recognition.onend = null;
-        recognition.abort();
-      }
-    } catch (err) {
-      /* ignore */
-    }
-    recognition = new SpeechRec();
-    recognition.lang = state.lang === "hi" ? "hi-IN" : "en-IN";
-    recognition.interimResults = false;
-    recognition.maxAlternatives = 3;
-    recognition.onresult = function (ev) {
-      let text = "";
-      if (ev.results && ev.results[0] && ev.results[0][0]) text = ev.results[0][0].transcript || "";
-      const token = parseSpeech(text);
-      if (token) respondToToken(token);
-      else {
-        const status = $("#talk-heard");
-        if (status) status.textContent = t("heard") + " " + (text || "…");
-        speakRaw(t("heardUnknown"));
-      }
-    };
-    recognition.onerror = function () {
-      state.listening = false;
-      $("#screen-talk").classList.remove("listening");
-      updateTalkStatus();
-    };
-    recognition.onend = function () {
-      state.listening = false;
-      $("#screen-talk").classList.remove("listening");
-      updateTalkStatus();
-    };
-    try {
+      recognition = new SpeechRec();
+      recognition.lang = state.lang === "hi" ? "hi-IN" : "en-IN";
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 3;
+      recognition.onresult = function (ev) {
+        const said = ev.results[0][0].transcript;
+        const token = parseSpeech(said);
+        const heard = $("#talk-heard");
+        if (token) respondToToken(token);
+        else {
+          if (heard) {
+            heard.textContent = t("heard") + " " + said + ". " + t("heardUnknown");
+            heard.className = "feedback no";
+          }
+          speakRaw(t("heardUnknown"));
+        }
+      };
+      recognition.onerror = function () { state.listening = false; updateTalkStatus(); };
+      recognition.onend = function () {
+        state.listening = false;
+        updateTalkStatus();
+        const mic = $("#btn-mic");
+        if (mic) mic.textContent = t("mic");
+        document.body.classList.remove("listening");
+      };
       recognition.start();
       state.listening = true;
-      $("#screen-talk").classList.add("listening");
+      document.body.classList.add("listening");
       const mic = $("#btn-mic");
       if (mic) mic.textContent = t("stop");
       updateTalkStatus();
@@ -888,65 +1186,49 @@
 
   function stopListening() {
     state.listening = false;
-    const screen = $("#screen-talk");
-    if (screen) screen.classList.remove("listening");
+    document.body.classList.remove("listening");
+    try { if (recognition) recognition.stop(); } catch (e) { /* ignore */ }
     const mic = $("#btn-mic");
     if (mic) mic.textContent = t("mic");
-    try {
-      if (recognition) recognition.stop();
-    } catch (err) {
-      /* ignore */
-    }
     updateTalkStatus();
   }
 
-  /* Rupees */
+  function renderReport() {
+    const r = level().report;
+    const set = (id, en, hi) => { const el = $(id); if (el) el.textContent = txt(en, hi); };
+    set("#report-child", r.childEn, r.childHi);
+    set("#report-eng", r.engEn, r.engHi);
+    set("#report-math", r.mathEn, r.mathHi);
+    set("#report-speak", r.speakEn, r.speakHi);
+    set("#report-hindi", r.hindiEn, r.hindiHi);
+    set("#report-next", r.nextEn, r.nextHi);
+  }
+
   function newRupeeRound() {
-    const sets = [
-      [1, 1, 2],
-      [2, 2],
-      [5],
-      [1, 2, 5],
-      [2, 2, 1, 1],
-      [10],
-      [5, 2, 1],
-      [1, 1, 1, 2]
-    ];
-    const coins = sets[Math.floor(Math.random() * sets.length)];
-    state.rupeeCoins = coins;
-    const total = coins.reduce((a, b) => a + b, 0);
-    const wrongs = [];
-    while (wrongs.length < 2) {
-      const w = total + (Math.floor(Math.random() * 5) - 2);
-      if (w > 0 && w !== total && wrongs.indexOf(w) === -1) wrongs.push(w);
-    }
-    state.rupeeChoices = shuffle([total].concat(wrongs));
+    const sets = [[1, 1, 2], [2, 5], [1, 2, 2, 5], [5, 5], [1, 2, 10]];
+    state.rupeeCoins = sets[Math.floor(Math.random() * sets.length)];
+    const total = state.rupeeCoins.reduce((a, b) => a + b, 0);
+    state.rupeeChoices = shuffle([total, total + 1, total === 2 ? 4 : total - 1].filter((v, i, a) => a.indexOf(v) === i && v > 0));
     state.rupeeAnswered = false;
-    const fb = $("#rupee-feedback");
-    if (fb) {
-      fb.textContent = "";
-      fb.className = "feedback";
-    }
     updateRupeeView();
   }
 
   function updateRupeeView() {
-    const box = $("#coin-row");
-    if (!box) return;
-    box.innerHTML = "";
-    state.rupeeCoins.forEach((v) => {
+    const row = $("#coin-row");
+    const opts = $("#rupee-options");
+    if (!row || !opts) return;
+    row.innerHTML = "";
+    state.rupeeCoins.forEach((n) => {
       const d = document.createElement("div");
       d.className = "coin";
-      d.textContent = "₹" + v;
-      box.appendChild(d);
+      d.textContent = "₹" + n;
+      row.appendChild(d);
     });
-    const opts = $("#rupee-options");
-    if (!opts) return;
     opts.innerHTML = "";
     state.rupeeChoices.forEach((n) => {
       const b = document.createElement("button");
       b.type = "button";
-      b.className = "letter-btn";
+      b.className = "choice-btn";
       b.textContent = "₹" + n;
       b.addEventListener("click", () => answerRupee(n));
       opts.appendChild(b);
@@ -954,161 +1236,72 @@
   }
 
   function answerRupee(n) {
-    if (state.rupeeAnswered) return;
     const total = state.rupeeCoins.reduce((a, b) => a + b, 0);
     const fb = $("#rupee-feedback");
-    const pack = I18N[state.lang];
-    if (n === total) {
-      state.rupeeAnswered = true;
-      const msg = pack.praise[Math.floor(Math.random() * pack.praise.length)];
-      if (fb) {
-        fb.textContent = msg;
-        fb.className = "feedback ok";
-      }
-      speakRaw(msg);
-      addStars(1);
-    } else {
-      const msg = pack.retry[Math.floor(Math.random() * pack.retry.length)];
-      if (fb) {
-        fb.textContent = msg;
-        fb.className = "feedback no";
-      }
-      speakRaw(msg);
+    const ok = n === total;
+    if (fb) {
+      fb.textContent = ok ? praise() : retry();
+      fb.className = "feedback " + (ok ? "ok" : "no");
     }
+    if (ok && !state.rupeeAnswered) {
+      state.rupeeAnswered = true;
+      addStars(1);
+      speakRaw(txt("Yes! " + total + " rupees in all.", "हाँ! कुल " + total + " रुपये।"));
+    } else if (!ok) speakRaw(retry());
   }
 
   function bind() {
-    $("#lang-btn").addEventListener("click", () => {
-      state.lang = state.lang === "en" ? "hi" : "en";
-      applyI18n();
-    });
     $("#back-btn").addEventListener("click", () => {
-      const map = {
-        parent: "splash",
-        home: "parent",
-        english: "home",
-        "english-quiz": "english",
-        maths: "home",
-        "maths-quiz": "maths",
-        slate: "home",
-        talk: "home",
-        report: "home",
-        rupees: "home"
-      };
+      const map = { parent: "splash", home: "parent", english: "home", maths: "home", logic: "home", slate: "home", talk: "home", report: "home", rupees: "home" };
       showScreen(map[state.screen] || "home");
     });
+    $("#lang-btn").addEventListener("click", () => { state.lang = state.lang === "en" ? "hi" : "en"; applyI18n(); });
     $("#btn-greet").addEventListener("click", greet);
     $("#btn-start").addEventListener("click", () => showScreen("parent"));
     $("#btn-trial").addEventListener("click", () => setPlan("trial"));
     $("#btn-basic").addEventListener("click", () => setPlan("basic"));
     $("#btn-premium").addEventListener("click", () => setPlan("premium"));
-    $$(".age-chip").forEach((b) =>
-      b.addEventListener("click", () => setAge(b.getAttribute("data-age")))
-    );
-    $("#card-english").addEventListener("click", () => {
-      state.selectedLetter = "A";
-      showScreen("english");
-      updatePhonic();
-      $$(".letter-pad .letter-btn").forEach((b) =>
-        b.classList.toggle("active", b.getAttribute("data-letter") === "A")
-      );
-    });
-    $("#card-maths").addEventListener("click", () => {
-      showScreen("maths");
-      setupMathsLesson();
-    });
-    $("#card-slate").addEventListener("click", () => {
-      showScreen("slate");
-      setTimeout(resizeSlate, 40);
-    });
-    $("#card-talk").addEventListener("click", () => {
-      showScreen("talk");
-      buildTalkFallback();
-    });
-    $("#card-rupees").addEventListener("click", () => {
-      showScreen("rupees");
-      newRupeeRound();
-    });
+    $("#btn-family").addEventListener("click", () => setPlan("family"));
+    $$(".age-chip").forEach((b) => b.addEventListener("click", () => setAge(b.getAttribute("data-age"))));
+    $("#card-english").addEventListener("click", startEnglish);
+    $("#card-maths").addEventListener("click", startMaths);
+    $("#card-logic").addEventListener("click", startLogic);
+    $("#card-slate").addEventListener("click", () => { state.slateIndex = 0; showScreen("slate"); setTimeout(resizeSlate, 40); });
+    $("#card-talk").addEventListener("click", () => showScreen("talk"));
+    $("#card-rupees").addEventListener("click", () => { newRupeeRound(); showScreen("rupees"); });
     $("#card-report").addEventListener("click", () => showScreen("report"));
-
-    $$(".letter-pad .letter-btn").forEach((b) =>
-      b.addEventListener("click", () => sayLetter(b.getAttribute("data-letter")))
-    );
-    $("#btn-english-quiz").addEventListener("click", () => {
-      state.quizIndex = 0;
-      showScreen("english-quiz");
-      newLetterQuiz();
-    });
-    $("#btn-english-next").addEventListener("click", () => {
-      state.quizIndex = (state.quizIndex + 1) % LETTERS.length;
-      newLetterQuiz();
-    });
+    $("#btn-english-hear").addEventListener("click", () => speakRaw(state.currentSpeak));
+    $("#btn-english-next").addEventListener("click", nextEnglish);
     $("#btn-english-home").addEventListener("click", () => showScreen("home"));
-    $("#btn-maths-count").addEventListener("click", cycleMathsLesson);
-    $("#btn-maths-quiz").addEventListener("click", () => {
-      showScreen("maths-quiz");
-      newMathsQuiz();
-    });
-    $("#btn-maths-next").addEventListener("click", newMathsQuiz);
+    $("#btn-maths-hear").addEventListener("click", () => speakRaw(state.currentSpeak));
+    $("#btn-maths-next").addEventListener("click", nextMaths);
     $("#btn-maths-home").addEventListener("click", () => showScreen("home"));
-
-    const c = $("#slate");
-    c.addEventListener("pointerdown", slateStart);
-    c.addEventListener("pointermove", slateMove);
-    c.addEventListener("pointerup", slateEnd);
-    c.addEventListener("pointercancel", slateEnd);
-    c.addEventListener("pointerleave", slateEnd);
+    $("#btn-logic-hear").addEventListener("click", () => speakRaw(state.currentSpeak));
+    $("#btn-logic-next").addEventListener("click", nextLogic);
+    $("#btn-logic-home").addEventListener("click", () => showScreen("home"));
     $("#btn-slate-clear").addEventListener("click", drawGlyphGuide);
     $("#btn-slate-next").addEventListener("click", () => {
       state.slateIndex += 1;
       drawGlyphGuide();
+      speakRaw(glyphs()[state.slateIndex % glyphs().length]);
     });
-    $("#btn-slate-done").addEventListener("click", () => {
-      addStars(1);
-      speakRaw(I18N[state.lang].praise[0]);
-      showScreen("home");
-    });
-
-    $("#btn-mic").addEventListener("click", () => {
-      if (state.listening) stopListening();
-      else startListening();
-    });
+    $("#btn-slate-done").addEventListener("click", () => { addStars(1); showScreen("home"); });
+    const canvas = $("#slate");
+    canvas.addEventListener("pointerdown", slateStart);
+    canvas.addEventListener("pointermove", slateMove);
+    canvas.addEventListener("pointerup", slateEnd);
+    canvas.addEventListener("pointerleave", slateEnd);
+    canvas.addEventListener("pointercancel", slateEnd);
+    $("#btn-mic").addEventListener("click", startListening);
     $("#btn-rupee-next").addEventListener("click", newRupeeRound);
-
-    window.addEventListener("resize", () => {
-      if (state.screen === "slate") resizeSlate();
-    });
-    if (window.speechSynthesis) {
-      speechSynthesis.getVoices();
-      speechSynthesis.addEventListener("voiceschanged", () => {
-        /* voices now available */
-      });
-    }
-  }
-
-  function buildTalkFallback() {
-    const box = $("#talk-keys");
-    if (!box) return;
-    box.innerHTML = "";
-    LETTERS.concat(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]).forEach((tok) => {
-      const b = document.createElement("button");
-      b.type = "button";
-      b.className = "letter-btn";
-      b.textContent = tok;
-      b.style.minHeight = "56px";
-      b.addEventListener("click", () => respondToToken(tok));
-      box.appendChild(b);
-    });
-    box.style.display = "grid";
-    box.style.gridTemplateColumns = "repeat(5, 1fr)";
-    box.style.gap = "8px";
+    window.addEventListener("resize", () => { if (state.screen === "slate") resizeSlate(); });
+    if (window.speechSynthesis) speechSynthesis.addEventListener("voiceschanged", function () {});
   }
 
   function init() {
     bind();
     applyI18n();
     showScreen("splash");
-    buildTalkFallback();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
