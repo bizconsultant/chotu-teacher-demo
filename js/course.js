@@ -5,6 +5,8 @@
   let save = { progress: {}, demoPremium: false };
   let current = null; // { unit, step, practice, pi, mastery, mi, correct, acted }
   let booted = false;
+  let mapFilter = null; // null = whole course, or "english" | "maths" | "logic"
+  const UI = () => window.ChotuUI;
 
   function C() { return window.Chotu; }
   function sfx() { return window.ChotuSfx || { start(){}, clap(){}, pop(){}, chime(){}, coin(){}, bell(){}, correct(){}, wrong(){}, whoosh(){}, unlock(){}, tick(){}, rain(){} }; }
@@ -77,6 +79,14 @@
     return '<div class="chotu-actor actor-' + (anim || pose || "bob") + '"><img alt="Chotu" src="' + poseSrc(pose || "idle") + '"></div>';
   }
 
+  function subjectTitle(f) {
+    const txt = C().txt;
+    if (f === "english") return txt("English", "अंग्रेज़ी");
+    if (f === "maths") return txt("Maths", "गणित");
+    if (f === "logic") return txt("Thinking & Logic", "सोच और तर्क");
+    return txt("Course map", "कोर्स मानचित्र");
+  }
+
   function renderMap() {
     load();
     const age = C().state.age;
@@ -85,30 +95,57 @@
     if (!root) return;
     const c = counts(age);
     const txt = C().txt;
+    const top = C().$("#top-title");
+    if (top && C().state.screen === "map") top.textContent = subjectTitle(mapFilter);
     if (prog) prog.textContent = txt("This year: " + c.done + " of " + c.total + " Basic units done", "इस वर्ष: " + c.done + " / " + c.total + " बेसिक इकाई पूरी");
+    // subject tabs
+    const tabs = C().$("#map-tabs");
+    if (tabs) {
+      const defs = [[null, "🗺️ " + txt("All", "सब")], ["english", "🔤 " + txt("English", "अंग्रेज़ी")], ["maths", "🔢 " + txt("Maths", "गणित")], ["logic", "🧩 " + txt("Logic", "तर्क")]];
+      tabs.innerHTML = "";
+      defs.forEach(([key, label]) => {
+        const b = document.createElement("button");
+        b.type = "button"; b.className = "subject-tab" + (mapFilter === key ? " on" : "");
+        b.setAttribute("data-subject", key || "all");
+        b.textContent = label;
+        b.addEventListener("click", () => { mapFilter = key; renderMap(); });
+        tabs.appendChild(b);
+      });
+      const how = document.createElement("button");
+      how.type = "button"; how.className = "howto-link"; how.id = "btn-howto";
+      how.textContent = "❓ " + txt("How to play with Chotu", "छोटू के साथ कैसे खेलें");
+      how.addEventListener("click", () => UI().howTo(() => {}));
+      tabs.appendChild(how);
+    }
     const groups = [
       { key: "english", title: txt("English · 10 Basic units", "अंग्रेज़ी · 10 बेसिक इकाई") },
       { key: "maths", title: txt("Maths · 10 Basic units", "गणित · 10 बेसिक इकाई") },
+      { key: "logic", title: txt("Thinking & Logic units", "सोच और तर्क की इकाइयाँ") },
       { key: "premium", title: txt("Premium units", "प्रीमियम इकाई") }
     ];
+    const show = (g) => mapFilter === null ? g.key !== "logic" : g.key === mapFilter;
     root.innerHTML = "";
-    groups.forEach((g) => {
-      const list = unitsFor(age).filter((u) => g.key === "premium" ? u.premium : (u.subject === g.key && !u.premium));
+    groups.filter(show).forEach((g) => {
+      const list = unitsFor(age).filter((u) => g.key === "premium" ? u.premium : g.key === "logic" ? (u.logic && !u.premium) : (u.subject === g.key && !u.premium));
       if (!list.length) return;
       const block = document.createElement("div");
-      block.className = "map-block";
+      block.className = "map-block"; block.setAttribute("data-block", g.key);
       block.innerHTML = "<h2>" + g.title + "</h2>";
       const grid = document.createElement("div");
       grid.className = "map-grid";
-      list.sort((a, b) => a.n - b.n).forEach((u) => {
+      let marked = false;
+      list.sort((a, b) => (a.subject === b.subject ? 0 : a.subject === "english" ? -1 : 1) || a.n - b.n).forEach((u) => {
         const st = statusOf(u);
         const b = document.createElement("button");
         b.type = "button";
-        b.className = "unit-card " + st;
+        b.className = "unit-card " + st + (st === "open" && !marked ? " next" : "");
+        if (st === "open") marked = true;
+        b.setAttribute("data-unit", u.id); b.setAttribute("data-subject", u.subject);
         const mark = st === "done" ? "✓" : (st === "locked" || st === "premium-locked" ? "🔒" : String(u.n));
         const logic = u.logic ? '<span class="ulogic">🧩 ' + txt("Logic inside", "तर्क अंदर") + "</span>" : "";
         const prem = u.premium ? '<span class="tag-prem">' + C().t("premiumTag") + "</span> " : "";
-        b.innerHTML = '<span class="unum">' + mark + "</span>" + prem + C().txt(u.titleEn, u.titleHi) + "<small>" + C().txt(u.shortEn || "", u.shortHi || "") + "</small>" + logic;
+        const subj = g.key === "logic" ? '<span class="usubj">' + (u.subject === "maths" ? txt("Maths", "गणित") : txt("English", "अंग्रेज़ी")) + "</span>" : "";
+        b.innerHTML = '<span class="unum">' + mark + "</span>" + prem + subj + C().txt(u.titleEn, u.titleHi) + "<small>" + C().txt(u.shortEn || "", u.shortHi || "") + "</small>" + logic;
         b.addEventListener("click", () => {
           if (st === "locked") { C().toast(C().txt("Finish the unit before this first.", "पहले पिछली इकाई पूरी करो।")); return; }
           if (st === "premium-locked") { C().toast(C().txt("Unlock Premium on the plans screen to try this.", "इसे आज़माने के लिए योजना स्क्रीन पर प्रीमियम खोलो।")); return; }
@@ -129,25 +166,45 @@
     el.textContent = C().txt(c.done + " / " + c.total + " units completed this year", "इस वर्ष " + c.done + " / " + c.total + " इकाई पूरी");
   }
 
-  function openMap() {
+  function openMap(subject) {
+    mapFilter = (subject === "english" || subject === "maths" || subject === "logic") ? subject : null;
     C().showScreen("map");
     renderMap();
+  }
+
+  function buildDecks(u, avoid) {
+    const pool = UI().dedupe(u.practice || []);
+    pool.forEach((it, i) => { if (!it.id) it.id = u.id + "-p" + i; delete it._order; });
+    const mc = Math.min(u.masteryCount || 4, Math.max(3, Math.floor(pool.length / 3)));
+    const pc = Math.max(0, Math.min(u.practiceCount || 6, pool.length - mc));
+    let deck = C().shuffle(pool);
+    if (avoid && avoid.size) {
+      const fresh = deck.filter((x) => !avoid.has(x.id)), used = deck.filter((x) => avoid.has(x.id));
+      deck = fresh.concat(used);
+    }
+    return { pool, practice: deck.slice(0, pc), mastery: deck.slice(pc, pc + mc) };
   }
 
   function openUnit(id) {
     const u = unitById(id);
     if (!u) return;
-    const practice = C().shuffle((u.practice || []).slice());
-    const mastery = C().shuffle((u.mastery || u.practice || []).slice()).slice(0, u.masteryCount || 5);
+    const d = buildDecks(u);
     current = {
-      unit: u, step: "teach",
-      practice, pi: 0,
-      mastery, mi: 0,
+      unit: u, step: "objective",
+      practice: d.practice, pi: 0,
+      mastery: d.mastery, mi: 0,
       correct: 0, answered: false,
-      actIndex: 0, actDone: {}
+      actIndex: 0, actDone: {}, actItems: {},
+      session: { lastPos: -1 }, used: new Set()
     };
+    if (!save.progress[u.id]) { save.progress[u.id] = { started: true, at: Date.now() }; persist(); }
     C().showScreen("unit");
-    drawUnit();
+    const stage = C().$("#unit-stage");
+    if (!UI().howToSeen()) {
+      if (stage) stage.innerHTML = "";
+      nextBtn("", false);
+      UI().howTo(() => { if (current && current.unit === u && C().state.screen === "unit") drawUnit(); });
+    } else drawUnit();
   }
 
   function stepList(u) {
@@ -162,6 +219,7 @@
   function phaseIndex() {
     const u = current.unit;
     const nAct = Math.min((u.activities || []).length, 3);
+    if (current.step === "objective") return -1;
     if (current.step === "teach") return 0;
     if (current.step === "activity") return 1 + current.actIndex;
     if (current.step === "practice") return 1 + nAct;
@@ -176,12 +234,19 @@
     box.innerHTML = names.map((n, i) => '<span class="' + (i < on ? "ok" : i === on ? "on" : "") + '">' + n + "</span>").join("");
   }
 
-  function setBar(cur, total) {
+  function setBar(cur, total, label) {
     const bar = C().$("#unit-progress");
     const lab = C().$("#unit-progress-label");
+    const dots = C().$("#unit-dots");
     const t = Math.max(total, 1);
     if (bar) bar.style.width = Math.round((cur / t) * 100) + "%";
     if (lab) lab.textContent = cur + " / " + t;
+    if (dots) {
+      let h = "";
+      for (let i = 1; i <= t; i++) h += '<i class="' + (i < cur ? "ok" : i === cur ? "on" : "") + '"></i>';
+      const words = label ? C().txt(label[0], label[1]) + " " : "";
+      dots.innerHTML = '<div class="dots-row">' + h + '</div><div class="dots-label">' + words + C().txt(cur + " of " + t, t + " में से " + cur) + "</div>";
+    }
   }
 
   function fb(ok, msg) {
@@ -206,6 +271,8 @@
   }
 
   function drawUnit() {
+    if (!current) return;
+    UI().stopRec();
     drawSteps();
     clearFb();
     const stage = C().$("#unit-stage");
@@ -213,6 +280,8 @@
     const u = current.unit;
     const title = C().$("#top-title");
     if (title) title.textContent = C().txt(u.titleEn, u.titleHi);
+    const dots = C().$("#unit-dots"); if (dots && current.step === "objective") dots.innerHTML = "";
+    if (current.step === "objective") return drawObjective(stage, u);
     if (current.step === "teach") return drawTeach(stage, u);
     if (current.step === "activity") return drawActivity(stage, u.activities[current.actIndex], u);
     if (current.step === "practice") return drawQuestion(stage, current.practice[current.pi], current.pi, current.practice.length, "practice");
@@ -220,20 +289,37 @@
     if (current.step === "result") return drawResult(stage);
   }
 
+  function objText(u) { return C().txt(u.objEn || u.titleEn, u.objHi || u.titleHi); }
+  function sumText(u) { return C().txt(u.sumEn || u.titleEn, u.sumHi || u.titleHi); }
+  function goalText(u) { return C().txt(u.goalEn || ("Learns: " + u.titleEn), u.goalHi || ("सीखना: " + u.titleHi)); }
+
+  function drawObjective(stage, u) {
+    const head = C().txt("Today we will learn:", "आज हम सीखेंगे:");
+    const goal = objText(u);
+    const subj = u.subject === "maths" ? C().txt("Maths", "गणित") : u.subject === "english" ? C().txt("English", "अंग्रेज़ी") : C().txt("Premium", "प्रीमियम");
+    const spoken = head.replace(":", ".") + " " + goal + ".";
+    stage.innerHTML = '<div class="obj-card"><img class="obj-chotu" src="assets/chotu-point.png" alt="Chotu pointing">' +
+      '<p class="obj-head">🎯 ' + head + '</p><p class="obj-big">' + UI().esc(goal) + '</p>' +
+      '<p class="obj-unit">' + subj + " · " + C().txt("Unit ", "इकाई ") + u.n + "</p></div>";
+    stage.appendChild(UI().sayAgainBtn(spoken));
+    const dots = C().$("#unit-dots"); if (dots) dots.innerHTML = "";
+    nextBtn(C().txt("Let's start!", "चलो शुरू करें!"), true);
+    C().speakRaw(spoken);
+  }
+
   function drawTeach(stage, u) {
     const t = u.teach || {};
-    stage.innerHTML = '<div class="teach-stage">' + sceneHTML(u.scene) + actorHTML(t.pose || "wave", t.anim || "wave") +
-      '<p class="teach-caption"><span class="unit-link">' + C().txt("Chotu teaches", "छोटू सिखाते हैं") + "</span>" + C().txt(t.capEn, t.capHi) + "</p></div>" +
-      '<button type="button" class="btn btn-sun" id="btn-teach-hear">' + C().txt("Hear Chotu", "छोटू को सुनो") + "</button>";
-    setBar(1, 1);
+    const cap = C().txt(t.capEn, t.capHi);
+    const spoken = C().txt(t.speakEn, t.speakHi || t.speakEn);
+    stage.innerHTML = '<div class="teach-stage">' + sceneHTML(u.scene) + actorHTML(t.pose || "wave", t.anim || "wave") + "</div>";
+    stage.appendChild(UI().banner(cap, spoken, () => { if (t.sound) UI().playSound(t.sound); }));
+    setBar(1, 1, ["Learn", "सीखो"]);
     nextBtn(C().txt("Let's play", "चलो खेलें"), true);
-    const hear = C().$("#btn-teach-hear");
-    const speak = () => C().speakRaw(C().txt(t.speakEn, t.speakHi));
-    if (hear) hear.addEventListener("click", speak);
-    speak();
     if (u.scene === "monsoon") sfx().rain();
     if (u.scene === "diwali") sfx().chime();
     if (u.scene === "market") sfx().bell();
+    if (t.sound) UI().playSound(t.sound);
+    setTimeout(() => { if (current && current.step === "teach" && C().state.screen === "unit") C().speakRaw(spoken); }, t.sound ? 900 : 50);
   }
 
   function optionWrap(options, onPick) {
@@ -242,37 +328,68 @@
 
   function markOk(wrap, btn, ok) { C().markAnswer(wrap, btn, ok); }
 
+  function showNext() { nextBtn(null, true); }
+  function actFinished() { current.actDone[current.actIndex] = true; current.answered = true; showNext(); }
+
+  function defaultInstr(act) {
+    const m = {
+      match: ["Tap two things that go together.", "साथ वाली दो चीज़ों पर टैप करो।"],
+      sequence: ["Tap in the right order.", "सही क्रम में टैप करो।"],
+      sort: ["Tap a thing. Then tap its box.", "एक चीज़ पर टैप करो। फिर उसके डिब्बे पर टैप करो।"],
+      "ten-frame": ["Look at the frame. Tap the answer.", "फ्रेम देखो। जवाब पर टैप करो।"],
+      "word-build": ["Tap the sounds in order.", "आवाज़ें क्रम से टैप करो।"],
+      compare: ["Tap the right one.", "सही वाले पर टैप करो।"],
+      clap: ["Clap with Chotu.", "छोटू के साथ ताली बजाओ।"],
+      trace: ["Trace with your finger.", "उँगली से बनाओ।"]
+    };
+    return m[act.type] || ["Tap the right answer.", "सही जवाब पर टैप करो।"];
+  }
+
   function drawActivity(stage, act, u) {
     if (!act) { advance(); return; }
     current.answered = !!current.actDone[current.actIndex];
-    const title = "<p class='sub'>" + C().txt(act.titleEn || "", act.titleHi || "") + "</p>";
-    if (act.promptEn) {
-      C().speakRaw(C().txt(act.speakEn || act.promptEn, act.speakHi || act.promptHi || act.promptEn));
-    }
-    setBar(current.actIndex + 1, (u.activities || []).length);
-    nextBtn(C().txt("Next", "आगे"), true);
+    const nAct = Math.min((u.activities || []).length, 3);
+    setBar(current.actIndex + 1, nAct, ["Play", "खेल"]);
+    nextBtn(C().txt("Next", "आगे"), !!current.actDone[current.actIndex]);
+    const d = defaultInstr(act);
+    const instr = C().txt(act.instrEn || act.promptEn || d[0], act.instrHi || act.promptHi || d[1]);
+    const spoken = C().txt(act.speakEn || act.instrEn || act.promptEn || d[0], act.speakHi || act.instrHi || act.promptHi || d[1]);
 
-    if (act.type === "match") return drawMatch(stage, act, title);
-    if (act.type === "sequence") return drawSequence(stage, act, title);
-    if (act.type === "sort") return drawSort(stage, act, title);
-    if (act.type === "ten-frame") return drawFrame(stage, act, title);
-    if (act.type === "word-build") return drawBuild(stage, act, title);
-    if (act.type === "compare") return drawCompare(stage, act, title);
-    if (act.type === "clap") return drawClap(stage, act, title);
-    if (act.type === "trace") return drawTrace(stage, act, title);
-    // default mcq / count / story / pattern
-    stage.innerHTML = title + visual(act);
-    const onPick = (val, btn, wrap) => {
-      const ok = String(val) === String(act.answer);
-      markOk(wrap, btn, ok);
-      fb(ok);
-      if (ok) { current.actDone[current.actIndex] = true; current.answered = true; C().addStars(1); }
-    };
-    stage.appendChild(optionWrap(act.options || [], onPick));
+    if (act.type === "say") {
+      UI().sayTask(stage, {
+        instr, spoken, word: act.word, emoji: act.emoji, accept: act.accept,
+        micLabel: C().txt(act.micEn || "Tap and say", act.micHi || "टैप करो और बोलो"),
+        onDone: actFinished
+      });
+      if (current.actDone[current.actIndex]) { const mic = stage.querySelector(".mic-big"); if (mic) mic.classList.add("done"); }
+      return;
+    }
+    if (!act.type || act.type === "mcq" || act.type === "count" || act.type === "story" || act.type === "pattern") {
+      const item = current.actItems[current.actIndex] || (current.actItems[current.actIndex] = Object.assign({}, act, {
+        instrEn: act.instrEn || act.qEn || act.promptEn || act.titleEn, instrHi: act.instrHi || act.qHi || act.promptHi || act.titleHi,
+        qEn: act.qEn || act.promptEn, qHi: act.qHi || act.promptHi
+      }));
+      UI().ask(stage, item, {
+        session: current.session, visualHTML: visual(act), qid: current.unit.id + "-act" + current.actIndex,
+        onDone: () => { actFinished(); }
+      });
+      return;
+    }
+    stage.innerHTML = "";
+    const holder = document.createElement("div");
+    stage.appendChild(UI().banner(instr, spoken));
+    stage.appendChild(holder);
+    const fn = { match: drawMatch, sequence: drawSequence, sort: drawSort, "ten-frame": drawFrame, "word-build": drawBuild, compare: drawCompare, clap: drawClap, trace: drawTrace }[act.type];
+    if (!fn) { advance(); return; }
+    fn(holder, act, "");
+    holder.querySelectorAll("p.hint").forEach((p, i) => { if (i === 0 && (act.type === "clap" || act.type === "trace")) p.remove(); });
+    const target = holder.querySelector(".match-card, .seq-item, .sort-item, .compare-item, .tile, #clap-btn, .choice-btn");
+    UI().hand(target, stage);
+    C().speakRaw(spoken);
   }
 
   function visual(act) {
-    if (act.showEmoji) return '<div class="prompt-card"><span style="font-size:2.6rem">' + act.showEmoji + "</span></div>";
+    if (act.showEmoji) return '<div class="prompt-card"><span class="big-emoji">' + act.showEmoji + "</span></div>";
     if (act.sentence) return '<div class="prompt-card"><p class="sentence">' + act.sentence + "</p></div>";
     if (act.pattern) return '<div class="pattern-row">' + act.pattern.map((p) => '<div class="pat' + (p === "?" ? " mystery" : "") + '">' + p + "</div>").join("") + "</div>";
     if (act.objects) {
@@ -280,7 +397,6 @@
       const e = act.objects.emoji || "🥭";
       return '<div class="prompt-card">' + e.repeat(Math.max(0, n)).split("").map(() => "").join("") + Array.from({ length: n }, () => '<span style="font-size:2rem">' + e + "</span>").join("") + "</div>";
     }
-    if (act.qEn) return "<p class='sub'>" + C().txt(act.qEn, act.qHi || act.qEn) + "</p>";
     return "";
   }
 
@@ -302,7 +418,7 @@
         if (ok) {
           pick.b.classList.add("paired"); b.classList.add("paired");
           pick.b.classList.remove("on"); found++; sfx().pop();
-          if (found >= pairs.length) { fb(true, C().txt("All pairs matched!", "सभी जोड़ियाँ मिल गईं!")); current.actDone[current.actIndex] = true; current.answered = true; C().addStars(1); }
+          if (found >= pairs.length) { fb(true, C().txt("All pairs matched!", "सभी जोड़ियाँ मिल गईं!")); actFinished(); C().addStars(1); }
         } else { fb(false); pick.b.classList.remove("on"); }
         pick = null;
       });
@@ -328,7 +444,7 @@
         if (built.length === order.length) {
           const ok = built.every((v, i) => String(v) === String(order[i]));
           fb(ok, ok ? C().txt("Yes, that is the order!", "हाँ, यही क्रम है!") : C().retry());
-          if (ok) { current.actDone[current.actIndex] = true; current.answered = true; C().addStars(1); }
+          if (ok) { actFinished(); C().addStars(1); }
           else { built = []; C().$$("#seq-row .seq-item").forEach((el) => el.classList.remove("on")); if (lab) lab.textContent = ""; }
         }
       });
@@ -365,7 +481,7 @@
         const b = stage._sortPick; if (!b) return;
         const ok = b._group === z.getAttribute("data-group");
         if (ok) { z.appendChild(b); b.classList.remove("on"); placed++; stage._sortPick = null; sfx().pop();
-          if (placed >= total) { fb(true, C().txt("Sorted well!", "बहुत अच्छा छाँटा!")); current.actDone[current.actIndex] = true; current.answered = true; C().addStars(1); }
+          if (placed >= total) { fb(true, C().txt("Sorted well!", "बहुत अच्छा छाँटा!")); actFinished(); C().addStars(1); }
         } else fb(false);
       });
     });
@@ -380,7 +496,7 @@
     const onPick = (val, btn, wrap) => {
       const ok = String(val) === String(act.answer);
       markOk(wrap, btn, ok); fb(ok);
-      if (ok) { current.actDone[current.actIndex] = true; current.answered = true; C().addStars(1); }
+      if (ok) { actFinished(); C().addStars(1); }
     };
     stage.appendChild(optionWrap(act.options || [], onPick));
   }
@@ -401,7 +517,7 @@
         if (out.length === tiles.length) {
           const ok = out.join("") === (act.order || tiles).join("");
           fb(ok, ok ? word : C().retry());
-          if (ok) { current.actDone[current.actIndex] = true; current.answered = true; C().addStars(1); }
+          if (ok) { actFinished(); C().addStars(1); }
           else { out = []; C().$$("#build-tiles .tile").forEach((el) => el.classList.remove("used")); if (el) el.textContent = ""; }
         }
       });
@@ -420,7 +536,7 @@
       d.addEventListener("click", () => {
         const ok = String(it.id) === String(act.answer);
         fb(ok);
-        if (ok) { current.actDone[current.actIndex] = true; current.answered = true; C().addStars(1); }
+        if (ok) { actFinished(); C().addStars(1); }
       });
       row.appendChild(d);
     });
@@ -435,7 +551,7 @@
     C().$("#clap-btn").addEventListener("click", () => {
       n++; sfx().clap();
       const el = C().$("#clap-count"); if (el) el.textContent = n + " / " + beats;
-      if (n === beats) { fb(true, C().txt("Great clapping!", "बहुत बढ़िया तालियाँ!")); current.actDone[current.actIndex] = true; current.answered = true; C().addStars(1); }
+      if (n === beats) { fb(true, C().txt("Great clapping!", "बहुत बढ़िया तालियाँ!")); actFinished(); C().addStars(1); }
     });
   }
 
@@ -457,7 +573,7 @@
     function move(e) {
       if (!drawing) return; const p = pos(e); ctx.beginPath(); ctx.moveTo(last.x, last.y); ctx.lineTo(p.x, p.y); ctx.stroke(); last = p; e.preventDefault();
     }
-    function end() { drawing = false; current.actDone[current.actIndex] = true; current.answered = true; }
+    function end() { drawing = false; actFinished(); }
     c.addEventListener("pointerdown", start); c.addEventListener("pointermove", move);
     c.addEventListener("pointerup", end); c.addEventListener("pointerleave", end);
     C().$("#mini-clear").addEventListener("click", () => { ctx.clearRect(0, 0, c.width, c.height); });
@@ -466,55 +582,66 @@
   function drawQuestion(stage, item, idx, total, kind) {
     if (!item) { advance(); return; }
     current.answered = false;
-    setBar(idx + 1, total);
-    nextBtn(C().txt("Next", "आगे"), true);
-    const q = "<p class='sub'>" + C().txt(item.qEn, item.qHi) + "</p>" + visual(item);
-    stage.innerHTML = q;
-    C().speakRaw(C().txt(item.speakEn || item.qEn, item.speakHi || item.qHi));
-    const onPick = (val, btn, wrap) => {
-      const ok = String(val) === String(item.answer);
-      markOk(wrap, btn, ok); fb(ok);
-      if (!current.answered && ok) { current.correct += 1; C().addStars(1); }
-      current.answered = true;
-      item._ok = ok;
-    };
-    stage.appendChild(optionWrap(item.options || [], onPick));
+    setBar(idx + 1, total, kind === "mastery" ? ["Star check", "स्टार जाँच"] : ["Question", "प्रश्न"]);
+    nextBtn(C().txt("Next", "आगे"), false);
+    current.used.add(item.id);
+    UI().ask(stage, item, {
+      session: current.session, visualHTML: visual(item), qid: item.id,
+      onDone: (res) => {
+        current.answered = true;
+        if (res.ok && kind === "mastery") current.correct += 1;
+        item._ok = res.ok;
+        showNext();
+      }
+    });
   }
 
   function drawResult(stage) {
-    const need = current.unit.masteryNeed || 4;
-    const got = current.correct;
     const total = current.mastery.length;
+    const need = Math.max(1, Math.ceil(total * 0.75));
+    const got = current.correct;
     const pass = got >= need;
-    stage.innerHTML = '<div class="mastery-result">' + actorHTML(pass ? "jump" : "listen", pass ? "jump" : "listen") +
-      '<p class="big">' + (pass ? "⭐" : "🌱") + "</p><p class='sub'>" +
-      (pass ? C().txt("You did it! The next unit is open.", "शाबाश! अगली इकाई खुल गई।")
-            : C().txt("Almost. Let's try the star check again.", "लगभग हो गया। स्टार जाँच फिर से करो।")) +
-      "</p><p class='hint'>" + got + " / " + total + "</p></div>";
-    setBar(got, total);
+    const u = current.unit;
+    const stars = pass ? (got === total ? 3 : 2) : 0;
+    setBar(got, total, ["Right", "सही"]);
+    const starRow = [1, 2, 3].map((i) => '<span class="rs ' + (i <= stars ? "on" : "") + '">⭐</span>').join("");
     if (pass) {
-      save.progress[current.unit.id] = { done: true, score: got, at: Date.now() };
-      persist(); sfx().unlock();
-      C().speakRaw(C().txt("You did it! The next unit is open.", "शाबाश! अगली इकाई खुल गई।"));
+      const learnt = C().txt("You learnt:", "तुमने सीखा:");
+      const spoken = learnt + " " + sumText(u);
+      stage.innerHTML = '<div class="mastery-result summary-card"><img class="res-chotu" src="assets/chotu-jump.png" alt="Chotu cheering">' +
+        '<p class="sum-head">🎉 ' + learnt + '</p><p class="sum-big">' + UI().esc(sumText(u)) + '</p>' +
+        '<div class="result-stars">' + starRow + '</div><p class="hint">' + C().txt("Star check: ", "स्टार जाँच: ") + got + " / " + total + "</p></div>";
+      stage.appendChild(UI().sayAgainBtn(spoken));
+      if (!current.saved) {
+        current.saved = true;
+        save.progress[u.id] = { done: true, score: got, stars: stars, at: Date.now() };
+        persist(); sfx().unlock(); C().addStars(stars);
+      }
+      C().speakRaw(spoken);
       nextBtn(C().txt("Back to the map", "मानचित्र पर जाएँ"), true);
-      const h = C().$("#btn-unit-home"); if (h) h.classList.remove("hidden");
     } else {
-      C().speakRaw(C().txt("Let's try the star check again.", "स्टार जाँच फिर से करते हैं।"));
+      const m = C().txt("Almost! Let's try the star check again.", "लगभग हो गया! स्टार जाँच फिर से करते हैं।");
+      stage.innerHTML = '<div class="mastery-result"><img class="res-chotu" src="assets/chotu-listen.png" alt="Chotu">' + '<p class="big">🌱</p><p class="sum-big">' + m + "</p>" +
+        '<div class="result-stars">' + starRow + '</div><p class="hint">' + got + " / " + total + "</p></div>";
+      stage.appendChild(UI().sayAgainBtn(m));
+      C().speakRaw(m);
       nextBtn(C().txt("Try again", "फिर कोशिश करो"), true);
     }
+    const h = C().$("#btn-unit-home"); if (h) h.classList.add("hidden");
     updateHomeProgress();
   }
 
   function advance() {
     if (!current) return;
     const u = current.unit;
-    const nAct = (u.activities || []).length;
+    const nAct = Math.min((u.activities || []).length, 3);
+    if (current.step === "objective") { current.step = "teach"; drawUnit(); return; }
     if (current.step === "teach") {
       current.step = nAct ? "activity" : "practice"; current.actIndex = 0; drawUnit(); return;
     }
     if (current.step === "activity") {
       if (current.actIndex < nAct - 1) { current.actIndex += 1; drawUnit(); return; }
-      current.step = "practice"; current.pi = 0; current.correct = 0; drawUnit(); return;
+      current.step = current.practice.length ? "practice" : "mastery"; current.pi = 0; current.mi = 0; current.correct = 0; drawUnit(); return;
     }
     if (current.step === "practice") {
       if (current.pi < current.practice.length - 1) { current.pi += 1; drawUnit(); return; }
@@ -525,12 +652,30 @@
       current.step = "result"; drawUnit(); return;
     }
     if (current.step === "result") {
-      const need = u.masteryNeed || 4;
-      if (current.correct >= need) { openMap(); return; }
-      current.step = "mastery";
-      current.mastery = C().shuffle((u.mastery || u.practice || []).slice()).slice(0, u.masteryCount || 5);
-      current.mi = 0; current.correct = 0; drawUnit();
+      const need = Math.max(1, Math.ceil(current.mastery.length * 0.75));
+      if (current.correct >= need) { openMap(mapFilter); return; }
+      const d = buildDecks(u, current.used);
+      current.mastery = d.mastery; current.step = "mastery"; current.mi = 0; current.correct = 0; current.saved = false;
+      drawUnit();
     }
+  }
+
+  function renderGoals() {
+    const root = C().$("#goals-root");
+    if (!root) return;
+    load();
+    const age = C().state.age;
+    const txt = C().txt;
+    const lvl = { nursery: txt("Nursery", "नर्सरी"), lkg: "LKG", ukg: "UKG", class1: txt("Class 1", "कक्षा 1") }[age] || age;
+    let h = "<h3>" + txt("Learning goals", "सीखने के लक्ष्य") + " · " + lvl + "</h3>";
+    unitsFor(age).filter((u) => !u.premium).sort((a, b) => (a.subject === b.subject ? 0 : a.subject === "english" ? -1 : 1) || a.n - b.n).forEach((u) => {
+      const p = save.progress[u.id];
+      const st = p && p.done ? "done" : p && p.started ? "going" : "new";
+      const label = st === "done" ? "✓ " + txt("Done", "पूरा") : st === "going" ? "▶ " + txt("In progress", "जारी है") : "○ " + txt("Not started", "शुरू नहीं हुआ");
+      h += '<div class="goal-row ' + st + '" data-unit="' + u.id + '"><div class="goal-top"><strong>' + (u.subject === "maths" ? txt("Maths", "गणित") : txt("English", "अंग्रेज़ी")) + " " + u.n + " · " +
+        UI().esc(txt(u.titleEn, u.titleHi)) + '</strong><span class="goal-st">' + label + '</span></div><div class="goal-txt">🎯 ' + UI().esc(goalText(u)) + "</div></div>";
+    });
+    root.innerHTML = h;
   }
 
   function setPremium(on) {
@@ -551,15 +696,15 @@
       t.addEventListener("change", () => setPremium(t.checked));
     }
     const mapBtn = C().$("#card-map");
-    if (mapBtn) mapBtn.addEventListener("click", openMap);
+    if (mapBtn) mapBtn.addEventListener("click", () => openMap(null));
     const next = C().$("#btn-unit-next");
     if (next) next.addEventListener("click", advance);
     const home = C().$("#btn-unit-home");
-    if (home) home.addEventListener("click", openMap);
-    // subject cards open the map
-    ["card-english", "card-maths", "card-logic"].forEach((id) => {
+    if (home) home.addEventListener("click", () => openMap(mapFilter));
+    // Each subject tile opens ITS OWN subject (this used to open the same English-first map for all three)
+    [["card-english", "english"], ["card-maths", "maths"], ["card-logic", "logic"]].forEach(([id, subject]) => {
       const b = C().$("#" + id);
-      if (b) b.addEventListener("click", (e) => { e.stopImmediatePropagation?.(); openMap(); }, true);
+      if (b) b.addEventListener("click", (e) => { e.stopImmediatePropagation(); openMap(subject); }, true);
     });
     updateHomeProgress();
   }
@@ -567,8 +712,14 @@
   window.ChotuCourse = {
     boot, openMap, openUnit, renderMap, updateHomeProgress, setPremium,
     isPremiumOn, statusOf, unitsFor, counts,
-    onI18n() { if (C().state.screen === "map") renderMap(); if (C().state.screen === "home") updateHomeProgress(); },
-    onScreen(id) { if (id === "map") renderMap(); if (id === "home") updateHomeProgress(); }
+    onI18n() {
+      if (C().state.screen === "map") renderMap();
+      if (C().state.screen === "home") updateHomeProgress();
+      if (C().state.screen === "report") renderGoals();
+      if (C().state.screen === "unit" && current) { C().stopSpeak(); drawUnit(); }
+    },
+    onScreen(id) { if (id === "map") renderMap(); if (id === "home") updateHomeProgress(); if (id === "report") renderGoals(); },
+    renderGoals, getFilter: () => mapFilter, current: () => current
   };
   if (window.Chotu) window.ChotuCourse.boot();
 })();

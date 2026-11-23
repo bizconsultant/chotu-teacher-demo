@@ -16,6 +16,17 @@ python3 -m http.server 4173
 - English / Hindi toggle, Chotu's voice (`speechSynthesis`, pitch 1.6, `en-IN` / `hi-IN`)
 - Stars, stickers, unlockable outfits, daily streak, and a parent screen-time limit
 
+## Round H: clarity pass (Nursery first)
+
+- **Subject routing fixed.** English, Maths and Thinking & Logic each open their own subject map (tabs: All, English, Maths, Logic). Before, all three tiles opened the same English-first map.
+- **Slow voice.** Chotu speaks at rate 0.7 (pitch 1.4), one short sentence at a time with pauses. Parents can switch Slow or Normal (default Slow) on the plans screen and on the Screen time screen. Saved in `localStorage` (`chotuVoiceSpeed`).
+- **Clear interaction.** Every activity starts with one spoken and written instruction, a big 🔁 *Say again* button, a pointing hand on tap tasks, and a glowing *Tap and say* mic on voice tasks. A first-time *How to play with Chotu* intro (tap, mic, stars) is also on the map under ❓.
+- **Hints and retries.** Wrong: gentle hint and retry. After 2 wrong tries the right answer glows. Right: cheer and a star.
+- **No repeats.** Each lesson draws its practice and star-check questions from one shuffled, de-duplicated deck without replacement, and the correct answer never sits in the same position twice in a row.
+- **Objective and summary.** Every unit opens with "Today we will learn…", shows progress dots ("3 of 6"), and ends with "You learnt…" plus stars. The parent report lists each unit's learning goal and status.
+- **Quality-checked Nursery units:** English 1 (sounds around us), English 2 (rhymes and claps), Maths 1 (sort and odd one out), in English and Hindi. The other Nursery units and the other levels use the new player but still have the older question text.
+- **Rhymes** (Nursery and LKG): Twinkle Twinkle, Baa Baa Black Sheep, Johny Johny, Humpty Dumpty, Jack and Jill, Machli Jal Ki Rani Hai and Chanda Mama Door Ke, with karaoke highlighting, a simple tune, *Sing with me* and a fun check.
+
 ## Limits
 
 - This is a front-end web prototype, not a native Play Store or App Store app. Nothing is billed. Parent reports use clearly labelled sample data.

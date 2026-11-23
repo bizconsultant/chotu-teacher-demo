@@ -532,6 +532,11 @@
     if (state.screen === "logic") renderLogic(false);
     if (window.ChotuFun && window.ChotuFun.onI18n) window.ChotuFun.onI18n();
     if (window.ChotuCourse && window.ChotuCourse.onI18n) window.ChotuCourse.onI18n();
+    $$(".voice-speed").forEach(renderSpeedControl);
+    hooks("onI18n");
+  }
+  function hooks(name, arg) {
+    (window.ChotuHooks || []).forEach((h) => { try { if (h[name]) h[name](arg); } catch (e) { console.error(e); } });
   }
 
   function screenTitleKey(id) {
@@ -546,6 +551,7 @@
   }
 
   function showScreen(id) {
+    if (id !== state.screen) stopSpeak();
     state.screen = id;
     $$(".screen").forEach((s) => s.classList.toggle("active", s.id === "screen-" + id));
     const scroller = $(".screens");
@@ -563,6 +569,7 @@
     if (phone) phone.classList.toggle("reels-on", id === "reels");
     if (window.ChotuFun && window.ChotuFun.onScreen) window.ChotuFun.onScreen(id);
     if (window.ChotuCourse && window.ChotuCourse.onScreen) window.ChotuCourse.onScreen(id);
+    hooks("onScreen", id);
   }
 
   function pickVoice(langCode) {
@@ -575,17 +582,99 @@
       voices.find((v) => norm(v).startsWith(want.slice(0, 2))) || null;
   }
 
-  function speakRaw(text, langOverride) {
-    if (!window.speechSynthesis || !text) return;
-    const lang = langOverride || (state.lang === "hi" ? "hi-IN" : "en-IN");
-    speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = lang;
-    u.pitch = 1.6;
-    u.rate = 0.95;
-    const voice = pickVoice(lang);
-    if (voice) u.voice = voice;
-    speechSynthesis.speak(u);
+  // ---- Voice: slow, short sentences, pauses between sentences -------------
+  const VOICE_KEY = "chotuVoiceSpeed";
+  const speech = { token: 0, timers: [], last: "" };
+  function getSpeed() {
+    try { return localStorage.getItem(VOICE_KEY) === "normal" ? "normal" : "slow"; } catch (e) { return "slow"; }
+  }
+  function setSpeed(v) {
+    try { localStorage.setItem(VOICE_KEY, v === "normal" ? "normal" : "slow"); } catch (e) {}
+    $$(".voice-speed").forEach(renderSpeedControl);
+  }
+  function speechRate(lang) {
+    const slow = getSpeed() === "slow";
+    if (lang && lang.toLowerCase().indexOf("hi") === 0) return slow ? 0.7 : 0.9;
+    return slow ? 0.7 : 0.9;
+  }
+  function renderSpeedControl(box) {
+    if (!box) return;
+    const cur = getSpeed();
+    box.innerHTML = '<span class="vs-label">' + txt("Chotu's voice speed", "छोटू की आवाज़ की गति") + "</span>" +
+      '<span class="vs-btns"><button type="button" data-speed="slow" class="' + (cur === "slow" ? "on" : "") + '">🐢 ' + txt("Slow", "धीमी") + "</button>" +
+      '<button type="button" data-speed="normal" class="' + (cur === "normal" ? "on" : "") + '">🐇 ' + txt("Normal", "सामान्य") + "</button></span>";
+    $$("button", box).forEach((b) => b.addEventListener("click", () => {
+      setSpeed(b.getAttribute("data-speed"));
+      speakRaw(txt("Hello! I am Chotu. Can you hear me?", "नमस्ते! मैं छोटू हूँ। क्या तुम मुझे सुन पा रहे हो?"), null, { remember: false });
+    }));
+  }
+  function stopSpeak() {
+    speech.token += 1;
+    speech.timers.forEach(clearTimeout);
+    speech.timers = [];
+    if (window.speechSynthesis) { try { speechSynthesis.cancel(); } catch (e) {} }
+  }
+  function splitSentences(text) {
+    const parts = String(text).replace(/\s+/g, " ").match(/[^.!?।…]+[.!?।…]*/g) || [];
+    return parts.map((x) => x.trim()).filter((x) => /[A-Za-z0-9\u0900-\u097F]/.test(x));
+  }
+  function hasVoice(langCode) {
+    const voices = window.speechSynthesis ? speechSynthesis.getVoices() : [];
+    if (!voices.length) return null; // unknown (voices not loaded)
+    return !!pickVoice(langCode) && (pickVoice(langCode).lang || "").toLowerCase().slice(0, 2) === langCode.toLowerCase().slice(0, 2);
+  }
+  // speak(text, {lang, split, gap, rate, pitch, onDone, onBoundary(charIndexInText)})
+  function speak(text, opts) {
+    opts = opts || {};
+    text = String(text || "").replace(/[\u{1F000}-\u{1FFFF}\u{2190}-\u{27BF}\u{2B00}-\u{2BFF}\u{FE0F}\u{200D}]/gu, " ").replace(/\s+([.,!?।])/g, "$1").replace(/:/g, ",").replace(/\s+/g, " ").trim();
+    if (!text) { if (opts.onDone) opts.onDone(); return; }
+    const lang = opts.lang || (state.lang === "hi" ? "hi-IN" : "en-IN");
+    stopSpeak();
+    const my = speech.token;
+    const slow = getSpeed() === "slow";
+    const gap = opts.gap != null ? opts.gap : (slow ? 650 : 300);
+    const chunks = opts.split === false ? [String(text)] : splitSentences(text);
+    if (!chunks.length) { if (opts.onDone) opts.onDone(); return; }
+    let offset = 0;
+    const offsets = chunks.map((c) => { const o = offset; offset += c.length + 1; return o; });
+    function finish() { if (my === speech.token && opts.onDone) opts.onDone(); }
+    if (!window.speechSynthesis) {
+      // no speech support: still advance after an estimated time so screens do not stall
+      speech.timers.push(setTimeout(finish, Math.min(6000, 600 + text.length * 70)));
+      return;
+    }
+    let i = 0;
+    function next() {
+      if (my !== speech.token) return;
+      if (i >= chunks.length) { finish(); return; }
+      const idx = i++;
+      const u = new SpeechSynthesisUtterance(chunks[idx]);
+      u.lang = lang;
+      u.pitch = opts.pitch || 1.4;
+      u.rate = opts.rate || speechRate(lang);
+      const voice = pickVoice(lang);
+      if (voice) { try { u.voice = voice; } catch (e) {} }
+      let advanced = false;
+      const go = () => {
+        if (advanced || my !== speech.token) return;
+        advanced = true;
+        speech.timers.push(setTimeout(next, idx === chunks.length - 1 ? 0 : gap));
+      };
+      u.onend = go;
+      u.onerror = go;
+      if (opts.onBoundary) u.onboundary = (e) => { if (my === speech.token && e.name !== "sentence") opts.onBoundary(offsets[idx] + (e.charIndex || 0), idx); };
+      // watchdog: some devices never fire onend
+      const est = Math.min(15000, 1200 + chunks[idx].length * 120 / (u.rate || 1));
+      speech.timers.push(setTimeout(go, est));
+      try { speechSynthesis.speak(u); } catch (e) { go(); }
+    }
+    speech.timers.push(setTimeout(next, 30));
+  }
+  function speakRaw(text, langOverride, opts) {
+    opts = Object.assign({}, opts || {});
+    if (langOverride) opts.lang = langOverride;
+    if (opts.remember !== false) speech.last = text;
+    speak(text, opts);
   }
 
   function greet() { speakRaw(t("greetSpeech")); }
@@ -656,6 +745,7 @@
   }
 
   function renderHome() {
+    hooks("onHome");
     const L = level();
     const blurb = $("#level-blurb");
     if (blurb) blurb.textContent = txt(L.blurbEn, L.blurbHi);
@@ -1435,10 +1525,16 @@
 
   function bind() {
     $("#back-btn").addEventListener("click", () => {
-      const map = { parent: "splash", home: "parent", english: "home", maths: "home", logic: "home", slate: "home", talk: "home", report: "home", rupees: "home", reels: "home", rewards: "home", limit: "home", gate: "home", tired: "home", map: "home", unit: "map" };
+      const map = { parent: "splash", home: "parent", english: "home", maths: "home", logic: "home", slate: "home", talk: "home", report: "home", rupees: "home", reels: "home", rewards: "home", limit: "home", gate: "home", tired: "home", map: "home", unit: "map", rhymes: "home", rhyme: "rhymes" };
       showScreen(map[state.screen] || "home");
     });
-    $("#lang-btn").addEventListener("click", () => { state.lang = state.lang === "en" ? "hi" : "en"; applyI18n(); });
+    $("#lang-btn").addEventListener("click", () => {
+      state.lang = state.lang === "en" ? "hi" : "en";
+      applyI18n();
+      if (state.lang === "hi") setTimeout(() => {
+        if (hasVoice("hi-IN") === false) toast("इस फ़ोन में हिन्दी आवाज़ नहीं मिली। फ़ोन की सेटिंग में Hindi text-to-speech जोड़ें।");
+      }, 600);
+    });
     $("#btn-greet").addEventListener("click", greet);
     $("#btn-start").addEventListener("click", () => showScreen("parent"));
     $("#btn-trial").addEventListener("click", () => setPlan("trial"));
@@ -1446,9 +1542,9 @@
     $("#btn-premium").addEventListener("click", () => setPlan("premium"));
     $("#btn-family").addEventListener("click", () => setPlan("family"));
     $$(".age-chip").forEach((b) => b.addEventListener("click", () => setAge(b.getAttribute("data-age"))));
-    $("#card-english").addEventListener("click", () => { if (window.ChotuCourse) window.ChotuCourse.openMap(); else startEnglish(); });
-    $("#card-maths").addEventListener("click", () => { if (window.ChotuCourse) window.ChotuCourse.openMap(); else startMaths(); });
-    $("#card-logic").addEventListener("click", () => { if (window.ChotuCourse) window.ChotuCourse.openMap(); else startLogic(); });
+    $("#card-english").addEventListener("click", () => { if (window.ChotuCourse) window.ChotuCourse.openMap("english"); else startEnglish(); });
+    $("#card-maths").addEventListener("click", () => { if (window.ChotuCourse) window.ChotuCourse.openMap("maths"); else startMaths(); });
+    $("#card-logic").addEventListener("click", () => { if (window.ChotuCourse) window.ChotuCourse.openMap("logic"); else startLogic(); });
     $("#card-slate").addEventListener("click", () => { state.slateIndex = 0; showScreen("slate"); setTimeout(resizeSlate, 40); });
     $("#card-talk").addEventListener("click", () => showScreen("talk"));
     $("#card-rupees").addEventListener("click", () => { newRupeeRound(); showScreen("rupees"); });
@@ -1498,6 +1594,14 @@
     t: t,
     txt: txt,
     speakRaw: speakRaw,
+    speak: speak,
+    stopSpeak: stopSpeak,
+    getSpeed: getSpeed,
+    setSpeed: setSpeed,
+    hasVoice: hasVoice,
+    pickVoice: pickVoice,
+    lastSpoken: () => speech.last,
+    renderSpeedControl: renderSpeedControl,
     addStars: addStars,
     showScreen: showScreen,
     $: $,
