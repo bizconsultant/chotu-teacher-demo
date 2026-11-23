@@ -181,6 +181,8 @@
     if (avoid && avoid.size) {
       const fresh = deck.filter((x) => !avoid.has(x.id)), used = deck.filter((x) => avoid.has(x.id));
       deck = fresh.concat(used);
+      // a retry only replays the star check, so it takes the unused questions first
+      return { pool, mastery: deck.slice(0, mc), practice: deck.slice(mc, mc + pc) };
     }
     return { pool, practice: deck.slice(0, pc), mastery: deck.slice(pc, pc + mc) };
   }
@@ -364,7 +366,7 @@
       if (current.actDone[current.actIndex]) { const mic = stage.querySelector(".mic-big"); if (mic) mic.classList.add("done"); }
       return;
     }
-    if (!act.type || act.type === "mcq" || act.type === "count" || act.type === "story" || act.type === "pattern") {
+    if (!act.type || act.type === "mcq" || act.type === "count" || act.type === "story" || act.type === "pattern" || (act.type === "ten-frame" && act.frame != null)) {
       const item = current.actItems[current.actIndex] || (current.actItems[current.actIndex] = Object.assign({}, act, {
         instrEn: act.instrEn || act.qEn || act.promptEn || act.titleEn, instrHi: act.instrHi || act.qHi || act.promptHi || act.titleHi,
         qEn: act.qEn || act.promptEn, qHi: act.qHi || act.promptHi
@@ -388,7 +390,21 @@
     C().speakRaw(spoken);
   }
 
+  function frameHTML(n) {
+    n = Math.max(0, Math.min(20, Number(n) || 0));
+    let h = '<div class="frame-wrap" aria-label="' + n + ' filled">';
+    const boxes = n > 10 ? 2 : 1;
+    for (let b = 0; b < boxes; b++) {
+      const filled = Math.max(0, Math.min(10, n - 10 * b));
+      let cells = "";
+      for (let i = 0; i < 10; i++) cells += '<div class="frame-cell">' + (i < filled ? '<span class="dot"></span>' : "") + "</div>";
+      h += '<div class="frame-box small">' + cells + "</div>";
+    }
+    return h + "</div>";
+  }
   function visual(act) {
+    if (act.frame != null) return frameHTML(act.frame);
+    if (act.readWord) return '<div class="prompt-card"><span class="read-word">' + act.readWord + "</span></div>";
     if (act.showEmoji) return '<div class="prompt-card"><span class="big-emoji">' + act.showEmoji + "</span></div>";
     if (act.sentence) return '<div class="prompt-card"><p class="sentence">' + act.sentence + "</p></div>";
     if (act.pattern) return '<div class="pattern-row">' + act.pattern.map((p) => '<div class="pat' + (p === "?" ? " mystery" : "") + '">' + p + "</div>").join("") + "</div>";

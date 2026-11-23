@@ -13,7 +13,7 @@
   function dedupe(pool) {
     const seen = new Set();
     return (pool || []).filter((it) => {
-      const k = [it.qEn || it.instrEn || "", it.qHi || "", String(it.answer), (it.showEmoji || ""), it.sound || ""].join("|");
+      const k = [it.qEn || it.instrEn || "", it.qHi || "", String(it.answer), (it.showEmoji || ""), it.sound || "", it.readWord || "", it.sentence || "", it.frame != null ? "f" + it.frame : ""].join("|");
       if (seen.has(k)) return false;
       seen.add(k);
       return true;

@@ -1,4 +1,4 @@
-/* Chotu Teacher: Rhymes (Nursery and LKG).
+/* Chotu Teacher: Rhymes (Nursery, LKG and UKG).
    Traditional nursery rhymes in the public domain, recited slowly by Chotu with karaoke-style
    highlighting, a simple tune (Web Audio), "Sing with me" (mic with tap fallback) and a short fun check. */
 (function () {
@@ -86,6 +86,59 @@
         Q("ch3", "Munna gets it in a … ☕", "मुन्ने को किसमें मिलता है? ☕", "", [O("cup", "☕", "cup (pyali)", "प्याली"), O("plate", "🍽️", "plate (thali)", "थाली"), O("bag", "👜", "bag", "थैला")], "cup", "मुन्ने को दें प्याली में।", "मुन्ने को दें प्याली में।")
       ] }
   ];
+
+  // ------------------------------------------------------------ UKG rhymes (traditional, public domain)
+  const UKG_RHYMES = [
+    { id: "rain", emoji: "🌧️", lang: "en-IN", titleEn: "Rain, Rain, Go Away", titleHi: "रेन रेन गो अवे", levels: ["ukg"],
+      lines: ["Rain, rain, go away,", "Come again another day.", "Little children want to play,", "Rain, rain, go away."],
+      tune: gentle(["a", "b", "c", "d"]),
+      quiz: [
+        Q("ra1", "What does the rhyme ask the rain to do? ☔", "कविता बारिश से क्या कहती है? ☔", "", [O("away", "🚶", "go away", "चली जाओ"), O("stay", "🏠", "stay", "रुको"), O("dance", "💃", "dance", "नाचो")], "away", "Rain, rain, go away.", "रेन, रेन, गो अवे। यानी बारिश, चली जाओ।"),
+        Q("ra2", "When can the rain come again? 📅", "बारिश फिर कब आ सकती है? 📅", "", [O("another", "📅", "another day", "किसी और दिन"), O("now", "⏰", "right now", "अभी"), O("night", "🌙", "tonight", "आज रात")], "another", "Come again another day.", "कम अगेन अनदर डे। यानी किसी और दिन आना।"),
+        Q("ra3", "Who wants to play? 🧒", "खेलना कौन चाहता है? 🧒", "", [O("kids", "🧒", "little children", "छोटे बच्चे"), O("cows", "🐮", "cows", "गायें"), O("buses", "🚌", "buses", "बसें")], "kids", "Little children want to play.", "छोटे बच्चे खेलना चाहते हैं।"),
+        Q("ra4", "Why do the children want the rain to go away? 🤔", "बच्चे बारिश को जाने को क्यों कहते हैं? 🤔", "", [O("play", "🛝", "to play outside", "बाहर खेलने के लिए"), O("sleep", "😴", "to sleep", "सोने के लिए"), O("eat", "🍽️", "to eat", "खाने के लिए")], "play", "Little children want to play. Can they play in heavy rain?", "बच्चे खेलना चाहते हैं। क्या तेज़ बारिश में खेल सकते हैं?")
+      ] },
+    { id: "hickory", emoji: "🕐", lang: "en-IN", titleEn: "Hickory Dickory Dock", titleHi: "हिकरी डिकरी डॉक", levels: ["ukg"],
+      lines: ["Hickory, dickory, dock,", "The mouse ran up the clock.", "The clock struck one,", "The mouse ran down,", "Hickory, dickory, dock."],
+      tune: gentle(["a", "b", "c", "d", "e"]),
+      quiz: [
+        Q("hi1", "What ran up the clock? 🕐", "घड़ी पर क्या चढ़ा? 🕐", "", [O("mouse", "🐭", "the mouse", "चूहा"), O("cat", "🐱", "the cat", "बिल्ली"), O("cow", "🐮", "the cow", "गाय")], "mouse", "The mouse ran up the clock.", "चूहा घड़ी पर चढ़ा।"),
+        Q("hi2", "The clock struck … o'clock. 🕐", "घड़ी ने कितने बजाए? 🕐", "🕐", [N(1), N(5), N(12)], "1", "The clock struck one. One o'clock.", "घड़ी ने एक बजाया। एक बजे।"),
+        Q("hi3", "What did the mouse do after the clock struck one? ⬇️", "घड़ी के एक बजाने के बाद चूहे ने क्या किया? ⬇️", "", [O("down", "⬇️", "ran down", "नीचे दौड़ा"), O("fly", "🕊️", "flew away", "उड़ गया"), O("sleep", "😴", "went to sleep", "सो गया")], "down", "The mouse ran down.", "चूहा नीचे दौड़ा।"),
+        Q("hi4", "What came first? Tap it. 🐭", "पहले क्या हुआ? उस पर टैप करो। 🐭", "", [O("up", "⬆️", "the mouse ran up", "चूहा ऊपर चढ़ा"), O("down", "⬇️", "the mouse ran down", "चूहा नीचे आया")], "up", "First the mouse ran up. Then the clock struck one. Then the mouse ran down.", "पहले चूहा ऊपर चढ़ा। फिर घड़ी ने एक बजाया। फिर चूहा नीचे आया।")
+      ] },
+    { id: "shoe", emoji: "👟", lang: "en-IN", titleEn: "One, Two, Buckle My Shoe", titleHi: "वन, टू, बकल माई शू", levels: ["ukg"],
+      lines: ["One, two, buckle my shoe;", "Three, four, knock at the door;", "Five, six, pick up sticks;", "Seven, eight, lay them straight;", "Nine, ten, a big fat hen."],
+      tune: gentle(["a", "b", "c", "d", "e"]),
+      quiz: [
+        Q("sh1", "Three, four, knock at the … 🚪", "तीन, चार, खटखटाओ … 🚪", "", [O("door", "🚪", "door", "दरवाज़ा"), O("shoe", "👟", "shoe", "जूता"), O("hen", "🐔", "hen", "मुर्गी")], "door", "Three, four, knock at the door.", "थ्री, फोर, नॉक एट द डोर। दरवाज़ा खटखटाओ।"),
+        Q("sh2", "Nine, ten, a big fat … 🐔", "नाइन, टेन, एक बड़ी मोटी … 🐔", "", [O("hen", "🐔", "hen", "मुर्गी"), O("cat", "🐱", "cat", "बिल्ली"), O("pig", "🐷", "pig", "सूअर")], "hen", "Nine, ten, a big fat hen.", "नाइन, टेन, अ बिग फैट हेन।"),
+        Q("sh3", "Which two numbers go with “lay them straight”? 📏", "“लेट देम स्ट्रेट” के साथ कौन-से दो अंक हैं? 📏", "", [O("78", "", "7, 8", "7, 8"), O("34", "", "3, 4", "3, 4"), O("910", "", "9, 10", "9, 10")], "78", "Seven, eight, lay them straight.", "सेवन, एट, ले देम स्ट्रेट।"),
+        Q("sh4", "What number comes after 8? 🔢", "8 के बाद कौन-सा अंक आता है? 🔢", "", [N(9), N(7), N(10)], "9", "Seven, eight, nine, ten. After eight comes nine.", "सात, आठ, नौ, दस। आठ के बाद नौ आता है।")
+      ] },
+    { id: "buns", emoji: "🧁", lang: "en-IN", titleEn: "Five Currant Buns", titleHi: "फाइव करंट बन्स", levels: ["ukg"],
+      lines: ["Five currant buns in a baker's shop,", "Round and fat with a cherry on the top.", "Along came a boy with a penny one day,", "Bought a currant bun and took it away.",
+        "Four currant buns in a baker's shop,", "Round and fat with a cherry on the top.", "Along came a boy with a penny one day,", "Bought a currant bun and took it away.",
+        "Three currant buns in a baker's shop,", "Round and fat with a cherry on the top.", "Along came a boy with a penny one day,", "Bought a currant bun and took it away."],
+      tune: gentle(["a", "b", "c", "d", "a", "b", "c", "d", "a", "b", "c", "d"]),
+      quiz: [
+        Q("bu1", "There are 5 buns. The boy buys 1. How many are left? 🧁", "5 बन हैं। लड़का 1 खरीदता है। कितने बचे? 🧁", "🧁🧁🧁🧁🧁", [N(3), N(4), N(5)], "4", "5 take away 1 is 4. Four currant buns in a baker's shop.", "5 में से 1 गया, तो 4। फोर करंट बन्स।"),
+        Q("bu2", "There are 4 buns. The boy buys 1. How many are left? 🧁", "4 बन हैं। लड़का 1 खरीदता है। कितने बचे? 🧁", "🧁🧁🧁🧁", [N(2), N(3), N(4)], "3", "4 take away 1 is 3. Three currant buns in a baker's shop.", "4 में से 1 गया, तो 3। थ्री करंट बन्स।"),
+        Q("bu3", "What is on top of each bun? 🍒", "हर बन के ऊपर क्या है? 🍒", "", [O("cherry", "🍒", "a cherry", "चेरी"), O("candle", "🕯️", "a candle", "मोमबत्ती"), O("star", "⭐", "a star", "तारा")], "cherry", "Round and fat with a cherry on the top.", "राउंड एंड फैट विद अ चेरी ऑन द टॉप।"),
+        Q("bu4", "What does the boy pay with? 🪙", "लड़का किससे पैसे देता है? 🪙", "", [O("penny", "🪙", "a penny", "एक पैसा"), O("leaf", "🍃", "a leaf", "एक पत्ता"), O("stone", "🪨", "a stone", "एक पत्थर")], "penny", "Along came a boy with a penny one day.", "अलॉन्ग केम अ बॉय विद अ पेनी वन डे।")
+      ] },
+    { id: "aloo", emoji: "🥔", lang: "hi-IN", titleEn: "Aloo Kachaloo", titleHi: "आलू कचालू", hindi: true, levels: ["ukg"],
+      lines: ["आलू कचालू बेटा कहाँ गए थे,", "बैंगन की टोकरी में सो रहे थे।", "बैंगन ने लात मारी रो रहे थे,", "मम्मी ने प्यार किया हँस रहे थे।"],
+      tune: gentle(["a", "b", "c", "d"]),
+      quiz: [
+        Q("al1", "Where was Aloo Kachaloo sleeping? 🍆", "आलू कचालू कहाँ सो रहे थे? 🍆", "", [O("basket", "🧺", "in the brinjal basket", "बैंगन की टोकरी में"), O("bed", "🛏️", "in a bed", "बिस्तर पर"), O("tree", "🌳", "on a tree", "पेड़ पर")], "basket", "बैंगन की टोकरी में सो रहे थे।", "बैंगन की टोकरी में सो रहे थे।"),
+        Q("al2", "What did the brinjal do? 🍆", "बैंगन ने क्या किया? 🍆", "", [O("kick", "🦵", "gave a kick", "लात मारी"), O("sing", "🎤", "sang a song", "गाना गाया"), O("run", "🏃", "ran away", "भाग गया")], "kick", "बैंगन ने लात मारी।", "बैंगन ने लात मारी।"),
+        Q("al3", "Then Aloo was … 😭", "तब आलू क्या कर रहे थे? 😭", "", [O("cry", "😭", "crying", "रो रहे थे"), O("laugh", "😄", "laughing", "हँस रहे थे"), O("sleep", "😴", "sleeping", "सो रहे थे")], "cry", "बैंगन ने लात मारी, रो रहे थे।", "बैंगन ने लात मारी, रो रहे थे।"),
+        Q("al4", "What made Aloo laugh at the end? 😄", "आख़िर में आलू को किसने हँसाया? 😄", "", [O("mummy", "👩", "Mummy's love", "मम्मी का प्यार"), O("cat", "🐱", "a cat", "बिल्ली"), O("rain", "🌧️", "rain", "बारिश")], "mummy", "मम्मी ने प्यार किया, हँस रहे थे।", "मम्मी ने प्यार किया, हँस रहे थे।")
+      ] }
+  ];
+  RHYMES.forEach((r) => { r.levels = r.levels || ["nursery", "lkg"]; });
+  UKG_RHYMES.forEach((r) => RHYMES.push(r));
   // Short, simple objective and summary for each rhyme
   const META = {
     twinkle: ["Today we will learn: Twinkle Twinkle Little Star ⭐", "आज हम सीखेंगे: ट्विंकल ट्विंकल लिटिल स्टार ⭐", "You learnt: Twinkle Twinkle Little Star!", "तुमने सीखा: ट्विंकल ट्विंकल लिटिल स्टार!"],
@@ -94,7 +147,12 @@
     humpty: ["Today we will learn: Humpty Dumpty 🥚", "आज हम सीखेंगे: हम्प्टी डम्प्टी 🥚", "You learnt: Humpty Dumpty sat on a wall!", "तुमने सीखा: हम्प्टी डम्प्टी दीवार पर बैठा!"],
     jack: ["Today we will learn: Jack and Jill 🪣", "आज हम सीखेंगे: जैक एंड जिल 🪣", "You learnt: Jack and Jill went up the hill!", "तुमने सीखा: जैक और जिल पहाड़ी पर चढ़े!"],
     machli: ["Today we will learn: Machli Jal Ki Rani Hai 🐟", "आज हम सीखेंगे: मछली जल की रानी है 🐟", "You learnt: the fish is the queen of water!", "तुमने सीखा: मछली जल की रानी है!"],
-    chanda: ["Today we will learn: Chanda Mama Door Ke 🌙", "आज हम सीखेंगे: चंदा मामा दूर के 🌙", "You learnt: Chanda Mama is the moon far away!", "तुमने सीखा: चंदा मामा दूर आसमान में हैं!"]
+    chanda: ["Today we will learn: Chanda Mama Door Ke 🌙", "आज हम सीखेंगे: चंदा मामा दूर के 🌙", "You learnt: Chanda Mama is the moon far away!", "तुमने सीखा: चंदा मामा दूर आसमान में हैं!"],
+    rain: ["Today we will learn: Rain, Rain, Go Away. Children want to play! 🌧️", "आज हम सीखेंगे: रेन रेन गो अवे। बच्चे खेलना चाहते हैं! 🌧️", "You learnt: Rain, Rain, Go Away! The children want to play.", "तुमने सीखा: रेन रेन गो अवे! बच्चे खेलना चाहते हैं।"],
+    hickory: ["Today we will learn: Hickory Dickory Dock. The clock struck one! 🕐", "आज हम सीखेंगे: हिकरी डिकरी डॉक। घड़ी ने एक बजाया! 🕐", "You learnt: the clock struck one, so it was one o'clock!", "तुमने सीखा: घड़ी ने एक बजाया, यानी एक बजे थे!"],
+    shoe: ["Today we will learn: counting 1 to 10 with One, Two, Buckle My Shoe 👟", "आज हम सीखेंगे: वन, टू, बकल माई शू से 1 से 10 गिनती 👟", "You learnt: counting from one to ten in pairs!", "तुमने सीखा: दो-दो करके एक से दस तक गिनती!"],
+    buns: ["Today we will learn: take away one, 5, 4, 3, with Five Currant Buns 🧁", "आज हम सीखेंगे: फाइव करंट बन्स से एक घटाना, 5, 4, 3 🧁", "You learnt: 5 take away 1 is 4, and 4 take away 1 is 3!", "तुमने सीखा: 5 में से 1 घटाओ तो 4, और 4 में से 1 घटाओ तो 3!"],
+    aloo: ["आज हम सीखेंगे: आलू कचालू 🥔", "आज हम सीखेंगे: आलू कचालू 🥔", "तुमने सीखा: आलू कचालू, एक हिन्दी लोक कविता!", "तुमने सीखा: आलू कचालू, एक हिन्दी लोक कविता!"]
   };
 
   // ------------------------------------------------------------ illustrations (SVG + CSS)
@@ -118,6 +176,28 @@
       '<g class="jackg"><text x="110" y="118" font-size="34">🧒</text></g><g class="jillg"><text x="145" y="92" font-size="34">👧</text></g><text class="pail" x="205" y="64" font-size="26">🪣</text><text x="230" y="156" font-size="22">💧</text></svg>',
     machli: '<svg viewBox="0 0 320 170" role="img" aria-label="A fish swimming with bubbles"><defs><linearGradient id="gW" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fd6ff"/><stop offset="1" stop-color="#1e88d8"/></linearGradient></defs><rect width="320" height="170" rx="18" fill="url(#gW)"/><g class="bubbles" fill="none" stroke="#fff" stroke-width="2"><circle class="bb b1" cx="60" cy="150" r="6"/><circle class="bb b2" cx="120" cy="150" r="4"/><circle class="bb b3" cx="230" cy="150" r="7"/><circle class="bb b4" cx="280" cy="150" r="4"/></g><g class="fishg"><text x="120" y="100" font-size="58">🐟</text></g><g fill="#2eaa5a"><path d="M20 170 Q26 130 32 170Z"/><path d="M34 170 Q42 120 50 170Z"/><path d="M280 170 Q288 128 296 170Z"/></g></svg>',
     chanda: '<svg viewBox="0 0 320 170" role="img" aria-label="Chanda Mama, the smiling moon"><rect width="320" height="170" rx="18" fill="#1b1f5e"/><g><circle class="ts t1" cx="40" cy="40" r="3" fill="#fff"/><circle class="ts t2" cx="270" cy="120" r="3" fill="#fff"/><circle class="ts t3" cx="90" cy="130" r="2.5" fill="#fff"/><circle class="ts t4" cx="250" cy="30" r="2.5" fill="#fff"/></g><g class="moon"><circle cx="160" cy="76" r="48" fill="#fff3b0"/><circle cx="144" cy="68" r="4" fill="#8a7a3a"/><circle cx="176" cy="68" r="4" fill="#8a7a3a"/><path d="M142 88 Q160 104 178 88" stroke="#8a7a3a" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="132" cy="84" r="6" fill="#ffd2a0" opacity=".7"/><circle cx="188" cy="84" r="6" fill="#ffd2a0" opacity=".7"/></g><text class="plate" x="40" y="160" font-size="26">🍽️</text><text class="cupe" x="250" y="160" font-size="26">☕</text></svg>'
+  };
+
+  const drops = Array.from({ length: 16 }, (_, i) => '<i style="left:' + (4 + i * 6) + '%;animation-delay:' + ((i * 0.37) % 1.3).toFixed(2) + 's"></i>').join("");
+  SC.rain = '<div class="rs-box rs-rain" role="img" aria-label="Rain falling, then sun, children want to play"><div class="drops">' + drops + '</div><div class="rs-sky">☁️🌧️☁️</div><div class="rs-sun rs-big">☀️</div><div class="rs-big">🧒👧</div></div>';
+  SC.hickory = '<div class="rs-box rs-clock" role="img" aria-label="A mouse running up a clock"><div class="clock-face"><b style="top:1px;left:50%;transform:translateX(-50%)">12</b><b style="right:8px;top:12px;color:#c33">1</b><b style="right:3px;top:44px">3</b><b style="bottom:1px;left:50%;transform:translateX(-50%)">6</b><b style="left:5px;top:44px">9</b><span class="h"></span><span class="m"></span></div><div class="mouse-run">🐭</div><div class="rs-cap">tick, tock</div></div>';
+  SC.shoe = '<div class="rs-box rs-shoe" role="img" aria-label="Numbers one to ten in pairs"><div class="shoe-row"><div class="shoe-col"><span>👟</span>1 · 2</div><div class="shoe-col"><span>🚪</span>3 · 4</div><div class="shoe-col"><span>🥢</span>5 · 6</div><div class="shoe-col"><span>📏</span>7 · 8</div><div class="shoe-col"><span>🐔</span>9 · 10</div></div></div>';
+  SC.buns = '<div class="rs-box rs-bun" role="img" aria-label="Currant buns in a baker\'s shop"><div class="bun-row" id="bun-row"><span>🧁</span><span>🧁</span><span>🧁</span><span>🧁</span><span>🧁</span></div><div class="rs-big" id="bun-n">5</div><div class="rs-cap" id="bun-boy">🏪</div></div>';
+  SC.aloo = '<div class="rs-box rs-aloo" role="img" aria-label="Aloo Kachaloo the potato"><div class="aloo-scene wob" id="aloo-s">🥔❓</div></div>';
+  const HOOK = {
+    shoe(i) { document.querySelectorAll("#rhyme-scene .shoe-col").forEach((c, k) => c.classList.toggle("on", k === i)); },
+    buns(i) {
+      const n = i < 0 ? 5 : 5 - Math.floor(i / 4) - (i % 4 === 3 ? 1 : 0);
+      const sh = i < 0 ? 5 : 5 - Math.floor(i / 4);
+      document.querySelectorAll("#bun-row span").forEach((sp, k) => sp.classList.toggle("gone", k >= n));
+      const nEl = document.getElementById("bun-n"); if (nEl) nEl.textContent = String(n);
+      const b = document.getElementById("bun-boy"); if (b) b.textContent = (i >= 0 && i % 4 >= 2) ? "🧒 🪙 → 🧁" : "🏪";
+      void sh;
+    },
+    aloo(i) {
+      const el = document.getElementById("aloo-s"); if (!el) return;
+      el.textContent = ["🥔❓", "🍆🧺 🥔💤", "🍆🦵 🥔😭", "👩💕 🥔😄"][i] || "🥔❓";
+    }
   };
   const BUBBLES = { johny: [["Johny, Johny?", "Yes, Papa?", "🧒"], ["Eating sugar?", "No, Papa!", "🙅"], ["Telling lies?", "No, Papa!", "🙅"], ["Open your mouth!", "Ha, ha, ha!", "😄"]] };
 
@@ -192,7 +272,8 @@
     intro.appendChild(ban);
     const grid = document.getElementById("rhyme-grid");
     grid.innerHTML = "";
-    RHYMES.forEach((r, i) => {
+    const age = C().state.age;
+    RHYMES.filter((r) => r.levels.indexOf(age) >= 0).forEach((r, i) => {
       const b = document.createElement("button");
       b.type = "button"; b.className = "rhyme-card"; b.setAttribute("data-rhyme", r.id);
       const st = store[r.id] || {};
@@ -222,6 +303,7 @@
     sc.setAttribute("data-line", "-1"); sc.setAttribute("data-rhyme", r.id);
     sc.innerHTML = SC[r.id] || "";
     const ly = document.getElementById("rhyme-lyrics");
+    ly.classList.toggle("long", r.lines.length > 6);
     ly.innerHTML = r.lines.map((ln, i) => '<p class="rline" data-i="' + i + '">' + wordsOf(ln).map((w, k) => '<span class="w" data-k="' + k + '">' + esc(w) + "</span>").join(" ") + "</p>").join("");
     const instrTxt = txt("Tap ▶ to hear Chotu sing.", "छोटू को सुनने के लिए ▶ दबाओ।");
     const instr = document.getElementById("rhyme-instr");
@@ -252,6 +334,7 @@
     });
     const el = document.querySelector('#rhyme-lyrics .rline[data-i="' + i + '"]');
     if (el && el.scrollIntoView) el.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    if (cur && HOOK[cur.id]) HOOK[cur.id](i);
     if (cur && cur.id === "johny" && BUBBLES.johny[i]) {
       const b = BUBBLES.johny[i];
       const b1 = document.getElementById("jj-b1"), b2 = document.getElementById("jj-b2"), boy = document.getElementById("jj-boy");
@@ -484,9 +567,9 @@
     const tile = document.getElementById("card-rhymes");
     if (!tile) return;
     const age = C().state.age;
-    tile.classList.toggle("hidden", !(age === "nursery" || age === "lkg"));
+    tile.classList.toggle("hidden", !(age === "nursery" || age === "lkg" || age === "ukg"));
     const l = document.getElementById("rhymes-tile-label"); if (l) l.textContent = txt("Rhymes", "कविताएँ");
-    const s = document.getElementById("rhymes-tile-sub"); if (s) s.textContent = txt("Twinkle Twinkle, Baa Baa…", "ट्विंकल ट्विंकल, बा बा…");
+    const s = document.getElementById("rhymes-tile-sub"); if (s) s.textContent = age === "ukg" ? txt("Rain Rain, Hickory Dickory…", "रेन रेन, हिकरी डिकरी…") : txt("Twinkle Twinkle, Baa Baa…", "ट्विंकल ट्विंकल, बा बा…");
   }
   window.ChotuHooks = window.ChotuHooks || [];
   window.ChotuHooks.push({

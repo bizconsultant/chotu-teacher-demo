@@ -27,6 +27,13 @@ python3 -m http.server 4173
 - **Quality-checked Nursery units:** English 1 (sounds around us), English 2 (rhymes and claps), Maths 1 (sort and odd one out), in English and Hindi. The other Nursery units and the other levels use the new player but still have the older question text.
 - **Rhymes** (Nursery and LKG): Twinkle Twinkle, Baa Baa Black Sheep, Johny Johny, Humpty Dumpty, Jack and Jill, Machli Jal Ki Rani Hai and Chanda Mama Door Ke, with karaoke highlighting, a simple tune, *Sing with me* and a fun check.
 
+## Round U: UKG pass
+
+- **Syllabus alignment.** All 26 UKG units (10 English, 10 Maths, 6 Premium) now carry the unit titles and goals from the *Chotu Teacher: Age-wise Syllabus* Page (UKG, age 5), and the Thinking & Logic thread is flagged on Maths 1, 2, 4, 8, 9 and 10. See `js/ukg-v2.js` and the home unit list in `js/app.js`.
+- **Reworked to the Nursery standard** (picture-led, English and Hindi, objective card, one instruction per task, hints, "You learnt" summary, parent goal): English 1 (Phase 2 fluency, then Phase 3 sh, ch, th, ng, plus j, v, w, x, y, z, qu), English 2 (vowel digraphs ai, ee, igh, oa, oo) and Maths 1 (bonds to 10 and make-10 talk). Each has a 20-item pool: 8 for practice and 5 for the star check, with a star-check retry drawn from the unused items first.
+- **New UKG rhymes** (traditional, public domain): Rain, Rain, Go Away; Hickory Dickory Dock (time); One, Two, Buckle My Shoe (counting); Five Currant Buns (take away 1); Aloo Kachaloo (Hindi folk rhyme). Rhymes are now listed per level (Nursery and LKG keep their 7).
+- The other 23 UKG units have the syllabus title and goal but still the older question text.
+
 ## Limits
 
 - This is a front-end web prototype, not a native Play Store or App Store app. Nothing is billed. Parent reports use clearly labelled sample data.
