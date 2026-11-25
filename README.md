@@ -34,6 +34,13 @@ python3 -m http.server 4173
 - **New UKG rhymes** (traditional, public domain): Rain, Rain, Go Away; Hickory Dickory Dock (time); One, Two, Buckle My Shoe (counting); Five Currant Buns (take away 1); Aloo Kachaloo (Hindi folk rhyme). Rhymes are now listed per level (Nursery and LKG keep their 7).
 - The other 23 UKG units have the syllabus title and goal but still the older question text.
 
+## Round C: Class 1 pass
+
+- **Syllabus alignment.** All 26 Class 1 units (10 English, 10 Maths, 6 Premium) now carry the unit titles and goals from the *Chotu Teacher: Age-wise Syllabus* Page (Class 1, age 6; NCERT *Mridang* & *Joyful Mathematics*, NIPUN Bharat aligned), and the Thinking & Logic thread is flagged on Maths 1, 3, 4, 5, 7 and 10. See `js/class1-v2.js` and `js/app.js`.
+- **Reworked to the Nursery/UKG standard** (picture-led, English and Hindi, objective card, one instruction per task, hints, "You learnt" summary, parent goal): English 1 (*Mridang, Two Little Hands*: action words, body-part labels, sentence reading, and Phase 3–4 phonics revisit), English 2 (*Greetings, including Namaste, and a written greeting*: social/time situations, polite words, capital letter & punctuation checks) and Maths 1 (*Shape properties and a logic sort, from What is Long? What is Round?*: rolling/sliding/stacking reasons, counting faces and corners, shape logic puzzles). Each has a 20-item pool: 8 for practice and 5 for the star check, with a star-check retry drawn from the unused items first.
+- **New Class 1 rhymes** (traditional, public domain): *Once I Saw a Little Bird* (also in NCERT Class 1 *Marigold*), *Here We Go Round the Mulberry Bush*, *Old MacDonald Had a Farm*, *Thirty Days Hath September*, and *Haathi Raja Kahan Chale* (traditional Hindi folk rhyme).
+- The other 23 Class 1 units have the syllabus title and goal but still the older question text.
+
 ## Limits
 
 - This is a front-end web prototype, not a native Play Store or App Store app. Nothing is billed. Parent reports use clearly labelled sample data.

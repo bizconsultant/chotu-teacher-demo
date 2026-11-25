@@ -1,4 +1,4 @@
-/* Chotu Teacher: Rhymes (Nursery, LKG and UKG).
+/* Chotu Teacher: Rhymes (Nursery, LKG, UKG and Class 1).
    Traditional nursery rhymes in the public domain, recited slowly by Chotu with karaoke-style
    highlighting, a simple tune (Web Audio), "Sing with me" (mic with tap fallback) and a short fun check. */
 (function () {
@@ -137,8 +137,99 @@
         Q("al4", "What made Aloo laugh at the end? 😄", "आख़िर में आलू को किसने हँसाया? 😄", "", [O("mummy", "👩", "Mummy's love", "मम्मी का प्यार"), O("cat", "🐱", "a cat", "बिल्ली"), O("rain", "🌧️", "rain", "बारिश")], "mummy", "मम्मी ने प्यार किया, हँस रहे थे।", "मम्मी ने प्यार किया, हँस रहे थे।")
       ] }
   ];
+
+  // ------------------------------------------------------------ Class 1 rhymes / poems (traditional, public domain)
+  const CLASS1_RHYMES = [
+    { id: "bird", emoji: "🐦", lang: "en-IN", titleEn: "Once I Saw a Little Bird", titleHi: "वन्स आई सॉ अ लिटिल बर्ड", levels: ["class1"],
+      lines: [
+        "Once I saw a little bird",
+        "Come hop, hop, hop,",
+        "So I cried, 'Little bird,",
+        "Will you stop, stop, stop?'",
+        "I was going to the window",
+        "To say, 'How do you do?'",
+        "But he shook his little tail,",
+        "And far away he flew."
+      ],
+      tune: gentle(["a", "b", "c", "d", "e", "f", "g", "h"]),
+      quiz: [
+        Q("bi1", "How did the little bird come?", "छोटी चिड़िया कैसे आई?", "", [O("hop", "🐦", "hop, hop, hop", "फुदक-फुदक कर"), O("swim", "🐟", "swimming", "तैरकर"), O("bus", "🚌", "by bus", "बस से")], "hop", "Come hop, hop, hop.", "कम हॉप, हॉप, हॉप। चिड़िया फुदक कर आई।"),
+        Q("bi2", "Where was the child going to greet the bird?", "बच्चा चिड़िया से मिलने कहाँ जा रहा था?", "", [O("window", "🪟", "the window", "खिड़की पर"), O("door", "🚪", "the gate", "दरवाज़े पर"), O("bed", "🛏️", "the bed", "बिस्तर पर")], "window", "I was going to the window.", "आई वाज़ गोइंग टू द विंडो। वह खिड़की के पास जा रहा था।"),
+        Q("bi3", "What greeting did the child want to say?", "बच्चा कौन-सा अभिवादन कहना चाहता था?", "", [O("how", "👋", "How do you do?", "आप कैसे हैं?"), O("night", "🌙", "Good night!", "शुभ रात्रि!"), O("sorry", "🙏", "Sorry!", "माफ़ करना!")], "how", "To say, 'How do you do?'", "बच्चा 'हाउ डू यू डू?' कहना चाहता था।"),
+        Q("bi4", "Why did they not chat at the end?", "आख़िर में वे बात क्यों नहीं कर पाए?", "", [O("flew", "🕊️", "the bird flew away", "चिड़िया उड़ गई"), O("rain", "🌧️", "it started raining", "बारिश आ गई"), O("sleep", "😴", "the bird slept", "चिड़िया सो गई")], "flew", "But he shook his little tail, and far away he flew.", "चिड़िया ने पूँछ हिलाई और दूर उड़ गई।")
+      ] },
+    { id: "mulberry", emoji: "🌿", lang: "en-IN", titleEn: "Here We Go Round the Mulberry Bush", titleHi: "हेयर वी गो राउंड द मलबेरी बुश", levels: ["class1"],
+      lines: [
+        "Here we go round the mulberry bush,",
+        "The mulberry bush, the mulberry bush,",
+        "Here we go round the mulberry bush,",
+        "So early in the morning.",
+        "This is the way we wash our hands,",
+        "Wash our hands, wash our hands,",
+        "This is the way we brush our teeth,",
+        "So early in the morning."
+      ],
+      tune: gentle(["a", "b", "c", "d", "e", "f", "g", "h"]),
+      quiz: [
+        Q("mu1", "When do the children do these actions?", "बच्चे ये सारे काम कब करते हैं?", "", [O("morning", "🌅", "early in the morning", "सुबह जल्दी"), O("night", "🌃", "late at night", "देर रात"), O("noon", "☀️", "at midnight", "आधी रात")], "morning", "So early in the morning.", "सो अर्ली इन द मॉर्निंग। यानी सुबह जल्दी।"),
+        Q("mu2", "Which two are action words from the poem?", "कविता से दो क्रिया (काम वाले) शब्द चुनो।", "", [O("act", "🧼", "wash and brush", "धोना और ब्रश करना"), O("noun", "🌿", "bush and hands", "झाड़ी और हाथ"), O("time", "⏰", "early and morning", "जल्दी और सुबह")], "act", "Action words tell what we do: wash our hands, brush our teeth.", "क्रिया शब्द काम बताते हैं: धोना (wash) और ब्रश करना (brush)।"),
+        Q("mu3", "What do we brush in the poem?", "कविता में हम क्या साफ़ (ब्रश) करते हैं?", "", [O("teeth", "🦷", "our teeth", "अपने दाँत"), O("shoes", "👟", "our shoes", "अपने जूते"), O("hats", "🎩", "our hats", "अपनी टोपी")], "teeth", "This is the way we brush our teeth.", "दिस इज़ द वे वी ब्रश अवर टीथ।"),
+        Q("mu4", "Why do we wash our hands and brush our teeth every morning?", "हम रोज़ सुबह हाथ क्यों धोते और दाँत क्यों साफ़ करते हैं?", "", [O("clean", "✨", "to stay clean and healthy", "साफ़ और स्वस्थ रहने के लिए"), O("fly", "🕊️", "to learn to fly", "उड़ना सीखने के लिए"), O("sleep", "😴", "to go to sleep", "सोने जाने के लिए")], "clean", "Washing and brushing keep germs away.", "हाथ धोने और ब्रश करने से हम साफ़ और स्वस्थ रहते हैं।")
+      ] },
+    { id: "farm", emoji: "🐄", lang: "en-IN", titleEn: "Old MacDonald Had a Farm", titleHi: "ओल्ड मैकडॉनल्ड हैड अ फार्म", levels: ["class1"],
+      lines: [
+        "Old MacDonald had a farm, E, I, E, I, O!",
+        "And on his farm he had a cow, E, I, E, I, O!",
+        "With a moo-moo here, and a moo-moo there,",
+        "Here a moo, there a moo, everywhere a moo-moo!",
+        "And on his farm he had a duck, E, I, E, I, O!",
+        "With a quack-quack here, and a quack-quack there,",
+        "Here a quack, there a quack, everywhere a quack-quack!",
+        "Old MacDonald had a farm, E, I, E, I, O!"
+      ],
+      tune: gentle(["a", "b", "c", "d", "e", "f", "g", "h"]),
+      quiz: [
+        Q("fa1", "Who had a farm in the song?", "गाने में खेत किसका था?", "", [O("old", "👨‍🌾", "Old MacDonald", "ओल्ड मैकडॉनल्ड"), O("chanda", "🌙", "Chanda Mama", "चंदा मामा"), O("jack", "🧒", "Jack", "जैक")], "old", "Old MacDonald had a farm.", "ओल्ड मैकडॉनल्ड हैड अ फार्म।"),
+        Q("fa2", "Which two farm animals are in this song?", "इस गाने में खेत के कौन-से दो जानवर हैं?", "", [O("cowduck", "🐮", "cow and duck", "गाय और बतख"), O("lionbear", "🦁", "lion and bear", "शेर और भालू"), O("fishfrog", "🐟", "fish and frog", "मछली और मेंढक")], "cowduck", "He had a cow… and he had a duck.", "खेत पर गाय (cow) और बतख (duck) थे।"),
+        Q("fa3", "What sound does the duck make on the farm?", "खेत पर बतख कैसी आवाज़ निकालती है?", "", [O("quack", "🦆", "quack-quack", "क्वैक-क्वैक"), O("moo", "🐮", "moo-moo", "मू-मू"), O("clap", "👏", "clap-clap", "ताली-ताली")], "quack", "With a quack-quack here, and a quack-quack there.", "बतख क्वैक-क्वैक करती है।"),
+        Q("fa4", "Why do cows and ducks live well on a farm?", "गाय और बतख खेत (फार्म) पर अच्छी तरह क्यों रहते हैं?", "", [O("care", "🌾", "they get food, water and care", "उन्हें खाना, पानी और देखभाल मिलती है"), O("bus", "🚌", "they drive buses", "वे बस चलाते हैं"), O("sea", "🌊", "they live deep in the sea", "वे गहरे समुद्र में रहते हैं")], "care", "A farm has grass, ponds and sheds to care for animals.", "खेत में जानवरों के लिए चारा, पानी और रहने की जगह होती है।")
+      ] },
+    { id: "months", emoji: "📅", lang: "en-IN", titleEn: "Thirty Days Hath September", titleHi: "थर्टी डेज़ हैथ सेप्टेम्बर", levels: ["class1"],
+      lines: [
+        "Thirty days hath September,",
+        "April, June, and November;",
+        "All the rest have thirty-one,",
+        "Except February alone,",
+        "Which has twenty-eight days clear,",
+        "And twenty-nine in each leap year."
+      ],
+      tune: gentle(["a", "b", "c", "d", "e", "f"]),
+      quiz: [
+        Q("mo1", "How many days does September have?", "सेप्टेम्बर (सितंबर) में कितने दिन होते हैं?", "", [N(30), N(31), N(28)], "30", "Thirty days hath September.", "थर्टी डेज़ हैथ सेप्टेम्बर। यानी 30 दिन।"),
+        Q("mo2", "Which month has 28 or 29 days?", "किस महीने में 28 या 29 दिन होते हैं?", "", [O("feb", "📅", "February", "फरवरी · February"), O("apr", "🌸", "April", "अप्रैल · April"), O("nov", "🍂", "November", "नवंबर · November")], "feb", "Except February alone, which has twenty-eight days clear.", "एक्सेप्ट फेब्रुअरी अलोन। फरवरी में 28 या 29 दिन होते हैं।"),
+        Q("mo3", "How many days does October have? (It is one of 'all the rest'.)", "अक्टूबर में कितने दिन होते हैं? (यह बाकी महीनों में से एक है।)", "", [N(31), N(30), N(29)], "31", "September, April, June, November have 30. All the rest (except February) have 31.", "सिर्फ चार महीनों में 30 दिन हैं। बाकी सभी में (फरवरी छोड़कर) 31 दिन हैं।"),
+        Q("mo4", "In a leap year, how many days are in February?", "लीप वर्ष (leap year) में फरवरी में कितने दिन होते हैं?", "", [N(29), N(28), N(30)], "29", "And twenty-nine in each leap year.", "एंड ट्वेंटी-नाइन इन ईच लीप ईयर। यानी 29 दिन।")
+      ] },
+    { id: "haathi", emoji: "🐘", lang: "hi-IN", titleEn: "Haathi Raja Kahan Chale", titleHi: "हाथी राजा कहाँ चले", hindi: true, levels: ["class1"],
+      lines: [
+        "हाथी राजा कहाँ चले,",
+        "सूँड़ हिलाकर कहाँ चले?",
+        "मेरे घर भी आओ ना,",
+        "हलवा पूरी खाओ ना।",
+        "आओ बैठो कुर्सी पर,",
+        "कुर्सी बोली चटर-पटर!"
+      ],
+      tune: gentle(["a", "b", "c", "d", "e", "f"]),
+      quiz: [
+        Q("ha1", "Who is the poem talking to?", "कविता में किससे बात हो रही है?", "", [O("elephant", "🐘", "the elephant (Haathi Raja)", "हाथी राजा से"), O("mouse", "🐭", "a mouse", "चूहे से"), O("monkey", "🐒", "a monkey", "बंदर से")], "elephant", "हाथी राजा कहाँ चले।", "हाथी राजा कहाँ चले।"),
+        Q("ha2", "What does the elephant shake while walking?", "हाथी राजा चलते हुए क्या हिलाते हैं?", "", [O("trunk", "🐘", "his trunk (soond)", "अपनी सूँड़"), O("wings", "🕊️", "wings", "पंख"), O("bell", "🔔", "a bell", "घंटी")], "trunk", "सूँड़ हिलाकर कहाँ चले?", "सूँड़ हिलाकर कहाँ चले?"),
+        Q("ha3", "What food is Haathi Raja invited to eat?", "हाथी राजा को क्या खाने के लिए बुलाया गया?", "", [O("halwa", "🍲", "halwa puri", "हलवा पूरी"), O("cake", "🎂", "cake", "केक"), O("ice", "🍦", "ice cream", "आइसक्रीम")], "halwa", "मेरे घर भी आओ ना, हलवा पूरी खाओ ना।", "मेरे घर भी आओ ना, हलवा पूरी खाओ ना।"),
+        Q("ha4", "Why did the chair go 'chatar-patar'?", "कुर्सी 'चटर-पटर' क्यों बोली?", "", [O("heavy", "⚖️", "because the elephant is heavy", "क्योंकि हाथी बहुत भारी है"), O("rain", "🌧️", "because it rained", "क्योंकि बारिश हुई"), O("fly", "🕊️", "because the chair flew", "क्योंकि कुर्सी उड़ गई")], "heavy", "आओ बैठो कुर्सी पर, कुर्सी बोली चटर-पटर! बड़ा हाथी कुर्सी पर बैठे तो क्या होगा?", "आओ बैठो कुर्सी पर, कुर्सी बोली चटर-पटर! भारी हाथी बैठने से कुर्सी हिली।")
+      ] }
+  ];
   RHYMES.forEach((r) => { r.levels = r.levels || ["nursery", "lkg"]; });
   UKG_RHYMES.forEach((r) => RHYMES.push(r));
+  CLASS1_RHYMES.forEach((r) => RHYMES.push(r));
   // Short, simple objective and summary for each rhyme
   const META = {
     twinkle: ["Today we will learn: Twinkle Twinkle Little Star ⭐", "आज हम सीखेंगे: ट्विंकल ट्विंकल लिटिल स्टार ⭐", "You learnt: Twinkle Twinkle Little Star!", "तुमने सीखा: ट्विंकल ट्विंकल लिटिल स्टार!"],
@@ -152,7 +243,12 @@
     hickory: ["Today we will learn: Hickory Dickory Dock. The clock struck one! 🕐", "आज हम सीखेंगे: हिकरी डिकरी डॉक। घड़ी ने एक बजाया! 🕐", "You learnt: the clock struck one, so it was one o'clock!", "तुमने सीखा: घड़ी ने एक बजाया, यानी एक बजे थे!"],
     shoe: ["Today we will learn: counting 1 to 10 with One, Two, Buckle My Shoe 👟", "आज हम सीखेंगे: वन, टू, बकल माई शू से 1 से 10 गिनती 👟", "You learnt: counting from one to ten in pairs!", "तुमने सीखा: दो-दो करके एक से दस तक गिनती!"],
     buns: ["Today we will learn: take away one, 5, 4, 3, with Five Currant Buns 🧁", "आज हम सीखेंगे: फाइव करंट बन्स से एक घटाना, 5, 4, 3 🧁", "You learnt: 5 take away 1 is 4, and 4 take away 1 is 3!", "तुमने सीखा: 5 में से 1 घटाओ तो 4, और 4 में से 1 घटाओ तो 3!"],
-    aloo: ["आज हम सीखेंगे: आलू कचालू 🥔", "आज हम सीखेंगे: आलू कचालू 🥔", "तुमने सीखा: आलू कचालू, एक हिन्दी लोक कविता!", "तुमने सीखा: आलू कचालू, एक हिन्दी लोक कविता!"]
+    aloo: ["आज हम सीखेंगे: आलू कचालू 🥔", "आज हम सीखेंगे: आलू कचालू 🥔", "तुमने सीखा: आलू कचालू, एक हिन्दी लोक कविता!", "तुमने सीखा: आलू कचालू, एक हिन्दी लोक कविता!"],
+    bird: ["Today we will learn: action words and a greeting in Once I Saw a Little Bird 🐦", "आज हम सीखेंगे: क्रिया शब्द और अभिवादन — वन्स आई सॉ अ लिटिल बर्ड 🐦", "You learnt: hop, stop, shook, flew, and the greeting 'How do you do?'!", "तुमने सीखा: hop, stop, flew और अभिवादन 'How do you do?'!"],
+    mulberry: ["Today we will learn: morning action words in The Mulberry Bush 🌿", "आज हम सीखेंगे: सुबह के काम — द मलबेरी बुश 🌿", "You learnt: wash our hands and brush our teeth early in the morning!", "तुमने सीखा: सुबह जल्दी हाथ धोना और दाँत साफ़ करना!"],
+    farm: ["Today we will learn: farm animals and sounds in Old MacDonald Had a Farm 🐄", "आज हम सीखेंगे: खेत के जानवर और आवाज़ें — ओल्ड मैकडॉनल्ड 🐄", "You learnt: on the farm the cow says moo and the duck says quack!", "तुमने सीखा: खेत पर गाय मू और बतख क्वैक करती है!"],
+    months: ["Today we will learn: days in each month with Thirty Days Hath September 📅", "आज हम सीखेंगे: महीनों के दिन — थर्टी डेज़ हैथ सेप्टेम्बर 📅", "You learnt: September, April, June and November have 30 days, February has 28 or 29!", "तुमने सीखा: सितंबर, अप्रैल, जून, नवंबर में 30 दिन और फरवरी में 28 या 29 दिन!"],
+    haathi: ["आज हम सीखेंगे: हाथी राजा कहाँ चले 🐘", "आज हम सीखेंगे: हाथी राजा कहाँ चले 🐘", "तुमने सीखा: हाथी राजा कहाँ चले — सूँड़, हलवा पूरी और कारण!", "तुमने सीखा: हाथी राजा कहाँ चले — सूँड़, हलवा पूरी और कारण!"]
   };
 
   // ------------------------------------------------------------ illustrations (SVG + CSS)
@@ -197,8 +293,50 @@
     aloo(i) {
       const el = document.getElementById("aloo-s"); if (!el) return;
       el.textContent = ["🥔❓", "🍆🧺 🥔💤", "🍆🦵 🥔😭", "👩💕 🥔😄"][i] || "🥔❓";
+    },
+    bird(i) {
+      const ic = document.getElementById("bird-ic"), cap = document.getElementById("bird-cap");
+      if (!ic || !cap) return;
+      ic.classList.toggle("flew", i >= 6);
+      ic.classList.toggle("hop", i >= 1 && i <= 3);
+      cap.textContent = i < 0 ? "hop, hop, hop" : ["🐦", "hop, hop!", "stop, stop?", "stop?", "🪟", "How do you do?", "shook tail!", "flew away! 💨"][i] || "";
+    },
+    mulberry(i) {
+      const ic = document.getElementById("mul-ic"), cap = document.getElementById("mul-cap");
+      if (!ic || !cap) return;
+      if (i >= 4 && i <= 5) { ic.textContent = "👐 🧼 💧"; cap.textContent = "wash our hands"; }
+      else if (i === 6) { ic.textContent = "🦷 🪥 ✨"; cap.textContent = "brush our teeth"; }
+      else { ic.textContent = "🌿👧🧒"; cap.textContent = "early in the morning"; }
+    },
+    farm(i) {
+      const ic = document.getElementById("farm-ic"), cap = document.getElementById("farm-cap");
+      if (!ic || !cap) return;
+      if (i >= 1 && i <= 3) { ic.textContent = "🌾 🐮 🌾"; cap.textContent = "moo-moo!"; }
+      else if (i >= 4 && i <= 6) { ic.textContent = "💧 🦆 💧"; cap.textContent = "quack-quack!"; }
+      else { ic.textContent = "🌾 🚜 🌾"; cap.textContent = "E, I, E, I, O!"; }
+    },
+    months(i) {
+      const m = document.getElementById("cal-m"), d = document.getElementById("cal-d"), c = document.getElementById("cal-cap");
+      if (!m || !d || !c) return;
+      if (i === 2) { m.textContent = "JAN · MAR · MAY · JUL · AUG · OCT · DEC"; d.textContent = "31"; c.textContent = "thirty-one days"; }
+      else if (i === 3 || i === 4) { m.textContent = "FEBRUARY"; d.textContent = "28"; c.textContent = "twenty-eight days"; }
+      else if (i === 5) { m.textContent = "LEAP YEAR · FEB"; d.textContent = "29"; c.textContent = "twenty-nine in leap year"; }
+      else { m.textContent = "SEP · APR · JUN · NOV"; d.textContent = "30"; c.textContent = "thirty days"; }
+    },
+    haathi(i) {
+      const ic = document.getElementById("haa-ic"), cap = document.getElementById("haa-cap");
+      if (!ic || !cap) return;
+      const frames = [["🐘", "हाथी राजा"], ["🐘💨", "सूँड़ हिलाकर"], ["🏠🐘", "मेरे घर आओ"], ["🍲🍛", "हलवा पूरी"], ["🐘🪑", "बैठो कुर्सी पर"], ["💥🪑🐘", "चटर-पटर!"]];
+      const f = frames[i] || frames[0];
+      ic.textContent = f[0]; cap.textContent = f[1];
     }
   };
+
+  SC.bird = '<div class="rs-box rs-bird" role="img" aria-label="A little bird at a window"><div class="rs-win">🪟</div><div class="rs-bird-ic" id="bird-ic">🐦</div><div class="rs-cap" id="bird-cap">hop, hop, hop</div></div>';
+  SC.mulberry = '<div class="rs-box rs-mul" role="img" aria-label="Children playing around a mulberry bush"><div class="rs-big" id="mul-ic">🌿👧🧒</div><div class="rs-cap" id="mul-cap">early in the morning</div></div>';
+  SC.farm = '<div class="rs-box rs-farm" role="img" aria-label="Animals on Old MacDonald\'s farm"><div class="rs-big" id="farm-ic">🌾🚜🌾</div><div class="rs-cap" id="farm-cap">E, I, E, I, O!</div></div>';
+  SC.months = '<div class="rs-box rs-cal" role="img" aria-label="Calendar months"><div class="cal-card"><div class="cal-top" id="cal-m">SEP · APR · JUN · NOV</div><div class="cal-num" id="cal-d">30</div></div><div class="rs-cap" id="cal-cap">days in the month</div></div>';
+  SC.haathi = '<div class="rs-box rs-haa" role="img" aria-label="Haathi Raja the elephant"><div class="rs-big" id="haa-ic">🐘</div><div class="rs-cap" id="haa-cap">सूँड़ हिलाकर</div></div>';
   const BUBBLES = { johny: [["Johny, Johny?", "Yes, Papa?", "🧒"], ["Eating sugar?", "No, Papa!", "🙅"], ["Telling lies?", "No, Papa!", "🙅"], ["Open your mouth!", "Ha, ha, ha!", "😄"]] };
 
   // ------------------------------------------------------------ screens
@@ -567,9 +705,9 @@
     const tile = document.getElementById("card-rhymes");
     if (!tile) return;
     const age = C().state.age;
-    tile.classList.toggle("hidden", !(age === "nursery" || age === "lkg" || age === "ukg"));
+    tile.classList.toggle("hidden", !(age === "nursery" || age === "lkg" || age === "ukg" || age === "class1"));
     const l = document.getElementById("rhymes-tile-label"); if (l) l.textContent = txt("Rhymes", "कविताएँ");
-    const s = document.getElementById("rhymes-tile-sub"); if (s) s.textContent = age === "ukg" ? txt("Rain Rain, Hickory Dickory…", "रेन रेन, हिकरी डिकरी…") : txt("Twinkle Twinkle, Baa Baa…", "ट्विंकल ट्विंकल, बा बा…");
+    const s = document.getElementById("rhymes-tile-sub"); if (s) s.textContent = age === "class1" ? txt("Little Bird, Mulberry Bush, Haathi Raja…", "लिटिल बर्ड, मलबेरी बुश, हाथी राजा…") : age === "ukg" ? txt("Rain Rain, Hickory Dickory…", "रेन रेन, हिकरी डिकरी…") : txt("Twinkle Twinkle, Baa Baa…", "ट्विंकल ट्विंकल, बा बा…");
   }
   window.ChotuHooks = window.ChotuHooks || [];
   window.ChotuHooks.push({
