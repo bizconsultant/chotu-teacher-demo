@@ -395,3 +395,37 @@
 .cal-card { background: #fff; border-radius: 14px; box-shadow: 0 3px 8px rgba(0,0,0,.15); overflow: hidden; min-width: 170px; text-align: center; }
 .cal-top { background: #e05252; color: #fff; font-size: .72rem; font-weight: 800; padding: 4px 8px; letter-spacing: .5px; }
 .cal-num { font-size: 2.3rem; font-weight: 800; color: #2b2b2b; padding: 4px 12px; }
+
+/* Fix pointing hand positioning + clearer match/sort touch feedback */
+.match-card, .sort-item, .seq-item, .tile, .drop-zone, .drag-item, .compare-item, #clap-btn {
+  position: relative;
+  border: 3px solid transparent;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+.match-grid.match-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: stretch;
+}
+.match-col { display: flex; flex-direction: column; gap: 10px; }
+.match-col .match-card { width: 100%; min-height: 58px; font-size: 0.98rem; text-align: center; }
+.match-card.on, .sort-item.on, .seq-item.on, .tile.on {
+  background: #dff4ff;
+  border-color: var(--sky-deep);
+  outline: 3px solid var(--sky-deep);
+  transform: scale(1.03);
+}
+.match-card.paired, .tile.used {
+  background: #e9fff1;
+  border-color: var(--leaf);
+  outline: 3px solid var(--leaf);
+  opacity: 0.72;
+}
+.match-card.wrong {
+  border-color: var(--coral);
+  background: #fff0f0;
+  animation: shake .35s;
+}
+.feedback.info { color: var(--sky-deep); }

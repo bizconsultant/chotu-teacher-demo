@@ -56,7 +56,7 @@
       (root || document).querySelectorAll(".hand").forEach((x) => x.remove());
       (root || document).querySelectorAll(".has-hand").forEach((x) => x.classList.remove("has-hand"));
     };
-    (root || target).addEventListener("pointerdown", kill, { capture: true, once: true });
+    (root || target).addEventListener("pointerdown", () => setTimeout(kill, 0), { capture: true, once: true });
   }
 
   function orderOptions(item, session) {

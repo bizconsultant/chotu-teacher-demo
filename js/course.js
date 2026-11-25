@@ -255,8 +255,8 @@
     const el = C().$("#unit-feedback");
     if (!el) return;
     el.textContent = msg || (ok ? C().praise() : C().retry());
-    el.className = "feedback " + (ok ? "ok" : "no");
-    if (ok) sfx().correct(); else sfx().wrong();
+    el.className = "feedback " + (ok === null ? "info" : ok ? "ok" : "no");
+    if (ok === true) sfx().correct(); else if (ok === false) sfx().wrong();
   }
   function clearFb() {
     const el = C().$("#unit-feedback");
@@ -420,27 +420,51 @@
     const pairs = C().shuffle((act.pairs || []).slice());
     const left = C().shuffle(pairs.map((p) => ({ side: "l", key: p.key, label: C().txt(p.leftEn, p.leftHi) })));
     const right = C().shuffle(pairs.map((p) => ({ side: "r", key: p.key, label: C().txt(p.rightEn, p.rightHi) })));
-    stage.innerHTML = title + "<p class='hint'>" + C().txt("Tap a pair that belongs together.", "जोड़ी पर टैप करो।") + "</p><div class='match-grid' id='match-grid'></div>";
-    const grid = C().$("#match-grid");
+    stage.innerHTML = title + "<p class='hint'>" + C().txt("Tap one on the left, then its match on the right.", "बाईं ओर से एक पर टैप करो, फिर दाईं ओर उसकी जोड़ी पर टैप करो।") + "</p>" +
+      "<div class='match-grid match-cols' id='match-grid'><div class='match-col' data-side='l'></div><div class='match-col' data-side='r'></div></div>";
+    const colL = C().$("#match-grid [data-side='l']");
+    const colR = C().$("#match-grid [data-side='r']");
     let pick = null, found = 0;
     function card(item) {
       const b = document.createElement("button");
-      b.type = "button"; b.className = "match-card"; b.textContent = item.label;
+      b.type = "button"; b.className = "match-card"; b.setAttribute("data-side", item.side); b.setAttribute("data-key", item.key);
+      b.textContent = item.label;
       b.addEventListener("click", () => {
-        if (b.classList.contains("paired")) return;
-        if (!pick) { pick = { item, b }; b.classList.add("on"); return; }
-        if (pick.b === b) { b.classList.remove("on"); pick = null; return; }
+        if (b.classList.contains("paired") || b.disabled) return;
+        if (!pick) {
+          pick = { item, b }; b.classList.add("on"); sfx().pop();
+          fb(null, C().txt("Picked: " + item.label + " — now tap its match!", "चुना: " + item.label + " — अब इसकी जोड़ी पर टैप करो!"));
+          return;
+        }
+        if (pick.b === b) { b.classList.remove("on"); pick = null; clearFb(); sfx().pop(); return; }
+        if (pick.item.side === item.side) {
+          pick.b.classList.remove("on"); pick = { item, b }; b.classList.add("on"); sfx().pop();
+          fb(null, C().txt("Picked: " + item.label + " — now tap its match!", "चुना: " + item.label + " — अब इसकी जोड़ी पर टैप करो!"));
+          return;
+        }
         const ok = pick.item.key === item.key && pick.item.side !== item.side;
-        if (ok) {
-          pick.b.classList.add("paired"); b.classList.add("paired");
-          pick.b.classList.remove("on"); found++; sfx().pop();
-          if (found >= pairs.length) { fb(true, C().txt("All pairs matched!", "सभी जोड़ियाँ मिल गईं!")); actFinished(); C().addStars(1); }
-        } else { fb(false); pick.b.classList.remove("on"); }
+        const first = pick.b;
+        first.classList.remove("on");
         pick = null;
+        if (ok) {
+          first.classList.add("paired"); b.classList.add("paired");
+          first.disabled = true; b.disabled = true;
+          first.textContent = "✓ " + first.textContent;
+          b.textContent = "✓ " + b.textContent;
+          found++;
+          const rem = pairs.length - found;
+          if (found >= pairs.length) { fb(true, C().txt("All pairs matched!", "सभी जोड़ियाँ मिल गईं!")); actFinished(); C().addStars(1); }
+          else fb(true, C().txt("Matched! " + rem + " left.", "शाबाश! " + rem + " बाकी।"));
+        } else {
+          first.classList.add("wrong"); b.classList.add("wrong");
+          setTimeout(() => { first.classList.remove("wrong"); b.classList.remove("wrong"); }, 450);
+          fb(false, C().txt("Not a match — try again!", "यह जोड़ी नहीं है — फिर कोशिश करो!"));
+        }
       });
       return b;
     }
-    left.concat(right).forEach((it) => grid.appendChild(card(it)));
+    left.forEach((it) => colL.appendChild(card(it)));
+    right.forEach((it) => colR.appendChild(card(it)));
   }
 
   function drawSequence(stage, act, title) {
@@ -487,8 +511,9 @@
       b.type = "button"; b.className = "sort-item"; b.textContent = it.label;
       b.addEventListener("click", () => {
         C().$$("#sort-items .sort-item").forEach((el) => el.classList.remove("on"));
-        b.classList.add("on"); b._group = it.group;
+        b.classList.add("on"); b._group = it.group; sfx().pop();
         stage._sortPick = b;
+        fb(null, C().txt("Picked: " + it.label + " — now tap its box!", "चुना: " + it.label + " — अब इसके डिब्बे पर टैप करो!"));
       });
       ibox.appendChild(b);
     });
